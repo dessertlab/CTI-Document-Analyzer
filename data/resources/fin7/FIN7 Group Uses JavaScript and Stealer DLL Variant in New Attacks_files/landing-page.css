@@ -1,0 +1,75 @@
+/* Styles for YiR landing page - could be used for other pages */
+
+
+/* These are one off styles utilizing a style on a <div> wrapper that is added within the editor */
+/* Needs to use 2 blocks of inserted html - one to open the tag around the cards and one to close */
+.product-card-row {
+    display: flex;
+    gap: 20px;
+    margin: 50px;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+    .product-card-row {
+        flex-wrap: nowrap;
+    }
+}
+
+.product-card-row .kg-product-card-container {
+    box-shadow: none;
+}
+
+.kg-product-card-description p {
+    text-align: center;
+}
+
+.page-full-content .kg-button-card {
+    text-align: center;
+}
+
+.page-full-content .kg-header-card {
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    min-height: auto !important;
+}
+
+.page-full-content h2.kg-header-card-header,
+.kg-header-card-heading, .kg-signup-card-heading,
+.kg-layout-split h2.kg-signup-card-heading,
+.kg-signup-card.kg-width-full.kg-layout-split h2.kg-signup-card-heading,
+.kg-header-card.kg-width-full.kg-layout-split h2.kg-header-card-heading,
+.kg-header-card.kg-width-full h2.kg-header-card-heading,
+.kg-header-card h2.kg-header-card-heading,
+.kg-signup-card h2.kg-signup-card-heading,
+.kg-header-card.kg-width-full.kg-layout-split h2.kg-header-card-heading,
+.kg-signup-card.kg-width-full.kg-layout-split h2.kg-signup-card-heading{
+    font-size: 2.5em !important;
+    font-weight: 100  !important;
+    margin-top: 30px !important;
+    line-height: 1.25em !important;
+    margin-bottom: 30px !important;
+}
+
+.page-full-content h3.kg-header-card-subheader, .kg-header-card-subheading  {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+    font-weight: 300 !important;
+    font-size: var(--bs-body-font-size) !important;
+}
+
+.kg-header-card-text {
+    padding: 1.5rem 3rem 3rem 3rem !important;
+}
+
+.kg-header-card-button {
+    height: auto !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    font-size: .8em !important;
+    padding: 15px 20px !important;
+}

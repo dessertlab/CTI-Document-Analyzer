@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="14px" viewBox="0 0 20 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>youtube</title>
+    <g id="web-style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="web-style-guide-desktop" transform="translate(-851.000000, -8014.000000)" fill="#FFBE2E">
+            <g id="footer" transform="translate(-3.000000, 7747.000000)">
+                <g id="top" transform="translate(34.000000, 196.000000)">
+                    <g id="right" transform="translate(663.000000, 1.000000)">
+                        <g id="social" transform="translate(36.000000, 66.999411)">
+                            <path d="M141,13.56446 L141,6.43671845 C141,6.43671845 141,3.00058921 137.552211,3.00058921 L124.445437,3.00058921 C124.445437,3.00058921 121,3.00058921 121,6.43671845 L121,13.56446 C121,13.56446 121,17.0005892 124.445437,17.0005892 L137.552211,17.0005892 C137.552211,17.0005892 141,17.0005892 141,13.56446 L141,13.56446 Z M134.882879,10.0111367 L128.334196,13.8433818 L128.334196,6.17654769 L134.882879,10.0111367 Z" id="youtube"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

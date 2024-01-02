@@ -1,0 +1,26 @@
+.pagination {
+    justify-content: center;
+}
+
+.page-link {
+    border: none;
+    display: inline-block;
+    background-color: #43474a;
+    color: #fff;
+    margin: 0 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2pt;
+    font-size: .9em;
+    padding: 0.25rem 0.8em;
+    border-radius: 2px;
+}
+
+.page-link.current {
+    background-color: #006db5;
+}
+
+.page-link:hover, .page-link.current:hover {
+     color: #f19615;
+     background-color: #fff;
+ }

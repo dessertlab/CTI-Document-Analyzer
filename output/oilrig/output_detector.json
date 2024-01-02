@@ -1,0 +1,1091 @@
+[
+    {
+        "text": "In an incident reminiscent of the Shadow Brokers leak that exposed the NSA's hacking tools, someone has now published similar hacking tools belonging to one of Iran's elite cyber-espionage units, known as APT34, Oilrig, or HelixKitten.\n The hacking tools are nowhere near as sophisticated as the NSA tools leaked in 2017, but they are dangerous nevertheless.\n",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5623557567596436
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The tools have been leaked since mid-March on a Telegram channel by an individual using the Lab Dookhtegan pseudonym.\n ",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.721768856048584
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Besides hacking tools, Dookhtegan also published what appears to be data from some of APT34's hacked victims, mostly comprising of username and password combos that appear to have been collected through phishing pages.\n ",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4676801860332489
+        },
+        "prediction": {}
+    },
+    {
+        "text": "ZDNet was previously aware of some of these tools and victim data after this reporter received a tip in mid-March.",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5680264830589294
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In a Twitter DM, a Twitter user shared some of the same files that were discovered today on Telegram, and we believe that this Twitter user is the Telegram Lab Dookhtegan persona.\n ",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.611931562423706
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In our Twitter conversation, the leaker claimed to have worked on the group's DNSpionage campaign, but this should be taken with a grain of salt, as the leaker could very well be a member of a foreign intelligence agency trying to hide their real identity while giving more credence to the authenticity of Iran's hacking tools and operations.\n ",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6190325617790222
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Furthermore, ZDNet has also learned that the same Twitter persona had also contacted tens of other reporters and infosec researchers with the same message, in an attempt to promote the leak. Similarly, the same persona has also posted links to some of these hacking tools on public hacking-focused forums.",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6159909963607788
+        },
+        "prediction": {}
+    },
+    {
+        "text": "On these forums, he claimed to be selling the hacked files, yet, he never mentioned anything about a price.\n",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6432032585144043
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In the Telegram channel discovered today, the hacker leaked the source code of six hacking tools, and the content from several active backend panels, where victim data had been collected.\n",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6780033111572266
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Hacking tools:\n- Glimpse (newer version of a PowerShell-based trojan that Palo Alto Networks names BondUpdater)\n- PoisonFrog (older version of BondUpdater)\n- HyperShell (web shell that Palo Alto Networks calls TwoFace)\n- HighShell (another web shell)\n- Fox Panel (phishing kit)\n- Webmask (DNS tunneling, main tool behind DNSpionage)\n Besides source code for the above tools, Dookhtegan also leaked on the Telegram channel data taken from victims that had been collected in some of APT34's backend command-and-control (C&C) servers.\n In total, according to Chronicle, Dookhtegan leaked data from 66 victims, mainly from countries in the Middle East, but also Africa, East Asia, and Europe.\n Data was taken from both government agencies, but also from private companies.",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.20506985485553741
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The two biggest companies named on the Telegram channel are Etihad Airways and Emirates National Oil.",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7353536486625671
+        },
+        "prediction": {}
+    },
+    {
+        "text": "A list of the victims (but without company/government agency names) is available here.\n Data leaked from each victim varied, ranging from usernames and password combos to internal network servers info and user IPs.\n Additionally, Dookhtegan also leaked data about past APT34 operations, listing the IP addresses and domains where the group had hosted web shells in the past, and other operational data.\n Besides data on past operations, the leaker also doxxed Iranian Ministry of Intelligence officers, posting phone numbers, images, and names of officers involved with APT34 operations. For some officers, Dookhtegan created PDF files containing their names, roles, images, phone numbers, email addresses, and social media profiles.\n",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.31273993849754333
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It was clear from the detailed doxing packages that the leaker had a bone to pick with the Iranian Ministry of Intelligence officers, to which he referred many times as \"cruel,\" \"ruthless,\" and \"criminal. \"\n\"We have more secret information about the crimes of the Iranian Ministry of Intelligence and its managers and we are determined to continue to expose them,\" Dookhtegan said in a Telegram message posted last week.\n The leaker also posted screenshots on the Telegram channel alluding to destroying the control panels of APT34 hacking tools and wiping servers clean.\n The data leaked on this Telegram channel is now under analysis by several cyber-security firms, ZDNet was told.",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4844500720500946
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\"It's likely this group will alter their toolset in order to maintain operational status,\" Brandon Levene, Head of Applied Intelligence at Chronicle, told ZDNet today in an email \"There may be some copycat activity derived from the leaked tools, but it is unlikely to see widespread use.",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5248684287071228
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\"\nThis is because the tools aren't sophisticated and aren't top-tier tools like the ones leaked in the Shadow Brokers' NSA leak.",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6971632838249207
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Nation-state or criminal groups who will reuse these tools will most likely do it as a smoke-screen or false flag, to mask their operations as APT34.",
+        "source": "Source code of Iranian cyber-espionage tools leaked on Telegram _ ZDNET.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.528061032295227
+        },
+        "prediction": {}
+    },
+    {
+        "text": "On April 26th, we identified a suspicious email that targeted a government official from Jordan\u2019s foreign ministry. The email contained a malicious Excel document that drops a new backdoor named Saitama. Following our investigation, we were able to attribute this attack to the known Iranian Actor APT34.\nAlso known as OilRig/COBALT GYPSY/IRN2/HELIX KITTEN, APT34 is an Iranian threat group that has targeted Middle Eastern countries and victims worldwide since at least 2014.",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.550033450126648
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The group is known to focus on the financial, governmental, energy, chemical, and telecommunication sectors.\n",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6387349963188171
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In this blog post, we describe the attack flow and share details about the Saitama backdoor.\n The malicious email was sent to the victim via a Microsoft Outlook account with the subject \u201cConfirmation Receive Document\u201d with an Excel file called \u201cConfirmation Receive Document.xls\u201d. The sender pretends to be a person from the Government of Jordan by using its coat of arms as a signature.\n",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6092296838760376
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The Excel attachment contains a macro that performs malicious activities. The document has an image that tries to convince the victim to enable a macro.\n",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7369884252548218
+        },
+        "prediction": {}
+    },
+    {
+        "text": "After enabling the macro, the image is replaced with the Jordan government\u2019s the coat of the arms:\nThe macro has been executed on WorkBook_Open(). Here are the main functionalities of this macro:\nThe dropped payload is a small backdoor that is written in .Net.",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6784917116165161
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This is stealthier than other communication methods, such as HTTP. Also, the actor cleverly uses techniques such as compression and long random sleep times.",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5700682997703552
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Another element that we found interesting about this backdoor is the way that it is implemented.",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7064829468727112
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The whole flow of the program is defined explicitly as a finite-state machine, as shown in the Figure 7.",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7195097804069519
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In short, the machine will change its state depending on the command sent to every state. Graphically, the program flow can be seen as this:\nIt is the initial state of the machine.",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6901627779006958
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It just accepts the start command that puts the machine into the ALIVE state.\n This state fetches the C&C server, expecting to receive a command from the attackers. These servers are generated by using the PRNG algorithm that involves transformations like the Mersenne Twister. These transformations will generate subdomains of the hard coded domains in the Config class (Figure 8).\n Figure 9 shows an example of the generated subdomain:\n",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6238641142845154
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This state has two possible next stages. If the performed DNS request fails, the next stage is SLEEP. Otherwise, the next stage is RECEIVE.\n",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.667218029499054
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These states put the backdoor in sleep mode. The amount of time that the program will sleep is determined by the previous stage. It is clear that one of the main motivations of the actor is to be as stealthy as possible.",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6692502498626709
+        },
+        "prediction": {}
+    },
+    {
+        "text": "For example, unsuccessful DNS requests puts the backdoor in sleep mode for a time between 6 and 8 hours! There are different sleep times depending on the situations (values are expressed in milliseconds):\nThere is also a \u201cSecond Sleep\u201d state that puts the program on sleep mode a different amount of time.\n This state is used to receiving commands from the C&C servers. Commands are sent using the IP address field that is returned by the DNS requests. Further details about the communication protocol are provided later in this report. In a nutshell, every DNS request is capable of receiving 4 bytes. The backdoor will concatenate responses, building buffers in that way. These buffers will contain the commands that the backdoor will execute.\n That state will execute commands received from the server.",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.38301679491996765
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The following figure shows the list of possible commands that can be executed by the backdoor.\n It is pretty shocking to see that even when attackers have the possibility of sending any command, they choose to add that predefined list in the backdoor in Base64 format.",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6750670075416565
+        },
+        "prediction": {}
+    },
+    {
+        "text": "As we can see, some of them are common reconnaissance snippets, but some of them are not that common. In fact, some of the commands contain internal IPsand also internal domain names(like ise-posture.mofagov.gover.local).",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.41300854086875916
+        },
+        "prediction": {}
+    },
+    {
+        "text": "That shows that this malware was clearly targeted and also indicates that the actor has some previous knowledge about the internal infrastructure of the victim.\n The Send state is used to send the results generated by commands to the actor\u2019s server. In this case, the name of the subdomain will contain the data. As domain names are used to exfiltrate unknown amounts of data, attackers had to split this data in different buffers.",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.603520929813385
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Every buffer is then sent through a different DNS request. As it can be seen in the Figure 12, all the required information in order to reconstruct original data is sent to the attackers. The size of the buffer is only sent in the first packet.\n There are several indicators that suggest that this campaign has been operated by APT34.\n",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5971368551254272
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Maldoc:\nConfirmation Receive Document.xls\n26884f872f4fae13da21fa2a24c24e963ee1eb66da47e270246d6d9dc7204c2b\nSaitama backdoor:\nupdate.exe\ne0872958b8d3824089e5e1cfab03d9d98d22b9bcb294463818d721380075a52d\nC2s:\nuber-asia.com\nasiaworldremit.com\njoexpediagroup.com\nDecember 15, 2023 - PikaBot, a stealthy malware normally distributed via malspam is now being spread via malicious ads.\n",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.31105563044548035
+        },
+        "prediction": {}
+    },
+    {
+        "text": "December 15, 2023 - Google will soon roll out its Tracking Protection feature to some randomly chosen users in order to prepare for a full deployment.\n December 14, 2023 - Apple has plans to make it harder for iPhone thieves to steal your personal information even if they have your device\u2019s passcode.\n",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5104270577430725
+        },
+        "prediction": {}
+    },
+    {
+        "text": "One Albert Quay\n2nd Floor\nCork T12 X8N6\nIreland\n3979 Freedom Circle\n12th Floor\nSanta Clara, CA 95054\nWant to stay informed on the latest news in cybersecurity?",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6213557124137878
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Cliccando su \u201cAccetta tutti i cookie\u201d, l'utente accetta di memorizzare i cookie sul dispositivo per migliorare la navigazione del sito, analizzare l'utilizzo del sito e assistere nelle nostre attivit\u00e0 di marketing.",
+        "source": "APT34 targets Jordan Government using new Saitama backdoor.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4428989887237549
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Check Point Research discovered evidence of a new campaign by the Iranian threat group APT34 (aka OilRig), against what appears to be a Lebanese target, employing a new backdoor variant we dubbed SideTwist.\n Since the 2019 leak of APT34\u2019s tools by an entity named \u201cLab Dookhtegan\u201d, the threat group has been actively retooling and updating their payload arsenal to try and avoid detection, creating several different malware variants whose ultimate purpose remained the same: to gain the initial foothold on the targeted device.\n Starting with the DNSpionage campaign back in 2018, APT34 has been observed targeting individuals through the use of booby-trapped job opportunity documents, delivered directly to the selected targets via LinkedIn messages. This activity continued through 2019 with the HardPass operation, in which the LinkedIn platform was used in the same manner.\n In this latest campaign from January, a document submitted to VirusTotal from Lebanon (a common target for APT34), also depicts such a job opportunity document, although in this case we were unable to confirm the initial delivery mechanism to the target.\n In the following article we analyze the latest infection chain used by the attackers and deep dive into the new malware variant.\n",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.2942098379135132
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Our analysis began with a malicious Microsoft Word document named Job-Details.doc (md5: 6615c410b8d7411ed14946635947325e).\n The decoy document clearly tries to appear like a benign document, offering various positions in the Ntiva IT consulting company \u2013 a company based in Virginia, US.\n However, once the user activates the embedded malicious macros, the full infection flow is triggered:\nMacros used by APT34\u2019s job opportunity campaigns have evolved through the years, but also managed to keep their own distinctive style and purpose:\nIn the macros function call graph above, we can see that from the Document_Open and the Document_Close functions, there are multiple calls to the DnsQuery external function.\n APT34 is notorious for its heavy use of DNS tunneling through many of their different tools, and this time this feature also made its way into the initial macros stage.\n Once the macros are executed, DNS requests are used to beacon back to the attacker, and inform them of the current stage of the execution, as well as to deliver some victim identifiable information.\n In this step, the attacker is using the publicly available requestbin.net DNS tunneling service, in order to get updates about the macros infection progress.",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3060254454612732
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This way the attacker-owned infrastructure would not be exposed, in case a sandbox would not be able to fully \u201cdetonate\u201d the document.\n",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6767455339431763
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Below is a demonstration of the information the attacker would see on the requesbin.net website, when a victim executes the malicious macros from a system with the following environment:\nThe encoded data is derived from the PC information, in the following manner:\nThe backdoor in this stage, is a variant we haven\u2019t seen before in previous APT34 operations, but provides functionality which is simple and similar to other C based backdoors utilized by the group: DNSpionage and TONEDEAF and TONEDEAF2.0. \n The functionality of the backdoor includes download, upload and shell command execution.\n In this infection chain the persistence is actually established by the 1st stage macros, and the 2nd stage payload does not have any persistence mechanism of its own.\n Persistence is achieved in the 1st stage, when the schedule task is registered. The scheduled task named SystemFailureReporter will execute the 2nd stage payload every 5 minutes:\nThe backdoor is very dependent on this persistence mechanism, as every time it would launch, it would only execute a single command provided from the C&C server and immediately shut down, until it is launched again by the scheduled task.\n",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.2941458523273468
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The backdoor starts by collecting basic information about the victim\u2019s machine and calculating a 4-byte long victim identifier, based on the user-name, computer-name and the domain name of the target environment. This identifier will be used in the follow-up C&C communication.\n",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6242882609367371
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Next the malware will verify that the update.xml file that was supposed to be created in the 1st stage of the infection does indeed exists, and if not, it will terminate itself \u2013 printing the following text to the debugging output using the OutputDebugString function:\n\u201cPlease install visual studio 2017 and try again\u201d\n As the purpose of this function is to print debugging information, only during the debugging process of an application, the text will not be visible to the regular user.\n",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.612064778804779
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The backdoor\u2019s communication with the C&C server (sarmsoftware[.]com) is HTTP based on port 443 with port 80 as fallback.\n ",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6725174188613892
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The encrypted Base64 communication can be decrypted using the following Python snippet:\nBoth the malicious macros, the backdoor, the targeting, and the techniques used in this operation \u2013 all align with previously reported campaigns attributed to APT34.\n ",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.668475329875946
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Besides the fact that like in previous APT34 operations, once again we see job opportunity documents being used to encourage the victim to enable macros, there are technical similarities as well.\n ",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6449267268180847
+        },
+        "prediction": {}
+    },
+    {
+        "text": "APT34\u2019s backdoors DNSpionage and TONEDEAF are known to receive commands from the servers by searching for specific pattern hidden inside the HTML content of a legitimate looking website.\n",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6668174862861633
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In our case the attackers utilized a Flickr lookalike page, while in previous campaigns GitHub, Wikipedia, and Microsoft lookalikes were used.\n  While analyzing the above campaign, this and additional APT34 related documents were uploaded to VirusTotal and noted by malware researchers on Twitter.\n ",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6116625666618347
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These documents utilized the very same requestbin.net DNS tunneling service in the initial macros and delivered another of the group\u2019s signature tools: a variant of the .NET based backdoor named Karkoff, which utilized internet facing exchange servers as a communication method with the attackers.\n  The newly found artifacts emphasize the extent of the ongoing APT34\u2019s offensive operations against targets in the Middle East, and especially in Lebanon:\n ",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6409623622894287
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The Karkoff implant (MD5: ab25014c3d6f77ec5880c8f9728be968) included credentials for an exchange server belonging to the Lebanese Government (mail.army.gov[.]lb), which might be an indication of a long running compromise of their network.\n ",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5372597575187683
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Iran backed APT34 shows no sign of slowing down, further pushing its political agenda in the middle-east, with an ongoing focus on Lebanon \u2013 using offensive cyber operations.\n ",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6343008875846863
+        },
+        "prediction": {}
+    },
+    {
+        "text": "While maintaining its modus operandi and reusing old techniques, as reviewed above, the group continues to create new and updated tools to minimize the possible detection of their tools by security vendors.\n ",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6420731544494629
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In this publication we analyzed the newest backdoor variant deployed by the group\u2019s ongoing job opportunities campaigns, which includes malicious documents with job offers \u2013 a technique they have successfully employed since at least 2018.\n",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7373147010803223
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Check Point Sandblast protects against this APT attack, and prevents it from the very first steps.  \n",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6237868070602417
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Malicious document:\nMD5: 6615c410b8d7411ed14946635947325e\nSHA1: 9bba72ac66af84253b55dd7789afc90e0344bf25\nSHA256: 13c27e5049a7fc5a36416f2c1ae49c12438d45ce50a82a96d3f792bfdacf3dcd\nSideTwist backdoor:\nMD5: 94004648630739c154f78a0bae0bec0a\nSHA1: 273488416b5d6f1297501825fa07a5a9325e9b56\nSHA256: 47d3e6c389cfdbc9cf7eb61f3051c9f4e50e30cf2d97499144e023ae87d68d5a\nSubscribe for cpr blogs, news and more\n\u00a9 1994-20232023 Check Point Software Technologies LTD.",
+        "source": "Iran\u2019s APT34 Returns with an Updated Arsenal - Check Point Research.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.1028079241514206
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These cookies are used in order to improve your browsing experience, for analytics purposes, and to serve targeted ads.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5271037220954895
+        },
+        "prediction": {}
+    },
+    {
+        "text": "By using and accessing this site, you agree to our Terms of Use and Privacy Policy.\n",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5314843654632568
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Based on uncovered phishing documents, we believe this Iranian actor is targeting Westat employees, or United States organizations hiring Westat services.\n Westat is a United States-based company that \u201cprovides research services to agencies of the U.S. Government, as well as businesses, foundations, and state and local governments\u201d.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5164138078689575
+        },
+        "prediction": {}
+    },
+    {
+        "text": "One example of the services Westat offers is a survey for federal workers, which leads us to believe this attack may target Westat customers.\n Official Westat response: \u201cWestat understands that in their effort to identify threats and malware, Intezer has identified a malicious file that uses the Westat name and logo.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6695771813392639
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This file was not created by, hosted by, or sent from Westat, and is likely the result of a bad actor stealing the Westat brand name and logo. Our cybersecurity team is working with Intezer and others to fully understand the nature of this report.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6220105886459351
+        },
+        "prediction": {}
+    },
+    {
+        "text": "APT34 (also known as OilRig or Helix Kitten) is a cluster of Iranian government-backed cyber espionage activities that has been active since 2014. The group is known to target various international organizations, mainly in the Middle East.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6030637621879578
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Among their targeted industries are government agencies, financial services, energy and utilities, telecommunications, and oil and gas.\n",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4462539851665497
+        },
+        "prediction": {}
+    },
+    {
+        "text": "More light was shed on this group in April 2019 as leaks emerged from a mysterious individual with the pseudonym \u201cLab Dookhtegan\u201d. This individual exposed data belonging to victims of this group, together with source code of hacking tools and data about previous APT34 operations; including IP addresses and domains where the group hosted web shells related to past operations.\n Most recently, FireEye exposed a spear-phishing operation conducted by APT34, which enabled us to connect this operation to this Iranian actor due to similarities in the techniques and tools employed in both campaigns.\n In late January 2020, we discovered a file named survey.xls that was designed to look like an employee satisfaction survey tailored to either Westat employees or Westat customers.\n",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.44140592217445374
+        },
+        "prediction": {}
+    },
+    {
+        "text": "At first the spreadsheet appeared to be blank. Only once the victim enables macros, the survey is displayed to the user and the malicious VBA code begins to execute.\n",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.72502201795578
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The embedded VBA code unpacks a zip file into a temporary folder, extracts a \u201cClient update.exe\u201d executable file and installs it to \u201cC:Users<User>valsClient update.exe\u201d.\n \u201cClient update.exe\u201d is actually a highly modified version of the TONEDEAF malware, which we named TONEDEAF 2.0. Finally, the crtt function creates a scheduled task \u201cCheckUpdate\u201d that runs the unpacked executable five minutes after being infected by it, as well as on future log-ons.\n Both the extracted VBA code and the functionality of the code look similar to the one analyzed in the FireEye report:\nAPT34 VBA Code from the FireEye Report\n In addition, we found a similar document labelled as \u201cEmployee satisfaction survey.xls\u201d containing the same survey as the previous document.\n However, it\u2019s important to highlight that the code page field of this document is Arabic as can be seen when examining its file metadata, denoting the preferred language installed on the document author\u2019s version of Microsoft Excel:\n",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5059301257133484
+        },
+        "prediction": {}
+    },
+    {
+        "text": "At first glance, \u201cClient update.exe\u201d seems like a completely new backdoor malware. However, further examination reveals it\u2019s most likely a highly modified version of the previously seen TONEDEAF backdoor.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.629174530506134
+        },
+        "prediction": {}
+    },
+    {
+        "text": "TONEDEAF is a backdoor that communicates with its Command and Control server via HTTP in order to receive and execute commands.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6179736852645874
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It was mentioned in FireEye\u2019s recent report about an ongoing APT34 operation, as one of the group\u2019s custom tools.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6398297548294067
+        },
+        "prediction": {}
+    },
+    {
+        "text": "TONEDEAF 2.0 is an advanced version of TONEDEAF, serving the same purpose as the original, but with a revamped C2 communication protocol and a substantially modified code base. In contrast to the original TONEDEAF, TONEDEAF 2.0 contains solely arbitrary shell execution capabilities, and doesn\u2019t support any predefined commands.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6033068895339966
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It\u2019s also more stealthy and contains new tricks such as dynamic importing, string decoding, and a victim deception method.\n",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5655351281166077
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Upon execution the backdoor checks whether it was executed with \u201c\u2026\u201d as an argument, which is the way it\u2019s configured to execute by the scheduled task, as part of the proper infection chain.\n In the case it\u2019s executed without the correct argument, such as by launching it via a double click, it will display a blank GUI Window to the user. This is most likely intended to serve as a deception method, to make the malware appear like a legitimate (alibiet broken) application titled \u201cBee\u201d.\n",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6037096381187439
+        },
+        "prediction": {}
+    },
+    {
+        "text": "TONEDEAF 2.0 also attempts to be more stealthy than its predecessor by hiding many of the interesting API imports it uses.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6036000847816467
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The names of these APIs, and the DLLs that contain them, are stored as encoded strings and are decoded and resolved on demand during runtime.\n The backdoor uses HTTP for C2 communication, with a custom encoding and handshake mechanisms. Messages sent by the backdoor always contain the HTTP query parameter \u201c?ser=<6 digits>\u201d as an identifier.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.604982316493988
+        },
+        "prediction": {}
+    },
+    {
+        "text": "POST /upl?ser==<server_id><client_id>  \u2013 reply to command message, used to send the executed command\u2019s output to the server.\n ",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6892349123954773
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Before performing the first request, the malware will generate the <client_id> derived from the environment variables %HOMEPATH% and %COMPUTERNAME% using a custom formula.\n ",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7466108202934265
+        },
+        "prediction": {}
+    },
+    {
+        "text": "One odd element about the communication is the usage of a Windows Phone User-Agent  value in the HTTP message.\n ",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7353021502494812
+        },
+        "prediction": {}
+    },
+    {
+        "text": "During our analysis the C2 was alive but continuously replied with a 403 Forbidden HTTP error code to our requests.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7354884147644043
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It\u2019s possible that the C2 is filtering the targets since this backdoor is part of a targeted operation and our client_id parameter does not match that of one of the intended victims.\n ",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6848917007446289
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Should the C2 accept the ID, it will reply with an encoded message that contains the <server_id> and the command the backdoor needs to execute.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7267271280288696
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malware extracts the command by looking for an HTTP div element in the response with a special class name.\n  The malware will then execute the command by prepending it with \u201ccmd U c\u201d and will send the output of the command back to the C2 using the POST reply message (2).\n ",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6975482702255249
+        },
+        "prediction": {}
+    },
+    {
+        "text": "When entering the C2 via a browser, the site tries to imitate https://docs.microsoft.com/en-us/, although it fails to display it properly due to a misconfiguration with the CSS, as can be seen in the console:\nWe have also observed that an SSL certificate has been recently generated that matches the domain of the C2.\n  SSL Certificate for the C2 Domain that was Issued One Month Ago\nThese findings might indicate that the attackers are in the process of transitioning into HTTPS for C2 communication, in an attempt to improve their OPSEC capabilities and avoid detection.\n ",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.45724809169769287
+        },
+        "prediction": {}
+    },
+    {
+        "text": "With all of the changes and new additions, there are still enough similarities that link TONEDEAF 2.0 to the original.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6531583070755005
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The C2 communication is different but still has similarities to its predecessor, such as the usage of three digit identifiers for both the victim and the server.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6954007744789124
+        },
+        "prediction": {}
+    },
+    {
+        "text": "However, most notably there are several places in the code where the similarity is most clear. One such place is a function that exists in both variants, which oddly enough creates a notification icon in the Windows status bar.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.713487446308136
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The only notable changes are the usage of dynamic API resolution and the shortening of the notification message from \u201cUpdating\u201d to \u201cup\u201d.\n",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7163242101669312
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It appears in different stages for each variant, but is identical:\nWe were unable to download further modules, however, we believe this operation also includes the usage of a VALUEVAULT implant.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.590336263179779
+        },
+        "prediction": {}
+    },
+    {
+        "text": "VALUEVAULT is a browser credential theft tool built in Golang, discovered by FireEye in the aforementioned APT34 operation analysis.\n We found the survey.xls file uploaded to VirusTotal with a VALUEVAULT instance and a TONEDEAF 2.0 instance, uploaded from Lebanon by the same user, only a few minutes apart. This may indicate that these malware were delivered together as part of the same attack.\n This VALUEVAULT takes a more minimalistic approach than its predecessor. Many functionalities and strings were stripped from the new binary in order to lower its noise.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.41800469160079956
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Only Chrome password dumping is now supported, although interestingly the use of the file \u201cfsociety.dat\u201d as a password data store under the \u201cAppData\\Roaming\u201d directory stayed the same.\n",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.666184663772583
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Furthermore, VALUEVAULT 2.0 is a 64-bit binary as opposed to VALUEVAULT 1.0 which is a 32-bit binary.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5830484628677368
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These relatively minor changes were enough to create a fully undetected implant.\n The last APT34 operation was exposed only a few months ago by FireEye, and judging by our current findings we can confidently state that the group has since evolved its operations. The technical analysis of the new malware variants reveals this Iranian government-backed group has invested substantial efforts into upgrading its toolset in an attempt to evade future detection.\n The binary code from these new malware samples are now indexed in our Genetic Malware Analysis platform, Intezer Analyze.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5027777552604675
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We encourage you to use our free community edition to detect and classify threats that share code with APT34 malware.\n",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5860167145729065
+        },
+        "prediction": {}
+    },
+    {
+        "text": "IOCs\nmanygoodnews[.]com\nc10cd1c78c180ba657e3921ee9421b9abd5b965c4cdfaa94a58e383b45bb72ca\n4c323bc11982b95266732c01645c39618550e68f25c34f6d3d79288eae7d4378\na897164e3547f0ce3aaa476b0364a200769e8c07ce825bcfdc43939dd1314bb1\n20b3d046ed617b7336156a64a0550d416afdd80a2c32ce332be6bbfd4829832c\nd61eecd7492dfa461344076a93fc2668dc28943724190faf3d9390f8403b6411\nPaul is a malware analyst and reverse engineer at Intezer. He previously served as a developer in the Israel Defense Force (IDF) Intelligence Corps for three years.\n Michael is a security researcher turned product manager, who previously led the Intezer Analyze product lifecycle.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.1620694398880005
+        },
+        "prediction": {}
+    },
+    {
+        "text": "He has presented his malware research at conferences such as REcon and the Chaos Communications Congress (CCC).\n Count on Intezer\u2019s Autonomous SOC solution to handle your Level 1 SOC. Leave the SOC grunt work to Intezer.",
+        "source": "Iranian Campaign Tailored to US Companies Uses Updated Toolset - Intezer.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5803565382957458
+        },
+        "prediction": {}
+    },
+    {
+        "text": "mandiant.com uses cookies to deliver and enhance the quality of its services and to analyze traffic. If you agree, cookies are also used to serve advertising and to personalize the content and advertisements that you see.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5806446671485901
+        },
+        "prediction": {}
+    },
+    {
+        "text": "mandiant.com uses cookies to deliver and enhance the quality of its services and to analyze traffic. If you agree, cookies are also used to serve advertising and to personalize the content and advertisements that you see.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5806446671485901
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Less than a week after Microsoft issued a patch for CVE-2017-11882 on Nov. 14, 2017, FireEye observed an attacker using an exploit for the Microsoft Office vulnerability to target a government organization in the Middle East. We assess this activity was carried out by a suspected Iranian cyber espionage threat group, whom we refer to as APT34, using a custom PowerShell backdoor to achieve its objectives.\n We believe APT34 is involved in a long-term cyber espionage operation largely focused on reconnaissance efforts to benefit Iranian nation-state interests and has been operational since at least 2014.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.41580843925476074
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This threat group has conducted broad targeting across a variety of industries, including financial, government, energy, chemical, and telecommunications, and has largely focused its operations within the Middle East. We assess that APT34 works on behalf of the Iranian government based on infrastructure details that contain references to Iran, use of Iranian infrastructure, and targeting that aligns with nation-state interests.\n APT34 uses a mix of public and non-public tools, often conducting spear phishing operations using compromised accounts, sometimes coupled with social engineering tactics. In May 2016, we published a blog detailing a spear phishing campaign targeting banks in the Middle East region that used macro-enabled attachments to distribute POWBAT malware.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.2793450951576233
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In July 2017, we observed APT34 targeting a Middle East organization using a PowerShell-based backdoor that we call POWRUNER and a downloader with domain generation algorithm functionality that we call BONDUPDATER, based on strings within the malware.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6199389696121216
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The backdoor was delivered via a malicious .rtf file that exploited CVE-2017-0199.\n In this latest campaign, APT34 leveraged the recent Microsoft Office vulnerability CVE-2017-11882 to deploy POWRUNER and BONDUPDATER.\n The full report on APT34 is available to our MySIGHT customer community. APT34 loosely aligns with public reporting related to the group \"OilRig\".",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5151011943817139
+        },
+        "prediction": {}
+    },
+    {
+        "text": "As individual organizations may track adversaries using varied data sets, it is possible that our classifications of activity may not wholly align.\n",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4987768232822418
+        },
+        "prediction": {}
+    },
+    {
+        "text": "CVE-2017-11882 affects several versions of Microsoft Office and, when exploited, allows a remote user to run arbitrary code in the context of the current user as a result of improperly handling objects in memory.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6191744804382324
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The vulnerability was patched by Microsoft on Nov. 14, 2017. A full proof of concept (POC) was publicly released a week later by the reporter of the vulnerability.\n The vulnerability exists in the old Equation Editor (EQNEDT32.EXE), a component of Microsoft Office that is used to insert and evaluate mathematical formulas. The Equation Editor is embedded in Office documents using object linking and embedding (OLE) technology.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5944055914878845
+        },
+        "prediction": {}
+    },
+    {
+        "text": "If a crafted formula is passed to the Equation Editor, it does not check the data length properly while copying the data, which results in stack memory corruption. As the EQNEDT32.exe is compiled using an older compiler and does not support address space layout randomization (ASLR), a technique that guards against the exploitation of memory corruption vulnerabilities, the attacker can easily alter the flow of program execution.\n ",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5837805271148682
+        },
+        "prediction": {}
+    },
+    {
+        "text": "APT34 sent a malicious .rtf file (MD5: a0e6933f4e0497269620f44a083b2ed4) as an attachment in a malicious spear phishing email sent to the victim organization.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6104034781455994
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malicious file exploits CVE-2017-11882, which corrupts the memory on the stack and then proceeds to push the malicious data to the stack. The malware then overwrites the function address with the address of an existing instruction from EQNEDT32.EXE.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5724279880523682
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The overwritten instruction (displayed in Figure 1) is used to call the \u201cWinExec\u201d function from kernel32.dll, as depicted in the instruction at 00430c12, which calls the \u201cWinExec\u201d function.\n  After exploitation, the \u2018WinExec\u2019 function is successfully called to create a child process, \u201cmshta.exe\u201d, in the context of current logged on user.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6096436977386475
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The process \u201cmshta.exe\u201d downloads a malicious script from hxxp://mumbai-m[.]site/b.txt and executes it, as seen in Figure 2.\n",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5753147006034851
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malicious script goes through a series of steps to successfully execute and ultimately establish a connection to the command and control (C2) server. The full sequence of events starting with the exploit document is illustrated in Figure 3.\n Figure 4 contains an excerpt of the v.vbs script pertaining to the Execution Workflow section.\n After successful execution of the steps mentioned in the Execution Workflow section, the Task Scheduler will launch GoogleUpdateschecker.vbs",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6087177395820618
+        },
+        "prediction": {}
+    },
+    {
+        "text": "every minute, which in turn executes the dUpdateCheckers.ps1 and hUpdateCheckers.ps1 scripts. These PowerShell scripts are final stage payloads \u2013 they include a downloader with domain generation algorithm (DGA) functionality and the backdoor component, which connect to the C2 server to receive commands and perform additional malicious activities. \n The backdoor component, POWRUNER, is a PowerShell script that sends and receives commands to and from the C2 server. POWRUNER is executed every minute by the Task Scheduler. Figure 5 contains an excerpt of the POWRUNER backdoor.\n POWRUNER begins by sending a random GET request to the C2 server and waits for a response.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3949223756790161
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The server will respond with either \u201cnot_now\u201d or a random 11-digit number. If the response is a random number, POWRUNER will send another random GET request to the server and store the response in a string. POWRUNER will then check the last digit of the stored random number response, interpret the value as a command, and perform an action based on that command.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5922796130180359
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Server response string contains batch commands\nExecute batch commands and send results back to server\nServer response string is a file path\nCheck for file path and upload (PUT) the file to server\nServer response string is a file path\nCheck for file path and download (GET) the file\nAfter successfully executing the command, POWRUNER sends the results back to the C2 server and stops execution.\n The C2 server can also send a PowerShell command to capture and store a screenshot of a victim\u2019s system. POWRUNER will send the captured screenshot image file to the C2 server if the \u201cfileupload\u201d command is issued. Figure 6 shows the PowerShell \u201cGet-Screenshot\u201d function sent by the C2 server.\n",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5329064130783081
+        },
+        "prediction": {}
+    },
+    {
+        "text": "One of the recent advancements by APT34 is the use of DGA to generate subdomains.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7007412910461426
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The BONDUPDATER script, which was named based on the hard-coded string \u201cB007\u201d, uses a custom DGA algorithm to generate subdomains for communication with the C2 server.\nFigure 7 provides a breakdown of how an example domain (456341921300006B0C8B2CE9C9B007.mumbai-m[.]site) is generated using BONDUPDATER\u2019s custom DGA.\n BONDUPDATER will attempt to resolve the resulting DGA domain and will take the following actions based on the IP address resolution:\nFile contains batch commands, it executes the batch commands\nRename the temporary file as .ps1 extension\nRename the temporary file as .vbs extension\nFigure 8 is a screenshot of BONDUPDATER\u2019s DGA implementation.\n Some examples of the generated subdomains observed at time of execution include:\nFigure 9 shows example network communications between a POWRUNER backdoor client and server.\n In the example, the POWRUNER client sends a random GET request to the C2 server and the C2 server sends the random number (99999999990) as a response. As the response is a random number that ends with \u20180\u2019, POWRUNER sends another random GET request to receive  an additional command string.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.2366299331188202
+        },
+        "prediction": {}
+    },
+    {
+        "text": "If the server had sent the string \u201cnot_now\u201d as response, as shown in Figure 10, POWRUNER would have ceased any further requests and terminated its execution.\n",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6691100597381592
+        },
+        "prediction": {}
+    },
+    {
+        "text": "POWRUNER may also receive batch commands from the C2 server to collect host information from the system.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7210782170295715
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This may include information about the currently logged in user, the hostname, network configuration data, active connections, process information, local and domain administrator accounts, an enumeration of user directories, and other data.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5909643173217773
+        },
+        "prediction": {}
+    },
+    {
+        "text": "APT34 has used POWRUNER and BONDUPDATER to target Middle East organizations as early as July 2017. In July 2017, a FireEye Web MPS appliance detected and blocked a request to retrieve and install an APT34 POWRUNER / BONDUPDATER downloader file. During the same month, FireEye observed APT34 target a separate Middle East organization using a malicious .rtf file (MD5: 63D66D99E46FB93676A4F475A65566D8) that exploited CVE-2017-0199. This file issued a GET request to download a malicious file from:\nAs shown in Figure 12, the script within the dupatechecker.doc file attempts to download another file named dupatechecker.exe from the same server. The file also contains a comment by the malware author that appears to be an apparent taunt to security researchers.\n",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.40499114990234375
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Recent activity by APT34 demonstrates that they are capable group with potential access to their own development resources.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5538095235824585
+        },
+        "prediction": {}
+    },
+    {
+        "text": "During the past few months, APT34 has been able to quickly incorporate exploits for at least two publicly vulnerabilities (CVE-2017-0199 and CVE-2017-11882) to target organizations in the Middle East.",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5823588967323303
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We assess that APT34\u2019s efforts to continuously update their malware, including the incorporation of DGA for C2, demonstrate the group\u2019s commitment to pursing strategies to deter detection. We expect APT34 will continue to evolve their malware and tactics as they continue to pursue access to entities in the Middle East region.\n",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6025063991546631
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Filename / Domain / IP Address\nHas resolved ns2.dns-update[.]club & hpserver[.]online & anyportals[.]com\nGet the Google Cloud Cybersecurity Forecast 2024 report to explore the latest trends on the horizon.\n",
+        "source": "New Targeted Attack in the Middle East by APT34, a Suspected Iranian Threat Group, Using CVE-2017-11882 Exploit _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5616708397865295
+        },
+        "prediction": {}
+    }
+]

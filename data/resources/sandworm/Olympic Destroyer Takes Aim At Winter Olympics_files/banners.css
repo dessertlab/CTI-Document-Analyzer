@@ -1,0 +1,301 @@
+/* Banners for custom pages - includes Podcast page/post banners, specific post type banners, etc */
+
+
+/* Post Banners - based on primary tag slug */
+.banner-post-graphic {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 270px;
+    margin: auto;
+}
+
+.threat-roundup-graphic {
+    background-image: url('../images/threat-roundup-graphic.svg');
+    background-size: 95%;
+    background-position-y: center;
+}
+.microsoft-patch-tuesday-graphic {
+    background-image: url('../images/patch-tuesday-graphic.svg');
+    background-size: 95%;
+    background-position-y: center;
+}
+.threat-source-newsletter-graphic {
+    background-image: url('../images/threat-source-newsletter-graphic.svg');
+    background-size: 95%;
+    background-position-y: center;
+}
+.threat-advisory-graphic {
+    background-image: url('../images/threat-advisory-graphic.svg');
+    background-size: 95%;
+    background-position-y: center;
+}
+.researcher-spotlight-graphic {
+    background-image: url('../images/researcher-spotlight-graphic.svg');
+}
+.vulnerability-spotlight-graphic {
+    background-image: url('../images/vuln-spotlight-graphic.svg');
+}
+.vulnerability-deep-dive-graphic {
+    background-image: url('../images/vuln-deep-dive-graphic.png');
+    background-size: 840px;
+    background-position: top -450px center;
+}
+.threat-spotlight-graphic {
+    background-image: url('../images/threat-spotlight-graphic.svg');
+}
+.headlines-graphic {
+    background-image: url('../images/in-the-headlines-graphic.svg');
+    background-size: 95%;
+    background-position-y: -6px;
+}
+.vulnerability-advisory-graphic {
+    background-image: url('../images/vulnerability-advisory-graphic.svg');
+    background-size: 95%;
+    background-position-y: center;
+}
+.incident-response-graphic, .ctir-graphic, .talos-incident-response-graphic {
+    background-image: url('../images/logo_talosir_reverse.svg');
+    background-size: 90%;
+    background-position-y: center;
+}
+
+.ctir-trends-graphic, .talos-ir-trends-graphic {
+    background-image: url('../images/quarterly-trends-only.png');
+    background-size: 90%;
+    background-position-y: center;
+}
+
+.emea-graphic {
+    background-image: url('../images/emea-graphic.svg');
+    background-size: 90%;
+    background-position-y: center;
+}
+
+.yir2022-graphic {
+    background-image: url('../images/YiR-Lockup.png');
+    background-size: 355px;
+    background-position-y: center;
+}
+
+.banner-bg-3 {
+    background-color: #0a0c0e;
+}
+
+.yir2023-graphic {
+    background-image: url('../images/YiR23_ghost.png');
+    background-repeat: no-repeat;
+    background-size: auto 270px;
+    background-position: center;
+}
+
+.the-need-to-know-graphic {
+    background-image: url('../images/need-to-know-banner.png');
+    background-size: 52%;
+    background-position-y: center;
+}
+
+@media (min-width: 700px) {
+    .threat-roundup-graphic,
+    .microsoft-patch-tuesday-graphic,
+    .threat-source-newsletter-graphic,
+    .threat-advisory-graphic,
+    .headlines-graphic,
+    .vulnerability-advisory-graphic
+    {
+        background-size: 600px;
+    }
+    .headlines-graphic {
+        background-position-y: -45px;
+    }
+    .incident-response-graphic,
+    .ctir-trends-graphic,
+    .ctir-graphic,
+    .talos-ir-trends-graphic,
+    .cisco-talos-incident-response-graphic {
+        background-size: 500px;
+    }
+    .emea-graphic {
+        background-size: 500px;
+    }
+}
+
+.center-bg-radar {
+    background-image: url('../images/on_the_radar_ghost_v4.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 270px;
+}
+
+@media (min-width: 768px) {
+    .center-bg-radar {
+        background-image: url('../images/on_the_radar_ghost_v4.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto 300px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .center-bg-radar {
+        background-image: url('../images/on_the_radar_ghost_v4.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto 360px;
+    }
+}
+
+/* Podcast specific banner graphics */
+.beers-with-talos-graphic {
+    background-image: url('../images/BWT_banner-sm.png');
+    background-size: 98%;
+    background-position-y: center;
+}
+@media (min-width: 768px) {
+    .beers-with-talos-graphic {
+        background-size: 600px;
+    }
+}
+@media (min-width: 1160px) {
+    .beers-with-talos-graphic {
+        background-image: url('../images/BWT_banner.png');
+        background-size: 800px;
+    }
+}
+.beers-with-talos-background {
+    background-image: url('../images/binary_background.svg');
+    background-color: #161617;
+    background-size: 390px;
+}
+
+.talos-takes-graphic {
+    background-image: url('../images/talos_takes_badge.png');
+    background-size: 260px;
+    background-position: center center;
+}
+.talos-takes-background {
+    background-image: url('../images/tt_banner2.png');
+    background-color: #243a47;
+    background-repeat: no-repeat;
+    background-size: 760px;
+    background-position: center;
+}
+
+
+.banner-bg-2 {
+    background-color: black;
+}
+
+.banner-bg-container,
+.banner-bg-container .left-bg-1,
+.banner-bg-container .right-bg-1,
+.banner-bg-container .left-bg-2,
+.banner-bg-container .right-bg-2 {
+    height: 100%;
+    min-height: 270px;
+}
+.banner-bg-container .left-bg-1 {
+    background-image: url('../images/pixel-fade-bg-left.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+.banner-bg-container .right-bg-1 {
+    background-image: url('../images/pixel-fade-bg-right.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+.banner-bg-container .left-bg-2 {
+    background-image: url('../images/bright-blue-pixel-bg-left.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+.banner-bg-container .right-bg-2 {
+    background-image: url('../images/bright-blue-pixel-bg-right.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.banner-content-wrapper {
+    position: absolute;
+    z-index: 200;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    min-height: 270px;
+}
+.banner-content-wrapper h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+.banner-content-wrapper h1.vertical-center {
+    margin-top: 85px;
+}
+
+.banner-content-wrapper p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+.podcast-subscribe-banner {
+    min-height: 50px;
+    background-color: #05558c;
+}
+.podcast-button-wrapper {
+    display: block;
+    width: auto;
+    margin: auto;
+}
+.podcast-subscribe-banner label, .podcast-subscribe-banner .podcast-subscribe-button {
+    margin: 5px 15px;
+    color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+}
+
+.podcast-subscribe-button {
+    border-radius: 2px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 15px center;
+    font-weight: 400;
+    -webkit-transition: background-color 0.1s ease;
+    -moz-transition:    background-color 0.1s ease;
+    -o-transition:      background-color 0.1s ease;
+    transition:         background-color 0.1s ease;
+}
+.podcast-subscribe-button:hover {
+    background-color: #05446f;
+}
+
+.apple-subscribe {
+    background-image: url('../images/icon_apple_podcasts_white.svg');
+    background-size: 28px;
+    padding-left: 45px;
+}
+.google-subscribe {
+    background-image: url('../images/icon_google_podcasts_white.svg');
+    background-size: 21px;
+    padding-left: 43px;
+}
+.spotify-subscribe {
+    background-image: url('../images/icon_spotify_white.svg');
+    background-size: 22px;
+    padding-left: 43px;
+}
+.stitcher-subscribe {
+    background-image: url('../images/icon_stitcher_white.svg');
+    background-size: 29px;
+    padding-left: 50px;
+}
+.rss-subscribe {
+    background-image: url('../images/icon_rss_white.svg');
+    background-size: 21px;
+    padding-left: 39px;
+}
+
+
+

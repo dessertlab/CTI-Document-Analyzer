@@ -1,0 +1,29 @@
+code .token {
+    font-family: 'Fira Mono', monospace;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+code .token.function {
+    color: #d2823f;
+}
+
+code .token.punctuation {
+    color: #aeaeae;
+}
+
+code .token.keyword {
+    color: #5a94c3;
+}
+
+code .token.comment,.token.cdata, .token.doctype, .token.prolog {
+    color: #5e5e5e;
+}
+
+code .token.string,.token.selector, .token.attr-name, .token.char, .token.builtin, .token.deleted {
+    color: #a767b7;
+}
+
+code .token.class-name {
+    color: #48af74;
+}

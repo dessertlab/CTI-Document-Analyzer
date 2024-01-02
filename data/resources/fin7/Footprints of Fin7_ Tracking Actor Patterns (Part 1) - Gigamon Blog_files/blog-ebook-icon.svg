@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+  <g id="Layer_4" data-name="Layer 4">
+    <g>
+      <g>
+        <path d="M39.11779,44.66393H15.53452a1.3806,1.3806,0,0,1-1.38725-1.37281V13.08954a1.3806,1.3806,0,0,1,1.38725-1.37281H39.11779A1.3806,1.3806,0,0,1,40.505,13.08954V43.29112A1.3806,1.3806,0,0,1,39.11779,44.66393Z" style="fill: none;stroke: #77e5dd;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 2px"/>
+        <line x1="18.35238" y1="31.56176" x2="29.05013" y2="31.56176" style="fill: none;stroke: #77e5dd;stroke-miterlimit: 10;stroke-width: 2px"/>
+        <line x1="18.35238" y1="26.33688" x2="29.05013" y2="26.33688" style="fill: none;stroke: #77e5dd;stroke-miterlimit: 10;stroke-width: 2px"/>
+        <line x1="26.43746" y1="40.35673" x2="28.9085" y2="40.35673" style="fill: none;stroke: #77e5dd;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 2px"/>
+        <polyline points="28.875 11.854 28.875 20.914 32.169 17.619 35.464 20.914 35.464 11.854" style="fill: none;stroke: #77e5dd;stroke-width: 2px"/>
+      </g>
+      <rect width="54" height="54" style="fill: none"/>
+    </g>
+  </g>
+</svg>

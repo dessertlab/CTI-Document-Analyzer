@@ -1,0 +1,2918 @@
+[
+    {
+        "text": "An official website of the United States government\nOn December 23, 2015, Ukrainian power companies experienced unscheduled power outages impacting a large number of customers in Ukraine. This report provides an account of the events that took place based on interviews with company personnel.\n",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6085783243179321
+        },
+        "prediction": {}
+    },
+    {
+        "text": "table.gridtable {\nfont-family: verdana,arial,sans-serif;\nfont-size:11px;\ncolor:#333333;\nborder-width: 1px;\nborder-color: #666666;\nborder-collapse: collapse;\n}\ntable.gridtable th {\nborder-width: 1px;\npadding: 8px;\nborder-style: solid;\nborder-color: #666666;\nbackground-color: #dedede;\n}\ntable.gridtable td {\nborder-width: 1px;\npadding: 8px;\nborder-style: solid;\nborder-color: #666666;\nbackground-color: #ffffff;\n}\nUpdated July 20, 2021:",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.33697402477264404
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The U.S. Government attributes this activity to Russian nation-state cyber actors and assess that Russian nation-state cyber actors conducted a cyber campaign against Ukrainian critical infrastructure.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6412796378135681
+        },
+        "prediction": {}
+    },
+    {
+        "text": "For more information on Russian malicious cyber activity, refer to us-cert.cisa.gov/Russia.\n On December 23, 2015, Ukrainian power companies experienced unscheduled power outages impacting a large number of customers in Ukraine. In addition, there have also been reports of malware found in Ukrainian companies in a variety of critical infrastructure sectors. Public reports indicate that the BlackEnergy (BE) malware was discovered on the companies\u2019 computer networks, however it is important to note that the role of BE in this event remains unknown pending further technical analysis.\n",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.40927088260650635
+        },
+        "prediction": {}
+    },
+    {
+        "text": "An interagency team comprised of representatives from the National Cybersecurity and Communications Integration Center (NCCIC)/Industrial Control Systems Cyber Emergency Response Team (ICS-CERT), U.S. Computer Emergency Readiness Team (US-CERT), Department of Energy, Federal Bureau of Investigation, and the North American Electric Reliability Corporation traveled to Ukraine to collaborate and gain more insight.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4720362722873688
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The Ukrainian government worked closely and openly with the U.S. team and shared information to help prevent future cyber-attacks.\n",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.689563512802124
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This report provides an account of the events that took place based on interviews with company personnel.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7107940912246704
+        },
+        "prediction": {}
+    },
+    {
+        "text": "ICS-CERT strongly encourages organizations across all sectors to review and employ the mitigation strategies listed below.\n",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6367868185043335
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Additional information on this incident including technical indicators can be found in the TLP GREEN alert (IR-ALERT-H-16-043-01P and subsequent updates) that was released to the US-CERT secure portal.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.586262583732605
+        },
+        "prediction": {}
+    },
+    {
+        "text": "US critical infrastructure asset owners and operators can request access to this information by emailing ics-cert@hq.dhs.gov(link sends email).\n The following account of events is based on the interagency team\u2019s interviews with operations and information technology staff and leadership at six Ukrainian organizations with first-hand experience of the event. Following these discussions and interviews, the team assesses that the outages experienced on December 23, 2015, were caused by external cyber-attackers.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5335741639137268
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The team was not able to independently review technical evidence of the cyber-attack; however, a significant number of independent reports from the team\u2019s interviews as well as documentary findings corroborate the events as outlined below.\n Through interviews with impacted entities, the team learned that power outages were caused by remote cyber intrusions at three regional electric power distribution companies (Oblenergos) impacting approximately 225,000 customers.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6120550036430359
+        },
+        "prediction": {}
+    },
+    {
+        "text": "While power has been restored, all the impacted Oblenergos continue to run under constrained operations. In addition, three other organizations, some from other critical infrastructure sectors, were also intruded upon but did not experience operational impacts  \nThe cyber-attack was reportedly synchronized and coordinated, probably following extensive reconnaissance of the victim networks. According to company personnel, the cyber-attacks at each company occurred within 30 minutes of each other and impacted multiple central and regional facilities. During the cyber-attacks, malicious remote operation of the breakers was conducted by multiple external humans using either existing remote administration tools at the operating system level or remote industrial control system (ICS) client software via virtual private network (VPN) connections. The companies believe that the actors acquired legitimate credentials prior to the cyber-attack to facilitate remote access.\n All three companies indicated that the actors wiped some systems by executing the KillDisk malware at the conclusion of the cyber-attack. The KillDisk malware erases selected files on target systems and corrupts the master boot record, rendering systems inoperable.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.22855022549629211
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It was further reported that in at least one instance, Windows-based human-machine interfaces (HMIs) embedded in remote terminal units were also overwritten with KillDisk.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4490607678890228
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The actors also rendered Serial-to-Ethernet devices at substations inoperable by corrupting their firmware. In addition, the actors reportedly scheduled disconnects for server Uninterruptable Power Supplies (UPS) via the UPS remote management interface.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6194434762001038
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The team assesses that these actions were done in an attempt to interfere with expected restoration efforts.\n Each company also reported that they had been infected with BlackEnergy malware however we do not know whether the malware played a role in the cyber-attacks. The malware was reportedly delivered via spear phishing emails with malicious Microsoft Office attachments. It is suspected that BlackEnergy may have been used as an initial access vector to acquire legitimate credentials; however, this information is still being evaluated. It is important to underscore that any remote access Trojan could have been used and none of BlackEnergy\u2019s specific capabilities were reportedly leveraged.\n",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.432430624961853
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The first, most important step in cybersecurity is implementation of information resources management best practices.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6695165038108826
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Key examples include: procurement and licensing of trusted hardware and software systems; knowing who and what is on your network through hardware and software asset management automation; on time patching of systems; and strategic technology refresh.\n Organizations should develop and exercise contingency plans that allow for the safe operation or shutdown of operational processes in the event that their ICS is breached. These plans should include the assumption that the ICS is actively working counter to the safe operation of the process.\n ICS-CERT recommends that asset owners take defensive measures by leveraging best practices to minimize the risk from similar malicious cyber activity.\n Application Whitelisting (AWL) can detect and prevent attempted execution of malware uploaded by malicious actors. The static nature of some systems, such as database servers and HMI computers, make these ideal candidates to run AWL. Operators are encouraged to work with their vendors to baseline and calibrate AWL deployments.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3460340201854706
+        },
+        "prediction": {}
+    },
+    {
+        "text": "NCCIC/ICS-CERT, Seven Steps to Effectively Defend Industrial Control Systems, https://ics-cert.us-cert.gov/sites/default/files/documents/Seven%20Steps%20to%20Effectively%20Defend%20Industrial%20Control%20Systems_S508C.pdf, web site last accessed February 25, 2016.\n",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3612487316131592
+        },
+        "prediction": {}
+    },
+    {
+        "text": "If a defined business requirement or control function exists, only allow real-time connectivity to external networks. If one-way communication can accomplish a task, use optical separation (\u201cdata diode\u201d).",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5390804409980774
+        },
+        "prediction": {}
+    },
+    {
+        "text": "If bidirectional communication is necessary, then use a single open port over a restricted network path.a\nOrganizations should also limit Remote Access functionality wherever possible.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6470014452934265
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Users should implement \u201cmonitoring only\u201d access that is enforced by data diodes, and do not rely on \u201cread only\u201d access enforced by software configurations or permissions.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.562972903251648
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Remote access should be operator controlled, time limited, and procedurally similar to \u201clock out, tag out.\u201d",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4544667899608612
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The same remote access paths for vendor and employee connections can be used; however, double standards should not be allowed. Strong multi-factor authentication should be used if possible, avoiding schemes where both tokens are similar types and can be easily stolen (e.g., password and soft certificate).a\nAs in common networking environments, control system domains can be subject to a myriad of vulnerabilities that can provide malicious actors with a \u201cbackdoor\u201d to gain unauthorized access. Often, backdoors are simple shortcomings in the architecture perimeter, or embedded capabilities that are forgotten, unnoticed, or simply disregarded.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.37361204624176025
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Malicious actors often do not require physical access to a domain to gain access to it and will usually leverage any discovered access functionality. Modern networks, especially those in the control systems arena, often have inherent capabilities that are deployed without sufficient security analysis and can provide access to malicious actors once they are discovered. These backdoors can be accidentally created in various places on the network, but it is the network perimeter that is of greatest concern.\n When looking at network perimeter components, the modern IT architecture will have technologies to provide for robust remote access.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.511359453201294
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Each technology will allow enhanced communications in and amongst affiliated networks and will often be a subsystem of a much larger and more complex information infrastructure.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6072111129760742
+        },
+        "prediction": {}
+    },
+    {
+        "text": "However, each of these components can (and often do) have associated security vulnerabilities that an adversary will try to detect and leverage.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5287460088729858
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Interconnected networks are particularly attractive to a malicious actor, because a single point of compromise may provide extended access because of pre-existing trust established among interconnected resources.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.600468635559082
+        },
+        "prediction": {}
+    },
+    {
+        "text": "NCCIC/ICS-CERT, Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies, https://ics-cert.us-cert.gov/sites/default/files/recommended_practices/NCCIC_ICS-CERT_Defense_in_Depth_2016_S508C.pdf , web site last accessed February 25, 2016.\n",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.34442174434661865
+        },
+        "prediction": {}
+    },
+    {
+        "text": "ICS-CERT reminds organizations to perform proper impact analysis and risk assessment prior to taking defensive measures.\n ICS-CERT also provides a recommended practices section for control systems on the ICS-CERT web site (http://ics-cert.us-cert.gov). Several recommended practices are available for reading or download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies and Seven Steps to Effectively Defend Industrial Control Systems.\n Organizations that observe any suspected malicious activity should follow their established internal procedures and report their findings to ICS-CERT for tracking and correlation against other incidents.\n",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.2869247794151306
+        },
+        "prediction": {}
+    },
+    {
+        "text": "For more information on securely working with dangerous malware, please see US-CERT Security Tip ST13-003 Handling Destructive Malware at https://www.us-cert.gov/ncas/tips/ST13-003 .\n",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4227808117866516
+        },
+        "prediction": {}
+    },
+    {
+        "text": "While the role of BlackEnergy in this incident is still being evaluated, the malware was reported to be present on several systems. Detection of the BlackEnergy malware should be conducted using the latest published YARA signature.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6888450384140015
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Additional information about using YARA signatures can be found in the May/June 2015 ICS-CERT Monitor available at: https://ics-cert.us-cert.gov/monitors/ICS-MM201506.\n Additional information on this incident including technical indicators can be found in the TLP GREEN alert (IR-ALERT-H-16-043-01P and subsequent updates) that was released to the US-CERT secure portal.",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.46658721566200256
+        },
+        "prediction": {}
+    },
+    {
+        "text": "US critical infrastructure asset owners and operators can request access to this information by emailing ics-cert@hq.dhs.gov(link sends email).\n This product is provided subject to this Notification and this Privacy & Use policy.\n",
+        "source": "Cyber-Attack Against Ukrainian Critical Infrastructure _ CISA.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.43382903933525085
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Research | Our Q3 report details what's new in the world of ransomware.\n On Thursday, October 15th, the United States Department of Justice (DoJ) indicted six Russian military officers connected to the SandWorm advanced persistent threat (APT) group, a threat group attributed to Russia\u2019s Main Intelligence Directorate (GRU). The indictment alleged that the men belonged to Military Unit 77445 of the GRU and coordinated a destructive cyber campaign against thousands of US and international corporations, organizations, political campaigns, and governments.",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4386019706726074
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The military officers purportedly conspired for Russia\u2019s strategic benefit through unauthorized access to victim computers to support broader Russian government efforts. \n",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7097072005271912
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Throughout the years, Digital Shadows (now ReliaQuest) has followed SandWorm, and we even analyzed the impact of the indictment in our recent ShadowTalk podcast. With this new indictment and a couple of new pieces of information, we thought this would be the perfect opportunity to revisit the tactics, techniques, and procedures (TTPs) behind the SandWorm APT.\n ",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5580326914787292
+        },
+        "prediction": {}
+    },
+    {
+        "text": "SandWorm is an APT group that has been active since at least 2009, with some researchers suggesting the group was involved in attacks against Georgia in 2008.",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6510371565818787
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The tactics employed in SandWorm\u2019s campaigns align with GRU\u2019s philosophy of leveraging aggressive and sometimes destructive cyberattacks.",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6863085031509399
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The charges filed against SandWorm represent not only the first criminal charges against SandWorm for its most destructive attacks but the first time that most of the charged threat actors have been publicly identified as members of the cybercriminal group.",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7167210578918457
+        },
+        "prediction": {}
+    },
+    {
+        "text": "They also represent SandWorm\u2019s first global law enforcement reaction to their deployment of the NotPetya malware, which crippled networks worldwide.\n ",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6626764535903931
+        },
+        "prediction": {}
+    },
+    {
+        "text": "According to the Government Communications Headquarters (GCHQ), Russia is assessed as a highly competent threat actor with demonstrated potential to carry out operations that have a myriad of impacts across any industry.",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.675714910030365
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Russia has been carrying out disruptive cyber activities to establish itself forcefully in various ways, including seeking to disrupt other countries\u2019 elections.",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5667077898979187
+        },
+        "prediction": {}
+    },
+    {
+        "text": "For example, it has been widely reported that Russian state-associated groups were behind the \u201chack and leak\u201d cyberattack, which aimed to breach French political party members\u2019 accounts in the run-up to the 2017 French elections.\n The United Kingdom\u2019s Secret Intelligence Service (SIS) reported that this activity \u201ccomes to the very muddy nexus between business and corruption and state power in Russia.\u201d GCHQ also stated a \u201cconsiderable balance of intelligence now which shows the links between serious and organized crime groups and Russian state activity.\u201d\n_ Around December 2015 and December 2016, SandWorm attempted to destabilize Ukraine by launching cyberattacks against companies that support the country\u2019s electric infrastructure, disrupting the supply of electricity to more than 225,000 Ukrainian customers.\n_ SandWorm launched spearphishing campaigns targeting local government entities, political parties, and campaigns in France, including those connected with French President Emmanuel Macron\u2019s presidential campaign. \n _ Around June 2017, SandWorm launched its \u201cNotPetya\u201d malware campaign, causing hundreds of victim organizations worldwide to lose one billion dollars collectively.\n",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.364926278591156
+        },
+        "prediction": {}
+    },
+    {
+        "text": "SandWorm retaliated against the 2018 Winter Olympics by launching cyberattacks against critical infrastructure after a Russian government-sponsored doping effort led to Russian athletes being unable to participate under the Russian flag.\n _ Around April 2018, SandWorm undermined efforts to hold Russia accountable for its use of a weapons-grade nerve agent on foreign soil by launching spearphishing campaigns against international and government organizations investigating the poisoning of a former GRU officer and his daughter.  \n",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5443293452262878
+        },
+        "prediction": {}
+    },
+    {
+        "text": "SandWorm threat group members primarily used spearphishing emails to gain access to computers or account credentials. The group specifically crafted the emails to resemble those from trustworthy or familiar senders. Attackers went so far as to develop and test spearphishing techniques before carrying out their campaigns to increase their success chances. \n",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6372167468070984
+        },
+        "prediction": {}
+    },
+    {
+        "text": "SandWorm heavily leveraged PowerShell commands and scripts to discover system information, execute code, and download malware.",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4973025321960449
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In one instance, the group executed a malicious PowerShell script that contained versions of a credential harvesting tool.",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7093150615692139
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Many of the spearphishing emails sent by SandWorm contained malware-laced documents that required user execution to deploy. \n To maintain their foothold, SandWorm obtained and repeatedly used existing accounts\u2019 credentials to preserve persistence in victim systems. The group primarily deployed malware and leveraged hacking tools to maintain control over victim computers and networks. \n SandWorm leveraged malware to escalate system privileges and determine whether particular antivirus processors were running, then attempted to identify other computers on the same network to potentially compromise. \n SandWorm used an algorithm to obscure particular features of the Olympic Destroyer malware to obstruct post-attack investigations and avoid detection. The group also attempted to obfuscate their activity by deleting data from compromised machines and servers and clearing event logs. \n On multiple occasions, SandWorm attempted to masquerade their activity through researching and emulating malware used by the Lazarus Group. \n SandWorm dumped credentials to obtain account login and credential details from compromised machines. \n SandWorm leveraged customized malware to overwrite itself to incorporate any additional usernames and passwords that it could obtain from the previous computer before spreading to the next computer.\n",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.2917887270450592
+        },
+        "prediction": {}
+    },
+    {
+        "text": "SandWorm repeatedly accessed and browsed files, ran malicious scripts, and searched compromised machines for credential files and files containing network configuration details. \n SandWorm exploited remote services to gain unauthorized access to internal systems. Once they gained access to the remote system, they deployed malware that was leveraged to obtain system privileges, extract and execute an open-source credential harvesting tool, and move laterally throughout the network.\n After gaining access to victims\u2019 computers, SandWorm threat actors performed various functions designed to identify, collect, package, and view targeted data, including usernames, IP addresses, and server data relating to RDP sessions on the target computers. This activity included stealing credentials that allowed them to move laterally and exponentially throughout victims\u2019 computer networks.\n",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4341912865638733
+        },
+        "prediction": {}
+    },
+    {
+        "text": "SandWorm established command and control to create a single point of access between compromised networks and a server they controlled.",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6649047136306763
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The tunnel allowed them to hide their activity, issue commands, install additional tools, and transfer data.\n SandWorm leveraged legitimate credentials to exfiltrate data from a victim network and retrieve internal documents from machines inside victim environments. \n SandWorm defaced approximately 1,500 websites and disrupted service to some of those websites following the Georgian web hosting provider\u2019s compromise. \n The group deployed destructive malware to delete files from the hard drive, force shutdowns, and impede rebooting and recovery by misconfiguring BitLocker, rendering computers inoperable.\n Considering the Russian Main Intelligence Directorate (GRU) allegedly sponsored SandWorm, its members\u2019 arrest and extraction are unlikely.",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4510316550731659
+        },
+        "prediction": {}
+    },
+    {
+        "text": "However, it is possible that authorities would impose sanctions against the alleged cybercriminals and the GRU unit that sponsors them, considering this countermeasure has previously been used. For now, SandWorm\u2019s indictments will limit their ability to use the Western financial system or travel to any country that may have an extradition agreement with the US.\n Is this indictment to deter future activity from Russia state-associated threat actors?",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5670337080955505
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Generally speaking, this will remind threat actors that cyberattacks will not occur without consequences. As nation-state operations are investigated and pieced together through international cooperation, the US will likely continue to file indictments against associated actors to increase pressure on them. \n",
+        "source": "Mapping MITRE ATT&CK to SandWorm APT\u2019s Global Campaign - ReliaQuest.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5435250401496887
+        },
+        "prediction": {}
+    },
+    {
+        "text": "CRASHOVERRIDE\nAnalysis of the Threat\nto Electric Grid Operations\nDRAGOS INC. / WWW.DRAGOS.COM\nversion 2.20170613\nC R A S HO V E R RI D E : Threat to the Electic Grid Operations\nCRASHOVERRIDE \nAnalyzing the Threat to \nElectric Grid Operations\nContents\nExecutive Summary  \n    Why Are We Publishing This \n    Key Takeaways \nBackground   \n    Introduction to Electric Grid Operations \nEvolution of Tradecraft \n    STUXNET   \n    Dragon\ufb02y/HAVEX \n    BLACKENERGY 2  \n    Ukraine Cyber Attack 2015 \n     CRASHOVERRIDE \nCapabilities   \n    Capabilities Overview \n    Module Commonalities  \n    Backdoor/RAT Module   \n    Launcher Module \n    Data Wiper Module \n    IEC 104 Module   \n    IEC 101 Module \n    61850 Module \n    OPC DA Module   \n    SIPROTECT DoS Module \n    Capability Conclusions   \nImplications of capability   \n    Attack Option: De-energize substation \n    Attack Option: Force an Islanding event \n    Adding Ampli\ufb01cation Attacks \n    Using OPC to create a Denial of Visibility \n    Using CVE-2015-5374 to hamper protective relays  \nDefense Recommendations \n3\n3\n4\n5\n6\n8\n8\n9\n10\n10\n11\n12\n12\n13\n13\n15\n16\n17\n21\n21\n21\n22\n22\n22\n22\n23\n24\n24\n25\n26\nC R A S HO V E R RI D E : Threat to the Electric Grid Operations\nExecutive Summary\nDragos, Inc. was noti\ufb01ed by the Slovak anti-virus \ufb01rm ESET of an ICS tailored mal-\nware on June 8th, 2017.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.11811639368534088
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The Dragos team was able to use this noti\ufb01cation to \ufb01nd \nsamples of the malware, identify new functionality and impact scenarios, and con-\n\ufb01rm that this was the malware employed in the December 17th, 2016 cyber-attack \non the Kiev, Ukraine transmission substation which resulted in electric grid opera-\ntions impact. This report serves as an industry report to inform the electric sector \nand security community of the potential implications of this malware and the appro-\npriate details to have a nuanced discussion. \n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5100670456886292
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Why Are We Publishing This\nSecurity \ufb01rms must always balance a need to inform the public against empowering \nadversaries with feedback on how they are being detected and analyzed.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6694652438163757
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This case is \n-\nbility described in this report takes advantage of the knowledge of electric grid sys-\ntems.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.603745698928833
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It cannot just be \npatched or architected away although the electric grid is entirely defensible.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.677123486995697
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Human \ndefenders leveraging an active defense such as hunting and responding internally to \nthe industrial control system (ICS) networks can ensure that security is maintained.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6474902033805847
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\n\u2022  ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.752051591873169
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malware self-identi\ufb01es as \u201ccrash\u201d in multiple locations thus leading to the \nnaming convention \u201cCRASHOVERRIDE\u201d for the malware framework.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7076983451843262
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\u2022   CRASHOVERRIDE is the \ufb01rst ever malware framework designed and deployed to \n\u2022   CRASHOVERRIDE is the fourth ever piece of ICS-tailored malware (STUXNET, \nBLACKENERGY 2, and HAVEX were the \ufb01rst three) used against targets and the \nsecond ever to be designed and deployed for disrupting physical industrial pro-\ncesses (STUXNET was the \ufb01rst).\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5488459467887878
+        },
+        "prediction": {}
+    },
+    {
+        "text": "CRASHOVERRIDE is not unique to any particular vendor or con\ufb01guration and \ninstead leverages knowledge of grid operations and network communications \nto cause impact; in that way, it can be immediately re-purposed in Europe and \nportions of the Middle East and Asia.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5051693320274353
+        },
+        "prediction": {}
+    },
+    {
+        "text": "CRASHOVERRIDE is extensible and with a small amount of tailoring such as the \n-\n\u2022  CRASHOVERRIDE could be leveraged at multiple sites simultaneously, but the \nscenario is not cataclysmic and would result in hours, potentially a few days, of \noutages, not weeks or more.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5520249605178833
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Dragos assesses with high con\ufb01dence that the same malware was used in the \ncyber-attack to de-energize a transmission substation on December 17, 2016, \nresulting in outages for an unspeci\ufb01ed number of customers.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6148158311843872
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The functionality in the CRASHOVERRIDE framework serves no espionage pur-\npose and the only real feature of the malware is for attacks which would lead to \nelectric outages.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6877312064170837
+        },
+        "prediction": {}
+    },
+    {
+        "text": "CRASHOVERRIDE could be extended to other industries with additional pro-\ntocol modules, but the adversaries have not demonstrated the knowledge of \nother physical industrial processes to be able to make that assessment anything \nother than a hypothetical at this point and protocol changes alone would be \n\u2022  Dragos, Inc. tracks the adversary group behind CRASHOVERRIDE as ELECTRUM \nand assesses with high con\ufb01dence through con\ufb01dential sources that ELECTRUM \nhas direct ties to the Sandworm team. Our intelligence ICS WorldView cus-\ntomers have received a comprehensive report and this industry report will not \nget into sensitive technical details but instead focus on information needed for \ndefense and impact awareness.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.557704746723175
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\nOn June 8th, 2017 the Slovak anti-virus \ufb01rm ESET shared a subset of digital hash-\nes of the malware described below and a portion of their analysis with Dragos. \n The Dragos team was asked to validate ESET\u2019s \ufb01ndings to news publications ESET \nhad contacted about the story which would be published June 12th, 2017. Dragos \nwould like to thank ESET for sharing the digital hashes which allowed the Dragos \nteam to spawn its investigation. Without control of the timeline, it was Dragos\u2019 \ndesire to publish a report alongside ESET\u2019s report to capture the nuance of elec-\ntric grid operations.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.502099871635437
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Also, because of the connectio n to the activity group \nDragos tracks as ELECTRUM, it was our decision that an independent report was \nwarranted.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.648326575756073
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The Dragos team has been busy over the last 96 hours reproducing and \nverifying ESET\u2019s analysis, hunting for new samples of the malware and potential ad-\nditional infections, notifying appropriate companies, and informing our customers. \n Importantly, Dragos also updated ICS vendors that needed to be made aware of \nthis capability, relevant government agencies, many national computer emergen-\ncy response teams (CERTs), and key players in the electric energy community.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5011172890663147
+        },
+        "prediction": {}
+    },
+    {
+        "text": "If you are a Dragos, Inc. customer, you will have already received the more concise \nand technically in-depth intelligence report.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6069040298461914
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It will be accompanied by follow-on \nreports, and the Dragos team will keep you up-to-date as things evolve.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5680398941040039
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It is in \nDragos\u2019 view that the following report contains signi\ufb01cant assessments that de-\nserve a wide audience in the electric sector.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6881359219551086
+        },
+        "prediction": {}
+    },
+    {
+        "text": "but this case-study is of immediate signi\ufb01cance, and this is not a \nsingular contained event.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5689114332199097
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The CRASHOVERRIDE capability is purpose built to im-\npact electric grid operations and has been created as a framework to facilitate the \nimpact of electric grids in other countries in the future outside the attack that took \nplace with it December 17th, 2016 in Ukraine.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6719343066215515
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\nIntroduction to Electri c",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7284233570098877
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Grid Operations  \nAs with most ICS speci\ufb01c incidents, the most interesting components of the attack \nare in how the adversary has demonstrated they understand the physical industri-\nal process. Whereas vulnerabilities, exploits, and infection vectors can drive dis-\ncussions in intrusion analysis of IT security threats that is not the most important \naspect of an ICS attack. To fully understand the CRASHOVERRIDE framework, its \nindividual capabilities, and overall impact on ICS security it is important to under-\nstand certain fundamentals of electric grid operations.\n Simplistically, the electric grid can be categorized into three functions: generation \nof electricity at power plants, transmission from the power plants across typically \nlong distances at high voltage, and then stepped down to lower voltage to distribu-\ntion networks to power customers. Along these long transmission and distribution \nsystems are substations to transform voltage levels, serve as switching stations and \nfeeders, and fault protection.\nsystems and communications.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.2864070534706116
+        },
+        "prediction": {}
+    },
+    {
+        "text": "As an example, while a power plant feeds energy \ninto the electric grid there is no one-size-\ufb01ts-all approach to power plants.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6203464865684509
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This \nmeans that the electric grid must be a robust, almost living creature, which moves \nand balances electricity across large regions. Electric grids use a special type of \nindustrial control system called a supervisory control and data acquisition (SCADA) \nsystem to manage this process across large geographical areas. Transmission and \ndistribution owners have their substations in their particular geographical footprint \nand control centers manage the cross-territory SCADA systems 24/7 by human op-\nerators. These control centers often regularly manage the continual demand and \nresponse of their customers, respond to faults, and plan and work with neighboring \nutilities.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.30599576234817505
+        },
+        "prediction": {}
+    },
+    {
+        "text": "As an \nexample, these systems use SCADA and leverage systems such as remote terminal \nunits (RTUs) to control circuit breakers.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5666006803512573
+        },
+        "prediction": {}
+    },
+    {
+        "text": "As the breakers open and close, substations \nare energized or de-energized to balance power across the grid.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.63355952501297
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Some network \nprotocols such as IEC 104, a TCP-based protocol, and its serial protocol compan-\nion IEC 101, are often regional speci\ufb01c.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5048204660415649
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Europe, some of Asian, and portions of \nthe Middle East leverage these protocols to control RTUs from the SCADA human \nmachine interfaces (HMIs).\n ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6347293853759766
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\nFigure 1: Simplistic Mockup of Electric Grid Operations Systems and Communications Relevant for CRASHOVERRIDE\n ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6594291925430298
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In North America, the protocol of choice for this is the Distributed Network Proto-\ncol 3 (DNP3).",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6795089244842529
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The various protocols purposes are largely the same though: control \nphysical equipment through RTUs, programmable logic controllers (PLCs), and \nother \ufb01nal control elements via HMIs as a part of the larger SCADA system.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6845411062240601
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Some \nprotocols have been adopted cross-country including IEC 61850 which is usual-\nly leveraged from an HMI to work with equipment such as digital relays and other \ntypes of intelligent electronic devices (IEDs).",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4944319725036621
+        },
+        "prediction": {}
+    },
+    {
+        "text": "IEDs are purpose built microproces-\nsor-based control devices and can often be found alongside  power equipment \nsuch as circuit breakers.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.48284241557121277
+        },
+        "prediction": {}
+    },
+    {
+        "text": "IEDs and RTUs operate in a master/slave capacity where \nthe slave devices are polled and sent commands by master devices.\n ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6565973162651062
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\nSubstations manage the \ufb02ow of power through transmission or distribution lines. \n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6488968729972839
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Management of energizing and de-energizing of these lines ultimately control \nwhen and where the \ufb02ow of power moves in and out of the substation.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5835436582565308
+        },
+        "prediction": {}
+    },
+    {
+        "text": "If you \n\u201copen\u201d a breaker you are removing the path where the electricity is \ufb02owing, or \nde-energizing it. If you \u201cclose\u201d a breaker then you are energizing the line by closing \nthe gap and allowing the power to \u201c\ufb02ow.\u201d",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6892332434654236
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This concept is similar to anyone who \nmay be confused on this terminology as it is opposite to how one would describe \nThe grid is a well-designed system, and while damage can be done, it is vital to un-\nderstand that in nations around the world the electric community has designed the \nsystem to be reliable and safe which has a natural byproduct of increased securi -\nty.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5104766488075256
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In the United States as an example, reliability is reinforced with regular training \nand events such as the North American grid\u2019s GridEx where grid operators train for \nevents from hurricanes, to terrorist incidents, to cyber-attacks and how they will \nrespond to such outages.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6073235273361206
+        },
+        "prediction": {}
+    },
+    {
+        "text": "There is constantly a balance that must be understood \nwhen referring to grid operations: yes, the systems are vulnerable and more must \nbe done to understand complex and multi-stage attacks, but the grid is also in a \ngreat defensible position because of the work of so many over the years.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6295258402824402
+        },
+        "prediction": {}
+    },
+    {
+        "text": "CRASHOVERRIDE represents an evolution in tradecraft and capabilities by ad-\nversaries who wish to do harm to industrial environments.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5324534177780151
+        },
+        "prediction": {}
+    },
+    {
+        "text": "To fully appreciate the \nmalware it is valuable to compare it to its predecessors and the Ukraine 2015 cyber \nattack.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7142643332481384
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The STUXNET malware has been written about extensively and r eferenced, at \ntimes, unfortunately, in comparison to most ICS related incidents and malware. It \nwas the \ufb01rst con\ufb01rmed example of ICS tailored malware leveraged against a tar-\nget. The Windows portion of the code with its four zero-day exploits gained a lot \nof notoriety.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5139696002006531
+        },
+        "prediction": {}
+    },
+    {
+        "text": "However, it was the malware\u2019s payload that was speci\ufb01c to ICS that \nwas the most interesting component.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7033233642578125
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In IT networks, it is important \nfor adversaries to identify vulnerabilities and exploit them  to load malware and gain \nprivileges on systems. \n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4810098111629486
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\nIn ICS networks though,",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6576898097991943
+        },
+        "prediction": {}
+    },
+    {
+        "text": "some of the most concerning issues are related to an \nadversary\u2019s ability to learn the physical process such as the engineering of the \nsystems and their components in how they work together. STUXNET\u2019s greatest \nstrength was leveraging functionality in Siemens equipment to interact with nucle-\nar enrichment centrifuges through abuses of intended functionality. The purpose \nof the Siemens equipment was to be able to control and change the speed of the \ncentrifuges. Stuxnet did this as well but with pre-programmed knowledge from the \nattackers on the speeds that would cause the centrifuge to burst from their cas-\nings. ICS tailored malware leveraging knowledge of industrial processes was now a \nthing. However, it was speci\ufb01c to Siemens equipment and unique to the Natanz fa-\ncility in Iran.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.42235010862350464
+        },
+        "prediction": {}
+    },
+    {
+        "text": "While tradecraft and exploits can be replicated, it was not reasonable \nto re-purpose the Stuxnet capability.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6016458868980408
+        },
+        "prediction": {}
+    },
+    {
+        "text": "control system locations, estimates put it at over 2,000 sites, with a large empha-\nsis on electric power and petrochemical asset owners.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5207388997077942
+        },
+        "prediction": {}
+    },
+    {
+        "text": "There are often not many commonalities between \nmentation, integration, and the physical processes required at each site.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.606532871723175
+        },
+        "prediction": {}
+    },
+    {
+        "text": "One of the \nfew commonalities across numerous ICS industries though is the OPC protocol. \n It is designed to be the universal translator for many industrial components and is \nreadily accessible in an HMI or dedicated OPC server. The HAVEX malware lever-\naged legitimate functionality in the OPC protocol to map out the industrial equip-\nment and devices on an ICS network. It was a clever use of the protocol and while \nthe malware itself was not complex the tradecraft associated with the usage of \nOPC was sophisticated.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4987628161907196
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Instead, it was the type of data you would want to leverage to design attacks \nin the future built for the speci\ufb01c targets impacted with the malware.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7222386002540588
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\nThe Sandworm team has targeted numerous industries ranging from western mil-\nitaries, governments, research organizations, defense contractors, and industrial \nsites.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.587380588054657
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It was their use of the BLACKENERGY 2 malware that caught the ICS indus-\ntry\u2019s attention.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6706084609031677
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This ICS tailored malware contained exploits for speci\ufb01c types of \nHMI applications including Siemens SIMATIC, GE CIMPLICITY, and Advantech We-\nbAccess. BLACKENERGY 2 was a smart approach by the adversaries to target in-\nternet connected HMIs. Upon exploitation of the HMIs, the adversaries had access \nto a central location in the ICS to start to learn the industrial process and gain the \ngraphical representation of that ICS through the HMI. The targeting of HMIs alone \nis often not enough to cause physical damage, but it is an ideal target for espio-\nnage and positioning in an ICS. Gaining a foothold in the network that had access \nto numerous components of the ICS while maintaining command and control to \nInternet locations, positioned it well for espionage.\n The cyber-attack on three power companies in Ukraine on December 23rd, 2015 \nmarked a revolutionary event for electric grid operators. It was the \ufb01rst known in-\nstance where a cyber-attack had disrupted electric grid operations. The Sandworm \nteam was attributed to the attack and their use of the BLACKENERGY 3 malware. \n BLACKENERGY 3 does not contain ICS components in the way that BLACKENER-\nGY 2 did.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.27015092968940735
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Instead, the adversaries leveraged the BLACKENERGY 3 malware to gain \naccess to the corporate networks of the power companies and then pivot into the \nSCADA networks. While in the environment the adversaries performed their recon-\nnaissance and eventually leveraged the grids systems against itself. They learned \nthe operations and used the legitimate functionality  of distribution management \nsystems to disconnect substations from the grid leaving 225,000+ customers \nwithout power for upwards of 6 hours until manual operations could restore pow-\ner. However, due to the wiping of Windows systems through the KillDisk malware \nand destruction of serial-to-Ethernet devices through malicious \ufb01rmware updates, \nthe Ukrainian grid operators were without their SCADA environment, meaning they \nlost the ability for automated control, for upwards of a year in some locations. The \nmost notable aspect of the attack was the adversary\u2019s focus on learning how to \nleverage the systems against themselves.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.36483269929885864
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Malware enabled the attack, and malware \n-\naging the ICS against itself that resulted in the electric power disruptions, not mal-\nware.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6247575879096985
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\n The CRASHOVERRIDE malware impacted a single transmission level substation \nin Ukraine on December 17th, 2016.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7057644128799438
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Many elements of the attack appear to have \nbeen more of a proof of concept than what was fully capable in  the malware. The \nmost important thing to understand though from the evolution of tradecraft is the \ncodi\ufb01cation and scalability in the malware towards what has been learned through \npast attacks.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6621506810188293
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malware took an approach to understand and codify the knowl-\nedge of the industrial process to disrupt operations as STUXNET did.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6899183392524719
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It leveraged \nthe OPC protocol to help it map the environment and select its targets similar to \nHAVEX.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7032250761985779
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It targeted the libraries and con\ufb01guration \ufb01les of HMIs to understand the \nenvironment further and leveraged HMIs to connect to Internet-connected lo-\ncations when possible as BLACKENERGY 2 had done.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.620952308177948
+        },
+        "prediction": {}
+    },
+    {
+        "text": "And it took the same type \nof approach to understanding grid operations and leveraging the systems against \nthemselves displayed in Ukraine 2015\u2019s attack. It did all of these things with added \nsophistication in each category giving the adversaries a platform to conduct at-\ntacks against grid operations systems in various environments and not con\ufb01ned to \nwork only on speci\ufb01c vendor platforms. It marks an advancement in capability by \nadversaries who intend to disrupt operations and poses a challenge for defenders \nwho look to patching systems as a primary defense, using anti-malware tools to \nspot speci\ufb01c samples, and relying upon a strong perimeter or air-gapped network \nas a silver-bullet solution.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4043103754520416
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Adversaries are getting smarter, they are growing in their \nability to learn industrial processes and codify and scale that knowledge, and de-\nfenders must also adapt.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.45365700125694275
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7530063986778259
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The CRASHOVERRIDE malware is a modular framework consisting of an initial \nbackdoor, a loader module, and several supporting and payload modules.\n The most important items are the backdoor, which provides access to the infected \npayload modules. Dragos focused our analysis on the previously mentioned items \nas they are most relevant for defending grid operations. \n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.645081102848053
+        },
+        "prediction": {}
+    },
+    {
+        "text": "on the targeted industrial control system. One sample was the IEC 104 protocol \nmodule, and the other sample was the data wiper.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7154655456542969
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Both samples shared common \ndesign characteristics indicative of being part of a broader ICS attack and manip-\nulation framework.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5971801280975342
+        },
+        "prediction": {}
+    },
+    {
+        "text": "ESET was able to uncover an additional IEC 61850 and OPC \nmodule which they have analyzed and shared with Dragos.\n Below contains an overview of program execution \ufb02ow and dependency.\n Figure 2. CRASHOVERRIDE Module Overview Including ESET\u2019s Discoveries\nC R A S HO V E R RI D E : Threat to the Electric Grid Operations\nDragos analysts were able to determine the compile time for both modules ob-\ntained as being within 12 minutes of each other just after 2:30 am on December \n18th in an unknown time zone although timestamps for both samples were zeroed \nout.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4232122004032135
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Both mod-\nule samples exported a function named Crash that served as the main function to \nbegin execution. The common Crash function enables the ability to \u201cplug and play\u201d \nadditional modules.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7202975749969482
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Authenticates with a local proxy via the internal network established before the \n\u2022   After authentication opens HTTP channel to external command and control \n\u2022  Receives commands via the external command and control (C2) server\n\u2022  Creates a \ufb01le on the local system (contents not determined)\n\u2022  Overwrites an existing service to point to the backdoor so the malware persists \nAccess to the ICS network \ufb02ows through a backdoor module.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5883182883262634
+        },
+        "prediction": {}
+    },
+    {
+        "text": "On execution, the malware \nattempts to contact a hard-coded proxy address located within the local network.  \n ELECTRUM must establish the internal proxy before the installation of the back-\ndoor.\n The malware expects to communicate to an internal proxy listening on TCP 3128. \n This port is a default port associated with the Squid proxy. The beaconing contin-\nues without pause until it establishes a connectio n. The backdoor then sends a se-\nries of HTTP POST requests with the victim\u2019s Windows GUID (a unique identi\ufb01er set \nwith every Windows installation) in the HTTP body. This information authenticates \nthe targeted machine to the command and control (C2) server.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.47531941533088684
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7530063986778259
+        },
+        "prediction": {}
+    },
+    {
+        "text": "If the authentication is successful to the internal proxy, the malware attempts to per-\nform an HTTP CONNECT to an external C2 server via the internal proxy. Across four \nA check of the TOR project\u2019s ExoneraTOR service indicates that all of the listed IP ad-\ndresses were listed as active TOR nodes during the events in Ukraine.\n When performing the HTTP CONNECT, the malware attempts to identify the system \ndefault user agent.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.589771568775177
+        },
+        "prediction": {}
+    },
+    {
+        "text": "If this cannot be determined or does not exist, then a hard-coded \ndefault for the malware is used:\nMozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; InfoPath.1)\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5510843992233276
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malware can be con\ufb01gured to beacon out periodically afterwards via a hard-coded \ncon\ufb01guration value.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6908860802650452
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The implant is designed to retrieve commands from the C2 server:\n\u2022  Create a new process as logged in user\n\u2022  Create a new process as speci\ufb01ed user via CreateProcessWithLogon\n\u2022  Execute a command as logged in user\n\u2022  Execute a command as speci\ufb01ed user\n\u2022  Specify a user (log in as user) and stop a service\n\u2022  Specify a user (log in as user) and start a service\n\u2022   Alter an existing service to point to speci\ufb01ed process and change to start at boot\nExecution results in several artifacts left on the host. During execution, the malware \nchecks for the presence of a mutex value. Mutexes are program objects that name re-\nsources to enable sharing with multiple program threads.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4738844931125641
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In this case, CRASHOVERRIDE \nchecks the following:\nC R A S HO V E R RI D E : Threat to the Electric Grid Operations\nThe backdoor may also create and check a blank mutex name.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6536757946014404
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Reviewing memo-\nry during execution and analysis of other modules in the malware indicates that \\\nSessions\\1\\Windows\\ appears multiple times, indicating that a check may be per-\nformed.\n The backdoor writes a \ufb01le to either C:\\Users\\Public\\ or C:\\Users\\<Executing User>\nThe contents of this \ufb01le were not discovered during our analysis, and it did not \nappear to be vital to the malware functionality. However, this is a good indicator of \nthe observed activity and may be leveraged to detect this speci\ufb01c sample through \nhost-based indicator checking.\n The service manipulation process is the only persistence mechanism for the mal-\nware.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.37984398007392883
+        },
+        "prediction": {}
+    },
+    {
+        "text": "When used, the adversary can select an arbitrary system service, direct it to \nrefer to CRASHOVERRIDE, and ensure it is loaded on system boot.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5978873372077942
+        },
+        "prediction": {}
+    },
+    {
+        "text": "If this fails, the \nmalware, although present on disk, will not start when the machine reboots.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6662350296974182
+        },
+        "prediction": {}
+    },
+    {
+        "text": "When evaluating the options provided to the adversary, an important piece of \nfunctionality associated with most remote access tools is absent: a command to \nex\ufb01ltrate data.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7111440300941467
+        },
+        "prediction": {}
+    },
+    {
+        "text": "While this functionality could be created via the command execu-\ntion options, one would expect this option to be explicit given options to down-\nload and copy \ufb01les on the host if the adversary intended to use the tool as an \nall-encompassing backdoor and espionage framework.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6513888835906982
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Ins tead, the functionality \nof this tool is explicitly designed for facilitating access to the machine and execut-\ning commands on the system and cannot reasonably be confused as an espionage \nplatform, data stealer, or another such item.\n ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6347904801368713
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\u2022  Loads payload modules which manipulate the ICS and cause destruction via \n\u2022  Starts itself as a service likely to hide better\n\u2022  Loads the payload module(s) de\ufb01ned on the command line during execu-\n\u2022  Launches the payload and begins either 1 or 2 hours countdown before \nlaunching the data wiper (variant dependent)\nC R A S HO V E R RI D E : Threat to the Electric Grid Operations\nWithin the attack sequence, the ICS payload modules and data wiper module must be \nloaded by a separate loader EXE.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.49873581528663635
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The launcher takes three parameters on start:\nOn launch, the sample analyzed starts a service named  defragsvc.   ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6890698671340942
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It then loads the \nmodule DLL via an exported function named Crash. A new thread is created at the \nhighest priority on the executing machine.   ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7366958856582642
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Control then passes from the launcher to \nthe loaded module while the launcher waits two hours before executing the data wip-\ner.\n ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7496920228004456
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\u2022  Clears all registry keys associated with system services\n\u2022  Overwrites all ICS con\ufb01guration \ufb01les across the hard drives and all mapped net-\nwork drives speci\ufb01cally targeting ABB PCM600 con\ufb01guration \ufb01les in this sample\nOnce executed, the data wiper module clears registry keys, erase \ufb01les, and kill pro-\ncesses running on the system.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5078111290931702
+        },
+        "prediction": {}
+    },
+    {
+        "text": "A unique characteristic of the wiper is that the main \nfunctionality was implemented within the Crash function.\n The \ufb01rst task of the wiper writes zeros into all of the registry keys in: \nThis registry tree contains initialization values for each service on the system. Removal \nof these values renders a system inoperable.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6518890857696533
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The next wiper task targets ICS con\ufb01gu-\nration \ufb01les across the local hard drive and mapped network drives. The malware au-\nthors included functionality to target drives lettered C-Z.\nC R A S HO V E R RI D E : Threat to the Electric Grid Operations\nThe wiper also targets \ufb01le types unique to ABB\u2019s PCM600 product used in substa-\ntion automation in addition to more general Windows \ufb01les. The below table out-\nlines some of the unique \ufb01le extensions used by industrial control systems.\n PCM600 Project (ABB)\nPCM600 IEC File (ABB)\nPCM600 Template IED File\nABB MicroScada\nProgrammable Logic File\nPLC Archive File\nTable 1. File extensions targeted by the data wiper module\n.pcmp\n.pcmi\n.pcmt\n.CIN\n.PL\n.paf\n.SCL\n.cid\n.scd\n \u2022  ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.2985759675502777
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Reads a con\ufb01guration \ufb01le de\ufb01ning the target (likely an RTU) and action to \n\u2018Kills\u2019 legitimate the master process on the victim host\n\u2022  Masquerades as the new master\n\u2022   Enters one of four modes:\n\u2022  Sequence mode: continuously sets RTU IOAs to open \n\u2022  Range mode: (1) Interrogates each RTU for valid IOAs; (2) toggles each \nIOA between open and closed state\n\u2022  Shift mode: unknown at this time\n\u2022  Persist mode: unknown at this time/not fully implemented\nC R A S HO V E R RI D E : Threat to the Electric Grid Operations\nFigure 3. Protocol Transmission Types in IEC 104\nC R A S HO V E R RI D E : Threat to the Electric Grid Operations\nFigure 4: Execution Flow of IEC 104 Module in CRASHOVERRIDE\n The CRASHOVERRIDE IEC 104 module is a complete implementation of IEC 104 to \nserve in a \u201cMASTER\u201d role. This raw functionality c reates a Swiss army knife for sub-\nstation automation manipulation yet also provides tailored functionality. The func-\ntions exposed to the malware operator are con\ufb01ned by the options of the con\ufb01gu-\nration \ufb01le.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.360868364572525
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This report outlines the options analyzed today but notes that extending \nand enhancing functionality is straight forward with the robust protocol implemen-\ntation.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6853920221328735
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\nondary group of developers could have been involved. Instead of the exported \ncrash function containing the primary execution instructions, the function parses \nthe con\ufb01g \ufb01le then starts a thread containing the IEC 104 master.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6341835856437683
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The con\ufb01guration \nsilence\nuselog\nstop_comm_service_name\ntimeout\nsocket_timeout\nrange\nNONE\nNONE\nNONE\nNONE\n1\n1\non\n0\n0\n<blank>\n1 second\n15 seconds\nNONE\nTable 2.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5719990134239197
+        },
+        "prediction": {}
+    },
+    {
+        "text": "IEC-104 module con\ufb01guration \ufb01le \ufb01elds\n-\ni\ufb01cations for the device must be provided by the operator in the con\ufb01guration \ufb01le \nfor the module to function.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6705479025840759
+        },
+        "prediction": {}
+    },
+    {
+        "text": "There are no observed automated means of enumerat-\ning the network and then impacting RTUs.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6277428269386292
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Once the IEC 104 master thread begins, the \ufb01rst action is to try to kill the commu-\nnications service process which acts as the master process. Once the module stops \nthe communications service process, a socket opens with the target IP and desti-\nnation port sending data to slave devices and receiving the resulting responses.\n C R A S HO V E R RI D E : Threat to the Electric Grid Operations\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.599288821220398
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Depending on the mode de\ufb01ned within the con\ufb01guration \ufb01le the module may:\n\u2022  Enumerate IOAs on the target devices\n\u2022  Continuously set the IOA to open, or \n\u2022  Continuously toggle the IOA between open and closed states.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7087229490280151
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This module contains no interactive capability.\nRTUs and PLCs, in simplistic terms, act on input and output. Each discrete input \nand output is tied to a memory address.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4872555732727051
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Depending on implementation these ad-\ndresses are referred to as coils, registers, or for IEC 104: information object ad -\nor Unsigned Integer values.  ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4342688322067261
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The 104 module properly understands how to enu-\nmerate and discover IOAs to operate breakers.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.658412516117096
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This module was unavailable to Dragos at the time of publication.   ESET\u2019s analysis \nclaims the functionality is equivalent to the IEC 104 module except with communi-\ncations over serial.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.709169864654541
+        },
+        "prediction": {}
+    },
+    {
+        "text": "ESET\u2019s analysis \nclaims once executed the module leverages a con\ufb01guration \ufb01le to identify targets \nand without a con\ufb01guration \ufb01le it enumerates the local network to identify poten-\ntial targets.   It communicates with the targets to identify whether the device con-\ntrols a circuit breaker switch.  ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6529726982116699
+        },
+        "prediction": {}
+    },
+    {
+        "text": "For certain variables (no further information avail-\nable) it will change their state while also generating an action log.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5675613880157471
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It enumerates all OPC servers \nand their associated items looking for a subset related to ABB containing the string \nctl. It then writes 0x01 twice  into the item overwriting the proper value giving the \ndevice a primary value out of limits device status.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6721091866493225
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\nThis module was unavailable to Dragos at the time of publication.   ESET\u2019s analysis \nclaims the module sends UDP packets to port 50000 exploiting CVE-2015-5374 \ncausing the SIPROTEC digital relay to fall into an unresponsive state.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5877954363822937
+        },
+        "prediction": {}
+    },
+    {
+        "text": "ELECTRUM\u2019s ability to adopt a development style described above has several im-\nplications: \ufb01rst, developers can integrate new protocols into the overall framework \nquickly. Second, ELECTRUM could easily leverage external development teams \nskilled at exploiting industrial control systems.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6223342418670654
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Some adversaries would likely ap-\nproach capability development through a \u2018two-tier\u2019 approach: a core development \nteam skilled at writing the overall framework and a second team knowledgeable \nabout a given control system. The platform team would take the control sys-\ntem modules and add logic to \ufb01t them within the platform.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6572384238243103
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Given the execution described with secondary threads the team authoring the \nCrash function likely did not author the IEC 104 master portion of the code. Both \ndevelopment teams probably worked together to decide on a log \ufb01le format for \nconsumption by the main Crash function and executed in each of the IEC 104 \nmodule threads.\n This section describes legitimate CRASHOVERRIDE attack and impact scenarios. \n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6740208268165588
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Extensions of these and potential hypothetical scenarios were deemed indetermin-\nistic and will not be addressed.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5197926759719849
+        },
+        "prediction": {}
+    },
+    {
+        "text": "CRASHOVERRIDE, based on prior knowledge, must have a con\ufb01guration \ufb01le for \ntargeting information of one or multiple RTUs.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5692614912986755
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7530063986778259
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Once it is at the subset of known addresses, it can then toggle the value.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.697752833366394
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The \ncommand then begins an in\ufb01nite loop and continues to set addresses to this val-\ncommand on their HMI the sequence loop will continue to re-open the breaker. \nline(s) preventing system operators from managing the breakers and re-energize \nthe line(s).\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6041474342346191
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In some circumstances, it may have no \nimmediate impact while in others it could put customers into an outage.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5467770099639893
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It is im-\nportant to note that grid operations encompass failure modes and operations can \nnormally compensate.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5029740333557129
+        },
+        "prediction": {}
+    },
+    {
+        "text": "That is, after all, why humans are \u2018in the loop\u2019 to monitor \nand maintain the system.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7043396234512329
+        },
+        "prediction": {}
+    },
+    {
+        "text": "If the CRASHOVER-\nRIDE loop continues unabated, then the crews will likely sever communications as \nboth a troubleshooting and recovery action.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6652701497077942
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Severing communications puts the \nsubstation in manual operation where a physical presence is now required.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7324719429016113
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This \ncould result in a few hours of outages\nAttack Option: Force an Islanding  event\nDragos is currently investigating a separate and more disruptive attack option in \nCRASHOVERRIDE as described by ESET. As before, the attacker must have a con\ufb01g-\nuration \ufb01le for targeting information of one or multiple RTUs. This con\ufb01guration \ufb01le \nnow uses the range command to begin a loop that toggles the status of the break-\ner between open and close continuously.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5308828949928284
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The changing breaker status will invoke \nautomated protective operations to isolate (commonly referred to as \u2018islanding\u2019) \nthe substation.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6961509585380554
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This is an intentional self-protective capability of grid operations.\n relay scheme\u2019s automated operations causing perturbations of some degree on the \ngrid as scienti\ufb01c principles de\ufb01ne how the behavior interacts with frequencies and \nations. Grid operation contingencies become more critical if multiple substations \nwere under attack likely resulting in many small islanding events. This is assuming \ncoordinated targeting of multiple electric sites and could result in a few days of \noutages.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.49438825249671936
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\nForcing an islanding of a substation through continual breaker manipulation is sig-\nni\ufb01cant by itself. However, CRASHOVERRIDE has the potential to amplify this attack \nUsing OPC to create a Denial of Visibility\nThe OPC module ESET analysis suggests it can brute force values.  ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5802087187767029
+        },
+        "prediction": {}
+    },
+    {
+        "text": "exe will send out a 0x01 status which for the target systems equates to a \u201cPrimary \nVariable Out of Limits\u201d misdirecting operators from understanding protective relay \nstatus.\n De\ufb01nition\nMore Status Available \u2013 More status information is available via \nCommand 48, Read Additional Status Information.\n Loop Current Fixed \u2013 The Loop Current is being held at a \ufb01xed \nvalue and is not responding to process variations.\n Loop Current Saturated \u2013 The Loop Current has reached its \nupper (or lower) endpoint limit and cannot increase (or decrease) \nany further.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4782242178916931
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Non-Primary Variable Out of Limits \u2013 A Device variable not \nmapped to the PV is beyond its operating limits.\n Primary Variable Out of Limits \u2013 The PV is beyond its operating \nlimits.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6558431386947632
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The outcome of the action infers that various systems can either perform actions \non wrong information or report incorrect information to system operators. This \nDenial of Visibility will amplify misunderstanding and confusion while system op-\nerators troubleshoot the problem as their system view will show breakers closed \nwhen they are open.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6288197636604309
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\nUsing CVE-2015-5374 to Hamper Pr otective Relays\nA second, and more severe, amplifying attack would be to neutralize the auto-\nmated protective system by creating a Denial of Service against some or all of the \nprotective relays. This possibility exists in a tool ESET has claimed to have discov-\nered that implements the known CVE-2015-5374 Denial of Service condition to the \nSiemens SIPROTEC relays. Siemens released a patch for this in July 2015 under Sie-\nmens advisory SCA-732541. At this time it is believed that CVE-2015-5374 causes a \ndenial of service (DoS) of the complete relay functionality and not just the network \ncommunications module.  ",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.2677817642688751
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Hampering the protective scheme by disabling  the protective relays can broaden \nthe islanding event and, if done at scale, could trigger a larger event causing multi-\nple substations and lines \u201cislanding\u201d from the electric gri d.  Siemens SIPROTEC was \nlikely chosen in this attack only because that was the vendor device at the Ukraine \nKiev site attacked in December 2016. This same tactic against digital relays, albe-\nit not the same exploit, could have a similar impact on grid operations. However, \nrequire a signi\ufb01cant investment on behalf of the adversary. \n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4007189869880676
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\nDoing the basics is always appropriate, and it signi\ufb01cantly helps move ICS into a \ndefensible position.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6859330534934998
+        },
+        "prediction": {}
+    },
+    {
+        "text": "However, they are not worth repeating here, and instead, more \ntailored approaches speci\ufb01c to ICS security analysts trying to defend against CRA-\nSHOVERRIDE and similar capabilities are presented below:\n\u2022  Electric utility security teams should have a clear understanding of where \nand how IEC 104 and IEC 61850 protocols are used.   North American elec-\ntric utilities should include DNP3 on this list in case the malware is extended \nto impact U.S. systems.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4261293113231659
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Look speci\ufb01cally for increased usage of the proto-\ncols against baselines established in the environment.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6460716128349304
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Also, look for systems \nleveraging these protocols if they have not before and speci\ufb01cally try to \nidentify systems that are generating new network \ufb02ows using these proto-\ncols.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.45984479784965515
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Also, \nCRASHOVERRIDE is the second, out of four, ICS tailored malware suite with \nOPC capabilities. OPC will appear abnormal in the CRASHOVERRIDE usage \nas it is being used to scan all devices on the network which would generate \n\u2022  Robust backups of engineering \ufb01les such as project logic, IED con\ufb01gura-\nhelp reduce the impact of the wiper functionality.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5017773509025574
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Prepare incident response plans for this attack and perform table top exer-\ncises bringing in appropriate stakeholders and personnel across engineer-\ning, operations, IT, and security. The scenario should include substation \noutages with the requirement to do manual operations while recovering the \nSCADA environment and gathering appropriate forensics.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5333797931671143
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The included YARA rules and other indicators of compromise can be lever-\naged to search for possible infections (IOCs). The YARA rules will provide a \nhigher con\ufb01dence towards discovering an infection than the other IOCs and \nshould be searched for against Windows OT systems especially noting HMIs.  \n The behavioral analytics to identify the communications on the network \nwould provide the highest capability to detect this and similar threats.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5935843586921692
+        },
+        "prediction": {}
+    },
+    {
+        "text": "C R A S HO V E R RI D E : Threat to the Electric Grid Operations\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7530063986778259
+        },
+        "prediction": {}
+    },
+    {
+        "text": "While some defenses and architecture changes may have value in other situations, \nthe following are responses that are not appropriate for this attack:\n\u2022  Transmission and distribution companies should not rely on the usage of \nother protocols such as DNP3 as a protection mechanism. The complete-\nness of the CRASHOVERRIDE framework suggests there may be other un-\ndisclosed modules such as a DNP3 module.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5783480405807495
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Also, adding this functionality \ninto the existing framework would not require extensive work on the part of \nthe adversary.\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7263205051422119
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\u2022  Air gapped networks, unidirectional \ufb01rewalls, anti-virus in the ICS, and other \npassive defenses and architecture changes are not appropriate solutions for \nthis attack.",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5525866150856018
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Human defenders are required\nC R A S HO V E R RI D E : Threat to the Electric Grid Operations\nFile dropped and deleted after pro-\ngram exit\nUser Agent String Mozilla/4.0 (compatible; MSIE 7.0; Win-\n External C2 server [DEC 2016] (likely \nTOR node at time of attack)\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.49167269468307495
+        },
+        "prediction": {}
+    },
+    {
+        "text": "[DEC 2016] (likely \nTOR node at time of attack)\nExternal C2 server [DEC 2016] (likely \nTOR node at time of attack)\nDefault user agent string used in C2 \nif unable to get system default user \nagent string\nCommand line arguments used to \nlaunch custom port scanner observed \nwith malware. Command line logging \nrequired to track.\n Change in Service Image Path in the \nsystem registry to point to malware \nallowing malware to restart on system \nreboot.\n ICS Kill Chain Impact\nStage 2: Install\nBackdoor/RAT Proxy + HTTP CON-\nNECT to 93.115.27.57:443. \n Backdoor/RAT Proxy + HTTP CON-\nNECT to 195.16.88.6:443 \nC R A S HO V E R RI D E : Threat to the Electric Grid Operations\nLauncher for payload DLL. Takes input as \nthree command line parameters \u2013 work-\ning directory, module, and con\ufb01g \ufb01le.\nwhich is invoked by launcher. Functional-\nity requires con\ufb01g \ufb01le. \n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.26338326930999756
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Wiper module, wipes list of \ufb01les by \nextension, removes system processes, \nand makes registry changes to prevent \nsystem boot. \n Wiper module, wipes list of \ufb01les by \nextension, removes system processes, \nand makes registry changes to prevent \nsystem boot. \n OPC Data Access protocol enumeration \nof servers and addresses \nOPC Data Access protocol enumeration \nof servers and addresses \nWiper module, wipes list of \ufb01les by \nextension, removes system processes, \nand makes registry changes to prevent \nsystem boot. \n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.3164159655570984
+        },
+        "prediction": {}
+    },
+    {
+        "text": "nocase wide ascii \n$s5 = \u201ciec104.log\u201d nocase wide ascii \n        $s0 = { 68 e8 ?? ?? ?? 6a 00 e8 a3 ?? ?? ??",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5336509943008423
+        },
+        "prediction": {}
+    },
+    {
+        "text": "8b f8 83 c4 ?8 }\n        $s1 = { 8a 10 3a 11 75 ?? 84 d2 74 12 }\n        $s2 = { 33 c0 eb ?? 1b c0 83 c8 ??",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5378421545028687
+        },
+        "prediction": {}
+    },
+    {
+        "text": "}\n        $s3 = { 85 c0 75 ?? 8d 95 ?? ?? ?? ?? 8b cf ?? ??",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5585585832595825
+        },
+        "prediction": {}
+    },
+    {
+        "text": "}\nC R A S HO V E R RI D E : Threat to the Electric Grid Operations\n        description = \u201cBlank mutex creation assoicated with CRASHOVERRIDE\u201d\n        $s1 = { 81 ec 08 02 00 00 57 33 ff 57 57 57 ff 15 ?? ?? 40 00 a3 ?? ?? ?? 00 \n 85 c0 }\n        $s2 = { 8d 85 ?? ?? ??",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5133156180381775
+        },
+        "prediction": {}
+    },
+    {
+        "text": "ff 15 ?? ?? ?? 00 68 ?? ?? 40 00}\n        description = \u201cIdentify service hollowing and persistence setting\u201d\n        $s0 = { 33 c9 51 51 51 51 51 51 ?? ?? ?? }\n        $s1 = { 6a ff 6a ff 6a ff 50 ff 15 24 ?? 40 00 ff ?? ?? ff 15 20 ?? 40 00",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5123583078384399
+        },
+        "prediction": {}
+    },
+    {
+        "text": "}\nC R A S HO V E R RI D E : Threat to the Electric Grid Operations\n        description = \u201cRegistry Wiper functionality assoicated with CRASHOVERRIDE\u201d\n        $s0 = { 8d 85 a0 ?? ?? ?? 46 50 8d 85 a0 ?? ?? ?? 68 68 0d ?? ?? 50 }\n        $s1 = { 6a 02 68 78 0b ?? ?? 6a 02 50 68 b4 0d ?? ?? ff b5 98 ?? ?? ?? ff 15 \n04 ?? ?? ?? }\n        $s2 = { 68 00 02 00 00 8d 85 a0 ?? ?? ?? 50 56 ff b5 9c ?? ?? ?? ff 15 00 ?? \n?? ??",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4152809977531433
+        },
+        "prediction": {}
+    },
+    {
+        "text": "85 c0 }\n    condition:\n        $s0 = { 6a 00 68 80 00 00 00 6a 03 6a 00 6a 02 8b f9 68 00 00 00 40 57 ff 15 \n1c ?? ?? ?? 8b d8 }\n        $s2 = { 6a 00 50 57 56 53 ff 15 4c ?? ?? ?? 56 }\n",
+        "source": "CrashOverride-01.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.45735594630241394
+        },
+        "prediction": {}
+    },
+    {
+        "text": "An official website of the United States government\nOn Oct. 15, 2020, a federal grand jury in Pittsburgh returned an indictment charging six computer hackers, all of whom were residents and nationals of the Russian Federation (Russia) and officers in Unit 74455 of the Russian Main Intelligence Directorate (GRU), a military intelligence agency of the General Staff of the Armed Forces. \n ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5324754118919373
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These GRU hackers and their co-conspirators engaged in computer intrusions and attacks intended to support Russian government efforts to undermine, retaliate against, or otherwise destabilize: (1) Ukraine; (2) Georgia; (3) elections in France; (4) efforts to hold Russia accountable for its use of a weapons-grade nerve agent, Novichok, on foreign soil; and (5) the 2018 PyeongChang Winter Olympic Games after Russian athletes were banned from participating under their nation\u2019s flag, as a consequence of Russian government-sponsored doping effort. \n  Their computer attacks used some of the world\u2019s most destructive malware to date, including: KillDisk and Industroyer, which each caused blackouts in Ukraine; NotPetya, which caused nearly $1 billion in losses to the three victims identified in the indictment alone; and Olympic Destroyer, which disrupted thousands of computers used to support the 2018 PyeongChang Winter Olympics.   ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3167397677898407
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The indictment charges the defendants with conspiracy, computer hacking, wire fraud, aggravated identity theft, and false registration of a domain name.\n",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6495656371116638
+        },
+        "prediction": {}
+    },
+    {
+        "text": "According to the indictment, beginning in or around November 2015 and continuing until at least in or around October 2019, the defendants and their co-conspirators deployed destructive malware and took other disruptive actions, for the strategic benefit of Russia, through unauthorized access  to victim computers (hacking).   ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6050828695297241
+        },
+        "prediction": {}
+    },
+    {
+        "text": "As alleged, the conspiracy was responsible for the following destructive, disruptive, or otherwise destabilizing computer intrusions and attacks:\nCybersecurity researchers have tracked the Conspirators and their malicious activity using the labels \u201cSandworm Team,\u201d \u201cTelebots,\u201d \u201cVoodoo Bear,\u201d and \u201cIron Viking.\u201d\n ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5930187106132507
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The charges were announced by Assistant Attorney General John C. Demers; FBI Deputy Director David Bowdich; U.S. Attorney for the Western District of Pennsylvania Scott W. Brady; and Special Agents in Charge of the FBI\u2019s Atlanta, Oklahoma City, and Pittsburgh Field Offices, J.C. \u201cChris\u201d Hacker, Melissa R. Godbold, and Michael A. Christman, respectively.\n  \u201cNo country has weaponized its cyber capabilities as maliciously or irresponsibly as Russia, wantonly causing unprecedented damage to pursue small tactical advantages and to satisfy fits of spite,\u201d said Assistant Attorney General for National Security John C. Demers.    \u201cToday the department has charged these Russian officers with conducting the most disruptive and destructive series of computer attacks ever attributed to a single group, including by unleashing the NotPetya malware.  ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.36326372623443604
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\u201cThe FBI has repeatedly warned that Russia is a highly capable cyber adversary, and the information revealed in this indictment illustrates how pervasive and destructive Russia\u2019s cyber activities truly are,\u201d said FBI Deputy Director David Bowdich.   \u201cBut this indictment also highlights the FBI\u2019s capabilities.  ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7265737056732178
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We have the tools to investigate these malicious malware attacks, identify the perpetrators, and then impose risks and consequences on them.  ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6722748279571533
+        },
+        "prediction": {}
+    },
+    {
+        "text": "As demonstrated today, we will relentlessly pursue those who threaten the United States and its citizens.\u201d\n",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6533660888671875
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\u201cFor more than two years we have worked tirelessly to expose these Russian GRU Officers who engaged in a global campaign of hacking, disruption and destabilization, representing the most destructive and costly cyber-attacks in history,\u201d said U.S. Attorney Scott W. Brady for the Western District of Pennsylvania.  ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5497533679008484
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\u201cThe crimes committed by Russian government officials were against real victims who suffered real harm.  ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7387437224388123
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We have an obligation to hold accountable those who commit crimes \u2013 no matter where they reside and no matter for whom they work \u2013 in order to seek justice on behalf of these victims.\u201d \n",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6209010481834412
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\u201cThe exceptional talent and dedication of our teams in Pittsburgh, Atlanta and Oklahoma City who spent years tracking these members of the GRU is unmatched,\u201d said FBI Pittsburgh Special Agent in Charge Michael A. Christman.   \u201cThese criminals underestimated the power of shared intelligence, resources and expertise through law enforcement, private sector and international partnerships.\u201d\n The defendants, Yuriy Sergeyevich Andrienko (\u042e\u0440\u0438\u0439 \u0421\u0435\u0440\u0433\u0435\u0435\u0432\u0438\u0447 \u0410\u043d\u0434\u0440\u0438\u0435\u043d\u043a\u043e), 32; Sergey Vladimirovich Detistov (\u0421\u0435\u0440\u0433\u0435\u0439 \u0412\u043b\u0430\u0434\u0438\u043c\u0438\u0440\u043e\u0432\u0438\u0447 \u0414\u0435\u0442\u0438\u0441\u0442\u043e\u0432), 35; Pavel Valeryevich Frolov (\u041f\u0430\u0432\u0435\u043b \u0412\u0430\u043b\u0435\u0440\u044c\u0435\u0432\u0438\u0447 \u0424\u0440\u043e\u043b\u043e\u0432), 28; Anatoliy Sergeyevich Kovalev (\u0410\u043d\u0430\u0442\u043e\u043b\u0438\u0439 \u0421\u0435\u0440\u0433\u0435\u0435\u0432\u0438\u0447 \u041a\u043e\u0432\u0430\u043b\u0435\u0432), 29; Artem Valeryevich Ochichenko (\u0410\u0440\u0442\u0435\u043c \u0412\u0430\u043b\u0435\u0440\u044c\u0435\u0432\u0438\u0447 \u041e\u0447\u0438\u0447\u0435\u043d\u043a\u043e), 27; and Petr Nikolayevich Pliskin (\u041f\u0435\u0442\u0440 \u041d\u0438\u043a\u043e\u043b\u0430\u0435\u0432\u0438\u0447 \u041f\u043b\u0438\u0441\u043a\u0438\u043d), 32, are all charged in seven counts: conspiracy to conduct computer fraud and abuse, conspiracy to commit wire fraud, wire fraud, damaging protected computers, and aggravated identity theft.  ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.11405593156814575
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Each defendant is charged in every count.   The charges contained in the indictment are merely accusations, however, and the defendants are presumed innocent unless and until proven guilty beyond a reasonable doubt.\n",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6741827130317688
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The indictment accuses each defendant of committing the following overt acts in furtherance of the charged crimes:\n\u00b7      Developed components of the NotPetya and Olympic Destroyer malware.\n\u00b7      Developed components of the NotPetya malware; and\n\u00b7      Prepared spearphishing campaigns targeting the 2018 PyeongChang Winter Olympic Games. \n\u00b7       Developed components of the KillDisk and NotPetya malware.\n\u00b7       Developed spearphishing techniques and messages used to target:\n-       members of the IOC and Olympic athletes; and\n-       employees of a Georgian media entity.\n\u00b7       Participated in spearphishing campaigns targeting 2018 PyeongChang Winter Olympic Games partners; and\n\u00b7       Conducted technical reconnaissance of the Parliament of Georgia official domain and attempted to gain unauthorized access to its network.\n\u00b7       Developed components of the NotPetya and Olympic Destroyer malware. \n The defendants and their co-conspirators caused damage and disruption to computer networks worldwide, including in France, Georgia, the Netherlands, Republic of Korea, Ukraine, the United Kingdom, and the United States. \n",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.2370542287826538
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The NotPetya malware, for example, spread worldwide, damaged computers used in critical infrastructure, and caused enormous financial losses.  ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5780335664749146
+        },
+        "prediction": {}
+    },
+    {
+        "text": "For example, the NotPetya malware impaired Heritage Valley\u2019s provision of critical medical services to citizens of the Western District of Pennsylvania through its two hospitals, 60 offices, and 18 community satellite facilities.   ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5925573706626892
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The attack caused the unavailability of patient lists, patient history, physical examination files, and laboratory records.   ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6771376132965088
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Heritage Valley lost access to its mission-critical computer systems (such as those relating to cardiology, nuclear medicine, radiology, and surgery) for approximately one week and administrative computer systems for almost one month, thereby causing a threat to public health and safety.\n ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5037757754325867
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The conspiracy to commit computer fraud and abuse carries a maximum sentence of five years in prison; conspiracy to commit wire fraud carries a maximum sentence of 20 years in prison; the two counts of wire fraud carry a maximum sentence of 20 years in prison; intentional damage to a protected computer carries a maximum sentence of 10 years in prison; and the two counts of aggravated identity theft carry a mandatory sentence of two years in prison.    The indictment also alleges false registration of domain names, which would increase the maximum sentence of imprisonment for wire fraud to 27 years in prison; the maximum sentence of imprisonment for intentional damage to a protected computer to 17 years in prison; and the mandatory sentence of imprisonment for aggravated identity theft to four years in prison.   ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.43101075291633606
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These maximum potential sentences are prescribed by Congress, however, and are provided here for informational purposes only, as the assigned judge will determine any sentence of a defendant.\n ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5776500105857849
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Defendant Kovalev was previously charged in federal indictment number CR 18-215, in the District of Columbia, with conspiring to gain unauthorized access into the computers of U.S. persons and entities involved in the administration of the 2016 U.S. elections.\n  Trial Attorney Heather Alpino and Deputy Chief Sean Newell of the National Security Division\u2019s Counterintelligence and Export Control Section and Assistant U.S. Attorneys Charles Eberle and Jessica Smolar of the U.S. Attorney\u2019s Office for the Western District of Pennsylvania are prosecuting this case.    The FBI\u2019s Atlanta, Oklahoma City, and Pittsburgh field offices conducted the investigation, with the assistance of the FBI\u2019s Cyber Division.\n  The Criminal Division\u2019s Office of International Affairs provided critical assistance in this case.    The department also appreciates the significant cooperation and assistance provided by Ukrainian authorities, the Governments of the Republic of Korea and New Zealand, Georgian authorities, and the United Kingdom\u2019s intelligence services, as well as many of the FBI\u2019s Legal Attach\u00e9s and other foreign authorities around the world.  ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3300534188747406
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The department is also grateful to Google, including its Threat Analysis Group (TAG); Cisco, including its Talos Intelligence Group; Facebook; and Twitter, for the assistance they provided in this investigation.  ",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6508622169494629
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Some private sector companies independently disabled numerous accounts for violations of the companies\u2019 terms of service.\n",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6863045692443848
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Peter Karasev, 36, a U.S. citizen residing in San Jose, was arraigned in the Northern District of California today on an indictment charging him with destroying energy facilities and using...\nYesterday, Deputy Attorney General Lisa O. Monaco and Treasury Deputy Secretary Wally Adeyemo convened the Russian Elites, Proxies, and Oligarchs (REPO)",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.48131340742111206
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Task Force Deputies to coordinate lines of effort to...\nA Maine man was sentenced today to 15 years in prison followed by a lifetime of supervised release for conspiring to provide material support to terrorists.\n",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5414102077484131
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Office of Public Affairs\nU.S. Department of Justice\n950 Pennsylvania Avenue, NW\nWashington DC 20530\nOffice of Public Affairs Direct Line\n202-514-2007\nDepartment of Justice Main Switchboard\n202-514-2000\nSignup for Email Updates\nSocial Media\nHave a question about Government Services?",
+        "source": "Office of Public Affairs _ Six Russian GRU Officers Charged in Connection with Worldwide Deployment of Destructive Malware and Other Disruptive Actions in Cyberspace _ United States Department of Justice.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3905472755432129
+        },
+        "prediction": {}
+    },
+    {
+        "text": "After an analysis of the encryption routine of the malware used in the Petya/ExPetr attacks, we have thought that the threat actor cannot decrypt victims\u2019 disk, even if a payment was made.\n This supports the theory that this malware campaign was not designed as a ransomware attack for financial gain.",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.664129376411438
+        },
+        "prediction": {}
+    },
+    {
+        "text": "First, in order to decrypt victim\u2019s disk the attackers need the installation ID:\nIn previous versions of \u201csimilar\u201d ransomware like Petya/Mischa/GoldenEye, this installation ID contains crucial information for the key recovery. After sending this information to the attacker they can extract the decryption key using their private key.\n Here\u2019s how this installation ID is generated in the ExPetr ransomware:\nThis installation ID in our test case is built using the CryptGenRandom function, which is basically generating random data.\n The following buffer contains the randomly generated data in an encoded \u201cBASE58\u201d format:\nIf we compare this randomly generated data and the final installation ID shown in the first screen, they are the same.",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5348138213157654
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In a normal setup, this string should contain encrypted information that will be used to restore the decryption key.",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6643635630607605
+        },
+        "prediction": {}
+    },
+    {
+        "text": "For ExPetr, the ID shown in the ransom screen is just plain random data.\n That means that the attacker cannot extract any decryption information from such a randomly generated string displayed on the victim, and as a result, the victims will not be able to decrypt any of the encrypted disks using the installation ID.\n",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6289022564888
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Well, first of all, this is the worst-case news for the victims \u2013 even if they pay the ransom they will not get their data back. Secondly, this reinforces the theory that the main goal of the ExPetr attack was not financially motivated, but destructive.\n Our friend Matt Suiche from Comae Technologies independently came to the same conclusion.\n",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.55409836769104
+        },
+        "prediction": {}
+    },
+    {
+        "text": "ExPetr/Petya/NotPetya is a Wiper, Not Ransomware\nYour email address will not be published. Required fields are marked *\nis the kaspersky update equipped to deal with the ExPetr/Petya/NotPetya wiper/\n",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5259657502174377
+        },
+        "prediction": {}
+    },
+    {
+        "text": "I agree that this is a wiper and not a Ransomware however sometimes that actual Malware may not be the main motive behind the attack. This to me is either a currency manipulation on a large scale or simply cyber terrorism.\n You can check out the theory below\nhttp://www.securityweek.com/latest-wannacry-theory-currency-manipulation\nWeak reason to classify it as a wiper, in my opinion.\n",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5167632699012756
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Wouldn\u2019t it be possible that the author stores the key and the ID in a table? In this case, it is nothing more than something like a UUID, but it would be still possible for the attacker to decrypt the data.\n Matt Suiche gives the better explanation why it is a wiper: Because it destroys some crucial data.\n",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6371896862983704
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Hi\nwe have also this detailed analysis https://www.crowdstrike.com/blog/petrwrap-ransomware-technical-analysis-triple-threat-file-encryption-mft-encryption-credential-theft/\nWe have been able to retrieve most of the files of infected computers.",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.40432190895080566
+        },
+        "prediction": {}
+    },
+    {
+        "text": "However, as expetya does crypt some of them BEFORE actually being visible, those are encrypted.",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4739747941493988
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Given the key in the README.TXT file, do you think they can actually be decrypted?",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6824570298194885
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Did you proove that the random ID has nothing to do with the encryption key?\n",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7591354846954346
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The hottest research right in your inbox\nAsian APT groups target various organizations from a multitude of regions and industries. We created this report to provide the cybersecurity community with the best-prepared intelligence data to effectively counteract Asian APT groups.\n We unveil a Lazarus campaign exploiting security company products and examine its intricate connections with other campaigns\nHow Kaspersky researchers obtained all stages of the Operation Triangulation campaign targeting iPhones and iPads, including zero-day exploits, validators, TriangleDB implant and additional modules.\n Nobody would even suspect the mining malware was merely a mask, masquerading behind an intricate modular framework that supports both Linux and Windows. The amount of effort that went into creating the framework is truly remarkable, and its disclosure was quite astonishing.\n",
+        "source": "ExPetr_Petya_NotPetya is a Wiper, Not Ransomware _ Securelist.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.37398019433021545
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This blog post is authored by Warren Mercer and Paul Rascagneres. Ben Baker and Matthew Molyett contributed to this post.\n Update 2/13 08:30 We have updated the information regarding the use of stolen credentials\nUpdate 2/12 12:00: We have updated the destructor section with action taken against mapped file shares\nThe Winter Olympics this year is being held in Pyeongchang, South Korea. The Guardian, a UK Newspaper reported an article that suggested the Olympic computer systems suffered technical issues during the opening ceremony. Officials at the games confirmed some technical issues to non-critical systems and they completed recovery within around 12 hours.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3632567822933197
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Sunday 11th February the Olympic games officials confirmed a cyber attack occurred but did not comment or speculate further.\n",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7183652520179749
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The samples identified, however, are not from adversaries looking for information from the games but instead they are aimed to disrupt the games.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.678339958190918
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Analysis shows that actors are again favouring legitimate pieces of software as PsExec functionality is identified within the sample. The destructive nature of this malware aims to render the machine unusable by deleting shadow copies, event logs and trying to use PsExec & WMI to further move through the environment.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6535561680793762
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The initial edb1ff2521fb4bf748111f92786d260d40407a2e8463dcd24bb09f908ee13eb9 sample is a binary that, when executed, drops multiple files on to the victim host.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6119906902313232
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These files are named using randomly generated file names, however, the hashes of the file when written to disk is the same during our analysis on multiple instances. Currently we are not aware of the initial infection vector used. This could have been delivered in a multitude of ways as it is simply a binary file.\n",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6293345093727112
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Two of the dropped files (the stealing modules) are executed with 2 arguments: 123 and a named pipe. The named pipe is used as a communication channel between the initial stage and the dropped executable. The technique was used during BadRabbit & Nyetya.\n",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.682145357131958
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The initial stage is responsible for propagation. The network discovery is performed using two techniques:\nThe purpose is to copy the initial stage to the remote system in %ProgramData%\\%COMPUTERNAME%.exe and to execute it via a VBScript.\n To perform the lateral movement, the malware needs credentials, it uses 2 stealers described in the next section:\n",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6646102070808411
+        },
+        "prediction": {}
+    },
+    {
+        "text": "A new version of the binary is generated with the newly discovered credentials. This new binary will be used on the new infected systems via the propagation.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7252547740936279
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This feature explains why we discovered several samples with different sets of credentials that were collected from previously infected systems.\n",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5827752351760864
+        },
+        "prediction": {}
+    },
+    {
+        "text": "As you can see, the domain attempted to be used is related to Pyeongchang 2018.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6810666918754578
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malware parses the registry and it queries the sqlite file in order to retrieve stored credentials. SQLite is embedded in the sample:\nIn additional to the browsers credential stealer, Olympic Destroyer drops and executes a system stealer. The stealer attempts to obtain credentials from LSASS with a technique similar to that used by Mimikatz.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.590739369392395
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Here is the output format parsed by the initial stage:\n The destructive portion of this malware starts during initial execution on the victim machine.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7418784499168396
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Following this, the malware then continues on it's path by beginning the malicious destruction element.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7152751088142395
+        },
+        "prediction": {}
+    },
+    {
+        "text": "By leveraging cmd.exe from the host the malware first deletes all possible shadow copies on the system using vssadmin:\nNext, again leveraging cmd.exe execution on the host we can see the author using wbadmin.exe, for those not familiar with wbadmin, this is the replacement for ntbackup on modern operating systems.\n ",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5499719977378845
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This step is executed to ensure that file recovery is not trivial - WBAdmin can be used to recover individual files, folders and also whole drives so this would be a very convenient tool for a sysadmin to use in order to aid recovery.\n ",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5741872191429138
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The next step the attacker takes in this destructive path is to, again leverage cmd.exe, but this time use bcdedit, a tool used for boot config data information, to ensure that the Windows recovery console does not attempt to repair anything on the host.\n ",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6423507332801819
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The attacker has now attempted to ensure that recovery is extremely difficult for any impacted hosts and to further cover their tracks the deletion of the System & Security windows event log is performed, this will be used to try and make any analysis more difficult.\n ",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6891311407089233
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Wiping all available methods of recovery shows this attacker had no intention of leaving the machine useable.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6711378693580627
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The purpose of this malware is to perform destruction of the host, leave the computer system offline, and wipe remote data.\n ",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6899142861366272
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Additionally, the destroyer disables all the services on the system:\nThe malware uses the ChangeServiceConfigW API to change the start type to 4 which means: \"Disabled: Specifies that the service should not be started.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6817677617073059
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\"\nAdditionally, the malware lists mapped file shares and for each share, it will wipe the writable files (using either uninitialized data or 0x00 depending of the file size).",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.605434775352478
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Additionally, the Olympic Destroyer drops the legitimate, digitally signed, PsExec file in order to perform lateral movement by using this legitimate tool from Microsoft.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6438168287277222
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Using legitimate tools like PsExec will save the adversary time from writing their own tooling.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6917799711227417
+        },
+        "prediction": {}
+    },
+    {
+        "text": "A free alternative they can wrap up within their own malware is a much easier option in this instance.\n ",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6968525648117065
+        },
+        "prediction": {}
+    },
+    {
+        "text": "During destructive attacks like this there often has to be a thought given to the nature of the attack.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7142897844314575
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Disruption is the clear objective in this type of attack and it leaves us confident in thinking that the actors behind this were after embarrassment of the Olympic committee during the opening ceremony.\n",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6949563026428223
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Disruption of services included the Olympic website being offline, meaning individuals could not print their tickets.",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.671707272529602
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malware delivery mechanism is currently unknown which means the infection vector could be a multitude of options, but, if the attacker already had access to the environment, this attack could have been carried out remotely. This would allow the actors to specifically pinpoint the moment of the opening ceremony and would allow them to control their time of impact.\n",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6065647602081299
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Advanced Malware Protection (AMP) is ideally suited to prevent the execution of the malware used by these threat actors.\n CWS or WSA web scanning prevents access to malicious websites and detects malware used in these attacks.\n Email Security can block malicious emails sent by threat actors as part of their campaign.\n Network Security appliances such asNGFW,NGIPS, andMeraki MX can detect malicious activity associated with this threat.\n AMP Threat Grid helps identify malicious binaries and build protection into all Cisco Security products.\n",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.42100226879119873
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Umbrella, our secure internet gateway (SIG), blocks users from connecting to malicious domains, IPs, and URLs, whether users are on or off the corporate network.\n Open Source Snort Subscriber Rule Set customers can stay up to date by downloading the latest rule pack available for purchase on Snort.org.\nBrowser Stealer: 19ab44a1343db19741b0e0b06bacce55990b6c8f789815daaf3476e0cc30ebea (unpacked: ab5bf79274b6583a00be203256a4eacfa30a37bc889b5493da9456e2d5885c7f )\n",
+        "source": "Olympic Destroyer Takes Aim At Winter Olympics.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3879146873950958
+        },
+        "prediction": {}
+    },
+    {
+        "text": "mandiant.com uses cookies to deliver and enhance the quality of its services and to analyze traffic. If you agree, cookies are also used to serve advertising and to personalize the content and advertisements that you see.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5806446671485901
+        },
+        "prediction": {}
+    },
+    {
+        "text": "mandiant.com uses cookies to deliver and enhance the quality of its services and to analyze traffic. If you agree, cookies are also used to serve advertising and to personalize the content and advertisements that you see.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5806446671485901
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\"After analyzing the information that has been made available by affected power companies, researchers, and the media it is clear that cyber attacks were directly responsible for power outages in Ukraine. The SANS ICS team has been coordinating ongoing discussions and providing analysis across multiple international community members and companies. We assess with high confidence based on company statements, media reports, and first-hand analysis that the incident was due to a coordinated intentional attack. \"\nRead the full SANS post here - and see below for iSIGHT\nThe SANS ICS blog confirms conclusions previously reached by iSIGHT regarding the nature of the Ukrainian attacks (specifically the role of destructive malware and phone disruption) and attribution to Sandworm Team. iSIGHT Partners believes this incident is a milestone because it is the first major cyber attack to substantially affect the civilian population and because of the overwhelming importance of the grid to multiple reliant sectors.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3844517767429352
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Furthermore, Sandworm Team's previous interest in US and European critical systems underscores the threat they pose (see below for more on Sandworm Team.)\n",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6169018149375916
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Since last week, iSIGHT Partners has worked to provide details on the power outage in Ukraine to our global customers.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6474137902259827
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We have analyzed the forensic evidence we have been able to obtain from the region, contextualizing it within our knowledge of cyber espionage actors.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6677675843238831
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Many details of the event remain unknown, and given the nature of the incident, especially the use of destructive malware, we do not anticipate every detail will be exposed.\n ",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6790714263916016
+        },
+        "prediction": {}
+    },
+    {
+        "text": "However, we have linked Sandworm Team to the incident, principally based on BlackEnergy 3, the malware that has become their calling card.\n ",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6479786038398743
+        },
+        "prediction": {}
+    },
+    {
+        "text": "iSiGHT Partners has tracked Sandworm Team for some time - and we publicly reported on some of their activities in October 2014, when we discovered their use of a zero-day exploit, CVE-2014-4114.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4392983615398407
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In that campaign, we saw targeting of Ukrainian government officials, members of the EU and NATO.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5908306837081909
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Shortly after releasing information on their espionage operations, our friends at TrendMicro found evidence that the operators were not only conducting classic strategic espionage but targeting SCADA systems as well.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6449658870697021
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Evidence of this accumulated, and iSIGHT Partners released a follow-up blog were we assessed that activity was reconnaissance for attack - a preparation for cyber attack to be carried out in the long term. ICS-CERT released a separate advisory as well.\nSandworm Team went to ground shortly after being exposed in October of 2014, and malware with Dune references (the genesis for the 'Sandworm' moniker) which we had previously used to track them disappeared entirely.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5007460117340088
+        },
+        "prediction": {}
+    },
+    {
+        "text": "However, the unique malware variant, BlackEnergy 3, reemerged in Ukraine early in 2015, where we had first found Sandworm Team.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.591295599937439
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We warned our clients of new features suggesting an increased focus on European targets - though verification of targets was not possible at the time. Additionally, we warned our customers about the targeting of both media and regional power authorities in the Ukraine, sectors later affected by cyber attacks. Some of this information was recently shared by the folks at ESET, who have also been following Sandworm Team very closely for quite some time.\n",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5416834950447083
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Last week iSIGHT's sources provided us with the same KillDisk malware published by Rob Lee of SANS and Dragos Security. As ESET has, we place this malware within the greater context of activity tied to BlackEnergy 3, which we believe is Sandworm Team. We believe this KillDisk malware is related to the destructive malware leveraged during Ukrainian elections in October. At the time, CERT-UA connected that incident to BlackEnergy 3.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4462677240371704
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Furthermore, iSIGHT's own sources indicate that BlackEnergy 3 malware was deployed on at least one of the Ukrainian power systems affected by KillDisk.\n iSIGHT Partners is still collecting information on the mechanics of the power outage and what role the KillDisk malware played in the greater event.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6537999510765076
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It may have been used following steps to manipulate power in order to impede restoration efforts or operator visibility. It is noteworthy that technical support numbers associated with the power authorities were allegedly flooded with calls, which may have been an effort to further overwhelm responders.",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5966435074806213
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The aggressive nature of Sandworm Team's previous activity in Europe and the United States exposed their interest in targeting critical systems and indicated preparation for cyber attack. Targeting of critical entities in Ukraine throughout 2015, during a time of war, further presaged a desire to disrupt infrastructure.\n Get the Google Cloud Cyberseurity Forecast 2024 report to explore the latest trends on the horizon.\n",
+        "source": "Sandworm Team and the Ukrainian Power Authority Attacks _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5654758214950562
+        },
+        "prediction": {}
+    },
+    {
+        "text": "On June 27, public announcements were made about a large-scale campaign of ransomware attacks across Europe. The ransomware impacted notable industries such as Maersk, the world\u2019s largest container shipping company. The initial infection vector appears to be the exploitation of a Ukrainian tax software called MEDoc. The sample also spreads on the internal network via exploitation of the EternalBlue SMB vulnerability, PsExec, WMI, and Admin$ shares.\n The metadata for the analyzed sample is noted below:\nMagic: PE32 executable for MS Windows (DLL) (console) Intel 80386 32-bit\nCompiled Time: Sun Jun 18 07:14:36 2017 UTC\nPE Sections (5): Name       Size       MD5\n               + 0x57000    6,008      da2b0b17905e8afae0eaca35e831be9e (Authenticode Signature)\n",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.45163750648498535
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This sample was compiled recently (18 June 2017 at 07:14:36 UTC) and contains an expired digital signature signed by Microsoft. This sample utilizes SysInternals PsExec v1.98 for remote execution, with the PsExec digital signature copied and applied to the malware.\n Initial analysis suggests that the malware is a new variant of the Petya family of ransomware. This recent sample follows the encryption and ransom note functionality seen in Petya samples.",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5159435868263245
+        },
+        "prediction": {}
+    },
+    {
+        "text": "However, further analysis suggests otherwise, leading to industry concerns of actual attribution and naming, with the colloquial names given of \u201cNotPetya\u201d and \u201cSchrodinger\u2019s Petya.\u201d",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5656217932701111
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malware itself, a Windows DLL library, is typically saved to the local Windows folder as perfc.dat if it runs with SeDebugPrivilege permission. If it does not have this privilege, it saves perfc.dat to the All Users application data directory (CSIDL_COMMON_APPDATA) which is resolved by Windows to either C:\\ProgramData or \u201cC:\\Documents and Settings\\All Users\\Application Data\u201d.\n",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5000975131988525
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malware must be executed with a direct call to its export of ordinal 1, seen as \u201c#1\u201d in the command line. There are various reasons why malware tends to use this style of execution, with the most common being to prevent execution within a sandbox.",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.666161835193634
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Upon execution, the malware will begin to perform privilege checking to determine what permissions the running account has, primarily checking for the SeDebugPrivilege permission, as detailed later in User Rights Checking and Malware Logic.",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6443210244178772
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Based upon these privileges the malware will encrypt the victim system in one of two methods.\n If the running user has the SeDebugPrivilege permission, the malware will assume it has administrative privileges, it will then attempt to encrypt the drive using the known Petya code.",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6548268795013428
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This is performed by overwriting the Master Boot Record (MBR) of the hard drive (PhysicalDrive0) with malicious code that displays a fake \u201cchkdsk.exe\u201d partition repair screen as it encrypts the hard drive, shown below.",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6531813144683838
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This is a technique that is known to exist in Petya, using nearly identical text and code. This is the reason why the malware was initially considered to be Petya upon dynamic analysis, although static analysis showed vastly different code for the remainder of the malware\u2019s functionality.\n Alternatively, if the user is not running with administrative privileges, as determined by a lack of SeDebugPrivilege, the malware will use a user-space encryption routine, which is a different routine from the one detailed above.\n After the malware is finished obtaining privileges on the system, it looks for specific processes running on the system.  ",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.43400439620018005
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malware authors use a proprietary XOR encryption routine to mask what process names they are looking for.   Carbon Black created a brute force routine to determine what those process names were:\nA global variable is modified if these process names are found running on the system.   This global variable affects how the malware runs on the system.  ",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6701300740242004
+        },
+        "prediction": {}
+    },
+    {
+        "text": "If none of these AV processes are found on the system and the malware obtains the required privileges, the credential stealer is dropped and executed.   The presence of these AV\u2019s on the system also affect if the malware runs PsExec, writes to the MBR, the type of encryption used, and if the anti-forensic log clearing is executed.\n Depending on the return values from this routine and the values SeDebugPrivilege check, if the process context does not have SeDebugPrivilege permissions then the variant will employ a technique common in ransomware variants.",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.42248937487602234
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Where files\u2019 data is loaded by using the FindFile and MapViewofFile APIs before encrypting the file\u2019s data.",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6878402233123779
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The file is encrypted in memory using AES encryption and then written to disk when the FlushViewOfFile is called.\n After the encryption routine completes, the sample will attempt to remove forensic artifacts of its activities by utilizing cmd.exe to run the command listed in the table below.",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6978077292442322
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This is done after performing additional operating system checks which include ensuring that the system is not version 5.1/5.2 (Windows XP) or 6.1 (Windows 7).\n",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5772125720977783
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The command will use the wevtutil command to clear (cl) the logs for the Setup, System, Security, and Application event logs. It then uses the fsutil command to delete (/D)",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6691412925720215
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Before the sample exits it will force a reboot of the infected system using one of three methods.   The method chosen is dependent upon the context of the process privileges, which are outlined in the table below. The sample will schedule a reboot early in its execution but, depending on the user privileges, will attempt to force a reboot earlier.\n",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6131750345230103
+        },
+        "prediction": {}
+    },
+    {
+        "text": "While the initial attack vector of a patient zero is currently unknown, what is known is that the malware is propagated across local environments using several methods. Like other recent malware the ransomware utilizes the highly effective EternalBlue exploit for Windows SMB vulnerabilities to copy itself to other systems and execute, which is detailed later in this post.\n In addition to the SMB exploit propagation method, the malware also attempts to establish default administrative network shares (Admin$) with a call to WNetAddConnection2() using a null username and password. By using null for these two values, the network connection is made using the current user\u2019s credentials, which directly affect organizations with shared local administrator accounts. Additionally, if the malware was somehow executed by a domain administrator, these connections would be made even without a shared local administrator account. An example of this additional lateral movement attempt is below:\nIf a connection is made to the remote system, the malware will create a copy of itself directly on the other system using standard CreateFile() and WriteFile() API routines. The malware also has the ability to extract an embedded and compressed resource (resource 3) containing the SysInternals PsExec.exe utility.",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3142531216144562
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This utility is then used to execute this file on the remote system.\n Failing that, the malware will then leverage the existing Windows WMI utility to execute the file on the remote system, which is displayed in the image below:\nAs noted earlier, upon initial execution the sample will check several system privileges to determine the appropriate execution path.   If the process has SeDebugPrivilege it will, among other things, access the physical drive (highlighted in red below) and then initiate a scan that will enumerate other systems on the domain (area highlighted in green in the image below).   The area highlighted in red below shows where a function (labeled here as filename_check) is called, where the sample will check to see if the file C:\\Windows\\perfc is present on the system.\n If present, the process will exit, which is leading many to call this a \u201ckill switch\u201d in the ransomware.  ",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5060427784919739
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This was most likely done to ensure that ransomware was not installed and executed twice on a system, much in the same way a mutex or a file lock (Linux based), is used to prevent multiple instances from running on a system.   Code responsible for this process is shown below.\n",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6238691210746765
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The second function (labeled Check_access_and_physicaldisk_Modify) is responsible for attempting to access the physical disk, and then gather drive geometry about the disk itself.  ",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6998763680458069
+        },
+        "prediction": {}
+    },
+    {
+        "text": "After the alterations have completed the sample will remove forensic artifacts in the manner detailed in Table 1 above, and then shut down as described in Table 2 above.  \n The function (highlighted in green in the image above) will gather system information and then enumerate the other systems on the domain.   This enumeration is highlighted in the red box below.\n As previously referenced, this sample is also capable of spreading through SMB kernel exploitation (MS17-010, commonly referred to as EternalBlue).  ",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5361320376396179
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The function displayed in the image below shows the sample building the SMB header, which will be used in the exploitation process.\n  The sample will then decode several strings used in the SMB phase of the  attack (which are displayed in a later table).   ",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.735832691192627
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The area, highlighted in green, shows where the sample will send SMB packets and then wait for a response from the targeted system.  \n ",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7097774147987366
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The table below shows the strings that were decoded in the previous image.    These strings were encoded using a simple XOR key of 0x72.\nDecoded Strings used in SMB Exploitation\nIf the sample finds an exploitable system, it will perform in the same manner that existing ransomware acted by passing a shellcode payload to the target system.    The function highlighted in the image below shows where the shellcode is first decoded with a simple XOR value of 0xCC.\n  The image below shows a portion of the decoded shellcode, which contains additional layers of obfuscation and is still being analyzed.   ",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4758552610874176
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Resource 4 (once inflated and decoded using a simple XOR of 0x86) is additional shell code that is used in the SMB exploitation process.\n",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.637704610824585
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This sample looks for three different types of privileges to perform its actions:\nPrior to any major function being executed, the malware attempts to gain any/all of the above privileges. The values are added together using Boolean OR commands which can result in the following results:\nBased upon the overall values constructed from these checks, the malware will perform varying sets of routines. Most notably are the methods for which to encrypt files on the system and in rebooting the system after infection.\n If the variant detects that its process is running with SeDebugPrivilege privileges it will call a function that is highlighted in red in the image below.\n The malware contains four separate, compressed resources that are used as additional commands to execute during operation.",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.43696048855781555
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This function will initially attempt to determine if the operating system is either x86 or 64-bit and then it will either load a password dumper from either Resource \u201c1\u201d or \u201c2\u201d (which ultimately are x86 and 64-bit executable files respectively).",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.634443461894989
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It should be noted that all of the four resources are stored as compressed buffers that can be inflated with zlib. Each resource contains a DWORD value at offset 0 that is the length of the data once it is inflated.  \n Once the OS type has been determined and the appropriate resource loaded, the sample will write the executable to the system %TEMP% path with a OS-generated temporary file name (highlighted in red in the image below). The sample will then create a named pipe to the temporary file (highlighted in blue), and execute the file as a new process, with a parameter of the named pipe (highlighted in green).",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4907463490962982
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This will allow the sample to get the results of the credential harvester.   Once completed the sample will delete the temporary file from the disk.   \n",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7582774758338928
+        },
+        "prediction": {}
+    },
+    {
+        "text": "(Editor\u2019s Note: This post was updated on 30 June to clarify the reboot sequence and adjust filename case for one process hash.)",
+        "source": "Carbon Black Threat Research Technical Analysis_ Petya _ NotPetya Ransomware \u2013 VMware Security Blog.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6665655374526978
+        },
+        "prediction": {}
+    }
+]

@@ -1,0 +1,81 @@
+.cr-sticky-cta-bar {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 999;
+  display: block;
+  bottom: 0;
+  top: calc(100vh - 100px);
+  padding: 25px 50px 0;
+  background-color: black;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1.5s cubic-bezier(.47,.12,.66,.87) all;
+}
+
+.cr-sticky-cta-bar.bg-yellow {background: rgba(246, 189, 3, .95);}
+.cr-sticky-cta-bar.bg-black {background: rgba(34, 34, 34, .9);}
+.cr-sticky-cta-bar.bg-white {background: rgba(255, 255, 255, .95);}
+
+.cr-sticky-cta-bar.is-visible {opacity: 1; transform: translateY(0);}
+.cr-sticky-cta-bar.off {opacity: 0!important;transform: translateY(100px)!important;}
+
+.cr-sticky-cta-bar .content {
+  width: fit-content;
+  width: -moz-fit-content;
+  margin: 0 auto;
+}
+
+.cr-sticky-cta-bar span {
+  font-family: 'Criteria Medium', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: #FFF;
+  padding: 0 50px;
+}
+
+.cr-sticky-cta-bar.bg-yellow span, .cr-sticky-cta-bar.bg-white span {color: #000;}
+
+.cr-sticky-cta-bar .content .cr-button:after {content: none;}
+
+.cr-sticky-cta-bar .cr-button__fill-yellow {background-color: transparent; border: 2px var(--cr-yellow) solid; color: var(--cr-yellow);}
+.cr-sticky-cta-bar .cr-button__fill-yellow:hover {background-color: var(--cr-yellow); color: #222; border: 2px var(--cr-yellow) solid; box-shadow: 0px 0px 10px var(--cr-yellow);}
+
+.cr-sticky-cta-bar .close {
+  font-family: 'HOSP', sans-serif;
+  font-size: 26px;
+  padding: 0 0 0 3px;
+  width: 34px;
+  height: 34px;
+  border-radius: 22px;
+  border: 2px var(--cr-yellow)solid;
+  color: var(--cr-yellow);
+  line-height: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: .3s ease all;
+  display: table-row-group;
+  vertical-align: middle;
+  opacity: .8;
+}
+.cr-sticky-cta-bar.bg-yellow .close, .cr-sticky-cta-bar.bg-white .close {
+  color: #222;
+  border: 2px #222 solid;
+}
+.cr-sticky-cta-bar.bg-yellow .close:hover, .cr-sticky-cta-bar.bg-white .close:hover {
+  box-shadow: 0px 0px 10px #222;
+  opacity: 1;
+}
+
+.cr-sticky-cta-bar .close:hover {
+  box-shadow: 0px 0px 10px var(--cr-yellow);
+  opacity: 1;
+}
+
+.cr-sticky-cta-bar .close:focus, .cr-sticky-cta-bar .close:active {transform: scale(1.15);}
+
+@media screen and (max-width: 1024px) {
+  .cr-sticky-cta-bar, .cr-sticky-cta-bar.is-visible {display: none;}

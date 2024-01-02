@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html -->
+<html lang="en" itemscope="" itemtype="http://schema.org/WebPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">            <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width,initial-scale=1">                  
+    
+    
+        <title>Attack Activities by Quasar Family - JPCERT/CC Eyes | JPCERT Coordination Center official Blog</title>
+    <meta name="description" content="Quasar [1] is an open source RAT (Remote Administration Tool) with a variety of functions. This is easy to use and therefore exploited by several APT actors. JPCERT/CC has confirmed that a group called APT10 used this tool in some...">
+    <meta name="keywords" content="">
+  
+    
+    
+    
+    
+    
+
+  
+                      
+    
+    
+        <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Attack Activities by Quasar Family - JPCERT/CC Eyes">
+    <meta property="og:url" content="https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html">
+    <meta property="og:description" content="Quasar [1] is an open source RAT (Remote Administration Tool) with a variety of functions. This is easy to use and therefore exploited by several APT actors. JPCERT/CC has confirmed that a group called APT10 used this tool in some...">
+    <meta property="og:site_name" content="JPCERT/CC Eyes">
+    <meta property="og:image" content="https://blogs.jpcert.or.jp/en/.assets/thumbnail/quasar-fig16-800wi.png">
+      
+    
+    
+    
+    
+    
+
+  
+                      
+    
+    
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Attack Activities by Quasar Family - JPCERT/CC Eyes">
+    <meta name="twitter:description" content="Quasar [1] is an open source RAT (Remote Administration Tool) with a variety of functions. This is easy to use and therefore exploited by several APT actors. JPCERT/CC has confirmed that a group called APT10 used this tool in some...">
+    <meta name="twitter:image" content="https://blogs.jpcert.or.jp/en/.assets/thumbnail/quasar-fig16-800wi.png">
+  
+    
+    
+    
+    
+    
+
+  
+                      
+    
+    
+        <meta itemprop="description" content="Quasar [1] is an open source RAT (Remote Administration Tool) with a variety of functions. This is easy to use and therefore exploited by several APT actors. JPCERT/CC has confirmed that a group called APT10 used this tool in some...">
+    <link itemprop="url" href="https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html">
+    <link itemprop="image" href="https://blogs.jpcert.or.jp/en/.assets/thumbnail/quasar-fig16-800wi.png">
+  
+    
+    
+    
+    
+    
+
+  
+            <link rel="start" href="https://blogs.jpcert.or.jp/en/">    <link rel="alternate" type="application/atom+xml" href="https://blogs.jpcert.or.jp/en/atom.xml">        <link rel="stylesheet" href="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/styles.css">    <link rel="shortcut icon" type="image/x-icon" href="https://blogs.jpcert.or.jp/en/common/images/favicon.ico">    <link rel="stylesheet" href="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous">    <!--[if lt IE 9]>    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>    <![endif]-->              <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/async-ads.js"></script><script type="text/javascript" async="" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/analytics.js"></script><script type="text/javascript" async="" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/js"></script><script type="text/javascript" async="" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/f.txt"></script><script async="" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/js(1)"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-124034031-1');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics GA4-->
+    <script async="" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/js(2)"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6NX4WBMERX');
+    </script>
+                
+        <link rel="canonical" href="https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html">
+
+  
+      <script src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/cse_element__ja.js" type="text/javascript"></script><link type="text/css" href="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/default+ja.css" rel="stylesheet"><link type="text/css" href="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/default.css" rel="stylesheet"><script charset="utf-8" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/button.856debeac157d9669cf51e73a08fbc93.js"></script><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(233,233,233,1),rgba(233,233,233,0))}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>  <body class="page_english">              
+    <!-- prepend body -->
+
+  
+            
+  
+  
+        
+    
+    <header class="header  header--bottom">
+    <div class="header__inner clearfix">
+      <p class="header__logo">
+        <a href="https://www.jpcert.or.jp/english/" target="_blank">
+          <img class="header__logo__src" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/header_logo.svg" width="198" height="66" alt="JPCERT/CC Eyes">
+        </a>
+      </p>
+      <h1 class="header__title">
+        <a class="header__title__link" href="https://blogs.jpcert.or.jp/en/">JPCERT/CC Eyes</a>
+      </h1>
+      <h2 class="header__description">JPCERT Coordination Center official Blog</h2>
+      <div class="header__lang">
+        <p class="header__lang__cell-label">Language:</p>
+        <div class="header__lang__cell-field">
+          <select class="header__lang__switcher" onchange="location.href = this.value;">
+            <option value="/ja/">日本語</option>
+            <option selected="" value="/en/">English</option>
+                      </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    
+
+
+        
+    
+    
+        
+                  
+    <section class="breadcrumb-navi">
+      <div class="inner">
+        <a href="https://blogs.jpcert.or.jp/en/">Top</a>&nbsp;&gt;&nbsp;<a href="https://blogs.jpcert.or.jp/en/malware/">List of “Malware”</a>&nbsp;&gt;&nbsp;Attack Activities by Quasar Family
+      </div>
+    </section>
+
+        
+        
+  
+    
+    
+    
+    
+    
+
+
+        <div id="content" class="clearfix">
+
+            <div id="main-wrapper">
+        <main role="main">
+
+                    
+        
+    <article id="entry-1650047" class="entry">
+
+        
+    
+    
+    
+    <div class="entry-meta clearfix">
+
+    <div class="entry-author">
+      <figure>
+        <a href="https://blogs.jpcert.or.jp/en/kino/">
+          <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/image-992ce083-832a-45c5-a3d8-5922b68506a7.jpg" width="50" height="50" alt="喜野 孝太(Kota Kino)">
+        </a>
+      </figure>
+      <p><a href="https://blogs.jpcert.or.jp/en/kino/">喜野 孝太(Kota Kino)</a></p>
+    </div>
+
+    <div class="entry-date">
+      <time datetime="2020-12-10T00:00:00+09:00">December 10, 2020</time>
+    </div>
+
+  </div>
+
+    
+    
+    
+
+
+        <h2 class="entry-title">Attack Activities by Quasar Family</h2>
+
+        
+    
+        
+    
+
+        
+  
+        
+    
+
+        
+  
+        <section class="entry-tags">
+      <ul>
+
+        
+                    
+                    
+                    
+        
+                    
+                    
+                        
+            <li>
+              <a href="https://blogs.jpcert.or.jp/en/tags/quasar/">Quasar</a>
+            </li>
+
+                        
+          
+                    
+        
+      </ul>
+    </section>
+  
+
+
+        
+    
+    
+    <div class="entry-social-buttons  entry-social-buttons--before-content  clearfix">
+    <ul>
+      <li class="entry-social-twitter">
+        <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 65px; height: 20px;" title="X Post Button" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/tweet_button.2f70fb173b9000da126c79afe2098f02.en.html" data-url="https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html"></iframe>
+      </li>
+      <li class="entry-social-mail">
+        <a href="mailto:?subject=Attack%20Activities%20by%20Quasar%20Family&amp;body=https%3A%2F%2Fblogs.jpcert.or.jp%2Fen%2F2020%2F12%2Fquasar-family.html">Email</a>
+      </li>
+    </ul>
+  </div>
+
+    
+    
+
+
+        <section class="entry-content clearfix">
+      <p>Quasar <a href="https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html#1">[1]</a> is an open source RAT (Remote Administration Tool) with a variety of functions. This is easy to use and therefore exploited by several APT actors. JPCERT/CC has confirmed that a group called APT10 used this tool in some targeted attacks against Japanese organisations. <br>
+As Quasar’s source code is publicly available, there are many variants of this RAT seen in the wild (referred to as “Quasar Family” hereafter). Some of them have been used in attacks against Japanese organisations, and they are seen as a threat as well as Quasar itself. <br>
+This article introduces the details of Quasar and Quasar Family.</p>
+
+<h3>Quasar overview</h3>
+
+<p>Quasar offers many functions which are intended for purposes such as device management, support operation and employee monitoring. Figure 1 describes Quasar’s functions and its supported environment as specified on GitHub.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig1-640wri.png" width="640" height="354" alt="" class="asset asset-image at-xid-1658114 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 1: Quasar’s functions and supported environment</figcaption></figure><p></p>
+
+<p>This tool was called “xRAT” at the time of its initial release, however, it was renamed as “Quasar” in August 2015. The latest version is v1.4, released in June 2020.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig2-640wri.png" width="640" height="313" alt="" class="asset asset-image at-xid-1658115 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 2: Quasar versions</figcaption></figure><p></p>
+
+<p>As v1.3 and the earlier are still used in recent attacks, this article explains the functions of both v1.3 and v1.4.</p>
+
+<h4>Communication protocol</h4>
+
+<p>Quasar v1.3 uses its custom protocol which combines AES and QuickLZ. In v1.4, however, Protocol Buffer (developed by Google) is used for data serialisation instead. In addition, the entire communication is encrypted with TLS1.2. <br>
+Figure 3 shows the comparison of the communication format in v1.3 and v1.4.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig3-640wri.png" width="640" height="436" alt="" class="asset asset-image at-xid-1658116 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 3: Quasar’s communication format</figcaption></figure><p></p>
+
+<h4>Communication flow</h4>
+
+<p>In v1.3, once a client connects to a server, authentication is performed. After that, the main body of data including the commands are exchanged. On the other hand, the authentication is replaced by a TLS handshake in v1.4, and the data exchange begins after that. <br>
+Figure 4 illustrates Quasar’s communication flow between a client and a server.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig4-640wri.png" width="640" height="182" alt="" class="asset asset-image at-xid-1658117 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 4: Quasar’s communication flow</figcaption></figure>
+ <p></p>
+
+<h4>Configuration</h4>
+
+<p>Quasar possesses its configuration in itself. It is encrypted by the combination of AES and BASE64 encoding. It is decrypted with the value specified in “ENCRYPTIONKEY” in the configuration when executed.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig5-640wri.png" width="640" height="294" alt="" class="asset asset-image at-xid-1658118 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 5: Quasar configuration</figcaption></figure><p></p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig6-640wri.png" width="640" height="109" alt="" class="asset asset-image at-xid-1658119 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 6: Configuration format</figcaption></figure><p></p>
+
+<p>Table 1 details the configuration for Quasar.</p>
+
+<table>
+<caption>Table 1: Configuration</caption>
+<tbody>
+<tr>
+<td>VERSION</td>
+<td>INSTALL</td>
+<td>LOGDIRECTORY (1.3)</td>
+</tr>
+<tr>
+<td>HOSTS</td>
+<td>STARTUP</td>
+<td>SERVERSIGNATURE (1.4)</td>
+</tr>
+<tr>
+<td>PORT (xRAT only)</td>
+<td>MUTEX</td>
+<td>SERVERCERTIFICATESTR (1.4)</td>
+</tr>
+<tr>
+<td>RECONNECTDELY</td>
+<td>STARTUPKEY</td>
+<td>SERVERCERTIFICATE (1.4)</td>
+</tr>
+<tr>
+<td>KEY</td>
+<td>HIDEFILE</td>
+<td>HIDELOGDIRECTORY (1.3)</td>
+</tr>
+<tr>
+<td>AUTHKEY</td>
+<td>ENABLEUACESCALATION (xRAT only)</td>
+<td>HIDELOGSUBDIRECTORY (1.3)</td>
+</tr>
+<tr>
+<td>DIRECTORY</td>
+<td>ENABLELOGGER</td>
+<td>INSTALLPATH (1.4)</td>
+</tr>
+<tr>
+<td>SUBDIRECTORY</td>
+<td>ENCRYPTIONKEY</td>
+<td>LOGSPATH (1.4)</td>
+</tr>
+<tr>
+<td>INSTALLNAME</td>
+<td>TAG (1.3)</td>
+<td>UNATTENDEDMODE (1.4)</td>
+</tr>
+</tbody></table>
+
+<h4>Commands</h4>
+
+<p>In v1.3, command sets are defined for “typeof” calls. Figure 7 shows some examples of commands defined in Quasar.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig7-640wri.png" width="640" height="411" alt="" class="asset asset-image at-xid-1658120 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 7: Commands</figcaption></figure><p></p>
+
+<h3>Quasar Family</h3>
+
+<p>Table 2 is the list of Quasar Family derived from Quasar which JPCERT/CC confirmed.</p>
+
+<table border="1" width="100%">
+<caption>Table 2: Quasar Family</caption>
+<thead>
+<tr>
+<th><div>Name</div></th>
+<th><div>Category</div></th>
+<th><div>Configuration</div></th>
+<th><div>Communication protocol</div></th>
+<th><div>Use in attacks in the wild</div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Golden Edition</td>
+<td>Clone</td>
+<td>Identical</td>
+<td>Identical</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>XPCTRA</td>
+<td>Clone</td>
+<td>Custom</td>
+<td>Identical</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>CinaRAT <a href="https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html#2">[2]</a></td>
+<td>Clone</td>
+<td>Identical</td>
+<td>Identical</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>Xtremis 2.0 <a href="https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html#3">[3]</a></td>
+<td>Clone</td>
+<td>Identical</td>
+<td>Identical</td>
+<td>Not confirmed</td>
+</tr>
+<tr>
+<td>QuasarStrike <a href="https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html#4">[4]</a></td>
+<td>Clone</td>
+<td>Identical</td>
+<td>Identical</td>
+<td>Not confirmed</td>
+</tr>
+<tr>
+<td>VenomRAT</td>
+<td>Clone</td>
+<td>Identical</td>
+<td>Identical</td>
+<td>Not confirmed</td>
+</tr>
+<tr>
+<td>RSMaster <a href="https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html#5">[5]</a></td>
+<td>Partially copied</td>
+<td>Custom</td>
+<td>Identical</td>
+<td>Not confirmed</td>
+</tr>
+<tr>
+<td>Void-RAT</td>
+<td>Partially copied</td>
+<td>Custom</td>
+<td>Identical</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>AsyncRAT <a href="https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html#6">[6]</a></td>
+<td>Partially copied</td>
+<td>Custom</td>
+<td>Identical</td>
+<td>Confirmed</td>
+</tr>
+</tbody>
+</table>
+
+<p>* “Clone” in the category refers to variants which uses the entire source code of Quasar with some functions added or modified. “Partially copied” refers to variants created as a new RAT using parts of the original source code.</p>
+
+<p>Figure 8 shows the comparison of commands embedded in XPCTRA and Quasar.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig8-640wri.png" width="640" height="360" alt="" class="asset asset-image at-xid-1658121 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 8: Comparison of commands<br>(Left: XPCTRA / Right: Quasar)</figcaption></figure><p></p>
+
+<p>In the comparison above, it is clear that commands in XPCTRA are mostly identical to those in Quasar. <br>
+Figure 9 shows the comparison of the salt value in AsyncRAT and Quasar.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig9-640wri.png" width="640" height="426" alt="" class="asset asset-image at-xid-1658122 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 9: Comparison of salt value<br>(Above: AsyncRAT / Below: Quasar)</figcaption></figure><p></p>
+
+<p>The salt value in AsyncRAT is identical to that in Quasar. <br>
+As Quasar Family applies some parts of the source code of Quasar, its configuration and communication protocol are also identical. In some cases, some functions are customised, and as a result, some new configuration and commands are added.</p>
+
+<h3>Attack campaigns using Quasar</h3>
+
+<p>Quasar has been used in many attack campaigns. Table 3 lists the differences of Quasar used by each attack group.</p>
+
+<table>
+<caption>Table 3: Example of Quasar used by attack group</caption>
+<thead>
+<tr>
+<th>Attack group</th>
+<th>Quasar version</th>
+<th>Customisation</th>
+<th>Obfuscation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>APT33</td>
+<td>1.3.0.0</td>
+<td>No</td>
+<td>ConfuserEx v1.0.0</td>
+</tr>
+<tr>
+<td>Gorgon Group</td>
+<td>-</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>APT-C-09</td>
+<td>2.0.0.0 RELEASE3</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>DustySky</td>
+<td>1.1.0.0</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>APT10</td>
+<td>2.0.0.0(Custom Version)</td>
+<td>Yes</td>
+<td>ConfuserEx v1.0.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>The original Quasar with the default configuration value was used in most cases. Figure 10 shows an example configuration of Quasar used by APT 33.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig10-640wri.png" width="640" height="287" alt="" class="asset asset-image at-xid-1658123 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 10: Configuration of Quasar used by APT33</figcaption></figure><p></p>
+
+<p>In most parts, the default values of the builder generating Quasar are used as is, except for STARTUPKEY. This way, attacker groups use the default values as per the original to avoid leaving any distinctive evidence.</p>
+
+<p>In some cases, attackers customise Quasar. For example, APT 10 updated some features and used it in some attacks. The following sections will cover the details of this custom Quasar.</p>
+
+<h4>Configuration</h4>
+
+<p>Quasar used by APT 10 (hereafter “custom Quasar”) has the following additional values in the configuration.</p>
+
+<ul>
+<li>DOWNLOAD_URL</li>
+<li>PROXY</li>
+</ul>
+
+<p>Figure 11 shows the comparison of configuration in the custom Quasar and the original Quasar.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig11-640wri.png" width="640" height="292" alt="" class="asset asset-image at-xid-1658124 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 11: Comparison of configuration<br>(Left: custom Quasar / Right: original Quasar)</figcaption></figure><p></p>
+
+<p>In “PROXY”, a proxy server URL can be configured. This ensures that the custom Quasar is able to communicate with a C2 server even if the target’s environment uses proxy servers. <br>
+While the original Quasar uses CBC mode when encrypting configuration with AES, the custom Quasar uses CFB mode.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig12-640wri.png" width="640" height="231" alt="" class="asset asset-image at-xid-1658125 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 12: Comparison of AES code<br>(Left: custom Quasar / Right: original Quasar)</figcaption></figure><p></p>
+
+<h4>Added/deleted commands</h4>
+
+<p>There are some changes to the commands in the custom Quasar. Figure 13 shows the comparison of commands in the custom Quasar and the original Quasar.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig13-640wri.png" width="640" height="468" alt="" class="asset asset-image at-xid-1658126 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 13: Comparison of commands<br>(Left: custom Quasar / Right: original Quasar)</figcaption></figure><p></p>
+
+<p>In the custom Quasar, new commands DoPlugin and DoPluginResponse are added while some including keylogger are deleted. <br>
+With DoPlugin, new functions can be added by loading additional plugin modules. These new modules can be deleted with DoPluginResponse. <br>
+This change enables Quasar to dynamically extend its functions with commands while maintaining Quasar itself as simple as it can be. This suggests the attacker’s intention to avoid detection by anti-virus software.</p>
+
+<h4>Error log creation</h4>
+
+<p>The custom Quasar has a function to create error logs. The file path of the error logs is hardcoded in itself.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig14-640wri.png" width="640" height="189" alt="" class="asset asset-image at-xid-1658127 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 14: Error log creation</figcaption></figure><p></p>
+
+<h4>Communication protocol</h4>
+
+<p>The encryption algorithms for communication with a C2 server also differs in the custom Quasar. While the original Quasar uses AES and QuickLZ, the custom Quasar also uses XOR encoding. Figure 15 shows the XOR encoding process added to the custom Quasar.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig15-640wri.png" width="640" height="247" alt="" class="asset asset-image at-xid-1658128 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 15: XOR encoding process</figcaption></figure><p></p>
+
+<p>For AES encryption, the custom Quasar uses CFB mode instead of CBC mode, as seen in the configuration. The encryption methods are as follows:</p>
+
+<ul>
+<li>Original Quasar: QuickLZ + AES (mode CBC)</li>
+<li>Custom Quasar: QuickLZ + AES (mode <font color="red"><strong>CFB</strong></font>) + <font color="red"><strong>XOR</strong></font> </li>
+</ul>
+
+<h3>C2 server activities</h3>
+
+<p>JPCERT/CC investigated the activities of Quasar Family C2 servers based on the characteristics discussed above. As of November 2020, 76 IP addresses running as C2 servers have been identified.
+Figure 16 shows the distribution of Quasar Family C2 servers which were revealed in this investigation.</p>
+
+<p></p><figure class="mt-figure mt-figure-center"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/quasar-fig16-640wri.png" width="640" height="245" alt="" class="asset asset-image at-xid-1658129 mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"><figcaption>Figure 16: C2 server distribution</figcaption></figure><p></p>
+
+<p>Multiple C2 servers are still running in different countries, which indicates its activeness.</p>
+
+<h2>In closing</h2>
+
+<p>Besides Quasar, other open source RATs are being used in ongoing attack cases <a href="https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html#7">[7]</a>. Attackers are taking advantage of these tools to make attribution difficult and reduce the cost for developing attack infrastructure. It is estimated that this attack trends may continue. <br>
+A tool to support Quasar analysis (compatible with Quasar v1.3 only) is available on <a href="https://github.com/JPCERTCC/QuasarRAT-Analysis">GitHub</a>. We hope you find it useful.</p>
+
+<ul>
+<li>Kota Kino, Shusei Tomonaga</li>
+<li>In cooperation with Tomoaki Tani <br>
+(Translated by Yukako Uchida)</li>
+</ul>
+
+<h4>Reference</h4>
+
+<p><a name="1"></a>[1] GitHub: Quasar <br>
+<a href="https://github.com/quasar/Quasar">https://github.com/quasar/Quasar</a></p>
+
+<p><a name="2"></a>[2] GitHub: CinaRAT <br>
+<a href="https://github.com/wearelegal/CinaRAT">https://github.com/wearelegal/CinaRAT</a></p>
+
+<p><a name="3"></a>[3] GitHub: Xtremis 2.0 <br>
+<a href="https://github.com/pavitra14/Xtremis-V2.0">https://github.com/pavitra14/Xtremis-V2.0</a></p>
+
+<p><a name="4"></a>[4] GitHub: QuasarStrike <br>
+<a href="https://github.com/Q-Strike/QuasarStrike">https://github.com/Q-Strike/QuasarStrike</a></p>
+
+<p><a name="5"></a>[5] GitHub: RSMaster <br>
+<a href="https://github.com/Netskyes/rsmaster">https://github.com/Netskyes/rsmaster</a></p>
+
+<p><a name="6"></a>[6] GitHub: AsyncRAT <br>
+<a href="https://github.com/NYAN-x-CAT/AsyncRAT-C-Sharp">https://github.com/NYAN-x-CAT/AsyncRAT-C-Sharp</a></p>
+
+<p><a name="7"></a>[7] Japan Security Analyst Conference 2020 (Opening Talk): Looking back on the incidents in 2019 <br>
+<a href="https://jsac.jpcert.or.jp/archive/2020/pdf/JSAC2020_0_JPCERT_en.pdf">https://jsac.jpcert.or.jp/archive/2020/pdf/JSAC2020_0_JPCERT_en.pdf</a></p>
+
+      
+
+    </section>
+
+        
+    
+    
+    <div class="entry-social-buttons  entry-social-buttons--after-content  clearfix">
+    <ul>
+      <li class="entry-social-twitter">
+        <iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 65px; height: 20px;" title="X Post Button" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/tweet_button.2f70fb173b9000da126c79afe2098f02(1).en.html" data-url="https://blogs.jpcert.or.jp/en/2020/12/quasar-family.html"></iframe>
+      </li>
+      <li class="entry-social-mail">
+        <a href="mailto:?subject=Attack%20Activities%20by%20Quasar%20Family&amp;body=https%3A%2F%2Fblogs.jpcert.or.jp%2Fen%2F2020%2F12%2Fquasar-family.html">Email</a>
+      </li>
+    </ul>
+  </div>
+
+    
+    
+
+
+        
+    
+    
+          
+    <section class="entry-author-detail">
+    <div class="entry-author-detail-header">
+      <p class="title">Author</p>
+    </div>
+
+    <div class="entry-author-detail-body clearfix">
+      <figure>
+        <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/image-992ce083-832a-45c5-a3d8-5922b68506a7.jpg" width="90" height="90" alt="喜野 孝太(Kota Kino)">
+      </figure>
+      <div class="entry-author-detail-body-text">
+        <p class="name"><a href="https://blogs.jpcert.or.jp/en/kino/">喜野 孝太(Kota Kino)</a></p>
+        <div class="profile">
+          <p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Kota Kino is Malware/Forensic Analyst at Incident Response Group, JPCERT/CC since August 2019.
+
+
+</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    
+    
+    
+
+
+        
+    
+  
+
+<!-- Feedback -->
+<div id="fb" class="feedback">
+  <form name="feedback_form" id="feedback_form">
+    <p class="title">Was this page helpful?</p>
+    <div class="inner">
+      <p class="select">
+        <label><input name="is_useful" id="is_usefull_yes" value="yes" type="radio">Yes</label>
+        <label><input name="is_useful" id="is_usefull_no" value="no" type="radio">No</label>
+      </p>
+      <p class="result"><span class="count">5</span> people found this content helpful.</p>
+    </div>
+    <p class="title">If you wish to make comments or ask questions, please use this form.</p>
+    <div class="inner">
+      <p class="message">This form is for comments and inquiries. For any questions regarding specific commercial products, please contact the vendor.</p>
+      <div class="container_a">
+        <div class="container_b">
+          <textarea name="free_text" id="free_text" cols="30" rows="3"></textarea>
+        </div>
+      </div>
+      <p class="send_area">
+        <span class="en_js_msg">please change the setting of your browser to set JavaScript valid.</span>
+        <span class="loader" style="display:none"><img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/fb_loader.gif" alt=""></span>
+        <span class="thanks">Thank you!</span>
+        <input class="button" type="button" value="Send" disabled="">
+      </p>
+    </div>
+    <input name="redirect_to" id="redirect_to" value="" type="hidden">
+    <input name="feedback_host" id="feedback_host" value="//ws.jpcert.or.jp/cgi-bin/" type="hidden">
+    <input name="uri" id="uri" value="" type="hidden">
+    <input name="token" id="token" value="" type="hidden">
+  </form>
+</div>
+<!-- //-------- feedback --------------------->
+
+
+
+    
+
+
+        
+    
+      
+    
+                      <section class="relation-entrylist">
+          <nav>
+            <h1>Related articles</h1>
+            <ul>
+      
+                            
+              <li>
+                <a href="https://blogs.jpcert.or.jp/en/2023/08/maldocinpdf.html" class="clearfix">
+                  <figure>
+                    <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/maldocpdf-fig1-320wi.png" alt="MalDoc in PDF - Detection bypass by embedding a malicious Word file into a PDF file –" class="entry-thumbnail">
+                  </figure>
+                  <div class="detail">
+                    <p class="title">MalDoc in PDF - Detection bypass by embedding a malicious Word file into a PDF file –</p>
+                  </div>
+                </a>
+              </li>
+
+                            
+                
+                            
+              <li>
+                <a href="https://blogs.jpcert.or.jp/en/2023/08/yama.html" class="clearfix">
+                  <figure>
+                    <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/yama-320wi.png" alt="YAMA-Yet Another Memory Analyzer for malware detection" class="entry-thumbnail">
+                  </figure>
+                  <div class="detail">
+                    <p class="title">YAMA-Yet Another Memory Analyzer for malware detection</p>
+                  </div>
+                </a>
+              </li>
+
+                            
+                
+                            
+              <li>
+                <a href="https://blogs.jpcert.or.jp/en/2023/07/dangerouspassword_dev.html" class="clearfix">
+                  <figure>
+                    <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/dangerouspassword_dev-fig3-320wi.png" alt="DangerousPassword attacks targeting developers’ Windows, macOS, and Linux environments" class="entry-thumbnail">
+                  </figure>
+                  <div class="detail">
+                    <p class="title">DangerousPassword attacks targeting developers’ Windows, macOS, and Linux environments</p>
+                  </div>
+                </a>
+              </li>
+
+                            
+                
+                            
+              <li>
+                <a href="https://blogs.jpcert.or.jp/en/2023/06/autoyara4flirt.html" class="clearfix">
+                  <figure>
+                    <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/AutoYara4FLIRT-fig5-320wi.png" alt="How to Create F.L.I.R.T Signature Using Yara Rules for Static Analysis of ELF Malware" class="entry-thumbnail">
+                  </figure>
+                  <div class="detail">
+                    <p class="title">How to Create F.L.I.R.T Signature Using Yara Rules for Static Analysis of ELF Malware</p>
+                  </div>
+                </a>
+              </li>
+
+                            
+                
+                            
+              <li>
+                <a href="https://blogs.jpcert.or.jp/en/2023/05/gobrat.html" class="clearfix">
+                  <figure>
+                    <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/gobrat-fig5-320wi.png" alt="GobRAT malware written in Go language targeting Linux routers" class="entry-thumbnail">
+                  </figure>
+                  <div class="detail">
+                    <p class="title">GobRAT malware written in Go language targeting Linux routers</p>
+                  </div>
+                </a>
+              </li>
+
+                            
+                  </ul>
+          </nav>
+        </section>
+            
+    
+    
+    
+
+
+        
+    
+    
+    <section class="entry-navi">
+    <div class="entry-navi-prev">
+              <a href="https://blogs.jpcert.or.jp/en/2020/12/cna-2cna.html">Back</a>
+          </div>
+    <div class="entry-navi-home">
+      <a href="https://blogs.jpcert.or.jp/en/">Top</a>
+    </div>
+    <div class="entry-navi-next">
+              <a href="https://blogs.jpcert.or.jp/en/2021/01/Lazarus_tools.html">Next</a>
+          </div>
+  </section>
+
+    
+    
+
+
+  </article>
+
+
+
+  
+
+        </main>
+      </div>
+
+            
+    <aside>
+
+        
+    <div class="google-search">
+    <script>
+      (function() {
+        var cx = '004990004422359256493:nnhwqqlx864';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-ja"><div class="gsc-control-wrapper-cse" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" role="presentation" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" role="presentation" id="gs_id50" class="gstl_50 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="検索" aria-label="検索" id="gsc-i-id1" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; background: url(&quot;https://www.google.com/cse/static/images/1x/ja/branding.png&quot;) left center no-repeat rgb(255, 255, 255); outline: none;" dir="ltr" spellcheck="false"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;" title="検索ボックスをクリア" role="button"><span class="gscb_a" id="gs_cb50" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>検索</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="結果をクリア">&nbsp;</div></td></tr></tbody></table></form><div class="gsc-results-wrapper-overlay"><div class="gsc-results-close-btn" tabindex="0"></div><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"><div aria-label="refinement" role="tab" class="gsc-tabHeader gsc-inline-block gsc-tabhActive">カスタム検索</div><span class="gs-spacer"> </span></div></div><div class="gsc-positioningWrapper"><div class="gsc-refinementsAreaInvisible"></div></div><div class="gsc-above-wrapper-area-invisible"><div class="gsc-above-wrapper-area-backfill-container"></div><table cellspacing="0" cellpadding="0" role="presentation" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">表示順:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><div><div class="gsc-expansionArea"></div></div></div></div></div></div><div class="gsc-modal-background-image" tabindex="0"></div></div></div></div>
+  </div>
+
+
+
+        
+        <section id="side-categories" class="categorylist">
+      <nav>
+        <h1>Categories</h1>
+        <ul>
+
+          
+                        
+                                      <li>
+                                  <span class="bullet" style="background-color: #6484c5"></span><a href="https://blogs.jpcert.or.jp/en/malware/">Malware</a>
+                
+                              </li>
+            
+                        
+          
+                        
+                                      <li>
+                                  <span class="bullet" style="background-color: #fca001"></span><a href="https://blogs.jpcert.or.jp/en/incident/">Incident</a>
+                
+                              </li>
+            
+                        
+          
+                        
+                                      <li>
+                                  <span class="bullet" style="background-color: #9ec700"></span><a href="https://blogs.jpcert.or.jp/en/event/">Event</a>
+                
+                              </li>
+            
+                        
+          
+                        
+                                      <li>
+                                  <span class="bullet" style="background-color: #009e9f"></span><a href="https://blogs.jpcert.or.jp/en/vulnerability/">Vulnerability</a>
+                
+                              </li>
+            
+                        
+          
+                        
+                                      <li>
+                                  <span class="bullet" style="background-color: #0172b6"></span><a href="https://blogs.jpcert.or.jp/en/security-technology/">Security Technology</a>
+                
+                              </li>
+            
+                        
+          
+                        
+                                      <li>
+                                  <span class="bullet" style="background-color: #a1017f"></span><a href="https://blogs.jpcert.or.jp/en/forensic/">Forensic</a>
+                
+                              </li>
+            
+                        
+          
+                        
+                                      <li>
+                                  <span class="bullet" style="background-color: #000"></span><a href="https://blogs.jpcert.or.jp/en/cyber-metrics/">Cyber Metrics</a>
+                
+                              </li>
+            
+                        
+          
+                        
+                                      <li>
+                                  <span class="bullet" style="background-color: #000"></span><a href="https://blogs.jpcert.or.jp/en/ics-ot/">ICS-OT</a>
+                
+                              </li>
+            
+                        
+          
+                        
+                                      <li>
+                                  <span class="bullet" style="background-color: #838383"></span><a href="https://blogs.jpcert.or.jp/en/other/">Other</a>
+                
+                              </li>
+            
+                        
+          
+                        
+                        
+                        
+          
+        </ul>
+      </nav>
+    </section>
+  
+
+
+        
+        
+            
+            
+            
+    
+            
+            
+            
+    
+            
+            
+            
+    
+            
+            
+            
+    
+            
+            
+            
+    
+            
+            
+            
+    
+            
+            
+            
+    
+            
+            
+            
+    
+            
+            
+            
+    
+            
+                    <section id="side-tags" class="taglist">
+          <nav>
+            <h1>Tags</h1>
+
+                          <ul>
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/python/">Python</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/conference/">Conference</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/datper/">Datper</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/chches/">ChChes</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/training/">Training</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/cybergreen/">Statistics and Indicator</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/tool/">Tool</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/blacktech/">BlackTech</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/logontracer/">LogonTracer</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/report/">Report</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/splunk/">Splunk</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/elasticstack/">ElasticStack</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/impfuzzy/">impfuzzy</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/volatility/">volatility</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/redleaves/">RedLeaves</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/plugx/">PlugX</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/darkhotel/">DarkHotel</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/banking-malware/">Banking malware</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/pacific-islands/">Pacific_Islands</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/csirt/">CSIRT</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/password/">Password</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/policy/">Policy</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/ddos/">DDoS</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/apt/">APT</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/trend/">Trend</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/africa/">Africa</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/securecoding/">SecureCoding</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/sysmonsearch/">SysmonSearch</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/jsac/">JSAC</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/iot/">IoT</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/iiot/">IIoT</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/quasar/">Quasar</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/lodeinfo/">LODEINFO</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/lazarus/">Lazarus</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/emotet/">Emotet</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/phishing/">Phishing</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/metrics/">Metrics</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/tsubame/">TSUBAME</a>
+                                  </li>
+
+                                
+                                        
+                                
+                <li>
+                                      <a href="https://blogs.jpcert.or.jp/en/tags/standard-guideline/">Standard-Guideline</a>
+                                  </li>
+
+                                
+              </ul>            
+          </nav>
+        </section>
+      
+            
+      
+
+
+        
+  
+  　<aside id="ranklet4-N2r04NQy9WPJiTSHTadz"><section id="side-ranking" class="rankinglist">
+  <nav>
+    <h1>Ranking</h1>
+    <ul class="rankinglist__list">
+      <li class="rankinglist__list__item">
+        <a class="rankinglist__list__item__grid" href="https://blogs.jpcert.or.jp/en/2023/08/maldocinpdf.html">
+          <span class="rankinglist__list__item__grid__cell-rank">
+            <span class="rankinglist__list__item__rank">1</span>
+          </span>
+          <span class="rankinglist__list__item__grid__cell-image">
+            <figure class="rankinglist__list__item__image">
+              <img class="rankinglist__list__item__image__src" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/maldocpdf-fig1-800wi.jpg" alt="MalDoc in PDF - Detection bypass by embedding a malicious Word file into a PDF file – ">
+            </figure>
+          </span>
+          <span class="rankinglist__list__item__grid__cell-data">
+            <p class="rankinglist__list__item__title">MalDoc in PDF - Detection bypass by embedding a malicious Word file into a PDF file – </p>
+          </span>
+        </a>
+      </li>
+      <li class="rankinglist__list__item">
+        <a class="rankinglist__list__item__grid" href="https://blogs.jpcert.or.jp/en/2023/12/tsubame_overflow_2023-07-09.html">
+          <span class="rankinglist__list__item__grid__cell-rank">
+            <span class="rankinglist__list__item__rank">2</span>
+          </span>
+          <span class="rankinglist__list__item__grid__cell-image">
+            <figure class="rankinglist__list__item__image">
+              <img class="rankinglist__list__item__image__src" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/ロゴ-800wi.jpg" alt="TSUBAME Report Overflow (Jul-Sep 2023) ">
+            </figure>
+          </span>
+          <span class="rankinglist__list__item__grid__cell-data">
+            <p class="rankinglist__list__item__title">TSUBAME Report Overflow (Jul-Sep 2023) </p>
+          </span>
+        </a>
+      </li>
+      <li class="rankinglist__list__item">
+        <a class="rankinglist__list__item__grid" href="https://blogs.jpcert.or.jp/en/2021/09/volatility3_offline.html">
+          <span class="rankinglist__list__item__grid__cell-rank">
+            <span class="rankinglist__list__item__rank">3</span>
+          </span>
+          <span class="rankinglist__list__item__grid__cell-image">
+            <figure class="rankinglist__list__item__image">
+              <img class="rankinglist__list__item__image__src" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/volatility3-800wi.jpg" alt="How to Use Volatility 3 Offline ">
+            </figure>
+          </span>
+          <span class="rankinglist__list__item__grid__cell-data">
+            <p class="rankinglist__list__item__title">How to Use Volatility 3 Offline </p>
+          </span>
+        </a>
+      </li>
+      <li class="rankinglist__list__item">
+        <a class="rankinglist__list__item__grid" href="https://blogs.jpcert.or.jp/en/2016/01/windows-commands-abused-by-attackers.html">
+          <span class="rankinglist__list__item__grid__cell-rank">
+            <span class="rankinglist__list__item__rank">4</span>
+          </span>
+          <span class="rankinglist__list__item__grid__cell-image">
+            <figure class="rankinglist__list__item__image">
+              <img class="rankinglist__list__item__image__src" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/03-800wi.jpg" alt="Windows Commands Abused by Attackers ">
+            </figure>
+          </span>
+          <span class="rankinglist__list__item__grid__cell-data">
+            <p class="rankinglist__list__item__title">Windows Commands Abused by Attackers </p>
+          </span>
+        </a>
+      </li>
+      <li class="rankinglist__list__item">
+        <a class="rankinglist__list__item__grid" href="https://blogs.jpcert.or.jp/en/2022/03/anti_upx_unpack.html">
+          <span class="rankinglist__list__item__grid__cell-rank">
+            <span class="rankinglist__list__item__rank">5</span>
+          </span>
+          <span class="rankinglist__list__item__grid__cell-image">
+            <figure class="rankinglist__list__item__image">
+              <img class="rankinglist__list__item__image__src" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/anti_upx_unpack-fig1-800wi.jpg" alt="Anti-UPX Unpacking Technique ">
+            </figure>
+          </span>
+          <span class="rankinglist__list__item__grid__cell-data">
+            <p class="rankinglist__list__item__title">Anti-UPX Unpacking Technique </p>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</section>
+</aside><style></style>
+  <script async="" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/N2r04NQy9WPJiTSHTadz.js"></script>
+
+
+        
+    
+              <section id="side-members" class="memberlist">
+        <nav>
+          <h1>Authors</h1>
+          <ul class="clearfix">
+    
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/SHIKAPON/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/matsu.png" alt="鹿野 恵祐 (Keisuke Shikano)" title="鹿野 恵祐 (Keisuke Shikano)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/sekiguchi/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/default-userpic-90.jpg" alt="関口　晃弘 (Akihiro Sekiguchi)" title="関口　晃弘 (Akihiro Sekiguchi)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/reto/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/Q6VN1jSR_400x400.jpg" alt="衛藤 亮介 (Ryosuke Eto)" title="衛藤 亮介 (Ryosuke Eto)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/ikuya/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/profile_icon.png" alt="福本 郁哉（Ikuya Fukumoto）" title="福本 郁哉（Ikuya Fukumoto）" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/m-toyama/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/default-userpic-90.jpg" alt="登山 昌恵 (Masae Toyama)" title="登山 昌恵 (Masae Toyama)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/s-tanaka/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/default-userpic-90.jpg" alt="田中 信太郎（Shintaro Tanaka） " title="田中 信太郎（Shintaro Tanaka） " width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/horata/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/default-userpic-90.jpg" alt="洞田 慎一 (Shinichi Horata)" title="洞田 慎一 (Shinichi Horata)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/kohnowriter/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/default-userpic-90.jpg" alt="河野 一之 (Kazuyuki Kohno)" title="河野 一之 (Kazuyuki Kohno)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/t.mizuno/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/default-userpic-90.jpg" alt="水野 哲也 (Tetsuya Mizuno)" title="水野 哲也 (Tetsuya Mizuno)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/y-murakami/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/default-userpic-90.jpg" alt="村上 勇樹（Yuki Murakami）" title="村上 勇樹（Yuki Murakami）" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/shu_tom/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/ENCORE_400x400.jpg" alt="朝長 秀誠 (Shusei Tomonaga)" title="朝長 秀誠 (Shusei Tomonaga)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/totsuka/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/default-userpic-90.jpg" alt="戸塚 紀子（Noriko Totsuka）" title="戸塚 紀子（Noriko Totsuka）" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/kkomiyama/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/photo_sparky_small.jpg" alt="小宮山 功一朗 (Koichiro Sparky Komiyama)" title="小宮山 功一朗 (Koichiro Sparky Komiyama)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/masubuchi/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/blog_image.png" alt="増渕 維摩(Yuma Masubuchi)" title="増渕 維摩(Yuma Masubuchi)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/hori-32tk/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/画像の貼り付け先_-2021-3-18-22-18.png" alt="堀 充孝（Mitsutaka Hori）" title="堀 充孝（Mitsutaka Hori）" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/kino/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/image-992ce083-832a-45c5-a3d8-5922b68506a7.jpg" alt="喜野 孝太(Kota Kino)" title="喜野 孝太(Kota Kino)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/uchida/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/14190908.jpg" alt="内田 有香子 (Yukako Uchida)" title="内田 有香子 (Yukako Uchida)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/sajo/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/Sajo0191031.jpg" alt="佐條 研(Ken Sajo)" title="佐條 研(Ken Sajo)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/Tomotaka/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/Tomotaka-Ito.jpg" alt="伊藤 智貴 (Tomo Ito)" title="伊藤 智貴 (Tomo Ito)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/tnakano/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/default-userpic-90(1).jpg" alt="中野 巧 (Takumi Nakano)" title="中野 巧 (Takumi Nakano)" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/k-nakamura/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/default-userpic-90.jpg" alt="中村 恭脩（kyosuke Nakamura）" title="中村 恭脩（kyosuke Nakamura）" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/shoko/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/DSCN1042-(2).png" alt="中井 尚子（Shoko Nakai）" title="中井 尚子（Shoko Nakai）" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+                          <li>
+                <a href="https://blogs.jpcert.or.jp/en/retiree_blog/">
+                  <img src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/j_icon72_400x400.jpg" alt="JPCERT/CC" title="JPCERT/CC" width="50">
+                </a>
+              </li>
+            
+                        
+          
+                        
+            
+                        
+              </ul>
+        </nav>
+      </section>
+      
+    
+
+
+    
+        
+              <section id="side-monthly-archive" class="archivelist">
+        <nav>
+          <h1>Archives</h1>
+          <ul>
+    
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2023/">2023</a><small>18</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2022/">2022</a><small>19</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2021/">2021</a><small>20</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2020/">2020</a><small>21</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2019/">2019</a><small>18</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2018/">2018</a><small>12</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2017/">2017</a><small>17</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2016/">2016</a><small>18</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2015/">2015</a><small>20</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2014/">2014</a><small>18</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2013/">2013</a><small>7</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2012/">2012</a><small>2</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2011/">2011</a><small>8</small></li>
+
+                
+          
+                
+        <li><a href="https://blogs.jpcert.or.jp/en/2010/">2010</a><small>4</small></li>
+
+                
+              </ul>
+        </nav>
+      </section>
+      
+
+
+  </aside>
+
+
+
+    </div>
+
+        
+    
+    <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__information">
+        <div class="footer__information__cell-logo">
+          <p class="footer__information__logo">
+            <a href="https://www.jpcert.or.jp/english/" target="_blank">
+              <img style="margin-top:3px" class="footer__information__logo__src" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/footer_logo.svg" width="188" height="48" alt="JPCERT Coordination Center">
+            </a>
+          </p>
+        </div>
+        <div class="footer__information__cell-company">
+          <dl class="footer__information__company">
+            <dt class="footer__information__company__name">JPCERT/CC</dt>
+            <dd class="footer__information__company__data">
+              <address class="footer__information__company__data__address">8F Tozan Bldg, 4-4-2 Nihonbashi-Honcho, Chuo-ku, Tokyo 1030023 JAPAN</address>
+              <p class="footer__information__company__data__tel">TEL: +81-3-6271-8901　FAX: +81-3-6271-8908</p>
+            </dd>
+          </dl>
+        </div>
+        <div class="footer__information__cell-navigation">
+          <ul class="footer__information__navigation">
+            <li class="footer__information__navigation__item"><a class="footer__information__navigation__link" href="https://blogs.jpcert.or.jp/en/privacy-policy.html" target="_blank">Privacy Policy</a></li>
+            <li class="footer__information__navigation__item"><a class="footer__information__navigation__link" href="https://blogs.jpcert.or.jp/en/disclaimer.html" target="_blank">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copyright">© 1996-2023 JPCERT/CC</p>
+    </div>
+  </footer>
+
+    
+
+
+  
+  
+
+    
+
+              
+        <script async="" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/widgets.js" charset="utf-8"></script>
+
+        <script src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/prototype.js"></script>
+    <script src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/script.js"></script>
+
+  
+                                    <script src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/get_feedback_jsonp.cgi"></script><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/widget_iframe.2f70fb173b9000da126c79afe2098f02.html" title="Twitter settings iframe" style="display: none;"></iframe><table cellspacing="0" cellpadding="0" role="presentation" class="gstl_50 gssb_c" style="width: 169px; display: none; top: 234px; left: 1313px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Attack Activities by Quasar Family - JPCERT_CC Eyes _ JPCERT Coordination Center official Blog_files/saved_resource.html"></iframe></body></html>

@@ -1,0 +1,73 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * kepler-std:
+ *   - http://typekit.com/eulas/00000000000000000001313f
+ *   - http://typekit.com/eulas/000000000000000000013140
+ *   - http://typekit.com/eulas/000000000000000000013144
+ *   - http://typekit.com/eulas/000000000000000000013145
+ * sofia-pro:
+ *   - http://typekit.com/eulas/00000000000000007735f999
+ *   - http://typekit.com/eulas/00000000000000007735f993
+ *   - http://typekit.com/eulas/00000000000000007735f98d
+ *   - http://typekit.com/eulas/00000000000000007735f98c
+ *
+ * © 2009-2023 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2022-11-01 15:28:21 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=itk2qbh&ht=tk&f=9871.9872.9874.14602.24539.24540.24547.24548&a=95056288&app=typekit&e=css");
+
+@font-face {
+font-family:"kepler-std";
+src:url("https://use.typekit.net/af/3f55d3/00000000000000000001313f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/3f55d3/00000000000000000001313f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/3f55d3/00000000000000000001313f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"kepler-std";
+src:url("https://use.typekit.net/af/2c86cd/000000000000000000013140/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/2c86cd/000000000000000000013140/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/2c86cd/000000000000000000013140/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"kepler-std";
+src:url("https://use.typekit.net/af/4337b5/000000000000000000013144/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/4337b5/000000000000000000013144/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/4337b5/000000000000000000013144/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;
+}
+
+@font-face {
+font-family:"kepler-std";
+src:url("https://use.typekit.net/af/411f5c/000000000000000000013145/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff2"),url("https://use.typekit.net/af/411f5c/000000000000000000013145/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff"),url("https://use.typekit.net/af/411f5c/000000000000000000013145/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:500;font-stretch:normal;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/5d97ff/00000000000000007735f999/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/5d97ff/00000000000000007735f999/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/5d97ff/00000000000000007735f999/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/66e20c/00000000000000007735f993/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/66e20c/00000000000000007735f993/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/66e20c/00000000000000007735f993/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/b718ff/00000000000000007735f98d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/b718ff/00000000000000007735f98d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/b718ff/00000000000000007735f98d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/c09857/00000000000000007735f98c/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/c09857/00000000000000007735f98c/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/c09857/00000000000000007735f98c/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+.tk-kepler-std { font-family: "kepler-std",serif; }
+.tk-sofia-pro { font-family: "sofia-pro",sans-serif; }

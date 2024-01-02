@@ -1,0 +1,2 @@
+define("photo",["module","page","utils"],function(t,i,o){const a={name:t.id,class:"."+t.id};o.broadcast(a.name,"loaded"),o.createModuleNoJQ(a.name,function(t){const i=this;this.el=t,this.module=a,this.init=function(){i.broadcast("init"),i.broadcast("ready")}})});
+//# sourceMappingURL=photo_7.7.5.js.map

@@ -1,0 +1,38 @@
+.ot_content_block{
+    color: #6CB33F;
+    border: 2px solid #6CB33F !important;
+    padding: 8px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.home.page-id-27964 .ot_content_block{
+	margin-right:20px;
+}
+.social-share{
+    padding-bottom:20px;
+}
+.social-share td{
+    padding:5px;
+}
+/*.social-share td,body.single .social-share td{
+    width:75px;
+    display:inline-block;
+}*/
+
+button#ot-sdk-btn:hover,button#ot-sdk-btn:active,button#ot-sdk-btn:focus{
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+.social-share .share-facebook {
+    margin-left: 10px;
+}
+.wrapper .social-share,.wprss_feed .social-share{
+    margin-top:0!important;
+}
+ 
+.single .social-share {
+    padding-bottom: 0px;
+}

