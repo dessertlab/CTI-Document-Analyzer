@@ -36,7 +36,47 @@ group = parser.add_mutually_exclusive_group()
 args=parser.parse_args()
 apt= os.path.split(args.path)[-1]
 
-scraped = paragraph_scraper.arrange(directory_path=args.path)
-filename = f"output/json/{apt}_paragraph.json"
-with open(filename, "w") as fp:
-    json.dump(obj=scraped, indent=4, fp=fp)
+# scraped = paragraph_scraper.arrange(directory_path=args.path)
+# filename = f"output/json/{apt}_paragraph.json"
+# with open(filename, "w") as fp:
+#     json.dump(obj=scraped, indent=4, fp=fp)
+
+with open(args.path) as fp:
+        scraped = json.load(fp=fp)
+name, ext = os.path.splitext(apt)
+apt=name
+apt=apt.replace("_paragraph", "")
+
+from models import classMClassificator,classDetector
+classifier = classMClassificator.Classificator()
+detector = classDetector.Detector()
+
+print("[CTI-Analyzer]\t, Detector's prediction")
+for entry in scraped:
+    entry['detection'] = detector.getPrediction2(entry["text"])
+
+aptdir = f"output/{apt}"
+
+if not os.path.exists(aptdir):
+    os.makedirs(aptdir)
+    print(f"Folder '{aptdir}' created.")                                            #DEBUG
+else:
+    print(f"Folder '{aptdir}' already exists.")
+
+print("[CTI-Analyzer]\t, Classifier's prediction")
+for entry in scraped:
+    if entry["detection"]["response"]== True:
+        entry["prediction"] = classifier.getKPrediction(entry["text"],k=5)
+
+with open(aptdir+f'/{apt}_paragraph.json', mode='w') as fp:
+        json.dump(fp=fp, obj=scraped,indent=4, cls=CustomJSONizer)
+
+# from models import classSummarizator
+# summarizer = classSummarizator.Summarizator()
+
+# for entry in scraped:
+#      entry["summary"]= summarizer.getSummary(text=entry["text"])
+
+# filename = f"output/json/{apt}_summary.json"
+# with open(filename, "w") as fp:
+#         json.dump(obj=scraped, indent=4, fp=fp, cls=SpaCyEncoder)

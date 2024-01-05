@@ -1,0 +1,1892 @@
+[
+    {
+        "text": "In an indictment unsealed by the U.S. Department of Justice (DoJ) on Aug. 1, 2018, three Ukrainian nationals have been charged with conspiracy, wire fraud, computer hacking, access device fraud and aggravated identity theft. Dmytro Fedorov, 44, Fedir Hladyr, 33, and Andrii Kopakov, 30, are suspected to be key members within CARBON SPIDER\u2019s point of sale (POS) subgroup.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "three Ukrainian nationals have been charged with conspiracy, wire fraud, computer hacking, access device fraud and aggravated identity theft. Dmytro Fedorov, 44, Fedir Hladyr, 33, and Andrii Kopakov, 30, are suspected to be key members within CARBON SPIDER\u2019s point of sale subgroup.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The arrests took place between January and June 2018, and coincided with a slowdown in CARBON SPIDER activity. The DoJ announcement also details the group\u2019s use of a front company, named Combi Security, to recruit developers and intrusion specialists for its operations. Given that other members of this subgroup remain at large, it is likely that the tactics, techniques and procedures (TTPs) may change but activity will continue.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "the arrests took place between January and June 2018, and coincided with a slowdown in CARBON SPIDER activity. the group\u2019s use of an front company, named Combi Security, to recruit developers and intrusion specialists for its operations. it is likely that the tactics, techniques and procedures (TTPs) may change but activity will continue.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "CARBON SPIDER, more widely known as the Carbanak group, is a long-standing criminal enterprise responsible for compromising banks to transfer funds to mule accounts, performing ATM jackpotting attacks, and conducting mass compromise of debit and credit cards from POS terminals in large enterprises. They have been active in some form since at least 2013. During that time, the group has focused on the banking, financial, media, technology, hospitality, and food and beverage verticals, using targeted campaigns to reach their objectives.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "the carbanak group is a long-standing criminal enterprise responsible for compromising banks to transfer funds to mule accounts, performing ATM jackpotting attacks, and conducting mass compromise of debit and credit cards from POS terminals. they have been active in some form since at least 2013 using targeted campaigns to reach their objectives.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The structure of CARBON SPIDER is very complex and was initially suspected to be a single group, based on their use of several custom tools and specific TTPs. However, further research into the structure indicates that there are several clusters of activity likely made up of subgroups serving different missions, potentially with access to a shared development environment and pool of resources. A complex structure such as this is difficult to manage and speaks to the sophistication of the actor.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "the structure of CARBON SPIDER is very complex and was initially suspected to be a single group, based on their use of several custom tools and specific TTPs. however, further research indicates that there are several clusters of activity likely made up of subgroups serving different missions.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "This blog aims to examine CARBON SPIDER over time and attempts to describe their changing relationship within the eCrime ecosystem.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "this blog aims to examine CARBON SPIDER over time and attempts to describe their changing relationship within the eCrime ecosystem.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "CARBON SPIDER has leveraged many custom tools since it began activity in 2013, including its primary implant Sekur (a.k.a. Anunak). These include the following:",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "CARBON SPIDER has leveraged many custom tools since it began activity in 2013, including its primary implant Sekur. these include:",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Sekur has been CARBON SPIDER\u2019s primary tool for several years, although usage over the last year appears to have declined. It contains all the functionality you would expect from a RAT, allowing the adversary to execute commands, manage the file system, manage processes, and collect data. In addition, it can record videos of victim sessions, log keystrokes, enable remote desktop, or install Ammyy Admin or VNC modules. From July 2014 on, samples were compiled with the capability to target Epicor POS systems and to collect credit card data.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "sekur contains all the functionality you would expect from a RAT. it can record videos of victim sessions, log keystrokes, enable remote desktop, or install ammyy Admin or VNC modules.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Agent ORM began circulating alongside Sekur in campaigns throughout the second half of 2015. The malware collects basic system information and is able to take screenshots of victim systems. It is used to download next-stage payloads when systems of interest are identified. It is strongly suspected that Agent ORM has been deprecated in favor of script-based first-stage implants (VB Flash, JS Flash, and Bateleur).",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "agent ORM began circulating alongside Sekur in campaigns throughout the second half of 2015. the malware collects basic system information and is able to take screenshots of victim systems. it is strongly suspected of being deprecated in favor of script-based first-stage implants (VB Flash, JS Flash and Bateleur).",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "VB Flash was first observed being deployed alongside Agent ORM in September 2015. It is likely that this was developed as a replacement to Agent ORM and contained similar capabilities. The first observed instance of VB Flash included comments and was easy to analyze\u2014later versions soon began to integrate multiple layers of obfuscation. Several versions of VB Flash were developed including ones that utilized Google Forms, Google Macros, and Google Spreadsheets together to make a command-and-control (C2) channel. This variant would POST victim data to a specified Google form, then make a request to a Google macro script, receiving an address for a Google Spreadsheet from which to request commands.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "VB Flash was first observed being deployed alongside Agent ORM in September 2015. it is likely that this was developed as a replacement to Agent orM and contained similar capabilities.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "JS Flash capabilities closely resemble those of VB Flash and leverage interesting techniques in deployment via batch scripts embedded as OLE objects in malicious documents. Many iterations of JS Flash were observed being tested before deployment, containing minor changes to obfuscation and more complex additions, such as the ability to download TinyMet (a cutdown of the Metasploit Meterpreter payload). PowerShell was also used heavily for the execution of commands and arbitrary script execution. No JS Flash samples were observed being deployed after November 2017.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "JS Flash capabilities closely resemble those of VB Flash and leverage interesting techniques in deployment via batch scripts embedded as OLE objects in malicious documents. many iterations were tested before deployment, containing minor changes to obfuscation and more complex additions, such as the ability to download TinyMet (a cutdown of the Metasploit Meterpreter payload)",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Bateleur deployments began not long after JS Flash and were also written in JavaScript. Deployments were more infrequent and testing was not observed. It is likely that Bateleur was run in parallel as an alternative tool and eventually replaced JS Flash as CARBON SPIDER\u2019s first stage tool of choice. Although much simpler in design than JS Flash, all executing out of a single script with more basic obfuscation, Bateleur has a wealth of capabilities\u2014including the ability to download arbitrary scripts and executables, deploy TinyMet, execute commands via PowerShell, deploy a credential stealer, and collect victim system information such as screenshots.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "Bateleur was run in parallel as an alternative tool and eventually replaced JS Flash as the first stage tool of choice. all executing out of a single script with more basic obfuscation, the tool has the ability to download arbitrary scripts and executables, deploy TinyMet, execute commands via PowerShell and collect victim system information such as screenshots.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Based on the use of these tools, it is possible to group the CARBON SPIDER activity into several clusters. These clusters may represent different groups with a common tool supply chain, or isolated campaigns from the same group, using separate individuals to carry out attacks with a different focus.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "based on the use of these tools, it is possible to group the activity into several clusters. they may represent different groups with a common tool supply chain, or isolated campaigns from the same group, using separate individuals to carry out attacks with different focus.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The POS cluster is the most prolific associated to the CARBON SPIDER actor and is also known as FIN7. This cluster has used all the custom tools described with VB Flash, JS Flash, and Bateleur that are unique to them. Over time, they have used targeted spear phishing emails to deploy malicious documents that initially used exploits; more recently, they have used macros and OLE embedded objects. The primary method of cash out for this group is the acquisition and sale of credit and debit card dumps from POS devices. Many of the stolen cards are sold as collectives on the eCrime marketplace, Joker\u2019s Stash.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "the POS cluster is the most prolific associated to the CARBON SPIDER actor. it has used all the custom tools described with VB Flash, JS Flash and Bateleur that are unique to them. over time, they have used targeted spear phishing emails to deploy malicious documents that initially used exploits.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "This cluster can also be described as the original Carbanak group. It is suspected that they stole large sums of money using several cash out methods against Russian banks, at which point the group may have diverged. It is likely that they developed the primary CARBON SPIDER implant Sekur and were, at the point of being operational, probably the only users of it.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "this cluster can also be described as the original Carbanak group. it is suspected that they stole large sums of money using several cash out methods against Russian banks, at which point the group may have diverged.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Although the targeting profile is the same as the Russian banking cluster, the TTPs are very different. In particular, the use of tooling stands out from other clusters of CARBON SPIDER activity. As with other clusters, the primary infection vector is targeted spear phishing emails that use exploits for a variety of vulnerabilities in Microsoft Office:",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "the use of tooling stands out from other clusters of CARBON SPIDER activity. the primary infection vector is targeted spear phishing emails that use exploits for a variety of vulnerabilities in Microsoft Office:",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "A custom .NET first stage payload is deployed that in some cases deploys Agent ORM or Sekur, but is also used to deploy NetWire. Instances of DarkComet and Morphine RAT use some custom .NET downloader servers as their C2. One possibility is that CARBON SPIDER outsourced deployment of their malware for this campaign. An alternative theory is that this is a seperate group also using CARBON SPIDER tools. Little is reported publicly about the successfulness of this cluster of activity, and no cash out methods are known.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "instances of DarkComet and Morphine RAT use some custom.NET downloader servers as their C2. one possibility is that CARBON SPIDER outsourced deployment of their malware for this campaign.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The Eastern European banking cluster is based on a single campaign using a strategic web compromise of an Italian bank in Ukraine to deploy instances of Agent ORM to likely Ukrainian targets. It is likely that this cluster links to one of the other clusters of Sekur activity, possibly the unattributed activity discussed below. However, no follow-on actions have been observed past Agent ORM deployment.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "the eastern European banking cluster is based on a single campaign using an italian bank in Ukraine to deploy instances of Agent ORM to likely Ukrainian targets. it is likely that this cluster links to one of the other clusters of Sekur activity, possibly the unattributed activity discussed below.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The unattributed activity is based on a cluster of Sekur activity that runs in parallel with the POS cluster of activity, but does not exhibit the same TTPs (with differences in Sekur configuration, campaigns, and infrastructure selection). Many of these samples were submitted from Ukraine; additionally, one of them was deployed using a malicious document with a decoy that suggests Ukrainian news and media targeting. It is possible that this activity relates to the Eastern European bank cluster of Agent ORM activity; yet without further evidence of follow-on activity, it is not possible to determine this cluster\u2019s action on objectives.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "the unattributed activity is based on a cluster of Sekur activity that runs in parallel with the POS cluster. it does not exhibit the same TTPs (with differences in sekur configuration, campaigns, and infrastructure selection)",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Below is a timeline showing the activity of each of the five clusters of CARBON SPIDER activity:",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "below is a timeline showing the activity of each of the five clusters of CARBON SPIDER activity. click here for more information.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The timeline shows that several of these clusters of activity started just after public reporting of the group (around mid-2015) and that the divergence in activity may have been the result of this exposure. It also highlights that CARBON SPIDER now likely operates multiple parallel missions focusing on different regions and sectors.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "the timeline shows that several clusters of activity started just after public reporting of the group. it also highlights that CARBON SPIDER now likely operates multiple parallel missions focusing on different regions and sectors.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Beyond the described clusters of CARBON SPIDER activity based around their custom tools, their are also interesting links to other tracked, targeted eCrime activity. This includes the group dubbed RATPAK SPIDER (also known as Buhtrap) that targets Russian and Ukrainian financial institutions, a group dubbed Odinaff targeting SWIFT systems particularly in Eastern Europe, and the group COBALT SPIDER (also known as Cobalt) that, again, specializes in targeting Russian banks.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "this includes the group dubbed RATPAK SPIDER (also known as Buhtrap) that targets Russian and Ukrainian financial institutions. cobalt that, again, specializes in targeting Russian banks.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Operation Buhtrap had a similar target scope (Russian financial) to the first cluster of CARBON SPIDER activity. Although these have always been tracked as seperate groups, there is a technical link between payload deployments. A custom macro dropper that would encode the payload using VB Script notation, and contained the strings \u201cAfter OnTime\u201d and \u201cFUCK AV,\u201d was observed in only 19 unique samples across Crowdstrike sample stores. One of the payloads was an instance of Agent ORM used to targeted casinos; a second payload also used by CARBON SPIDER was an instance of Sekur. The other six unique payloads observed being deployed using this custom macro dropper were instances of the Nullsoft Scriptable Install System (NSIS) downloader attributed to the Buhtrap group. Initially, this led to tracking both threats as CARBON SPIDER. Although it now appears that Buhtrap is likely a separate entity, the use of this shared deployment mechanism \u2014 unique to these two groups \u2014 suggests a common supply chain or developer and a closer working relationship, especially given some similarities in target scope.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "a custom macro dropper that encoded the payload using VB Script notation was observed in only 19 unique samples across Crowdstrike sample stores. one paidload was an instance of Agent ORM used to targeted casinos, the other six were instances of the NSIS downloader attributed to the Buhtrap group. this led to tracking both threats as CARBON SPIDER. the use of this shared deployment mechanism \u2014 unique to these two groups",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "A SWIFT compromise was observed in mid-2016, targeting a Ukrainian bank that at the time was unattributed. Based on similar TTPs, it was hypothesised that this could be CARBON SPIDER activity; however, although common off-the-shelf tools (such as Meterpreter and Cobalt Strike) were used, the custom CARBON SPIDER arsenal was not present. Later, this group was reported in open source as Odinaff. In addition to similar TTPs, there appeared to be some infrastructure overlap with two IP addresses. One Odinaff C2 was also reported to be in previous use as a Sekur plugin server. A second IP was also reported to be used by CARBON SPIDER in a previous campaign. Again, this may just be a shared hosting provider, but the TTP similarity makes this infrastructure overlap more noteworthy.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "SWIFT compromise was observed in mid-2016, targeting a Ukrainian bank that at the time was unattributed. based on similar TTPs, it was hypothesised that this could be CARBON SPIDER activity; however, common off-the-shelf tools (such as Meterpreter and Cobalt Strike) were used, but the custom arsenal was not present; later, this group was reported in open source as Odinaff",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The Cobalt group, tracked by CrowdStrike intelligence as COBALT SPIDER, bears many similarities in the targeting of banks to the Russian cluster of CARBON SPIDER activity. Both groups also use Cobalt Strike and several other pen-testing tools in their operations; nevertheless, the two groups appear to be distinct outside of this.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "the cobalt group, tracked by CrowdStrike intelligence as COBALT SPIDER, bears many similarities in the targeting of banks to the Russian cluster. the two groups appear distinct outside of this.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "On March 26, 2018, an announcement was made that a Russian citizen identified by authorities as \u201cDenis K.\u201d was arrested by the Spanish national police in Alicante, Spain. He was reportedly involved in early CARBON SPIDER targeting of Russian banks and is suspected of being one of the members of COBALT SPIDER. Although reports suggest that he may have been a leader of COBALT SPIDER, activity has continued from this group, suggesting his role was not a key one within this organization. This suggests a link between the two groups between 2013 and likely, 2015. This is around the time that the dominant focus for CARBON SPIDER became targeting the POS systems of Western enterprises. It is possible that at least one individual left CARBON SPIDER and either joined forces with or created COBALT SPIDER.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "a Russian citizen identified by authorities as \u201cDenis K.\u201d was arrested by the spanish national police in Alicante, Spain. he was reportedly involved in early CARBON SPIDER targeting of Russian banks and is suspected of being one of the members of COBALT sp.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "CARBON SPIDER is the pioneer of targeted eCrime activity with some of the largest publicly attributed success. Their level of sophistication across the clusters of activity makes them a key player in the eCrime ecosystem. Although there is not enough evidence to directly link CARBON SPIDER to other targeted criminal groups, it is assessed with high confidence (based on analysis of artifacts and infrastructure over time) that CARBON SPIDER shares resources with other notable criminal groups.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "CARBON SPIDER is the pioneer of targeted eCrime activity with some of the largest publicly attributed success. they share resources with other notable criminal groups, based on analysis of artifacts and infrastructure over time.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "There are two possible hypotheses as to how the clusters of CARBON SPIDER activity are linked. One theory is that they were originally one group that splintered into several with different focuses. Several of the splinter groups may have maintained access to their custom tools (e.g., Sekur), while others moved on to work with other actors (e.g., COBALT SPIDER). A second theory is that CARBON SPIDER operates as distinct groups with different focuses, but they report to a single management structure. Resources may be shared between the groups, but each has its own members. At this stage, the first theory appears to be the most likely.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "one theory is that they were originally one group that splintered into several with different focuses. others moved on to work with other actors (e.g., COBALT SPIDER)",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Based on recently observed tooling and operations, CARBON SPIDER appears to be focusing their efforts on the POS cluster of activity against the hospitality and restaurant sector, with no recently reported activity against banks. They also appear to be moving away from their custom tooling, with no Sekur samples compiled since November 2017 and fewer samples appearing in live operations.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "CARBON SPIDER appears to focus their efforts on the POS cluster of activity against the hospitality and restaurant sector. they also appear to be moving away from their custom tooling, with no sekur samples compiled since November 2017 and fewer samples appearing in live operations.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Going forward, it is likely that CARBON SPIDER will continue operations to target sectors that give the best financial return for their efforts. For the short term, this will likely mean a continued focus on POS systems and large enterprises that process them. It is possible that they may return to target banks, but this would likely be on a small scale with very focused operations. CARBON SPIDER will likely move completely away from their old custom toolset, either developing new tools or using commodity off-the-shelf packages to achieve their objectives. This is even more assured given the arrests of three members of the most prolific CARBON SPIDER subgroup.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "CARBON SPIDER will continue operations to target sectors that give the best financial return for their efforts. for the short term, this will likely mean a continued focus on POS systems and large enterprises that process them.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "As CARBON SPIDER adversary groups retool and alter their TTPs CrowdStrike will continue to track this adversary leveraging CrowdStrike CrowdStrike Falcon\u00ae Intelligence capabilities to combine endpoint protection, automation and malware analysis to prevent CARBON SPIDER from breaching our customer networks.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "CARBON SPIDER adversary groups retool and alter their TTPs CrowdStrike. they combine endpoint protection, automation and malware analysis to prevent our customers from breaching our customer networks.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "To learn more about how to incorporate intelligence on threat actors like CARBON SPIDER into your security strategy, please visit the Falcon Intelligence product page.",
+        "source": "Arrests Put New Focus on CARBON SPIDER Adversary Group.html",
+        "summary": "to learn more about how to incorporate intelligence on threat actors like CARBON SPIDER into your security strategy, please visit the Falcon Intelligence product page.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The story of Carbanak began when a bank from Ukraine asked us to help with a forensic investigation. Money was being mysteriously stolen from ATMs. Our initial thoughts tended towards the Tyupkin malware. However, upon investigating the hard disk of the ATM system we couldn\u2019t find anything except a rather odd VPN configuration (the netmask was set to 172.0.0.0).",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "the story of carbanak began when a bank from Ukraine asked us to help. our initial thoughts tended towards the Tyupkin malware. however, upon investigating the hard disk we couldn\u2019t find anything except an odd VPN configuration (the netmask was set to 172.0.0.0).",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "At this time we regarded it as just another malware attack. Little did we know then that a few months later one of our colleagues would receive a call at 3 a.m. in the middle of the night. On the phone was an account manager, asking us to call a certain number as matter of urgency. The person at the end of the line was the CSO of a Russian bank. One of their systems was alerting that data was being sent from their Domain Controller to the People\u2019s Republic of China.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "an account manager asked us to call a certain number as matter of urgency. one of their systems was alerting that data was being sent from their Domain Controller to the People\u2019s Republic of China.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Up to 100 financial institutions have been hit.Total financial losses could be as a high as $1bn#TheSAS2015#Carbanak",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "up to 100 financial institutions have been hit. total financial losses could be as high as $1bn#TheSAS2015#Carbanak#.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "When we arrived on site we were quickly able to find the malware on the system. We wrote a batch script that removed the malware from an infected PC, and ran this script on all the computers at the bank. This was done multiple times until we were sure that all the machines were clean. Of course, samples were saved and through them we encountered the Carbanak malware for the first time.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "we wrote a batch script that removed the malware from an infected PC. this was done multiple times until we were sure that all the machines were clean.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Further forensic analysis took us to the point of initial infection: a spear phishing e-mail with a CPL attachment; although in other cases Word documents exploiting known vulnerabilities were used. After executing the shellcode, a backdoor based on Carberp, is installed on the system. This backdoor is what we know today as Carbanak. It is designed for espionage, data exfiltration and remote control.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "a backdoor based on Carberp is installed on the system. it is designed for espionage, data exfiltration and remote control.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Each bank robbery took 2-4 months, from infecting the first computer to cashing the money out #TheSAS2015 #Carbanak",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "each bank robbery took 2-4 months, from infecting the first computer to cashing out the money out #theSAS2015 #Carbanak.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Once the attackers are inside the victim\u00b4s network, they perform a manual reconnaissance, trying to compromise relevant computers (such as those of administrators\u2019) and use lateral movement tools. In short, having gained access, they will jump through the network until they find their point of interest. What this point of interest is, varies according to the attack. What they all have in common, however, is that from this point it is possible to extract money from the infected entity.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "attackers perform a manual reconnaissance, trying to compromise computers and use lateral movement tools. they will jump through the network until they find their point of interest.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The gang behind Carbanak does not necessarily have prior knowledge of the inner workings of each bank targeted, since these vary per organisation. So in order to understand how a particular bank operates, infected computers were used to record videos that were then sent to the Command and Control servers. Even though the quality of the videos was relatively poor, they were still good enough for the attackers, armed also with the keylogged data for that particular machine to understand what the victim was doing. This provided them with the knowledge they needed to cash out the money.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "the gang behind carbanak does not necessarily have prior knowledge of the inner workings of each bank targeted. infected computers were used to record videos that were then sent to the Command and Control servers, which provided them with the knowledge they needed to cash out the money.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "ATMs were instructed remotely to dispense cash without any interaction with the ATM itself, with the cash then collected by mules; the SWIFT network was used to transfer money out of the organisation and into criminals\u2019 accounts; and databases with account information were altered so that fake accounts could be created with a relatively high balance, with mule services being used to collect the money.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "ATMs were instructed remotely to dispense cash without any interaction with the ATM itself, with cash then collected by mules. the SWIFT network was used to transfer money out of the organisation and into criminals\u2019 accounts; databases with account information were altered so that fake accounts could be created with a relatively high balance.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Since we started investigating this campaign we have worked very closely with the law enforcement agencies (LEAs) tracking the Carbanak group. As a result of this cooperation we know that up to 100 targets have been hit. When it comes to financial institutions, In at least half of the cases the criminals were able to extract money from the infected institution. Losses per bank range from $2.5 million to approximately $10 million. However, according to information provided by LEAs and the victims themselves, total financial losses could be as a high as $1 billion, making this by far the most successful criminal cyber campaign we have ever seen.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "in at least half of cases the criminals were able to extract money from the infected institution. total financial losses could be as high as $1 billion, making this by far the most successful criminal cyber campaign we have ever seen.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Losses from #Carbanak per bank range from $2.5 million to approximately $10 million #TheSAS2015",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "Losses from #Carbanak per bank range from $2.5 million to approximately $10 million #TheSAS2015. #thesa2015 is the fastest-growing bank in the world.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Our investigation began in Ukraine and then moved to Moscow, with most of the financial entities targeted by the group located in Eastern Europe. However thanks to KSN data and data obtained from the Command and Control servers, we know that Carbanak also targets victims in the USA, Germany and China. Now the group is expanding its operations to new areas. These include Malaysia, Nepal, Kuwait and several regions in Africa, among others.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "our investigation began in Ukraine and then moved to Moscow, with most of the financial entities targeted by the group located in eastern Europe. but thanks to KSN data and data obtained from the Command and Control servers, we know that Carbanak also targets victims in the USA, Germany and China. now it is expanding its operations to new areas, including Malaysia, Nepal, Kuwait and several regions in Africa, among others.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The group is still active, and we urge all financial organizations to carefully scan their networks for the presence of Carbanak. If detected, report the intrusion to law enforcement immediately.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "the group is still active, and we urge all financial organizations to carefully scan their networks for the presence of Carbanak. if detected, report the intrusion to law enforcement immediately.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "For a full description of the campaign, IOCs and list of infections please see our report.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "a full description of the campaign, the IOCs and the list of infections please see our report. click here for more information.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "To check your network for Carbanak\u2019s presence, you can also use the open IOC file available here.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "to check your network for Carbanak\u2019s presence, you can also use the open IOC file available here. if you have any questions, please contact us for more information.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Carbanak is the name we use for an APT-style campaign targeting (but not limited to) financial institutions. The main difference with other APT attacks is that attackers do not see data but money as their primary target. We say APT-like, however the attack is not strictly speaking Advanced. Strictly speaking, the main feature defining the attackers is Persistence.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "carbanak is the name we use for an APT-style campaign targeting financial institutions. the main difference with other attacks is that attackers do not see data but money as their primary target.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "We name the backdoor Carbanak since it is based on Carberp and the name of the configuration file is \u201canak.cfg\u201d.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "the backdoor carbanak is based on Carberp and the name of the configuration file is anak.cfg.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The attackers infiltrate the victim\u00b4s network looking for the critical system they can use for cashing money out. Once they have stolen a significant amount of money (from 2.5 to 10 MM USD per entity), they abandon the victim.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "attackers infiltrate victim s network looking for the critical system they can use for cashing money out. once they have stolen a significant amount of money (from 2.5 to 10 MM USD per entity) they abandon the victim.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Banking entities have always been a primary target for cybercriminals. However it was almost always through their customers. This time attackers are targeting financial entities directly in an unprecedented, determined, highly professional and coordinated attack, and using any means from the target to cash as much money out as possible, up to an apparently auto-imposed limit.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "this time attackers are targeting financial entities directly in an unprecedented, determined, highly professional and coordinated attack. using any means from the target to cash as much money out as possible, up to an apparently auto-imposed limit.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "According to what we know, the first malicious samples were compiled in August, 2013 when the cybercriminals started to test the Carbanak malware. The first infections were detected in December, 2013.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "the first malicious samples were compiled in august, 2013 when the cybercriminals started to test the Carbanak malware. first infections were detected in December, 2013.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "On average, each bank robbery took between two and four months, from infecting the first computer at the bank\u2019s corporate network to cashing the money out.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "each bank robbery took between two and four months, from infecting the first computer at the bank\u2019s corporate network to cashing out the money.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "We believe that the gang was able to successfully steal from their first victims during the period of February-April 2014. The peak of infections was recorded in June 2014.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "we believe that the gang was able to successfully steal from their first victims during the period of February-April 2014. The peak of infections was recorded in June 2014.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Since we started working on this campaign we have collaborated with the different LEAs involved in the investigation and helped them as much as possible. As it remains an open investigation, we were asked not to share any details until it was safe to do so.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "since we started working on this campaign we have collaborated with the different LEAs involved in the investigation. as it remains an open investigation, we were asked not to share any details until it was safe.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Yes, this investigation turned into a joint operation between Kaspersky Lab\u2019s Global Research and Analysis Team and international organizations, national and regional law enforcement agencies and a number of Computer Emergency Response Teams (CERTs) worldwide.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "this investigation turned into a joint operation between Kaspersky Lab\u2019s Global Research and Analysis Team and international organizations, national and regional law enforcement agencies.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "One of our main goals was to disseminate our knowledge of the campaign and IOCs among all detected and potential victims. We used national CERTs and LEAs as the distribution channel.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "one of our main goals was to disseminate our knowledge of the campaign and IOCs among all detected and potential victims.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "We\u2019re helping to assist in investigations and countermeasures that disrupt malware operations and cybercriminal activity. During the investigations we provide technical expertise such as analyzing infection vectors, malicious programs, supported Command & Control infrastructure and exploitation methods.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "we\u2019re helping to assist in investigations and countermeasures that disrupt malware operations and cybercriminal activity. During the investigations we provide technical expertise such as analyzing infection vectors, malicious programs, supported Command & Control infrastructure and exploitation methods.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Attackers used spear phishing emails with malicious attachments against employees of the targeted financial institutions, in some cases sending them to their personal email addresses. We believe the attackers also used drive by download attacks, but this second assumption is still not 100% confirmed.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "attackers used spear phishing emails with malicious attachments against employees of the targeted financial institutions. we believe the attackers also used drive by download attacks, but this second assumption is still not 100% confirmed.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Based on what the attackers stole from victims, a new victim faces potential losses of up to 10 million $. However this figure is arbitrary based on what we know: nothing limits the potential loss once an institution is infected.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "a new victim faces potential losses of up to 10 million $. this figure is arbitrary based on what we know: nothing limits the potential loss once an institution is infected.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Victims are mainly institutions in the financial industry; however we have also found traces of infections in POS terminals and PR agencies. For a sense of the scale of the attack please see the different charts and maps we provide in our report.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "victims are mainly institutions in the financial industry; however we have also found traces of infections in POS terminals and PR agencies.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "As with many malware campaigns there are a variety of companies/individuals analyzing the malware, resulting in requests to the Command and Control server. When we analyze those servers, all we see are the IPs and possibly some additional information. When this additional information is not present, and when the IP cannot be traced back to its owner, we mark it as an infection.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "as with many malware campaigns there are a variety of companies/individuals analyzing the malware, resulting in requests to the Command and Control server. when this additional information is not present, and when the IP cannot be traced back to its owner, we mark it as an infection.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Based on this approach our analysis concludes that Russia, the US, Germany and China are the most affected countries in number of traces of infection (IP addresses).",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "Russia, the us, Germany and china are the most affected countries in number of traces of infection (IP addresses) in the u.s.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "All Kaspersky Lab\u2019s corporate products and solutions detect known Carbanak samples. To raise the level of protection, it is recommended to switch on Kaspersky\u2019s Proactive Defense Module included in each modern product and solution.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "all Kaspersky Lab\u2019s corporate products and solutions detect known Carbanak samples. to raise the level of protection, it is recommended to switch on the Proactive Defense Module included in each modern product and solution.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Your email address will not be published. Required fields are marked *",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "your email address will not be published. Required fields are marked *. if you have any questions, please contact us for more information.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Impressive. When it hits the news all over the major media, hopefully people will realize that the digital world is not safe.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "when it hits the news all over the major media, hopefully people will realize that the digital world is not safe. if you want to know more, click here.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The digital world is no more dangerous then the non digital world. People need to be smarter about what they click on. Real banks get robbed all the time.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "the digital world is no more dangerous than the non-digital world. people need to be smarter about what they click on. real banks get robbed all the time.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "It\u2019s fascinating how in the 21st century, people are still opening attachments from unknown sources, which seems to be how the malware spread. Even my mother who\u2019s just started using a computer, refrains from doing so. Even more disturbing is the fact that these financial institutions didn\u2019t take adequate safety measures. Besides the obvious (firewall, anitivirus and the whole technical armada), educating employees about the risks seems to be always overlooked. They\u2019ve probably learnt a lesson now.\nOh, and yes of course, use don\u2019t forget linux, the solution of all problems.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "in the 21st century, people are still opening attachments from unknown sources, which seems to be how the malware spread. even my mother who\u2019s just started using a computer, refrain from doing so. besides the obvious (firewall, anitivirus and the whole technical armada)",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Great marketing by Kaspersky by \u201cbreaking\u201d a story that is almost 2 months old. \u2013> https://krebsonsecurity.com/2015/02/the-great-bank-heist-or-death-by-1000-cuts/",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "great marketing by Kaspersky by \"breaking\" a story that is almost 2 months old. https://krebsonsecurity.com/2015/02/the-great-bank-heist-or-death-by-1000-cuts/",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Since we started working on this campaign we have collaborated with the different LEAs involved in the investigation and helped them as much as possible. As it remains an open investigation, we were asked not to share any details until it was safe to do so.\u201d",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "since we started working on this campaign we have collaborated with the different LEAs involved in the investigation. as it remains an open investigation, we were asked not to share any details until it was safe.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "+ the fact that the Anunak report is basically the first volume of the same story \u2013 the Kaspersky report is the follow-up, from their point of view and work with the LEAs.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "the Kaspersky report is the follow-up, from their point of view and work with the LEAs. it is also the first volume of the same story.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "ps: they could and should have mentioned that other report here, yes, but you know how competition goes between security groups\u2026",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "ps: they could and should have mentioned that other report here, yes, but you know how competition goes between security groups....",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Excellent research. There are some differences in the IOCs as published in the Full Report (PDF) and the OpenIOC file. Can you please review the files and make sure they list the same IOCs? For instance, the domain adobe-update.net appears in the PDF version but not in the OpenIOC version.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "can you please review the files and make sure they list the same IOCs? the domain adobe-update.net appears in the PDF version.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Yes, in fact. Linux and Open Source Software is the solution. why do you think the Navy switched their Nuke Subs to Linux?? and their Drone Program??\nand the NY Stock exchange switched to Linux. they didn\u2019t do it to upset you or offend your Love of Microsoft. they did it to increase security. the International Space station moved to Linux. it goes on and on\u2026..",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "the navy switched their Nuke Subs to Linux and their Drone Program. they didn\u2019t do it to upset you or offend your Love of Microsoft.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Linux isn\u2019t safe. Nothing is 100% safe.\nChange it all. We\u2019ll still get in because your whole system of living is weak.\nYour whole reality is based on lies. You lock your door & feel safe but you are NOT safe.\nUntil you stop pretending you never will be.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "Linux isn\u2019t safe. Nothing is 100% safe.we\u2019ll still get in because your whole system of living is weak.Your whole reality is based on lies. You lock your door & feel safe but you are NOT safe, until you stop pretending you never will be.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "In this report Kaspersky researchers provide an analysis of the previously unknown HrServ web shell, which exhibits both APT and crimeware features and has likely been active since 2021.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "in this report, researchers provide an analysis of the previously unknown HrServ web shell. it exhibits both APT and crimeware features and has likely been active since 2021.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Asian APT groups target various organizations from a multitude of regions and industries. We created this report to provide the cybersecurity community with the best-prepared intelligence data to effectively counteract Asian APT groups.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "Asian APT groups target various organizations from a multitude of regions and industries. we created this report to provide the cybersecurity community with the best-prepared intelligence data to effectively counteract Asian groups.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "We unveil a Lazarus campaign exploiting security company products and examine its intricate connections with other campaigns",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "we unveil a lazarus campaign exploiting security company products and examine its intricate connections with other campaigns. the campaign has been exploited by security firm security companies and is based in the u.s.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "How Kaspersky researchers obtained all stages of the Operation Triangulation campaign targeting iPhones and iPads, including zero-day exploits, validators, TriangleDB implant and additional modules.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "how Kaspersky researchers obtained all stages of the Operation Triangulation campaign targeting iPhones and iPads including zero-day exploits, validators, TriangleDB implant and additional modules.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "\u00a9 2023 AO Kaspersky Lab. All Rights Reserved.\nRegistered trademarks and service marks are the property of their respective owners.",
+        "source": "The Great Bank Robbery_ the Carbanak APT _ Securelist.html",
+        "summary": "trademarks and service marks are the property of their respective owners.  2023 AO Kaspersky Lab. All Rights Reserved.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Forcepoint Security Labs\u2122 recently investigated a trojanized RTF document which we tied to the Carbank criminal gang. The document contains an encoded Visual Basic Script (VBScript) typical of previous Carbanak malware. Recent samples of the malware have now included the ability to use Google services for command-and-control (C&C) communication. We have notified Google of the abuse and are working with them to share additional information.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "Forcepoint Security LabsTM recently investigated a trojanized RTF document. the document contains an encoded Visual Basic Script (VBScript) typical of previous Carbanak malware. recent samples have now included the ability to use Google services for command-and-control (C&C) communication.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Carbanak (also known as Anunak) are a group of financially motivated criminals first exposed in 2015. The actors typically steal from financial institutions using targeted malware. Recently a new Carbanak attack campaign dubbed \"Digital Plagiarist\" was exposed where the group used weaponized office documents hosted on mirrored domains, in order to distribute malware.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "the actors typically steal from financial institutions using targeted malware. recently a new carbanak attack campaign dubbed \"Digital Plagiarist\" was exposed where the group used weaponized office documents hosted on mirrored domains to distribute malware.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The RTF document we analyzed (SHA1 1ec48e5c0b88f4f850facc718bbdec9200e4bd2d) has an embedded OLE object which contains a VBScript file. When the document is opened the targeted user is lured into double-clicking on the embedded OLE object which is disguised as an image:",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "the SHA1 1ec48e5c0b88f4f850facc718bbdec9200e4bd2d document contains an embedded OLE object. when the document is opened the targeted user is lured into double-clicking on the embedded object which is disguised as an image:",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Double clicking on the image results in a file open dialog for \"unprotected.vbe\". If the user executes this file then the VBScript malware will begin to execute.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "double clicking on the image results in a file open dialog for \"unprotected.vbe\" the VBScript malware will begin to execute.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The VBScript malware inside the RTF document (SHA1 cd75662751c59951717b4704ea2cdb6fb7ec19bc) is an encoded VBScript file. We decoded the script and found hallmarks typical of the Carbanak group's VBScript malware, however we also found the addition of a new \"ggldr\" script module.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "we decoded the script and found hallmarks typical of the VBScript malware. we also found the addition of a new \"ggldr\" script module.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The module is base64 encoded inside the main VBScript file along with various other VBScript modules used by the malware. When we analyzed the script we noticed that it is capable of using Google services as a C&C channel.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "the module is base64 encoded inside the main VBScript file. when we analyzed the script we noticed that it is capable of using Google services as a C&C channel.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The \"ggldr\" script will send and receive commands to and from Google Apps Script, Google Sheets, and Google Forms services. For each infected user a unique Google Sheets spreadsheet is dynamically created in order to manage each victim. The use of a legitimate third party service like this one gives the attacker the ability to hide in plain sight. It is unlikely that these hosted Google services are blocked by default in an organization, so it is more likely that the attacker will establish a C&C channel successfully.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "the \"ggldr\" script will send and receive commands to and from Google Apps Script, Google Sheets, and Google Forms services. for each infected user a unique spreadsheet is dynamically created in order to manage each victim. it is unlikely that these hosted Google services are blocked by default in an organization.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Upon the first attempt to contact the hard-coded Google Apps Script URL with the user's unique infection ID, the C&C will state that no spreadsheet currently exists for the user. The malware will then send two requests to another hard-coded Google Forms URL which will result in the creation of unique Google Sheets spreadsheet and Google Form IDs for the victim.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "Upon the first attempt to contact the hard-coded Google Apps Script URL with the user's unique infection ID, the C&C will state that no spreadsheet currently exists.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The second time the Google Apps Script is requested, the C&C will return the unique Google Sheet and Google Form ID values:",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "the second time the Google Apps Script is requested, the C&C will return the unique Google Sheet and Google Form ID values.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The \"entry\" value is also a unique ID which is sent with each subsequent Google Forms C&C request.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "the \"entry\" value is also a unique ID which is sent with each subsequent Google Forms C&C request. if you have any questions, please contact us.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Forcepoint\u2122 customers are protected against this threat via TRITON\u00ae ACE at the following stages of attack:",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "ForcepointTM customers are protected against this threat via TRITON\u00ae ACE at the following stages of attack. the threat is a threat to forcespoint's customers via forcepoint.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Stage 5 (Dropper File) - The malware components are prevented from being downloaded and/or executed.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "the malware components are prevented from being downloaded and/or executed. stage 5 (Dropper File) is a malware component that cannot be downloaded or executed.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Stage 6 (Call Home) - The HTTP-based Carbanak C&C traffic is blocked.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "the HTTP-based Carbanak C&C traffic is blocked. stage 6 (Call Home) - if you have a problem, click here.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The Carbanak actors continue to look for stealth techniques to evade detection. Using Google as an independent C&C channel is likely to be more successful than using newly created domains or domains with no reputation. Forcepoint will continue to monitor this group's activities and share data with trusted partners.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "the carbanak actors continue to look for stealth techniques to evade detection. using google as an independent C&C channel is likely to be more successful than using newly created domains with no reputation.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "By submitting this form, you agree to our Terms of Use and acknowledge our Privacy Statement. You can unsubscribe at any time at Manage Subscriptions.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "submitting this form, you agree to our Terms of Use and acknowledge our Privacy Statement. you can unsubscribe at any time at Manage Subscriptions.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "A podcast covering latest trends and topics in the world of cybersecurity",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "a podcast covering latest trends and topics in the world of cybersecurity. the podcast is based in san francis, california and the u.s.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "By submitting this form, you agree to our Terms of Use and acknowledge our Privacy Statement. You can unsubscribe at any time at Manage Subscriptions.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "submitting this form, you agree to our Terms of Use and acknowledge our Privacy Statement. you can unsubscribe at any time at Manage Subscriptions.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Privacy is our priority. We do not sell or otherwise share personal information for money or anything of value.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "privacy is our priority. we do not sell or otherwise share personal information for money or anything of value. if you have any questions, please contact us.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "We use strictly necessary cookies to enable site functionality and improve the performance of our website. We also store cookies to personalize the website content and to serve more relevant content to you. For more information please visit our Privacy Policy or Cookie Policy.",
+        "source": "Carbanak Group uses Google for malware command-and-control _ Forcepoint.html",
+        "summary": "strictly necessary cookies are used to enable site functionality and improve the performance of our website. we store cookies to personalize the website content and to serve more relevant content to you.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "mandiant.com uses cookies to deliver and enhance the quality of its services and to analyze traffic. If you agree, cookies are also used to serve advertising and to personalize the content and advertisements that you see. Learn more.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "mandiant.com uses cookies to deliver and enhance the quality of its services and analyze traffic. if you agree, cookies are also used to serve advertising and to personalize the content and advertisements that you see.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "mandiant.com uses cookies to deliver and enhance the quality of its services and to analyze traffic. If you agree, cookies are also used to serve advertising and to personalize the content and advertisements that you see. Learn more.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "mandiant.com uses cookies to deliver and enhance the quality of its services and analyze traffic. if you agree, cookies are also used to serve advertising and to personalize the content and advertisements that you see.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "In this blog, we will take a closer look at the powerful, versatile backdoor known as CARBANAK (aka Anunak). Specifically, we will focus on the operational details of its use over the past few years, including its configuration, the minor variations observed from sample to sample, and its evolution. With these details, we will then draw some conclusions about the operators of CARBANAK. For some additional background on the CARBANAK backdoor, see the papers by Kaspersky and Group-IB and Fox-It.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "this blog will take a closer look at the powerful, versatile backdoor known as CARBANAK (aka Anunak) we will focus on the operational details of its use over the past few years, including its configuration, the minor variations observed from sample to sample, and its evolution.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Before we dive into the meat of this blog, a brief technical analysis of the backdoor is necessary to provide some context. CARBANAK is a full-featured backdoor with data-stealing capabilities and a plugin architecture. Some of its capabilities include key logging, desktop video capture, VNC, HTTP form grabbing, file system management, file transfer, TCP tunneling, HTTP proxy, OS destruction, POS and Outlook data theft and reverse shell. Most of these data-stealing capabilities were present in the oldest variants of CARBANAK that we have seen and some were added over time.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "CARBANAK is a full-featured backdoor with data-stealing capabilities. some of its capabilities include key logging, desktop video capture, VNC, HTTP form grabbing, file system management, files transfer, TCP tunneling, OS destruction, POS and Outlook data theft and reverse shell.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The backdoor may optionally start one or more threads that perform continuous monitoring for various purposes, as described in Table 1.  ",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "the backdoor may optionally start one or more threads that perform continuous monitoring for various purposes, as described in Table 1. there may also be a thread that is continuously monitored for different purposes.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Logs key strokes for configured processes and sends them to the command and control (C2) server",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "logs key strokes for configured processes and sends them to the command and control server (C2) server. keystrokes are sent to command & control (c2).",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Monitors HTTP traffic for form data and sends it to the C2 server",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "monitors HTTP traffic for form data and sends it to the C2 server. if you have a query, click here.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Monitors for changes to logs stored in C:\\NSB\\Coalition\\Logs and nsb.pos.client.log and sends parsed data to the C2 server",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "monitors changes to logs stored in C:NSBCoalitionLogs and nsb.pos.client.log and sends parsed data to the C2 server.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Searches recursively for newly created Outlook personal storage table (PST) files within user directories and sends them to the C2 server",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "searches recursively for newly created Outlook personal storage table (PST) files within user directories and sends them to the C2 server.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Monitors HTTP traffic for requests sent to HTTP proxies, saves the proxy address and credentials for future use",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "monitors HTTP traffic for requests sent to HTTP proxies, saves the proxy address and credentials for future use. if you have any questions, please contact us for more information.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "In addition to its file management capabilities, this data-stealing backdoor supports 34 commands that can be received from the C2 server. After decryption, these 34 commands are plain text with parameters that are space delimited much like a command line. The command and parameter names are hashed before being compared by the binary, making it difficult to recover the original names of commands and parameters. Table 2 lists these commands.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "this data-stealing backdoor supports 34 commands that can be received from the C2 server. the command and parameter names are hashed before being compared by the binary, making it difficult to recover the original names of commands and parameters.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Runs each command specified in the configuration file (see the Configuration section).",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "runs each command specified in the configuration file (see the Configuration section. if you want to run a command, click here for more information.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Takes a screenshot of the desktop and sends it to the C2 server",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "takes a screenshot of the desktop and sends it to the C2 server. if you have any questions, please contact us.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "A configuration file resides in a file under the backdoor\u2019s installation directory with the .bin extension. It contains commands in the same form as those listed in Table 2 that are automatically executed by the backdoor when it is started. These commands are also executed when the loadconfig command is issued. This file can be likened to a startup script for the backdoor. The state command sets a global variable containing a series of Boolean values represented as ASCII values \u20180\u2019 or \u20181\u2019 and also adds itself to the configuration file. Some of these values indicate which C2 protocol to use, whether the backdoor has been installed, and whether the PST monitoring thread is running or not. Other than the state command, all commands in the configuration file are identified by their hash\u2019s decimal value instead of their plain text name. Certain commands, when executed, add themselves to the configuration so they will persist across (or be part of) reboots. The loadconfig and state commands are executed during initialization, effectively creating the configuration file if it does not exist and writing the state command to it.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "configuration file resides in a file under the backdoor\u2019s installation directory. it contains commands in the same form as those listed in Table 2. These commands are executed when the loadconfig command is issued.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Figure 1 and Figure 2 illustrate some sample, decoded configuration files we have come across in our investigations.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "figure 1 and Figure 2 illustrate some sample, decoded configuration files we have come across in our investigations. if you have any questions, please contact us for more information.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "CARBANAK communicates to its C2 servers via pseudo-HTTP or a custom binary protocol.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "CARBANAK communicates to its C2 servers via pseudo-HTTP or a custom binary protocol. if you have any questions, please contact us.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Messages for the pseudo-HTTP protocol are delimited with the \u2018|\u2019 character. A message starts with a host ID composed by concatenating a hash value generated from the computer\u2019s hostname and MAC address to a string likely used as a campaign code. Once the message has been formatted, it is sandwiched between an additional two fields of randomly generated strings of upper and lower case alphabet characters. An example of a command polling message and a response to the listprocess command are given in Figure 3 and Figure 4, respectively.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "a message for the pseudo-HTTP protocol is delimited with the '|' character. the host ID is composed by concatenating the hash value generated from the computer\u2019s hostname and MAC address to the string likely used as an campaign code. once the message has been formatted, it is sandwiched between an additional two fields of randomly generated strings of upper and lower case alphabet characters.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Messages are encrypted using Microsoft\u2019s implementation of RC2 in CBC mode with PKCS#5 padding. The encrypted message is then Base64 encoded, replacing all the \u2018/\u2019 and \u2018+\u2019 characters with the \u2018.\u2019 and \u2018-\u2019 characters, respectively. The eight-byte initialization vector (IV) is a randomly generated string consisting of upper and lower case alphabet characters. It is prepended to the encrypted and encoded message.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "the encrypted message is then base64 encoded, replacing all the \u2018/\u2019 and \u2018+\u2019 characters. the eight-byte initialization vector (IV) is a randomly generated string consisting of upper and lower case alphabet characters.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The encoded payload is then made to look like a URI by having a random number of \u2018/\u2019 characters inserted at random locations within the encoded payload. The malware then appends a script extension (php, bml, or cgi) with a random number of random parameters or a file extension from the following list with no parameters: gif, jpg, png, htm, html, php.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "the malware then appends a script extension (php, bml, or cgi) with random number of random parameters or file extension from the following list with no parameters.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "This URI is then used in a GET or POST request. The body of the POST request may contain files contained in the cabinet format. A sample GET request is shown in Figure 5.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "this URI is then used in a GET or POST request. the body of the request may contain files contained in the cabinet format.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The pseudo-HTTP protocol uses any proxies discovered by the HTTP proxy monitoring thread or added by the adminka command. The backdoor also searches for proxy configurations to use in the registry at HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings and for each profile in the Mozilla Firefox configuration file at %AppData%\\Mozilla\\Firefox\\<ProfileName>\\prefs.js.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "the backdoor also searches for proxy configurations to use in the registry at HKCUSoftwareMicrosoftWindowsCurrentVersionInternet Settings.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Figure 6 describes the structure of the malware\u2019s custom binary protocol. If a message is larger than 150 bytes, it is compressed with an unidentified algorithm. If a message is larger than 4096 bytes, it is broken into compressed chunks. This protocol has undergone several changes over the years, each version building upon the previous version in some way. These changes were likely introduced to render existing network signatures ineffective and to make signature creation more difficult.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "if a message is larger than 150 bytes, it is compressed with an unidentified algorithm. this protocol has undergone several changes over the years, each version building upon the previous version in some way.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "In the earliest version of the binary protocol, we have discovered that the message bodies that are stored in the <chunkData> field are simply XORed with the host ID. The initial message is not encrypted and contains the host ID.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "the message bodies that are stored in the chunkData> field are simply XORed. the initial message is not encrypted and contains the host ID.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Rather than using the host ID as the key, this version uses a random XOR key between 32 and 64 bytes in length that is generated for each session. This key is sent in the initial message.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "this version uses a random XOR key between 32 and 64 bytes in length that is generated for each session. this key is sent in the initial message.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Version 3 adds encryption to the headers. The first 19 bytes of the message headers (up to the <hdrXORKey2> field) are XORed with a five-byte key that is randomly generated per message and stored in the <hdrXORKey2> field. If the <flag> field of the message header is greater than one, the XOR key used to encrypt message bodies is iterated in reverse when encrypting and decrypting messages.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "the first 19 bytes of the message headers are XORed with a five-byte key that is randomly generated per message. if the flag> field is greater than one, iterated in reverse when encrypting messages.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "This version adds a bit more complexity to the header encryption scheme. The headers are XOR encrypted with <hdrXORKey1> and <hdrXORKey2> combined and reversed.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "this version adds a bit more complexity to the header encryption scheme. headers are xOR encrypted with hdrXORKey1> combined and reversed.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Version 5 is the most sophisticated of the binary protocols we have seen. A 256-bit AES session key is generated and used to encrypt both message headers and bodies separately. Initially, the key is sent to the C2 server with the entire message and headers encrypted with the RSA key exchange algorithm. All subsequent messages are encrypted with AES in CBC mode. The use of public key cryptography makes decryption of the session key infeasible without the C2 server\u2019s private key.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "version 5 is the most sophisticated of the binary protocols we have seen. 256-bit session key is generated and used to encrypt both message headers and bodies separately. all subsequent messages are encrypted with AES in CBC mode.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "We have rounded up 220 samples of the CARBANAK backdoor and compiled a table that highlights some interesting details that we were able to extract. It should be noted that in most of these cases the backdoor was embedded as a packed payload in another executable or in a weaponized document file of some kind. The MD5 hash is for the original executable file that eventually launches CARBANAK, but the details of each sample were extracted from memory during execution. This data provides us with a unique insight into the operational aspect of CARBANAK and can be downloaded here.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "the MD5 hash is for the original executable file that eventually launches CARBANAK, but the details of each sample were extracted from memory during execution.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "As described earlier, CARBANAK\u2019s binary protocol has undergone several significant changes over the years. Figure 7 illustrates a rough timeline of this evolution based on the compile times of samples we have in our collection. This may not be entirely accurate because our visibility is not complete, but it gives us a general idea as to when the changes occurred. It has been observed that some builds of this data-stealing backdoor use outdated versions of the protocol. This may suggest multiple groups of operators compiling their own builds of this data-stealing backdoor independently.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "it has been observed that some builds of this data-stealing backdoor use outdated versions of the protocol. this may suggest multiple groups of operators compiling their own builds independently.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "*It is likely that we are missing an earlier build that utilized version 3.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "*It is likely that we are missing an earlier build that utilized version 3. the build used the same version as the previous build.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Most of CARBANAK\u2019s strings are encrypted in order to make analysis more difficult. We have observed that the key and the cipher texts for all the encrypted strings are changed for each sample that we have encountered, even amongst samples with the same compile time. The RC2 key used for the HTTP protocol has also been observed to change among samples with the same compile time. These observations paired with the use of campaign codes that must be configured denote the likely existence of a build tool.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "the key and cipher texts for all the encrypted strings are changed for each sample that we have encountered. the RC2 key used for the HTTP protocol has also been observed to change among samples with the same compile time.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Despite the likelihood of a build tool, we have found 57 unique compile times in our sample set, with some of the compile times being quite close in proximity. For example, on May 20, 2014, two builds were compiled approximately four hours apart and were configured to use the same C2 servers. Again, on July 30, 2015, two builds were compiled approximately 12 hours apart.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "we have found 57 unique compile times in our sample set. for example, on may 20, 2014, two builds were compiled approximately four hours apart and were configured to use the same C2 servers.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "What changes in the code can we see in such short time intervals that would not be present in a build tool? In one case, one build was programmed to execute the runmem command for a file named wi.exe while the other was not. This command downloads an executable from the C2 and directly runs it in memory. In another case, one build was programmed to check for the existence of the domain blizko.net in the trusted sites list for Internet Explorer while the other was not. Blizko is an online money transfer service. We have also seen that different monitoring threads from Table 1 are enabled from build to build. These minor changes suggest that the code is quickly modified and compiled to adapt to the needs of the operator for particular targets.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "in one case, one build was programmed to execute the runmem command for a file named wi.exe while the other was not. this command downloads an executable from the C2 and directly runs it in memory.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "In some cases, there is a close proximity of the compile time of a CARBANAK sample to the month specified in a particular campaign code. Figure 8 shows some of the relationships that can be observed in our data set.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "in some cases, there is close proximity of the compile time of a CARBANAK sample to the month specified in an particular campaign code.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Recently, 64 bit variants of the backdoor have been discovered. We shared details about such variants in a recent blog post. Some of these variants are programmed to sleep until a configured activation date when they will become active.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "64 bit variants of the backdoor have been discovered. some are programmed to sleep until a configured activation date when they will become active.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Much of the publicly released reporting surrounding the CARBANAK malware refers to a corresponding \u201cCarbanak Group\u201d, who appears to be behind the malicious activity associated with this data-stealing backdoor. FireEye iSIGHT Intelligence has tracked several separate overarching campaigns employing the CARBANAK tool and other associated backdoors, such as DRIFTPIN (aka Toshliph). With the data available at this time, it is unclear how interconnected these campaigns are \u2013 if they are all directly orchestrated by the same criminal group, or if these campaigns were perpetrated by loosely affiliated actors sharing malware and techniques.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "fireEye iSIGHT Intelligence has tracked several overarching campaigns using the CARBANAK tool and other associated backdoors. it is unclear how interconnected these campaigns are \u2013 if they are all directly orchestrated by the same criminal group or were perpetrated by loosely affiliated actors sharing malware and techniques.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "In all Mandiant investigations to date where the CARBANAK backdoor has been discovered, the activity has been attributed to the FIN7 threat group. FIN7 has been extremely active against the U.S. restaurant and hospitality industries since mid-2015.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "FIN7 has been extremely active against the U.S. restaurant and hospitality industries since mid-2015. in all mandiant investigations to date, the activity is attributed to the threat group.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "FIN7 uses CARBANAK as a post-exploitation tool in later phases of an intrusion to cement their foothold in a network and maintain access, frequently using the video command to monitor users and learn about the victim network, as well as the tunnel command to proxy connections into isolated portions of the victim environment. FIN7 has consistently utilized legally purchased code signing certificates to sign their CARBANAK payloads. Finally, FIN7 has leveraged several new techniques that we have not observed in other CARBANAK related activity.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "FIN7 uses CARBANAK as a post-exploitation tool in later phases of an intrusion. they often use the video command to monitor users, learn about the victim network and proxy connections into isolated portions of victim environment.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "We have covered recent FIN7 activity in previous public blog posts:",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "recent FIN7 activity has been covered in previous public blog posts. we have covered recent activity in past public blogs: f7.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The FireEye iSIGHT Intelligence MySIGHT Portal contains additional information on our investigations and observations into FIN7 activity.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "the FireEye iSIGHT Intelligence MySight Portal contains additional information on our investigations and observations into FIN7 activity.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Proofpoint initially reported on a widespread campaign targeting banks and financial organizations throughout the U.S. and Middle East in early 2016. We identified several additional organizations in these regions, as well as in Southeast Asia and Southwest Asia being targeted by the same attackers.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "proofpoint initially reported on a widespread campaign targeting banks and financial organizations throughout the U.S. and Middle East in early 2016. we identified several additional organizations in these regions, as well as in Southeast Asia and Southwest Asia being targeted by the same attackers.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "This cluster of activity persisted from late 2014 into early 2016. Most notably, the infrastructure utilized in this campaign overlapped with LAZIOK, NETWIRE and other malware targeting similar financial entities in these regions.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "this cluster of activity persisted from late 2014 into early 2016. the infrastructure used in this campaign overlapped with LAZIOK, NETWIRE and other malware targeting similar financial entities in these regions.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "DRIFTPIN (aka Spy.Agent.ORM, and Toshliph) has been previously associated with CARBANAK in various campaigns. We have seen it deployed in initial spear phishing by FIN7 in the first half of 2016.  Also, in late 2015, ESET reported on CARBANAK associated attacks, detailing a spear phishing campaign targeting Russian and Eastern European banks using DRIFTPIN as the malicious payload. Cyphort Labs also revealed that variants of DRIFTPIN associated with this cluster of activity had been deployed via the RIG exploit kit placed on two compromised Ukrainian banks\u2019 websites.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "DRIFTPIN (aka Spy.Agent.ORM, and Toshliph) has been associated with CARBANAK in various campaigns. we have seen it deployed in initial spear phishing by FIN7 in the first half of 2016.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "FireEye iSIGHT Intelligence observed this wave of spear phishing aimed at a large array of targets, including U.S. financial institutions and companies associated with Bitcoin trading and mining activities. This cluster of activity continues to be active now to this day, targeting similar entities. Additional details on this latest activity are available on the FireEye iSIGHT Intelligence MySIGHT Portal.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "FireEye iSIGHT Intelligence observed this wave of spear phishing aimed at a large array of targets, including U.S. financial institutions and companies associated with Bitcoin trading and mining activities. this cluster of activity continues to be active now to this day, targeting similar entities.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "In December 2014, Group-IB and Fox-IT released a report about an organized criminal group using malware called \"Anunak\" that has targeted Eastern European banks, U.S. and European point-of-sale systems and other entities. Kaspersky released a similar report about the same group under the name \"Carbanak\" in February 2015. The name \u201cCarbanak\u201d was coined by Kaspersky in this report \u2013 the malware authors refer to the backdoor as Anunak.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "group-iB and Fox-IT released a report about an organized criminal group using malware called \"Anunak\" the group has targeted Eastern European banks, U.S. and European point-of-sale systems and other entities.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "This activity was further linked to the 2014 exploitation of ATMs in Ukraine. Additionally, some of this early activity shares a similarity with current FIN7 operations \u2013 the use of Power Admin PAExec for lateral movement.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "this activity was linked to the 2014 exploitation of ATMs in Ukraine. some of this early activity shares a similarity with current FIN7 operations - the use of Power Admin PAExec for lateral movement.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The details that can be extracted from CARBANAK provide us with a unique insight into the operational details behind this data-stealing malware. Several inferences can be made when looking at such data in bulk as we discussed above and are summarized as follows:",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "the details that can be extracted from CARBANAK provide us with a unique insight into the operational details behind this data-stealing malware.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Get the Google Cloud Cybersecurity Forecast 2024 report to explore the latest trends on the horizon.",
+        "source": "Behind the CARBANAK Backdoor _ Mandiant.html",
+        "summary": "Get the Google Cloud Cybersecurity Forecast 2024 report to explore the latest trends on the horizon. if you have any questions, please contact us today.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "In  mid-2018,  Bitdefender  researchers  investigated  a  targeted  attack  on  an  Eastern  European  financial  institution,  gaining  new \ninsights and creating a complete event timeline showing how the infamous group Carbanak infiltrates organizations, how it moves \nlaterally across the infrastructure, and the time it takes to set up the actual heist.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Bitdefender researchers investigated an attack on an Eastern European financial institution in mid-2018. they created a complete event timeline showing how the infamous group Carbanak infiltrates organizations, how it moves laterally across the infrastructure and the time it takes to set up the actual heist.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The  initial  point  of  compromise  found  in  our  investigation  involved  the  use  of  spear-phishing  emails  with  malicious  URLs  and \ntainted documents rigged to download a Cobalt Strike beacon component. Within hours of compromise, the cybercriminal group \nwould begin to move laterally across the infrastructure, identify critical documents and prepare them for exfiltration, and try to \naccess the organization\u2019s ATM and banking applications. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "cybercriminal group used spear-phishing emails with malicious URLs and tainted documents rigged to download a Cobalt Strike beacon component. within hours of compromise, the group would begin to move laterally across the infrastructure, identify critical documents and prepare them for exfiltration, and try to access the organization\u2019s ATM and banking applications.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Financial institutions in Eastern Europe remain the primary focus of the criminal group, which uses spear phishing as the \nmain attack vector\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "financial institutions in eastern Europe remain the primary focus of the criminal group, which uses spear phishing as the main attack vector. the group has been targeted by a number of criminal groups in the u.s.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The presence of Cobalt Strike hacking tools is the key indicator that the financial institutions were targeted by the Carbanak \ncyber-criminal gang\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the presence of Cobalt Strike hacking tools is the key indicator that the financial institutions were targeted by the carbanak cyber-criminal gang.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "In the reconnaissance phase, data related to banking applications and internal procedures was collected and prepared for \nexfiltration, to be used for the final stage of the attack\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "in the reconnaissance phase, data related to banking applications and internal procedures was collected and prepared for exfiltration, to be used for the final stage of the attack.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Infrastructure reconnaissance mainly occurred after business hours or on weekends to avoid triggering security alarms\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "infrastructure reconnaissance mainly occurred after business hours or on weekends to avoid triggering security alarms. security alerts were also alerted to a number of incidents in the u.s.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "It only took attackers a couple hours from initial compromise to fully established foothold and lateral movement, showing \nexperience, knowledge and coordination\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "attackers only took a couple hours from initial compromise to fully established foothold and lateral movement, showing experience, knowledge and coordination.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The final goal of the targeted attack was to compromise the ATM networks, potentially to cash out at ATMs in a coordinated \nphysical and infrastructure criminal operation\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the final goal of the targeted attack was to compromise the ATM networks, potentially to cash out at ATMs in a coordinated physical and infrastructure criminal operation.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Several spear-phishing campaigns attributed to Carbanak, all occurring between March and May 2018, were analyzed by security \nresearchers  in  2018.  These  campaigns  impersonated  emails  from  high-profile  organizations,  such  as  IBM  or  European  Central \nBank, but also cybersecurity companies.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "several spear-phishing campaigns attributed to Carbanak, all occurring between March and May 2018, were analyzed by security researchers in 2018. these campaigns impersonated emails from high-profile organizations, such as IBM or European Central Bank, but also cybersecurity companies.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "While  most  forensic  investigations  focus  on  offering  a  highly  technical  analysis  of  the  payloads  used  by  the  Carbanak  group, \nBitdefender\u2019s  investigation  offers  a  complete  timeline  of  events,  from  the  moment  the  email  reached  the  victim\u2019s  inbox  to  the \nmoment of the heist.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Bitdefender's investigation offers a complete timeline of events. the email reached the victim\u2019s inbox to the moment of the heist.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "One  of  the  most  prolific  APT-style  cyberattacks,  specifically  targeting  the  financial  sector,  is  known  as  Carbanak.  Discovered  in \n2014, the campaign quickly gained notoriety after compromising the security systems of 100 banks in 40 countries and stealing \nup to $1 billion in the process. Banks in countries such as Russia, the United Kingdom, the Netherlands, Spain, Romania, Belarus, \nPoland, Estonia, Bulgaria, Georgia, Moldova, Kyrgyzstan, Armenia, Taiwan and Malaysia have allegedly been targeted with spear-\nphishing emails, luring victims into clicking malicious URLs and executing booby-trapped documents.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the campaign quickly gained notoriety after compromising the security systems of 100 banks in 40 countries. banks in countries such as the united kingdom, the Netherlands, Spain, Romania, Belarus, Poland, Estonia, Bulgaria, Georgia, Moldova, Kyrgyzstan, Armenia, Taiwan and Malaysia have allegedly been targeted with spear-phishing emails, luring victims into clicking malicious URLs and executing booby-trapped documents.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The  same  group  is  believed  to  have  also  been  using  the  Cobalt  Strike  framework  to  run  sophisticated  campaigns,  plotting \nand  performing  financial  heists  of  financial  institutions.  Following  an  investigation  led  by  law  enforcement  in  cooperation  with \ncybersecurity companies, the leader of the group was apprehended in Alicante, Spain, on March 26th, 2018. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the same group is believed to have also been using the cobalt Strike framework to run sophisticated campaigns. the leader of the group was apprehended in alicante, Spain, on march 26th, 2018.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "However, this action doesn\u2019t appear to have made a dent in the cybercriminal organization, as subsequent spear-phishing campaigns \nseem to have been reported from March until May 2018.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "this action doesn\u2019t appear to have made a dent in the cybercriminal organization, as subsequent spear-phishing campaigns have been reported from March until May 2018.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "March 7th-10th    Emails sent from fake domains: ibm-cert.com, ibm-warning.com, ibm- notice.com\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "emails sent from fake domains: ibm-cert.com. an email sent by fake e-mails was sent on tuesday in the u.s.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Emails impersonated VeriFon (a large POS terminal vendor) and used the fake dns-verifon.com domain.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "emails impersonated VeriFon (a large POS terminal vendor) and used fake dns-verifon domain.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Phishing emails pertaining to be from SpamHaus (non-profit organization that fights spam and phishing). They \nregistered the spamhuas.com domain and cloned the content from the official website (spamhaus. org).\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "they registered the spamhuas.com domain and cloned the content from the official website (spamhaus. org).",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Impersonated the SWIFT payment system and embedded documents with a JavaScript backdoor. A similar \nattack was used on USA and Europe banks.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "impersonated the SWIFT payment system and embedded documents with a JavaScript backdoor. similar attack was used on USA and Europe banks.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Spearphishing emails impersonating the European Central Bank. They contained a JavaScript backdoor.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "spearphishing emails impersonating the European Central Bank contained a JavaScript backdoor. the e-mails were aimed at the european central bank.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "A Carbanak trademark in cyberattacks remains the use of Cobalt Strike \u2013 a powerful pentesting tool designed for exploiting and \nexecuting  malicious  code,  simulating  post-exploitation  actions  of  advanced  threat  actors  \u2013  which  allows  them  to  infiltrate  the \norganization, move laterally, exfiltrate data, and deploy anti-forensic and evasion tools. While the end results of such an attack can \nbe easily assessed in financial losses, little information has been publicly available until now on how the attack occurs step-by-step \nwithin a compromised organization.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "cobalt Strike is a powerful pentesting tool designed for exploiting and executing malicious code, simulating post-exploitation actions of advanced threat actors. it allows the attackers to infiltrate the organization, move laterally, exfilter data, and deploy anti-forensic, evasion tools. the end results of such an attack can be easily assessed in financial losses, but little information has been publicly available until now on how the attack occurs step",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The APT-style cybercriminal group has a long track record of successfully targeting financial institutions around the world to either \ncash out at ATMs or perform wire transfers using the bank\u2019s internal systems.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "cybercriminal group has a long track record of successfully targeting financial institutions around the world to either cash out at ATMs or perform wire transfers using the bank\u2019s internal systems.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The spear-phishing emails sent to the financial institutions either end up with victims downloading a tampered document meant to \ndownload the Cobalt Strike beacon or to exploit several unpatched Remote Code Execution Vulnerabilities and deploy a backdoor. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the emails either end up with victims downloading a tampered document meant to download the Cobalt Strike beacon or to exploit several unpatched remote code Execution Vulnerabilities.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Once the user attempts to open the attached documents, scripts (Fig. 1) embedded within the files are dropped on the disk and \nautomatically executed in the background. This is a popular technique, sometimes associated with advanced persistent threats \n(APTs) attributed to nation-sponsored threat actors.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "once the user attempts to open the attached documents, scripts are dropped on the disk. this is a popular technique, sometimes associated with advanced persistent threats (APTs) attributed to nation-sponsored threat actors.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Fig. 1 - Windows Script Component (.sct) file sample, embedded in spearphishing attachment (md5: bb784d55895db10b67b1b4f1f5b0be16)\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Windows Script Component (.sct) file sample embedded in spearphishing attachment (md5: bb784d 55895db10b67b1b4f1f5b0be16)",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Designed for stealth infiltration within the targeted system, the attacks use reconnaissance tools designed to assess the state of \nthe victim\u2019s workstation and determine what tools should be downloaded next, or even open decoy documents similar to the one in \nFig.2, to avoid drawing victims\u2019 suspicion.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Designed for stealth infiltration within the targeted system, attacks use reconnaissance tools designed to assess the state of the victim\u2019s workstation and determine what tools should be downloaded next.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Bitdefender\u2019s forensics and investigation team was contacted to look into a security incident that started in May 2018 with an email \nreceived by two of the bank\u2019s employees. As previously mentioned, the date coincides with a Carbanak spear-phishing campaign.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Bitdefender's forensics and investigation team was contacted to look into a security incident that started in may 2018 with an email received by two of the bank\u2019s employees.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The attack target was to gain access to banking systems and eventually withdraw funds in cash from ATMs. The pattern exhibited \nby attackers and their lateral movements across the infrastructure show that they knew what types of information to look for and \nthey were skilled at evasion techniques. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "attack target was to gain access to banking systems and withdraw cash from ATMs. the pattern exhibited by attackers and their lateral movements across the infrastructure show that they knew what types of information to look for and were skilled at evasion techniques.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Judging  by  the  way  the  adversaries  interacted  with  different  systems,  the  targeted  hosts  and  the  documents  prepared  for \nexfiltration,  it  appears  that  the  cybercriminal  group  focused  initially  on  mapping  the  internal  processes  and  applications  of  the \naffected institution. They displayed a deep understanding of the nature and location of the data they sought. They were able to \nmaintain  a  low  network  footprint  and  avoid  suspicion  by  using  selected  single  workstations  as  a  hub  for  centralizing  collected \ninformation and for communication with their command & control server, outside the regular working hours of the bank. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the cybercriminal group focused initially on mapping the internal processes and applications of the affected institution. they were able to maintain a low network footprint and avoid suspicion by using selected single workstations as an hub for centralizing collected information and for communication with their command & control server, outside the regular working hours.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "After compromising the first victim, the aggressors\u2019 next goal was to find admin-level credentials that would allow them to move \nacross the entire infrastructure. By performing all these operations outside business hours and limiting their interaction to only a \nhandful of systems, the cybercriminal group minimized the detection opportunities. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the aggressors\u2019 next goal was to find admin-level credentials that would allow them to move across the entire infrastructure. by performing all these operations outside business hours and limiting their interaction to only a handful of systems, the cybercriminal group minimized the detection opportunities.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "A carefully executed network reconnaissance and lateral movement plan was unfolding during this time. What follows is a timeline \nof events that started with the initial spear-phising email.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "a carefully executed network reconnaissance and lateral movement plan was unfolding during this time. what follows is the timeline of events that started with the initial spear-phising email.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Two victims were tricked into opening the spear-phishing attachment, initially compromising two separate endpoints.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "two victims were tricked into opening the spear-phishing attachment. initially compromising two separate endpoints, the victim said.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "16:48 \u2013 one of the employees opened the document within the spear-phishing email\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "one of the employees opened the document within the spear-phishing email. the email was sent to an employee who opened it within a'spinning email'",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "16:49 \u2013 a second employee opened the same tainted document. The document opened by both employees used three \nexploit  methods  for  Remote  Code  Execution  in  Microsoft  Word:  CVE-2017-8570,  CVE-2017-11882,  and  CVE-2018-0802.  To \ndistract the user from the attack occurring in the background, a decoy document (fig 2) was used. Finally, a backdoor from the \nCommand and Control Server was used to establish persistence in the infrastructure.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the document opened by both employees used three exploit methods. a decoy document was used to distract the user from the attack occurring in the background.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Fig. 2 - Decoy document sample displayed on the victim\u2019s machine \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "fig. 2 - Decoy document sample displayed on victim\u2019s machine. victim's computer was unable to find a document containing the document.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "At this point, the adversary had the ability to download and execute new payloads, download additional scripts, run shell commands \nto move laterally in the infrastructure, and delete files from the system and cleaning registry keys to leave fewer forensics traces.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "adversary had the ability to download and execute new payloads, run shell commands to move laterally in the infrastructure, and delete files from the system and cleaning registry keys.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "In this phase, attackers compromised additional network endpoints, gathering data and using one of the endpoints for collecting \nand storing internal documents that appeared of interest.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "attackers compromised additional network endpoints, gathering data and using one of them for collecting and storing internal documents that appeared of interest.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "As soon as the first spear-phishing email was accessed, events occurred as follows: \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "as soon as the first spear-phishing email was accessed, events occurred as follows: e-mail, email, and email.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Cobalt Strike beacon was delivered and used to discover and map the organization\u2019s internal network, with the purpose of \ncollecting administrative level credentials;\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "cobalt Strike beacon was delivered and used to discover and map the organization's internal network. it was intended to collect administrative level credentials;",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Credentials for one Domain Administrator were compromised and used throughout the duration of the attack; \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Credentials for one Domain Administrator were compromised and used throughout the duration of the attack. a domain administrator's credential was compromised;",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Credentials were \u201ctested\u201d on one of the Domain Controller servers to make sure they\u2019re valid, resulting in its compromise\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Credentials were \u201ctested\u201d on one of the Domain Controller servers to make sure they\u2019re valid. the compromise resulted in a compromise between the server and the domain controller.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "At least two more endpoints were compromised by the end of the day.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "at least two more endpoints were compromised by the end of the day, according to a report from the university of london.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Numerous workstations were systemically compromised in a search for critical information that the cybercriminals could use.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "numerous workstations were systemically compromised in a search for critical information. the cybercriminals could use crucial information that could be used by the criminals.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Attack reaches another compromised, which will later be used to store documents related to internal applications, manuals and \nother potentially valuable documents.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "attack reaches another compromised, which will later be used to store documents related to internal applications, manuals, and other potentially valuable documents.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "A  series  of  potentially  valuable  documents  pertaining  to  internal  applications  and  procedures  were  identified  and  prepared  for \nexfiltration.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "a series of potentially valuable documents were identified and prepared for exfiltration. documents pertaining to internal applications and procedures were included in the document.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Lateral movements and intelligence collection continue, while attackers also target and compromise additional internal hosts and \nservers that will be used during the actual heist.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "lateral movements and intelligence collection continue. attackers also target and compromise additional internal hosts and servers that will be used during the actual heist.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Between Day 30 to 46, over a period of 17 days, a series of archives were created containing manuals, guides and training materials \nfor different applications. The information gathered was archived and organized in different folders. This information was relevant \nin  planning  the  attack  on  the  bank  and,  potentially,  other  banks  that  share  similar  systems.  The  cybercriminal  group  could  be \nactively improving its understanding of internal banking systems by collecting and studying this type of information, in an attempt \nto make their attacks more efficient and stealthier. Their specialization in compromising banking infrastructures could be a direct \nconsequence of intelligence collected and assimilated after each attack on previous financial institutions. This level of intimate \nknowledge of how banking applications work based on stolen documentation, helps them quickly achieve their purpose, which is \nto access and transfer financial assets. The more information they have on the inner workings of banking applications, the easier it \nbecomes to pull off surgical cyber heists and avoid security tripwires.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the cybercriminal group could be actively improving its understanding of internal banking systems by collecting and studying this type of information. the more information they have on the inner workings of banking applications, the easier it becomes to pull off surgical cyber heists and avoid security tripwires.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "A series of archives were created containing manuals, guides and training materials for different applications. \nThe information gathered was archived and organized in different folders.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "a series of archives were created containing manuals, guides and training materials for different applications. the information gathered was archived and organized in different folders.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Attackers connected to servers and hosts with access to banking applications. The connections were initiated \nfrom workstations that had activity after regular office hours.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "attackers connected to servers and hosts with access to banking applications. the connections were initiated from workstations that had activity after regular office hours.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "A series of archives were created containing manuals, guides and training materials for different applications. \nThe information gathered was archived and organized in different folders.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "a series of archives were created containing manuals, guides and training materials for different applications. the information gathered was archived and organized in different folders.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Using a compromised domain administrator account, attackers remotely dial into various network workstations \nand ultimately remove the archives used to store the baking materials, to cover their tracks\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "attackers remotely dial into various network workstations using a compromised domain administrator account. they then remove the archives used to store baking materials, to cover their tracks.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Starting on Day 33, attackers connected to servers and hosts with access to banking applications. The connections were initiated \nfrom workstations that had activity after regular office hours. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "attackers connected to servers and hosts with access to banking applications. the connections were initiated from workstations that had activity after regular office hours.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The workstations used to connect to these machines were logged in from and controlled by a workstation that was not part of the \nlegitimate corporate infrastructure. The system belonged to the adversary and accessed the organization network through a VPN \ntunnel established by the Cobalt Strike beacon component, to contact the internal corporate network systems. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the system belonged to the adversary and accessed the organization network through a VPN tunnel established by the Cobalt Strike beacon component.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "These command & control connections last between 20 minutes and one hour on average, based on the logs available for forensic \ninvestigation. The documents prepared for exfiltration, which were relevant to the internal applications, as well as the connections \nto banking applications after regular office hours, point to a financially motivated attack.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "these command & control connections last between 20 minutes and one hour on average, based on the logs available for forensic investigation. the documents were relevant to the internal applications, as well as the connections to banking applications after regular office hours, point to a financially motivated attack.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Below is a complete lateral movement timeline that includes all major events related to what infrastructure assets were compromised \nand  when.  Marked  in  red  are  the  three  major  milestones  achieved  during  the  attack:  the  moment  the  domain  controller  was \ncompromised, the moment documents started being stored on an internal endpoint, and when the threat actors first connected to \na host with access to banking applications .\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "below is a complete lateral movement timeline that includes all major events related to what infrastructure assets were compromised and when. marked in red are the three major milestones achieved during the attack.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "This lateral movement timeline was compiled based on forensic evidence correlated from several analyzed systems and network \nevents. It is the most relevant blueprint, revealing a complete attack timeline and behavior of the notorious financial cyber-criminal \ngroup when inside an infrastructure belonging to a financial organization.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "lateral movement timeline was compiled based on forensic evidence correlated from several analyzed systems and network events. it is the most relevant blueprint, revealing a complete attack timeline and behavior of the notorious financial cyber-criminal group when inside an infrastructure belonging to an organization.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Day 0 16:48:53    1st endpoint compromised after opening the spearphishing email\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "day 0 16:48:53 1st endpoint compromised after opening the spearphishing email. the email was sent to mrs.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": " ------ 18:20:00    3rd victim - Domain Controller compromise and admin credentials used throughout the duration of the attack\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "------ 18:20:00 3rd victim - Domain Controller compromise and admin credentials used throughout the duration of the attack..",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Day 1 10:24:07     Another endpoint compromised and used to perform lateral movement\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Day 1 10:24:07 Another endpoint compromised and used to perform lateral movement. day 1 was a day after another end point compromised.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Day 10  1:30:17    Another endpoint compromised and used to store documents prepared for exfiltration.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "another endpoint compromised and used to store documents prepared for exfiltration. day 10 1:30:17 was a time when the end point compromised.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Day 15 21:39:11    Domain Controller accessed and used remotely dial into various endpoints\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Day 15 21:39:11 Domain Controller accessed and used remotely dial into various endpoints. the domain controller was able to access and use a remote dialing device to dial the end point.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Day 33 17:00:55    The moment when attackers connected to a host with access to banking applications.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "attackers connected to a host with access to banking applications. day 33 17:00:55 The moment when host hosts connected with bank applications.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Day 34  8:52:18     Another host with access to banking applications was access by the attackers.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "another host with access to banking applications was access by the attackers. day 34 8:52:18 was a day after the attack.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Day 35 15:15:33    Another host with access to banking applications was access by the attackers.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "another host with access to banking applications was access by the attackers. day 35 15:15:33 was a day after the attack.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Day 45 20:36:38    Another host with access to banking applications was access by the attackers.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "day 45 20:36:38 another host with access to banking applications was access by the attackers. a host who was able to access banking apps was also on the host.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Day 53 16:07:29    Another host with access to banking applications was access by the attackers.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "day 53 16:07:29 another host with access to banking applications was access by the attackers. a host who was able to access banking apps was also on the host.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": " Another host with access to banking applications was access by the attackers.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "a host with access to banking applications was access by the attackers. another host was able to access banking apps by stealing money from banks.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": " Another host with access to banking applications was access by the attackers.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "a host with access to banking applications was access by the attackers. another host was able to access banking apps by stealing money from banks.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Day 55 12:56:28    Another host with access to banking applications was access by the attackers.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "day 55 12:56:28 another host with access to banking applications was access by the attackers. a host who was able to access banking apps was also on the host.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Below is a detailed analysis of the key indicators of compromise that helped build the APT timeline. It includes an event timeline \ncompiled from two workstations used in the attack: the one used to compromise the domain controller and the one used to store \nall the network-collected data. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the APT timeline includes an event timeline compiled from two workstations used in the attack. the one used to compromise the domain controller and the other to store all the network-collected data.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The following events help paint a clear picture of actions immediately after the spear-phishing email attachment was opened, and \nshow how the threat actors move laterally across the infrastructure and how they gathered relevant documentation.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the following events help paint a clear picture of actions immediately after the spear-phishing email attachment was opened. show how the threat actors move laterally across the infrastructure and how they gathered relevant documentation.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The  \u201cswift-fraud[.]com/documents/94563784.doc\u201d  URL  was  opened  from  the  body  of  an  email  received  in  a \nspearphishing campaign targeting financial institutions. The Bitdefender research team obtained the document from our Threat \nIntelligence feeds and started analyzing it. According to other threat reports, the same URL has been used in delivering other tainted \ndocuments, potentially part of similar campaigns aimed at other financial institutions. This suggests the cybercriminal group may \nhave been delivering multiple documents to victims, potentially laced with other exploits or droppers.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the \u201cswift-fraud[.]com/documents/94563784.doc\u201d URL was opened from the body of an email received in a spearphishing campaign targeting financial institutions. this suggests the cybercriminal group may have been delivering multiple documents to victims, potentially laced with other exploits or droppers.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The attack flow leaves behind a temporary file, which was found on two of the systems analyzed in the incident response. This \ntemporary file was created on the filesystem after the opening of the original document file, downloaded from the malicious URL \nmentioned above.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "temporary file was found on two systems analyzed in the incident response. it was created on the filesystem after the opening of the original document file, downloaded from the malicious URL mentioned above.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Analysis of the document on one of the systems reveals the steps involved in compromising the targeted system via the spear \nphishing email. The document contains four objects that are dropped on the filesystem of the victim:\nAttack flow after opening the tampered spearphishing document\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the document contains four objects that are dropped on the filesystem of the victim:Attack flow after opening the tampered spearphishing email.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": " This object was not found on disk, it was deleted after running by \u201cMGsCOxPSNK.txt\u201d. Its role is to launch into \nexecution the component \u201cMGsCOxPSNK.txt\u201d\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "object was not found on disk, it was deleted after running by \"MGsCOxPSNK.txt\" its role is to launch into execution the component.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": " This file was not found on disk. Its functionality is to act as a next stage batch script which executes \u201ccmstp.\nexe /s /ns tCrrDqBQoCcEkbnK.txt\u201d\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "this file was not found on disk. it is to act as a next stage batch script which executes \"cmstp.exe /s/ns tCrrDqBQoCcEkbnK.txt\"",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": " This file can be found at the path: C:\\Users\\[redacted]\\AppData\\Local\\Temp\\cqHfjCkTtMwG.doc. It is a decoy \nfile, because it acts as a normal document file while the malicious payload is being dropped and executed on \nthe system.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "this file can be found at the path: C:Users[redacted]AppDataLocalTempcqHfjCkTtMwG.doc. it acts as a normal document file while the malicious payload is being dropped and executed on the system.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": " This object can be found at the path: C:\\Users\\[redacted]\\AppData\\Local\\Temp\\tCrrDqBQoCcEkbnK.txt. It is a \nconfiguration file for cmstp.exe. It downloads a DLL dropper from \u201ccloud[.]yourdocument[.]biz/robots.txt\u201d\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "this object can be found at the path: C:Users[redacted]AppDataLocalTemptCrrDqBQoCcEkbnK.txt. It is a configuration file for cmstp.exe.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The DLL Dropper downloaded on step four was not found on the file system and has the role of decrypting and dropping yet another \nJavaScript Dropper on the system. The decrypted JavaScript will be saved at the path \u201c%APPDATA%\\<registry_value>.txt\u201d where \nregistry_value  =  \u201cHKEY_CURRENT_USER\\Software\\Microsoft\\Notepad[USERNAME]\\303F1428C3F\u201d.  Before  exiting,  the  DLL  will \nself-delete.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the DLL Dropper downloaded on step four was not found on the file system. the decrypted JavaScript will be saved at the path \"%APPDATA%registry_value>.txt\"",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The file \u201c303F1428C3F.txt\u201d (eb561d46c6283c632df88bd20ade6df4) can be found at the path C:\\Users\\[redacted]\\\nAppData\\Roaming\\303F1428C3F.txt. Also, the file was obfuscated and encrypted with RC4. After decryption, the binary tried \nto download a JavaScript backdoor from the Command and Control server (C&C) \u201cnl[.][redacted][.]kz/robots.txt\u201d and \nsaved the file to \u201c%APPDATA%\\9D01CA.txt\u201d. The backdoor \u201c%APPDATA%\\9D01CA.txt\u201d was then executed via \u201cregsrv32\u201d \n(ex. \u201cregsvr32 /S /N /U /I:path_backdoor scrobj\u201d).\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the file can be found at the path C:Users[redacted]AppDataRoaming303F1428C3F.txt. after decryption, the binary tried to download a JavaScript backdoor from the command and control server (C&C)",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The file \u201c9D01CA.txt\u201d sent an initial fingerprint of the system compromised which contained the name of the antivirus solution \ninstalled on the system, the local IP address, username, computername and OS version. After this communication, the component \nwaited for instructions from the C&C \u201cnl[.][redacted][.]kz/api/v1\u201d. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the file \"9D01CA.txt\" sent an initial fingerprint of the system compromised. the component waited for instructions from the C&C \"nl[.][redacted]kz/api/v1\"",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The traffic with the C&C was encrypted and the commands received from the C&C would split into five types:\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the traffic was encrypted and the commands received from the C&C would split into five types. the c&c's commands would be divided into 5 types:",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "\u25cf\t \u201cd&exec\u201d: download and execute payload (EXE of DLL)\n\u25cf\t \u201cmore_eggs\u201d: download additional scripts (including self-update) and save them in \u201c%APPDATA%\u201d\n\u25cf\t \u201cgtfo\u201d: self delete/registry cleanup\n\u25cf\t \u201cmore_onion\u201d: runs additional downloaded scripts\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "download and execute payload (EXE of DLL) \"more_eggs\": download additional scripts (including self-update) and save them in \"%APPDATA%\"",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "All files mentioned in this stage of the attack were created on the system on Day 0 at around 16:49, when the first download link was \naccessed. It is worth mentioning that a binary executable named \u201crad353F7.tmp\u201d, which appeared on the system at a later date, \nDay 6, was most certainly downloaded on the system by the Javascript Backdoor \u201c9D01CA.txt\u201d.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "all files mentioned in this stage of the attack were created on the system on day 0 at around 16:49, when the first download link was accessed.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Day 0 at 16:48:58 marks the touchdown of a decoy file on two systems. This file is a decoy because it acts as a normal document \nfile while the malicious payload is being dropped on the system. On one of the two workstations, the decoy file has the creation time \nof Day 0 at 16:49:09 (10 seconds later than the other workstation) and the path C:\\Users\\[redacted]\\AppData\\Local\\\nTemp\\cqHfjCkTtMwG.doc. This system shows more stages of the attack, because the adversary used this machine to perform \nlateral movement and compromise a domain administrator account within two hours of the initial compromise.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the decoy file has the creation time of Day 0 at 16:48:58 (10 seconds later than the other workstation) it acts as a normal document file while the malicious payload is being dropped on the system.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "After the compromise of the domain administrator account, a network discovery is performed and systems start to be logged on via \nremote desktop protocol to reach the objective of infiltrating the network and gathering information. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "after the compromise of the domain administrator account, a network discovery is performed and systems start to be logged on via remote desktop protocol to reach the objective of infiltrating the network and gathering information.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Below is a complete timeline of events recorded on the workstation that was used to compromise the domain administrator account \nemployed by attackers throughout the lateral movement process.\nDay 0\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "below is a complete timeline of events recorded on the workstation that was used to compromise the domain administrator account employed by attackers throughout the lateral movement process.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The legitimate jusched.exe is replaced with the jusched.exe (d68351f754a508a386c06946c8e79088) beacon \ndownloader\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "jusched.exe (d68351f754a508a386c06946c8e79088) beacon downloader.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Failed  attempts  to  connect  to  several  internal  systems.  330  events:  322  target  a  single  system  ;  4  target  a \nsecond system ; 4 target a third system .\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "330 attempts failed to connect to several internal systems. 322 target a single system ; 4 target the second system and 4 targets the third system.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Failed  attempts  to  connect  to  several  internal  systems.  358  events:  349  target  a  single  system  ;  5  target  a \nsecond system; 5 target a third system.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "failed attempts to connect to several internal systems. 358 events: 349 target a single system, 5 target the second system and 5 targets the third system.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Failed attempts to connect to several internal systems. (355) target a single system ; 5 target a second system; \n5 target a third system\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "failed attempts to connect to several internal systems. (355) target a single system; 5 target the second and 3rd system.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Failed attempts to connect to several internal systems. (304) target a single system ; 7 target a second system; \n7 target a third system\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "failed attempts to connect to several internal systems. 304) target a single system; 7 target the second system and 7 targets the third system.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The full list of components and their corresponding hashes can be found in the IoC section below. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the full list of components and their corresponding hashes can be found in the IoC section below. if you have any questions, please contact me at the bottom of the page.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The workstation used to store the .zip archives containing internal banking documents was compromised on Day 9 using domain \nadmin credentials. On that day, attackers remotely dialed into the workstation and started accessing various network locations in an \nattempt to find various internal banking application files and documents.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "attackers remotely dialed into the workstation and started accessing various network locations in an attempt to find internal banking files and documents.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "From Day 10 to Day 27, the same workstation was used to connect to other internal network server.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "from day 10 to day 27, the same workstation was used to connect to other internal network server. if you have any questions, please contact us for more information.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "On Day 28 at 10:43:57 and 19:53:49, two .zip archive containing internal documents were created. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "on day 28 at 10:43:57 and 19:53:49, two.zip archive containing internal documents were created..",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "On Day 30 at 10:53:50, a third .zip archive was created, and it was deleted at 15:34:38.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "on day 30 at 10:53:50, a third.zip archive was created, and it was deleted at 15:34:38.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "On Day 46, attackers deleted a series of documents and folders from the workstation, potentially to cover their tracks and leave no \nevidence regarding the collected documents.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "attackers deleted a series of documents and folders from the workstation on day 46. they leave no evidence regarding the collected documents.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The Cobalt Strike beacon is a malicious agent implant that, once dropped on a compromised system, calls back to the attacker and \nchecks for new commands to be executed on the compromised system. This versatile tool can support two types of communication \nmechanisms: asynchronous and interactive. The asynchronous mode keeps commands in a queue and, when the beacon connects \nto a C&C, it downloads commands, executes them, and finally reports results to the C&C server. This can be particularly useful when \ntrying to keep a low network footprint and not trigger any alarms by constantly \u201cchatting\u201d back and forth with the C&C server. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the cobalt Strike beacon is a malicious agent implant that calls back to the attacker and checks for new commands to be executed on the compromised system.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "While  the  asynchronous  communication  mode  is  also  known  as  \u201clow  and  slow\u201d,  in  the  sense  that  it  becomes  inactive  when \nan  internet  connection  is  not  present,  the  interactive  communication  mode  offers  real-time  interaction  with  the  compromised \nworkstation. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the asynchronous communication mode is also known as \u201clow and slow\u201d in the sense that it becomes inactive when an internet connection is not present.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Overall framework capabilities include, but are not limited to, executing shell commands, uploading and downloading files, recording \nkeystrokes  and  taking  screenshots,  escalating  privileges,  deploying  exploits,  bypassing  User  Account  Control  (UAC),  and  even \ndeploying memory scraping tools, such as Mimikatz, or enumerating Active Directory (AD) hosts.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "framework capabilities include, but are not limited to, executing shell commands, uploading and downloading files, recording keystrokes and taking screenshots, and even deploying memory scraping tools.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "By supporting malleable communication with the C&C server, it can help attackers blend malicious traffic as legitimate, by allowing \nthem to transform and store data, interpret it backwards, and extract and recover that data from a transaction. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "attackers can blend malicious traffic as legitimate, by allowing them to transform and store data, interpret it backwards, and extract and recover that data from a transaction.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "different commands can be executed (some leave traces in the events)\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "different commands can be executed (some leave traces in the events). a different command can also be used to execute the commands.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Keystrokes and Screenshots (the tools for these actions are injected in different processes)\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Keystrokes and Screenshots (the tools for these actions) are injected in different processes. a keystroke and screenshot is the tool for the actions.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "SOCKS Proxy - set up a SOCKS proxy server to tunnel traffic through Beacon\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "SOCKS Proxy - set up a proxy server to tunnel traffic through Beacon. the server will be able to use the proxy to send traffic to the u.s.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Privileges - enable the privileges assigned to your current access token\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Privileges - enable the privileges assigned to your current access token. if you are unable to access your token, you will be able to use it as a proxy.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "\u2022  Mimikatz - Beacon integrates Mimikatz (although in other cases it can use different tools such as Modified Windows Vault \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Mimikatz - Beacon integrates the tool. in other cases it can use different tools such as Modified Windows Vault.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Credential and Hash Harvesting - injects into LSASS and dumps the password hashes for local users on the current system\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Credential and Hash Harvesting - injects into LSASS and dumps the password hashes for local users on the current system.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "\u2022  Network and Host Enumeration - interrogates and discovers targets in a Windows active directory network\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Network and Host Enumeration - interrogates and discovers targets in a Windows active directory network network. network and host enum\u00e9ration (network and network)",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Kerberos Tickets - inject a Kerberos ticket in the current session, making the interaction with remote systems possible using \nthe current tickets\u2019 rights\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "- inject a Kerberos ticket in the current session, making the interaction with remote systems possible. current tickets' rights are used to make the interactions possible using the tickets\u2019 rights.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Lateral Movement - lateral movement can be performed when a domain admin or a domain user that has admin on the target \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Lateral Movement - lateral movement can be performed when a domain admin has admin on the target. when admin is on target, the movement is performed by the domain user.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The  Carbanak  group,  which  has  a  long  track  record  of  compromising  infrastructure  belonging  to  financial  institutions,  is  still \nactive.  Its  purpose  remains  to  manipulate  financial  assets,  such  as  transferring  funds  from  bank  accounts  or  taking  over  ATM \ninfrastructures and instructing them to dispense cash at predetermined time intervals. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the carbanak group has a long track record of compromising infrastructure belonging to financial institutions. its purpose remains to manipulate financial assets, such as transferring funds from bank accounts or taking over ATM infrastructures and instructing them to dispense cash at predetermined time intervals.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Bitdefender\u2019s  investigation  shows  the  attackers\u2019  main  methods  remain  to  quietly  infiltrate  the  infrastructure  by  establishing  a \nfoothold on an employee\u2019s system, then move laterally across the infrastructure or elevate privileges to find critical systems that \nmanage financial transactions or ATM networks.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "Bitdefender's investigation shows attackers\u2019 main methods remain to quietly infiltrate the infrastructure by establishing a foothold on an employee\u2019s system.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "This  attack  falls  in  line  with  previous  objectives  observed  in  past  attacks  on  other  financial  institutions,  as  the  cybercriminal \norganization targeted the ATM network to reach systems belonging to key people within the organization who have access to ATM \nsystems. \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "this attack falls in line with previous targets observed in past attacks on other financial institutions. the cybercriminal organization targeted the ATM network to reach systems belonging to key people within the organization who have access to ATM systems.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "If  the  attack  had  succeeded,  it  would  have  given  hackers  control  over  the  ATM  network,  while  money  mules  would  have  been \nstanding by the ATM machines at pre-set time intervals to cash them out. They could have also been able to reset the cash-out limit \non ATMs, using a predetermined / preauthorized card. This way, money mules could have extracted the same amount over and over, \nwithout the ATMs reporting any transactions to the bank.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "money mules would have been standing by the ATM machines at pre-set time intervals to cash them out. they could have also been able to reset the cash-out limit on ATMs using a predetermined / preauthorized card.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "It is not uncommon in a targeted attack for phishing emails to bypass anti-spam solutions deployed at the mail server level, which \nis why it is good practice to deploy an in-depth security model that ensures URL filtering, behavior-based detection techniques and \nsandboxing, aside from classical anti-malware solutions. An enterprise-level solution that looks at both network traffic and endpoint \nbehavior would observe lateral movements by the attacker and flag them for review by a security analyst.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "it is not uncommon in targeted attacks for phishing emails to bypass anti-spam solutions deployed at the mail server level. an enterprise-level solution that looks at network traffic and endpoint behavior would observe lateral movements by the attacker and flag them for review by a security analyst.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "The damage observed throughout the investigation process was limited to access of internal documents on the compromised \nsystems and user account credentials leaked.  \n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "damage observed throughout the investigation process was limited to access of internal documents on the compromised systems and user account credentials leaked. the damage was observed to the extent of the leaks.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "downloads JavaScript backdoor\nJavaScript  backdoor  C&C  -  gets  commands \nand executes them\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "downloads JavaScript backdoorC&C - gets commands and executes them. if you have any questions, please contact us for more information.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Downloader that downloads a shellcode, which in turn downloads the beacon.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "downloader that downloads a shellcode. the beacon is downloaded in turn by the e-mail address on tuesday.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Downloader that downloads a shellcode, which in turn downloads the beacon. Same file/hash as \u201csmrs.exe\u201d, just under a different \nname.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "the same file/hash as \"smrs.exe\", just under a different name. downloader that downloads shellcode.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "Bitdefender is a global security technology company that delivers solutions in more than 100 countries through a network of \nvalue-added alliances, distributors and reseller partners. Since 2001, Bitdefender has consistently produced award-winning \nbusiness and consumer security technology, and is a leading security provider in virtualization and cloud technologies. Through \nR&D, alliances and partnership teams, Bitdefender has elevated the highest standards of security excellence in both its number-\none-ranked technology and its strategic alliances with the world\u2019s leading virtualization and cloud technology providers. More \ninformation is available at http://www.bitdefender.com/.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "global security technology company Bitdefender delivers solutions in more than 100 countries through a network of value-added alliances, distributors and reseller partners.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "All Rights Reserved. \u00a9 2018 Bitdefender. All trademarks, trade names, and products referenced herein are property of their \nrespective owners. FOR MORE INFORMATION VISIT: enterprise.bitdefender.com.\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "all trademarks, trade names, and products referenced herein are property of their respective owners. for more information VISIT: enterprise.bitdefender.com.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "N\nE\n_\nn\ne\n-\ns\n6\n1\n4\n1\nM\n1\n3\n-\n6\n9\n4\n3\nT\nA\nE\nR\nC\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "NE_ne-s6141M13-6943TAERC is currently on the run for the first time in a row.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "-\nt\nn\ni\nr\nP\ne\nu\nB\nT\nP\nA\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "-tnirPeuBTPA is based in the u.s. and europe. it is one of the fastest growing and fastest-growing sites on the planet.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "-\nr\ne\np\na\nP\ne\nt\ni\nh\nW\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "-repaPetihWW will be back in the u.s. on tuesday.",
+        "detection": {},
+        "prediction": {}
+    },
+    {
+        "text": "-\nr\ne\nd\nn\ne\nf\ne\nd\nt\ni\nB\n",
+        "source": "Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf",
+        "summary": "-rednefedtiB is a member of the federation of europe's governing body. it is the first of its kind to be able to get the most out of it.",
+        "detection": {},
+        "prediction": {}
+    }
+]
