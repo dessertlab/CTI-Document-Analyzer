@@ -45,7 +45,7 @@ with open(args.path) as fp:
         scraped = json.load(fp=fp)
 name, ext = os.path.splitext(apt)
 apt=name
-apt=apt.replace("_paragraph", "")
+apt=apt.replace("_summary", "")
 
 from models import classMClassificator,classDetector
 classifier = classMClassificator.Classificator()
@@ -68,7 +68,7 @@ for entry in scraped:
     if entry["detection"]["response"]== True:
         entry["prediction"] = classifier.getKPrediction(entry["text"],k=5)
 
-with open(aptdir+f'/{apt}_paragraph.json', mode='w') as fp:
+with open(aptdir+f'/{apt}_summary.json', mode='w') as fp:
         json.dump(fp=fp, obj=scraped,indent=4, cls=CustomJSONizer)
 
 # from models import classSummarizator
