@@ -4,20 +4,50 @@
         "source": "Ransom hackers hit Georgia courts after cities pay $1M - UPI.com.html",
         "summary": "hackers behind what appear to be a series of specialized and repeating ransomware attacks are keeping up the assault after at least two cities paid off them.",
         "detection": {
-            "response": false,
-            "confidence": 0.47008469700813293
+            "response": true,
+            "confidence": 0.6282894015312195
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1027",
+                "T1566",
+                "T1499",
+                "T1059",
+                "T1189"
+            ],
+            "confidence": [
+                0.007503194734454155,
+                0.006795305758714676,
+                0.005842774640768766,
+                0.0055078426375985146,
+                0.00548909418284893
+            ]
+        }
     },
     {
         "text": "The hackers began to attract attention with a cyberattack in early May against multiple systems in Baltimore and Greenville, N.C. In Baltimore, which paid the hackers nothing, some of those systems are still down. Two cities in Florida, however, have paid the hackers a combined amount that surpasses $1 million. Both cities, Riviera Beach and Lake City, said they did so to quickly get back control of the hijacked files -- but experts fear paying the criminals is precisely what may be encouraging new attacks.",
         "source": "Ransom hackers hit Georgia courts after cities pay $1M - UPI.com.html",
         "summary": "two cities in florida have paid the hackers a combined amount that surpasses $1 million. experts fear paying the criminals is precisely what may be encouraging new attacks.",
         "detection": {
-            "response": false,
-            "confidence": 0.39925405383110046
+            "response": true,
+            "confidence": 0.7017319798469543
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1070",
+                "T1027",
+                "T1496",
+                "T1486",
+                "T1564"
+            ],
+            "confidence": [
+                0.008589275181293488,
+                0.006001631263643503,
+                0.00578575162217021,
+                0.00551249785348773,
+                0.005437851883471012
+            ]
+        }
     },
     {
         "text": "Georgia's state court system and Eurofins Scientific, one of Britain's largest forensics lab, have also been targeted. BBC News reported Eurofins paid the ransom, but the amount wasn't disclosed.",
@@ -25,22 +55,22 @@
         "summary": "georgia's state court system and eurofins Scientific have also been targeted. the ransom was paid, but the amount wasn't disclosed.",
         "detection": {
             "response": true,
-            "confidence": 0.5570753216743469
+            "confidence": 0.6325588226318359
         },
         "prediction": {
             "attack_id": [
                 "T1499",
-                "T1566",
-                "T1059",
-                "T1070",
-                "T1140"
+                "T1027",
+                "T1140",
+                "T1222",
+                "T1070"
             ],
             "confidence": [
-                0.011142564937472343,
-                0.006003211718052626,
-                0.005366838071495295,
-                0.005297900177538395,
-                0.005291517823934555
+                0.00837898999452591,
+                0.005990664009004831,
+                0.005881346762180328,
+                0.005567868705838919,
+                0.005464944522827864
             ]
         }
     },
@@ -50,22 +80,22 @@
         "summary": "at least a portion of the digital information systems in Atlanta were taken offline. attackers left note requesting contact but did not include further demands, he said.",
         "detection": {
             "response": true,
-            "confidence": 0.646488606929779
+            "confidence": 0.6609163880348206
         },
         "prediction": {
             "attack_id": [
-                "T1190",
-                "T1083",
+                "T1070",
+                "T1499",
+                "T1059",
                 "T1486",
-                "T1018",
-                "T1027"
+                "T1018"
             ],
             "confidence": [
-                0.006370625924319029,
-                0.006322495639324188,
-                0.006262653041630983,
-                0.005734447855502367,
-                0.005610221531242132
+                0.009369341656565666,
+                0.006117557175457478,
+                0.0055350372567772865,
+                0.005495590157806873,
+                0.005431880708783865
             ]
         }
     },
@@ -75,22 +105,22 @@
         "summary": "Shaw added there's no evidence yet of data mining. the affected servers did not contain any personal information, he added. it was not clear if there were any personally identifiable information on the server.",
         "detection": {
             "response": true,
-            "confidence": 0.6540930271148682
+            "confidence": 0.6051502823829651
         },
         "prediction": {
             "attack_id": [
-                "T1078",
                 "T1110",
-                "T1550",
-                "T1592",
-                "T1083"
+                "T1555",
+                "T1078",
+                "T1548",
+                "T1550"
             ],
             "confidence": [
-                0.00932337623089552,
-                0.006001525092869997,
-                0.0058081611059606075,
-                0.005403982009738684,
-                0.005379475653171539
+                0.012149048037827015,
+                0.005450623109936714,
+                0.00538222212344408,
+                0.005373732652515173,
+                0.0053055561147630215
             ]
         }
     },
@@ -100,22 +130,22 @@
         "summary": "the intrusion cost the city $18 million in recovery efforts. the court system joins the two Florida cities, plus Key Biscayne, on the growing victims list.",
         "detection": {
             "response": true,
-            "confidence": 0.6606364250183105
+            "confidence": 0.7223402261734009
         },
         "prediction": {
             "attack_id": [
-                "T1496",
-                "T1059",
-                "T1534",
-                "T1018",
-                "T1486"
+                "T1565",
+                "T1498",
+                "T1562",
+                "T1027",
+                "T1083"
             ],
             "confidence": [
-                0.008386421017348766,
-                0.0057418677024543285,
-                0.005700634326785803,
-                0.005518060643225908,
-                0.005462121684104204
+                0.007360896095633507,
+                0.0058737886138260365,
+                0.0056023248471319675,
+                0.00558046018704772,
+                0.005474772769957781
             ]
         }
     },
@@ -124,10 +154,25 @@
         "source": "Ransom hackers hit Georgia courts after cities pay $1M - UPI.com.html",
         "summary": "the city council voted unanimously to pay at least $600,000 ransom through an insurance plan to recover files. Lake City paid $460,000 from city insurance and $10,000 in public money, and fired its information technology chief.",
         "detection": {
-            "response": false,
-            "confidence": 0.4407290816307068
+            "response": true,
+            "confidence": 0.5623242259025574
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1486",
+                "T1070",
+                "T1120",
+                "T1018",
+                "T1534"
+            ],
+            "confidence": [
+                0.013666328974068165,
+                0.005298960022628307,
+                0.00524057587608695,
+                0.0052353921346366405,
+                0.005232305731624365
+            ]
+        }
     },
     {
         "text": "The target cities have since been able to revive a portion of their systems or files, but experts say they face ongoing vulnerabilities from the intrusions. Authorities are not yet sure if all, or any, of the ransomware attacks are connected.",
@@ -135,22 +180,22 @@
         "summary": "the target cities have since been able to revive a portion of their systems or files, but experts say they face ongoing vulnerabilities from the intrusions. authorities are not sure if all, or any, of the ransomware attacks are connected.",
         "detection": {
             "response": true,
-            "confidence": 0.6337765455245972
+            "confidence": 0.6396614909172058
         },
         "prediction": {
             "attack_id": [
                 "T1486",
-                "T1499",
                 "T1070",
+                "T1499",
                 "T1083",
                 "T1027"
             ],
             "confidence": [
-                0.009554833173751831,
-                0.005852370522916317,
-                0.005721495486795902,
-                0.005436849780380726,
-                0.005387918557971716
+                0.009706431068480015,
+                0.005768840666860342,
+                0.005706409458070993,
+                0.005467682145535946,
+                0.005422831512987614
             ]
         }
     },
@@ -160,22 +205,22 @@
         "summary": "Lake City police Sgt. Mike Lee says the process has been \"slow going\" the lake city police are investigating the incident.",
         "detection": {
             "response": true,
-            "confidence": 0.7024254202842712
+            "confidence": 0.7333031296730042
         },
         "prediction": {
             "attack_id": [
                 "T1204",
+                "T1016",
                 "T1486",
-                "T1496",
-                "T1564",
-                "T1016"
+                "T1566",
+                "T1562"
             ],
             "confidence": [
-                0.007714376784861088,
-                0.006038803141564131,
-                0.005533624440431595,
-                0.005526196211576462,
-                0.005466294474899769
+                0.007261412683874369,
+                0.0068580047227442265,
+                0.005591635592281818,
+                0.005530231632292271,
+                0.005436253733932972
             ]
         }
     },
@@ -185,22 +230,22 @@
         "summary": "the city uses the process to \"start over\" if files are corrupted during the recovery process. \"we have to take and backup the entire system and then we're recovering from the backups,\" he said.",
         "detection": {
             "response": true,
-            "confidence": 0.662253737449646
+            "confidence": 0.6477707028388977
         },
         "prediction": {
             "attack_id": [
                 "T1486",
-                "T1564",
                 "T1083",
-                "T1059",
-                "T1562"
+                "T1018",
+                "T1497",
+                "T1057"
             ],
             "confidence": [
-                0.012095815502107143,
-                0.005903151817619801,
-                0.005278767552226782,
-                0.0052609751001000404,
-                0.0052430955693125725
+                0.008185348473489285,
+                0.007590719498693943,
+                0.005441336426883936,
+                0.005379867274314165,
+                0.005371458362787962
             ]
         }
     },
@@ -210,22 +255,22 @@
         "summary": "Lee said lake City is performing a forensic analysis to determine whether hackers accessed city systems through phishing or some other method.",
         "detection": {
             "response": true,
-            "confidence": 0.5950183868408203
+            "confidence": 0.614667534828186
         },
         "prediction": {
             "attack_id": [
                 "T1599",
-                "T1498",
                 "T1110",
-                "T1505",
-                "T1016"
+                "T1016",
+                "T1534",
+                "T1498"
             ],
             "confidence": [
-                0.006207473576068878,
-                0.005772601347416639,
-                0.005634587723761797,
-                0.005632015410810709,
-                0.005519170314073563
+                0.006576542276889086,
+                0.005690538790076971,
+                0.005572531372308731,
+                0.005570578388869762,
+                0.005542665719985962
             ]
         }
     },
@@ -235,22 +280,22 @@
         "summary": "the recent spate of attacks has prompted other cities nationwide to assess their security. experts have advised cities against paying any ransom sums.",
         "detection": {
             "response": true,
-            "confidence": 0.6448282599449158
+            "confidence": 0.6727806329727173
         },
         "prediction": {
             "attack_id": [
-                "T1018",
                 "T1496",
-                "T1518",
                 "T1534",
+                "T1018",
+                "T1489",
                 "T1070"
             ],
             "confidence": [
-                0.008325926028192043,
-                0.0065630353055894375,
-                0.005836924538016319,
-                0.005479208659380674,
-                0.005382864270359278
+                0.00673314044252038,
+                0.006638432387262583,
+                0.0059278602711856365,
+                0.005853406619280577,
+                0.005689975805580616
             ]
         }
     },
@@ -259,10 +304,25 @@
         "source": "Ransom hackers hit Georgia courts after cities pay $1M - UPI.com.html",
         "summary": "MonsterCloud CEO Zohar Pinhasi says \"they just want to get their money and they're going to leave\" he says the company just wants to make money.",
         "detection": {
-            "response": false,
-            "confidence": 0.39575740694999695
+            "response": true,
+            "confidence": 0.61750328540802
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1497",
+                "T1036",
+                "T1204",
+                "T1027",
+                "T1562"
+            ],
+            "confidence": [
+                0.006665375083684921,
+                0.006551389582455158,
+                0.006229332182556391,
+                0.005559781566262245,
+                0.005428262520581484
+            ]
+        }
     },
     {
         "text": "WIZARD SPIDER is a sophisticated eCrime group that has been operating the Ryuk ransomware since August 2018, targeting large organizations for a high-ransom return. This methodology, known as \u201cbig game hunting,\u201d signals a shift in operations for WIZARD SPIDER. This actor is a Russia-based criminal group known for the operation of the TrickBot banking malware that had focused primarily on wire fraud in the past. ",
@@ -270,22 +330,22 @@
         "summary": "WIZARD SPIDER is a sophisticated eCrime group that has been operating the Ryuk ransomware since august 2018. this actor is known for the operation of the trickBot banking malware that had focused primarily on wire fraud in the past.",
         "detection": {
             "response": true,
-            "confidence": 0.5429465174674988
+            "confidence": 0.685547411441803
         },
         "prediction": {
             "attack_id": [
-                "T1587",
                 "T1496",
-                "T1499",
                 "T1189",
-                "T1588"
+                "T1574",
+                "T1203",
+                "T1587"
             ],
             "confidence": [
-                0.00783388502895832,
-                0.007569707930088043,
-                0.005816191900521517,
-                0.005383857060223818,
-                0.005344045348465443
+                0.012145711109042168,
+                0.005497436970472336,
+                0.005355758126825094,
+                0.0053200083784759045,
+                0.005307066719979048
             ]
         }
     },
@@ -295,22 +355,22 @@
         "summary": "the actor name GRIM SPIDER was introduced into CrowdStrike\u2019s nomenclature in September 2018 for the group that operates the Ryuk ransomware as a distinct sub-group. however, in June 2019, further evidence emerged that he was able to assess with high confidence that it is in fact operated as part of the core WIZARD sPIder criminal enterprise.",
         "detection": {
             "response": true,
-            "confidence": 0.6260733008384705
+            "confidence": 0.6218384504318237
         },
         "prediction": {
             "attack_id": [
                 "T1070",
                 "T1587",
                 "T1082",
-                "T1059",
-                "T1027"
+                "T1027",
+                "T1105"
             ],
             "confidence": [
-                0.009259787388145924,
-                0.0061947195790708065,
-                0.005618683993816376,
-                0.0053771985694766045,
-                0.005375395063310862
+                0.009654496796429157,
+                0.005793028976768255,
+                0.005571848247200251,
+                0.005439120344817638,
+                0.0053937374614179134
             ]
         }
     },
@@ -320,7 +380,7 @@
         "summary": "CrowdStrike Intelligence will now solely use the actor name WIZARD SPIDER in association with TrickBot and Ryuk.",
         "detection": {
             "response": true,
-            "confidence": 0.6805309057235718
+            "confidence": 0.6948257684707642
         },
         "prediction": {
             "attack_id": [
@@ -328,14 +388,14 @@
                 "T1583",
                 "T1608",
                 "T1018",
-                "T1597"
+                "T1210"
             ],
             "confidence": [
-                0.01126439031213522,
-                0.005462759640067816,
-                0.0053679742850363255,
-                0.005348709877580404,
-                0.005346258636564016
+                0.010463382117450237,
+                0.005433847662061453,
+                0.005391322076320648,
+                0.0053847539238631725,
+                0.005356679204851389
             ]
         }
     },
@@ -344,10 +404,25 @@
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "Ryuk was derived from the Hermes source code and has been under steady development since its release. unlike hermes, the threat actors operating it have netted over 705.80 BTC across 52 transactions for a total current value of $3,701,893.98 USD.",
         "detection": {
-            "response": false,
-            "confidence": 0.3297640085220337
+            "response": true,
+            "confidence": 0.5519700050354004
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1027",
+                "T1082",
+                "T1496",
+                "T1195",
+                "T1553"
+            ],
+            "confidence": [
+                0.008630253374576569,
+                0.00574609637260437,
+                0.005622720345854759,
+                0.005595760885626078,
+                0.005426530726253986
+            ]
+        }
     },
     {
         "text": "Want the latest insights on the cyber threat landscape?\nDownload the 2021 Global Threat Report",
@@ -355,22 +430,22 @@
         "summary": "the 2021 Global Threat Report is a comprehensive and comprehensive cyber threat report. e-mail us your thoughts on cyber threats in the u.s.",
         "detection": {
             "response": true,
-            "confidence": 0.803057849407196
+            "confidence": 0.6056504845619202
         },
         "prediction": {
             "attack_id": [
                 "T1068",
-                "T1070",
                 "T1082",
-                "T1083",
-                "T1583"
+                "T1102",
+                "T1518",
+                "T1016"
             ],
             "confidence": [
-                0.010474560782313347,
-                0.005904500838369131,
-                0.0057039218954741955,
-                0.005384418182075024,
-                0.00528673455119133
+                0.0106110330671072,
+                0.006730824243277311,
+                0.0052788439206779,
+                0.005252037197351456,
+                0.005249605979770422
             ]
         }
     },
@@ -379,50 +454,125 @@
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "the ransom note is written to a file named RyukReadMe.txt. the template is static with the exception of the email address and the Bitcoin (BTC) wallet address, which may change.",
         "detection": {
-            "response": false,
-            "confidence": 0.37001165747642517
+            "response": true,
+            "confidence": 0.6836205720901489
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1105",
+                "T1113",
+                "T1036",
+                "T1486",
+                "T1566"
+            ],
+            "confidence": [
+                0.006399884819984436,
+                0.006347518879920244,
+                0.005985846742987633,
+                0.0058337184600532055,
+                0.005519715137779713
+            ]
+        }
     },
     {
         "text": "The ransom email used by Ryuk appears to be unique for each compiled executable. Our Using threat intelligence, our team has observed several different email addresses, but the same BTC addresses across multiple Ryuk executables. On Nov. 29, 2018, WIZARD SPIDER changed how they communicated with their victims.  As seen in the previous ransom note version, WIZARD SPIDER included their BTC address and email addresses. However, recent variants of Ryuk no longer contain the BTC address \u2014 only the email addresses. The ransom note states that the victim will receive the BTC address as a reply from WIZARD SPIDER. The new ransom note can be seen below.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "Using threat intelligence, our team has observed several different email addresses, but the same BTC addresses across multiple Ryuk executables. the ransom note states that the victim will receive the address as a reply from WIZARD SPIDER.",
         "detection": {
-            "response": false,
-            "confidence": 0.4145263433456421
+            "response": true,
+            "confidence": 0.6605109572410583
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1598",
+                "T1016",
+                "T1033",
+                "T1110",
+                "T1082"
+            ],
+            "confidence": [
+                0.0064720455557107925,
+                0.006249819882214069,
+                0.006036823149770498,
+                0.006004547234624624,
+                0.0055705527774989605
+            ]
+        }
     },
     {
         "text": "Early Ryuk binaries with the removal of the BTC address contained a PDB path of C:\\Users\\Admin\\Documents\\Visual Studio 2015\\Projects\\ConsoleApplication54new crypted try to clean\\x64\\Release\\ConsoleApplication54.pdb. This PDB path started appearing on Nov. 29, 2018. The removal of the BTC addresses occurred a day after the U.S. Department of Justice unsealed indictments for two individuals involved in facilitating cashouts from Samas Bitcoin addresses.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "early Ryuk binaries with the removal of the BTC address contained a PDB path of C:UsersAdminDocumentsVisual Studio 2015ProjectsConsoleApplication54new crypted try to cleanx64Release.",
         "detection": {
-            "response": false,
-            "confidence": 0.3565063774585724
+            "response": true,
+            "confidence": 0.6093957424163818
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1036",
+                "T1140",
+                "T1564",
+                "T1083",
+                "T1547"
+            ],
+            "confidence": [
+                0.008697648532688618,
+                0.006349443923681974,
+                0.005467492621392012,
+                0.00540796248242259,
+                0.005383673589676619
+            ]
+        }
     },
     {
         "text": "Based on observed transactions to known Ryuk BTC addresses, the ransom demand varies significantly. This suggests that WIZARD SPIDER (like INDRIK SPIDER with BitPaymer) calculates the ransom amount based on the size and value of the victim organization. To date, the lowest observed ransom was for 1.7 BTC and the highest was for 99 BTC. With 52 known transactions spread across 37 BTC addresses (as of this writing), WIZARD SPIDER has made 705.80 BTC, which has a current value of $3.7 million (USD). With the recent decline in BTC to USD value, it is likely GRIM SPIDER has netted more. The tables in the Appendix include a set of known Ryuk BTC addresses extracted from Ryuk binaries, which are believed to be only a subset of the Ryuk BTC addresses.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "WIZARD SPIDER calculates the ransom amount based on the size and value of the victim organization. with 52 known transactions spread across 37 BTC addresses, it is likely GRIM has netted more.",
         "detection": {
-            "response": false,
-            "confidence": 0.46301543712615967
+            "response": true,
+            "confidence": 0.6635854244232178
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1124",
+                "T1534",
+                "T1614",
+                "T1611",
+                "T1120"
+            ],
+            "confidence": [
+                0.006341406609863043,
+                0.005897943861782551,
+                0.005803776904940605,
+                0.005739413667470217,
+                0.005702477414160967
+            ]
+        }
     },
     {
         "text": "CrowdStrike\u00ae has conducted multiple incident response (IR) engagements responding to Ryuk infections in which TrickBot was also identified on hosts in the victim environment. CrowdStrike Falcon\u00ae Intelligence\u2122\u00ae believes that the initial compromise is performed through TrickBot, which is typically distributed either via spam email or, through the use of the Emotet (developed and operated by MUMMY SPIDER) geo-based download function. Falcon Intelligence has been monitoring the geo-based download activity from Emotet and, during 2018, MUMMY SPIDER has been an avid supporter of WIZARD SPIDER, predominantly distributing TrickBot to Emotet victims in the U.K., the U.S., and Canada.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "CrowdStrike\u00ae has conducted multiple incident response engagements responding to Ryuk infections in which TrickBot was identified on hosts in the victim environment.",
         "detection": {
-            "response": false,
-            "confidence": 0.35416242480278015
+            "response": true,
+            "confidence": 0.6610706448554993
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1505",
+                "T1068",
+                "T1190",
+                "T1217",
+                "T1583"
+            ],
+            "confidence": [
+                0.010570015758275986,
+                0.005702093709260225,
+                0.005649210885167122,
+                0.005427546799182892,
+                0.00538149569183588
+            ]
+        }
     },
     {
         "text": "Some of TrickBot\u2019s modules (such as pwgrab) could aid in recovering the credentials needed to compromise environments \u2014 the SOCKS module in particular has been observed tunneling PowerShell Empire traffic to perform reconnaissance and lateral movement. Through CrowdStrike IR engagements, WIZARD SPIDER has been observed performing the following events on the victim\u2019s network, with the end goal of pushing out the Ryuk binary:",
@@ -430,22 +580,22 @@
         "summary": "some of TrickBot\u2019s modules (such as pwgrab) could aid in recovering credentials needed to compromise environments. the SOCKS module in particular has been observed tunneling powerShell Empire traffic to perform reconnaissance and lateral movement.",
         "detection": {
             "response": true,
-            "confidence": 0.6292708516120911
+            "confidence": 0.5834128260612488
         },
         "prediction": {
             "attack_id": [
                 "T1068",
                 "T1059",
-                "T1070",
-                "T1601",
-                "T1552"
+                "T1574",
+                "T1552",
+                "T1021"
             ],
             "confidence": [
-                0.008166685700416565,
-                0.005969810765236616,
-                0.0055824159644544125,
-                0.0054536680690944195,
-                0.005423406139016151
+                0.007221733219921589,
+                0.006903411820530891,
+                0.005632185842841864,
+                0.005471305921673775,
+                0.005392797756940126
             ]
         }
     },
@@ -454,10 +604,25 @@
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "Hermes ransomware, the predecessor to Ryuk, was first distributed in february 2017. only one month after its release, a decryptor was written for hermes, followed by the release of version 2.0 in April 2017, which fixed vulnerabilities in its cryptographic implementation.",
         "detection": {
-            "response": false,
-            "confidence": 0.4788503050804138
+            "response": true,
+            "confidence": 0.582175612449646
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1496",
+                "T1070",
+                "T1014",
+                "T1490",
+                "T1027"
+            ],
+            "confidence": [
+                0.006682627368718386,
+                0.006374414544552565,
+                0.005915860645473003,
+                0.005886646453291178,
+                0.0057603525929152966
+            ]
+        }
     },
     {
         "text": "Hermes was originally sold on forums for $300 USD. When purchased, the buyer received a build that supported two email addresses, a decryptor and a unique RSA key pair. If the purchaser desired more email addresses, they were required to purchase another build for an additional $50. The seller of Hermes ransomware appears to have stopped or limited advertising on forums in 2017.",
@@ -465,22 +630,22 @@
         "summary": "the seller of Hermes ransomware appears to have stopped or limited advertising on forums in 2017. if the buyer desired more email addresses, they were required to purchase another build for an additional $50.",
         "detection": {
             "response": true,
-            "confidence": 0.5605514049530029
+            "confidence": 0.6667410135269165
         },
         "prediction": {
             "attack_id": [
-                "T1102",
-                "T1608",
-                "T1133",
-                "T1195",
-                "T1027"
+                "T1189",
+                "T1078",
+                "T1566",
+                "T1070",
+                "T1548"
             ],
             "confidence": [
-                0.0058618225157260895,
-                0.005852920934557915,
-                0.0057145291939377785,
-                0.005670705810189247,
-                0.005626557394862175
+                0.008164506405591965,
+                0.007142398972064257,
+                0.005521559156477451,
+                0.0055181607604026794,
+                0.0054442742839455605
             ]
         }
     },
@@ -490,22 +655,22 @@
         "summary": "early versions of Hermes were reportedly installed via internet-accessible RDP servers protected by weak credentials. in October 2017, hermes was deployed as a destructive distraction for the SWIFT compromise at the Far Eastern International Bank (FEIB in Taiwan) in march 2018, she was observed targeting users in south Korea via the GreenFlash Sundown exploit kit.",
         "detection": {
             "response": true,
-            "confidence": 0.5085498094558716
+            "confidence": 0.6110925674438477
         },
         "prediction": {
             "attack_id": [
+                "T1546",
                 "T1560",
-                "T1003",
-                "T1555",
-                "T1573",
-                "T1070"
+                "T1219",
+                "T1059",
+                "T1588"
             ],
             "confidence": [
-                0.00855991430580616,
-                0.007386140525341034,
-                0.005345660261809826,
-                0.0053401305340230465,
-                0.005320170894265175
+                0.005926990881562233,
+                0.005816257558763027,
+                0.005815296899527311,
+                0.005719597451388836,
+                0.005630817264318466
             ]
         }
     },
@@ -514,70 +679,175 @@
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "modified version of hermes, dubbed Ryuk, started appearing in a public malware repository. the changes include removing anti-analysis checks and querying the PEB to see if the field is BeingDebugged, and ensuring that the host language is not Russian, Ukrainian, or Belarusian.",
         "detection": {
-            "response": false,
-            "confidence": 0.4280979037284851
+            "response": true,
+            "confidence": 0.639459490776062
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1027",
+                "T1082",
+                "T1497",
+                "T1565",
+                "T1059"
+            ],
+            "confidence": [
+                0.006987628992646933,
+                0.006850067526102066,
+                0.005921469535678625,
+                0.005502096842974424,
+                0.005456563550978899
+            ]
+        }
     },
     {
         "text": "Another notable difference between Hermes and Ryuk is how the encryption keys are created. Hermes starts the encryption initialization by first generating an RSA public and private key pair  \u2014 referred to as a \u201cvictim key.\u201d An AES-256 key is generated and the victim\u2019s RSA private key is encrypted in AES-CBC mode. The attacker-controlled public RSA key is used to encrypt the AES key (previously used to encrypt the victim\u2019s RSA private key). Then, for each file encrypted, an AES key is generated, which is used to encrypt the file. Finally, the AES key for each file is encrypted with the victim\u2019s RSA public key, then stored at the end of the file.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "hermes starts the encryption initialization by first generating an RSA public and private key pair. an AES-256 key is generated and the victim\u2019s private keys are encrypted in CBC mode.",
         "detection": {
-            "response": false,
-            "confidence": 0.41998565196990967
+            "response": true,
+            "confidence": 0.6424430012702942
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1521",
+                "T1573",
+                "T1486",
+                "T1027",
+                "T1140"
+            ],
+            "confidence": [
+                0.01107611134648323,
+                0.006386947352439165,
+                0.005411983001977205,
+                0.005248111207038164,
+                0.0052467524074018
+            ]
+        }
     },
     {
         "text": "Ryuk contains the same logic, but no longer generates the victim-specific RSA key pair. Instead, Ryuk has two public RSA keys embedded in the executable, and what was previously the victim\u2019s RSA private key is encrypted and embedded in the executable. Because Ryuk does not generate a victim-specific RSA key pair, all hosts can be decrypted with the same decryption key. This might appear to be a design flaw but is not, since Ryuk has a unique key for each executable.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "Ryuk does not generate a victim-specific RSA key pair. the victim's private key is encrypted and embedded in the executable.",
         "detection": {
-            "response": false,
-            "confidence": 0.47834351658821106
+            "response": true,
+            "confidence": 0.6665179133415222
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1574",
+                "T1008",
+                "T1036",
+                "T1137",
+                "T1185"
+            ],
+            "confidence": [
+                0.006413564085960388,
+                0.006143477279692888,
+                0.006078471429646015,
+                0.005785925779491663,
+                0.0056742033921182156
+            ]
+        }
     },
     {
         "text": "If a single executable is used for a single victim environment, then there are no repercussions if the private keys are leaked because it will only decrypt the damage from a single Ryuk executable. Thus, it is highly likely that Ryuk pre-generates the RSA key pairs for each victim. This is arguably more secure, since the victim\u2019s system will never have access to the unencrypted RSA key pair parameters without paying the ransom. This approach is similar to INDRIK SPIDER\u2019s BitPaymer ransomware, which generates a victim-specific sample with a hard-coded public key.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "it is highly likely that Ryuk pre-generates the RSA key pairs for each victim. this is arguably more secure, since the victim\u2019s system will never have access to the unencrypted key pair parameters without paying the ransom.",
         "detection": {
-            "response": false,
-            "confidence": 0.40600210428237915
+            "response": true,
+            "confidence": 0.679238498210907
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1083",
+                "T1082",
+                "T1027",
+                "T1016",
+                "T1499"
+            ],
+            "confidence": [
+                0.010823771357536316,
+                0.006370416842401028,
+                0.0053723216988146305,
+                0.005277624819427729,
+                0.00525667192414403
+            ]
+        }
     },
     {
         "text": "There are two types of Ryuk binaries: a dropper (which is not commonly observed) and the Ryuk executable payload. Recovery of Ryuk droppers are rare, due to the Ryuk executable payload deleting the dropper when executed. Upon execution, the dropper constructs an installation folder path. The folder path is created by calling GetWindowsDirectoryW and then inserting a null byte at the fourth character of the path. This is used to create a string that contains the drive letter path. If the host operating system is Windows XP or earlier, the string Documents and Settings\\Default User\\ is appended to the drive letter path. If the host is Windows Vista or newer, the string users\\Public\\ is appended to the drive letter path. For Windows XP, an example folder path would be C:\\Documents and Settings\\Default User\\, and for Window Vista or higher, the path would be C:\\Users\\Public.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "the Ryuk executable payload deletes the dropper when executed. the folder path is created by calling GetWindowsDirectoryW and then inserting a null byte at the fourth character of the path.",
         "detection": {
-            "response": false,
-            "confidence": 0.3814842700958252
+            "response": true,
+            "confidence": 0.6937052607536316
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1140",
+                "T1547",
+                "T1036",
+                "T1070",
+                "T1546"
+            ],
+            "confidence": [
+                0.009881236590445042,
+                0.006063064094632864,
+                0.005751726683229208,
+                0.005594196263700724,
+                0.005352681968361139
+            ]
+        }
     },
     {
         "text": "A random executable file name is then constructed. It is created by calling _srand with a seed value returned from calling GetTickCount, then _rand is continuously called until five alphabetic characters are concatenated together. The extension .exe is then appended. The dropper checks whether the host is 32-bit or 64-bit by calling IsWow64Process and writes one of two embedded payload executables corresponding to the host\u2019s architecture. The newly written executable is then run by calling ShellExecuteW. The Ryuk payload executable written by the dropper is the Ryuk component that contains the core logic for encrypting files on the host.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "a random executable file name is then constructed. the dropper checks whether the host is 32-bit or 64bit by calling IsWow64Process.",
         "detection": {
-            "response": false,
-            "confidence": 0.4719238877296448
+            "response": true,
+            "confidence": 0.6309829354286194
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1574",
+                "T1036",
+                "T1140",
+                "T1027",
+                "T1547"
+            ],
+            "confidence": [
+                0.0073206122033298016,
+                0.00685096113011241,
+                0.005714216735213995,
+                0.005686474964022636,
+                0.005600129719823599
+            ]
+        }
     },
     {
         "text": "Ryuk is under constant development. In recent months, Ryuk binaries have continued to deviate further and further from the original Hermes source code, with the threat actors adding and removing functionality often. In November 2018, Falcon Intelligence identified new functionality added to Ryuk that included an anti-analysis infinite loop, a ping-like request to an IP address once the encryption process was completed, and the addition of an appended file extension for encrypted files. Of these three new features, only the file extension is still present in an executable compiled on Dec. 20, 2018.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "new features include an anti-analysis infinite loop, a ping-like request to an IP address once the encryption process was completed. only the file extension is still present in an executable compiled on Dec. 20, 2018.",
         "detection": {
-            "response": false,
-            "confidence": 0.4881933927536011
+            "response": true,
+            "confidence": 0.6615398526191711
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1497",
+                "T1546",
+                "T1059",
+                "T1480",
+                "T1055"
+            ],
+            "confidence": [
+                0.008476481772959232,
+                0.005939058028161526,
+                0.005855547729879618,
+                0.005803487729281187,
+                0.005632196087390184
+            ]
+        }
     },
     {
         "text": "Compared to other families of ransomware, Ryuk has very few safeguards to ensure stability of the host by not encrypting system files. For example, many ransomware families contain extensive lists of file extensions or folder names that should not be encrypted (whitelisted), but Ryuk only whitelists three extensions: It will not encrypt files with the extensions exe, dll, or hrmlog. The last extension appears to be a debug log filename created by the original Hermes developer. It should be noted that absent from this list is sys (system drivers), ocx (OLE control extension) and other executable file types. Encrypting these files could make the host unstable. Early versions of Ryuk included the whitelisting of ini and lnk files, but these have been removed in recent builds. The following folder names are also whitelisted and not encrypted.",
@@ -585,7 +855,7 @@
         "summary": "many ransomware families contain extensive lists of file extensions or folder names that should not be encrypted (whitelisted) but Ryuk only whitelists three extensions: it will not encrypt files with the extensions exe, dll, or hrmlog.",
         "detection": {
             "response": false,
-            "confidence": 0.3827979266643524
+            "confidence": 0.49306413531303406
         },
         "prediction": {}
     },
@@ -595,22 +865,22 @@
         "summary": "this is only a small subset of folder names that should be whitelisted in order to ensure stability on the host. an infected machine can become unstable over time and unbootable if restarted.",
         "detection": {
             "response": true,
-            "confidence": 0.5280073285102844
+            "confidence": 0.6318591833114624
         },
         "prediction": {
             "attack_id": [
                 "T1037",
+                "T1090",
                 "T1083",
-                "T1082",
-                "T1601",
-                "T1036"
+                "T1047",
+                "T1548"
             ],
             "confidence": [
-                0.007553756702691317,
-                0.005814355798065662,
-                0.0056412098929286,
-                0.005597173236310482,
-                0.0055002206936478615
+                0.009277578443288803,
+                0.0055193668231368065,
+                0.0054413797333836555,
+                0.005434959661215544,
+                0.005415509454905987
             ]
         }
     },
@@ -619,20 +889,50 @@
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "Ryuk uses combination of symmetric (AES) and asymmetric encryption to encrypt files. without the private key provided by WIZARD SPIDER, the files cannot be decrypted and are unrecoverable.",
         "detection": {
-            "response": false,
-            "confidence": 0.441010445356369
+            "response": true,
+            "confidence": 0.576633870601654
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1573",
+                "T1560",
+                "T1486",
+                "T1140",
+                "T1027"
+            ],
+            "confidence": [
+                0.011575520969927311,
+                0.0057001495733857155,
+                0.005508327856659889,
+                0.005354215856641531,
+                0.005337876733392477
+            ]
+        }
     },
     {
         "text": "Ryuk attempts to encrypt all mounted drives and hosts that have Address Resolution Protocol (ARP) entries (IP addresses) and it enumerates all mounted drives by calling GetLogicalDrives. For each mounted drive, Ryuk calls GetDriveTypeW to determine the drive\u2019s type. If the drive type is not a CD-ROM, files on the drive are encrypted. To retrieve IP addresses that have ARP entries, Ryuk calls GetIpNetTable. It iterates through all entries and then tries to enumerate files and folders on the remote host and encrypt the files.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "Ryuk attempts to encrypt all mounted drives and hosts that have Address Resolution Protocol entries (IP addresses) for each mounted drive, it calls GetDriveTypeW to determine the drive\u2019s type.",
         "detection": {
-            "response": false,
-            "confidence": 0.3433249592781067
+            "response": true,
+            "confidence": 0.5866321325302124
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1025",
+                "T1490",
+                "T1039",
+                "T1120",
+                "T1119"
+            ],
+            "confidence": [
+                0.007255238015204668,
+                0.006399726960808039,
+                0.0061341156251728535,
+                0.005698875989764929,
+                0.005555016919970512
+            ]
+        }
     },
     {
         "text": "Current builds of Ryuk no longer contain persistence functionality. Previously, to remain persistent on the host, Ryuk created a registry entry under the Run key using Windows cmd.exe shell. The following command line was used to write to the Registry Run Key name svchos to  HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run with the value being the path to the Ryuk executable.",
@@ -640,22 +940,22 @@
         "summary": "Ryuk created a registry entry under the Run key using Windows cmd.exe shell. this command line was used to write to the Registry Run Key name svchos to HKEY_CURRENT_USERSOFTWAREMicrosoftWindowsCurrentVersionRun.",
         "detection": {
             "response": true,
-            "confidence": 0.5385511517524719
+            "confidence": 0.5561001300811768
         },
         "prediction": {
             "attack_id": [
-                "T1547",
-                "T1546",
                 "T1112",
+                "T1547",
+                "T1218",
                 "T1036",
                 "T1012"
             ],
             "confidence": [
-                0.013710225000977516,
-                0.005347934551537037,
-                0.00523405009880662,
-                0.005233586300164461,
-                0.00522261718288064
+                0.00935651920735836,
+                0.006516102701425552,
+                0.00561704533174634,
+                0.005504569970071316,
+                0.0053846449591219425
             ]
         }
     },
@@ -664,10 +964,25 @@
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "Ryuk uses virtualalloc, WriteProcessMemory and CreateRemoteThread to inject itself into a remote process. it takes no action if the adjustment of the token privileges fails.",
         "detection": {
-            "response": false,
-            "confidence": 0.3698636591434479
+            "response": true,
+            "confidence": 0.6117686629295349
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1055",
+                "T1574",
+                "T1548",
+                "T1134",
+                "T1547"
+            ],
+            "confidence": [
+                0.009220457635819912,
+                0.006378044839948416,
+                0.005739367101341486,
+                0.005453211721032858,
+                0.005364283919334412
+            ]
+        }
     },
     {
         "text": "Unlike other families of ransomware, Ryuk does not contain process/service termination and anti-recovery functionality embedded in the executable. In the past, Ryuk did contain these capabilities, but they have been removed and are contained within two batch files.",
@@ -675,22 +990,22 @@
         "summary": "Ryuk does not contain process/service termination and anti-recovery functionality embedded in the executable. these capabilities have been removed and are contained within two batch files.",
         "detection": {
             "response": true,
-            "confidence": 0.6097155213356018
+            "confidence": 0.5949574708938599
         },
         "prediction": {
             "attack_id": [
-                "T1553",
-                "T1548",
-                "T1218",
-                "T1036",
-                "T1574"
+                "T1574",
+                "T1027",
+                "T1546",
+                "T1564",
+                "T1562"
             ],
             "confidence": [
-                0.008078854531049728,
-                0.006089221686124802,
-                0.00568785285577178,
-                0.005637975875288248,
-                0.005428716074675322
+                0.008644348941743374,
+                0.005842065438628197,
+                0.005675706546753645,
+                0.00557117722928524,
+                0.005430746357887983
             ]
         }
     },
@@ -700,22 +1015,22 @@
         "summary": "the batch file kill.bat contains commands for stopping services, disabling services and killing processes. the processes and services are stopped to ensure no open handles exist for files that will be encrypted.",
         "detection": {
             "response": true,
-            "confidence": 0.6316595077514648
+            "confidence": 0.625266969203949
         },
         "prediction": {
             "attack_id": [
                 "T1070",
-                "T1546",
                 "T1036",
+                "T1546",
                 "T1053",
                 "T1047"
             ],
             "confidence": [
-                0.01199315395206213,
-                0.005392550956457853,
-                0.005369291175156832,
-                0.005309083499014378,
-                0.00530815776437521
+                0.012108758091926575,
+                0.005410564597696066,
+                0.005383376032114029,
+                0.00529598630964756,
+                0.005295475944876671
             ]
         }
     },
@@ -725,7 +1040,7 @@
         "summary": "net stop avpsus /ynet stop McAfeeDLPAgentService. disablesc config SQLTELEMETRY$ECWDB2 start= disabled...taskkill/IM mspub.exe",
         "detection": {
             "response": false,
-            "confidence": 0.2872498035430908
+            "confidence": 0.3289474546909332
         },
         "prediction": {}
     },
@@ -735,22 +1050,22 @@
         "summary": "a batch file named windows.bat makes file recovery easier on the victim's machine. it should be noted that file names can be arbitrarily changed by threat actors.",
         "detection": {
             "response": true,
-            "confidence": 0.604658305644989
+            "confidence": 0.6302865743637085
         },
         "prediction": {
             "attack_id": [
                 "T1036",
-                "T1027",
                 "T1070",
-                "T1521",
-                "T1218"
+                "T1137",
+                "T1037",
+                "T1564"
             ],
             "confidence": [
-                0.010875103063881397,
-                0.006237917114049196,
-                0.005479402374476194,
-                0.005285386461764574,
-                0.005284254904836416
+                0.012277125380933285,
+                0.005361916497349739,
+                0.00531802186742425,
+                0.005286891479045153,
+                0.005280123557895422
             ]
         }
     },
@@ -760,7 +1075,7 @@
         "summary": "vssadmin Delete Shadows/all /quietdel. c:*.vehicle, bkf and mcdonald o'brien resize shadowstorage (for=c) if you have any questions, please contact us on 0800 555 111 or visit www.wbcat.com.",
         "detection": {
             "response": false,
-            "confidence": 0.05948920547962189
+            "confidence": 0.3563758432865143
         },
         "prediction": {}
     },
@@ -769,20 +1084,50 @@
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "the command option vssadmin resize shadowstorage is rarely used. shadow copies were created by third-party applications (such as backup software)",
         "detection": {
-            "response": false,
-            "confidence": 0.29382890462875366
+            "response": true,
+            "confidence": 0.6645206212997437
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1546",
+                "T1562",
+                "T1070",
+                "T1140",
+                "T1003"
+            ],
+            "confidence": [
+                0.0076647792011499405,
+                0.006312754470854998,
+                0.006197766866534948,
+                0.005581051576882601,
+                0.0053891707211732864
+            ]
+        }
     },
     {
         "text": "The final set of commands deletes files based on their extension or folder locations. The command arguments are for del delete files in all sub-directories (/s) in quiet mode (/q) without asking the user for confirmation and to force (/f)  the deletion of a file. The file extensions are for Virtual Hard Disk (.VHD), Avantrix Backup Plus files (.bac), backup copy (.bak), Windows Backup Catalog File (.wbcat), Windows Backup Utility File (.bfk), setting files (.set), Windows Backup File (.win), Disk Images (.dsk) and all folders that start with Backup. Note that since the del command does not securely delete a file (i.e., overwrite a file before deletion), some level of file recovery may be possible using forensic tools. The last command of del %0 deletes the executing .bat file.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "the final set of commands deletes files based on their extension or folder locations. the command arguments are for del delete files in all sub-directories (/s)",
         "detection": {
-            "response": false,
-            "confidence": 0.3425878882408142
+            "response": true,
+            "confidence": 0.6554003953933716
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1070",
+                "T1083",
+                "T1059",
+                "T1037",
+                "T1547"
+            ],
+            "confidence": [
+                0.013148865662515163,
+                0.005358879920095205,
+                0.005258576478809118,
+                0.0052568344399333,
+                0.005240174941718578
+            ]
+        }
     },
     {
         "text": "The anti-recovery commands used by Ryuk are more extensive than most ransomware families. These commands have not been observed being used by other ransomware families yet. This indicates that the threat actors have a thorough understanding of enterprise backup software.",
@@ -790,22 +1135,22 @@
         "summary": "the anti-recovery commands used by Ryuk are more extensive than most ransomware families. this indicates that the threat actors have a thorough understanding of enterprise backup software.",
         "detection": {
             "response": true,
-            "confidence": 0.656594455242157
+            "confidence": 0.6721481680870056
         },
         "prediction": {
             "attack_id": [
                 "T1070",
-                "T1140",
                 "T1547",
-                "T1553",
-                "T1027"
+                "T1140",
+                "T1548",
+                "T1068"
             ],
             "confidence": [
-                0.012312261387705803,
-                0.005391553044319153,
-                0.0053614722564816475,
-                0.005318846553564072,
-                0.005266187712550163
+                0.011048211716115475,
+                0.005447194911539555,
+                0.0054268427193164825,
+                0.005414713639765978,
+                0.005317226517945528
             ]
         }
     },
@@ -814,10 +1159,25 @@
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "Hermes was executed on a host during the SWIFT compromise of FEIB in October 2017. the two executables related to hermes are bitsran.exe and RSW7B37.tmp.",
         "detection": {
-            "response": false,
-            "confidence": 0.446311891078949
+            "response": true,
+            "confidence": 0.521434485912323
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1070",
+                "T1059",
+                "T1055",
+                "T1003",
+                "T1014"
+            ],
+            "confidence": [
+                0.0070482585579156876,
+                0.006045463494956493,
+                0.005912385880947113,
+                0.005873386282473803,
+                0.005694641266018152
+            ]
+        }
     },
     {
         "text": "Table 1. File Information for Binaries Used in the FEIB SWIFT Compromise",
@@ -825,22 +1185,22 @@
         "summary": "File Information for Binaries Used in the FEIB SWIFT Compromise. Table 1 shows the file information for binaries used in a document compiled by feib.",
         "detection": {
             "response": true,
-            "confidence": 0.7030664086341858
+            "confidence": 0.6849573254585266
         },
         "prediction": {
             "attack_id": [
-                "T1003",
-                "T1071",
-                "T1083",
                 "T1027",
-                "T1518"
+                "T1083",
+                "T1003",
+                "T1518",
+                "T1218"
             ],
             "confidence": [
-                0.009379366412758827,
-                0.005870766006410122,
-                0.005594749003648758,
-                0.0055053578689694405,
-                0.005443465430289507
+                0.008714081719517708,
+                0.006633737590163946,
+                0.005601787939667702,
+                0.005473119672387838,
+                0.0053728423081338406
             ]
         }
     },
@@ -849,20 +1209,50 @@
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "the first executable, bitsran.exe, is a dropper, and RSW7B37.tmp is the Hermes ransomware.",
         "detection": {
-            "response": false,
-            "confidence": 0.4843134880065918
+            "response": true,
+            "confidence": 0.6113208532333374
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1036",
+                "T1218",
+                "T1055",
+                "T1547",
+                "T1027"
+            ],
+            "confidence": [
+                0.013980348594486713,
+                0.005246671382337809,
+                0.0052315955981612206,
+                0.005224146414548159,
+                0.005221972241997719
+            ]
+        }
     },
     {
         "text": "If the time stamps are correct, the two executables (bitsran.exe and RSW7B37.tmp) were compiled within four hours and three minutes of each other. Due to the short time frame of Hermes being bundled within an executable that was hard-coded with credentials of the FEIB network, Falcon Intelligence assesses that STARDUST CHOLLIMA likely had access to the Hermes source code, or a third party compiled and built a new version for them. Unlike other variants of Hermes, RSW7B37.tmp does not append the exported and encrypted AES key to the end of the file. Figure 5 is a file encrypted by Hermes with the exported AES key appended to the end of the file as a footer.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "the two executables (bitsran.exe and RSW7B37.tmp) were compiled within four hours and three minutes of each other.",
         "detection": {
-            "response": false,
-            "confidence": 0.3835829198360443
+            "response": true,
+            "confidence": 0.5826830267906189
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1036",
+                "T1546",
+                "T1059",
+                "T1070",
+                "T1083"
+            ],
+            "confidence": [
+                0.009470084682106972,
+                0.006429004017263651,
+                0.005602793302386999,
+                0.0054508293978869915,
+                0.005327120888978243
+            ]
+        }
     },
     {
         "text": "Figure 6 is the end of a file encrypted by the Hermes variant RSW7B37.tmp used in the SWIFT attack. The footer only contains the marker HERMES but not the exported AES key.",
@@ -870,22 +1260,22 @@
         "summary": "figure 6 is the end of a file encrypted by the variant RSW7B37.tmp. the footer only contains the marker HERMES but not the exported AES key.",
         "detection": {
             "response": true,
-            "confidence": 0.6522835493087769
+            "confidence": 0.679847002029419
         },
         "prediction": {
             "attack_id": [
                 "T1027",
-                "T1036",
                 "T1140",
-                "T1521",
-                "T1547"
+                "T1547",
+                "T1036",
+                "T1059"
             ],
             "confidence": [
-                0.007932805456221104,
-                0.006215339060872793,
-                0.00601725559681654,
-                0.005666498560458422,
-                0.005528689362108707
+                0.008638547733426094,
+                0.006214026361703873,
+                0.005603863392025232,
+                0.005525121930986643,
+                0.005504305008798838
             ]
         }
     },
@@ -895,22 +1285,22 @@
         "summary": "Example Hermes Footer in FEIB SWIFT Attack with Encrypted AES Key Missing. Figure 6 shows examples of hermes footer with a key missing in the feib attack.",
         "detection": {
             "response": true,
-            "confidence": 0.505221962928772
+            "confidence": 0.5744406580924988
         },
         "prediction": {
             "attack_id": [
+                "T1003",
+                "T1564",
                 "T1027",
-                "T1036",
-                "T1521",
                 "T1055",
-                "T1546"
+                "T1033"
             ],
             "confidence": [
-                0.006587463431060314,
-                0.006300501991063356,
-                0.005834614392369986,
-                0.005711172241717577,
-                0.005652519408613443
+                0.007600777316838503,
+                0.005883660167455673,
+                0.005842253565788269,
+                0.005631537642329931,
+                0.00561914499849081
             ]
         }
     },
@@ -920,22 +1310,22 @@
         "summary": "the Hermes executable used in the FEIB SWIFT attack appears never to have been used to ransom the machine.",
         "detection": {
             "response": true,
-            "confidence": 0.6253427267074585
+            "confidence": 0.7443158626556396
         },
         "prediction": {
             "attack_id": [
-                "T1486",
-                "T1560",
-                "T1573",
-                "T1119",
-                "T1140"
+                "T1124",
+                "T1003",
+                "T1070",
+                "T1140",
+                "T1562"
             ],
             "confidence": [
-                0.013030553236603737,
-                0.005383406300097704,
-                0.005306093487888575,
-                0.005296663846820593,
-                0.005251401104032993
+                0.006672105751931667,
+                0.006152553949505091,
+                0.0060761538334190845,
+                0.0056763021275401115,
+                0.005652736872434616
             ]
         }
     },
@@ -945,7 +1335,7 @@
         "summary": "if hermes was related to STARDUST CHOLLIMA, it would imply that nation-state threat actors are selling their services on Russian-speaking forums.",
         "detection": {
             "response": false,
-            "confidence": 0.47417300939559937
+            "confidence": 0.44939345121383667
         },
         "prediction": {}
     },
@@ -954,20 +1344,50 @@
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "this refers to functionality implemented in Hermes to check the host language. the machine has the value 0419 (Russian), 0422 (Ukrainian) or 0423 (Belarusian)",
         "detection": {
-            "response": false,
-            "confidence": 0.33176189661026
+            "response": true,
+            "confidence": 0.6939380168914795
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1568",
+                "T1027",
+                "T1614",
+                "T1082",
+                "T1104"
+            ],
+            "confidence": [
+                0.0070346626453101635,
+                0.00688477186486125,
+                0.006312631536275148,
+                0.005493415519595146,
+                0.0054353284649550915
+            ]
+        }
     },
     {
         "text": "While supporting an incident response investigation involving Ryuk, Falcon Intelligence noticed files related to the investigation being uploaded to a file-scanning website from an IP address in Moscow, Russia. The file in question was a variant of kill.bat that contained commands previously only observed executed by Ryuk calling ShellExecute. The files could have been uploaded by a victim in Russia, but the time frame between the functionality being removed from Ryuk binaries and included in kill.bat was very short. The most likely scenario is that threat actors were testing whether kill.bat would be detected by antivirus engines.",
         "source": "What is Ryuk Ransomware_ The Complete Breakdown.html",
         "summary": "the file in question was a variant of kill.bat that contained commands previously only observed executed by Ryuk calling ShellExecute.",
         "detection": {
-            "response": false,
-            "confidence": 0.3650287687778473
+            "response": true,
+            "confidence": 0.6715039014816284
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1055",
+                "T1574",
+                "T1057",
+                "T1059",
+                "T1547"
+            ],
+            "confidence": [
+                0.0066579775884747505,
+                0.0058432938531041145,
+                0.0058395108208060265,
+                0.005806079600006342,
+                0.005670434329658747
+            ]
+        }
     },
     {
         "text": "Also, during forensic investigation of a network compromised by WIZARD SPIDER, CrowdStrike Services recovered artifacts with filenames in Russian. One file was named !!! files dlya raboty !!!.rar, which translates to \u201cfiles for work.\u201d  Based on these factors, there is considerably more evidence supporting the hypothesis that the WIZARD SPIDER threat actors are Russian speakers and not North Korean.",
@@ -975,22 +1395,22 @@
         "summary": "one file was named!!! files dlya raboty!!.rar, whichtranslates to \"files for work\" there is considerably more evidence supporting the hypothesis that the WIZARD SPIDER threat actors are Russian speakers.",
         "detection": {
             "response": true,
-            "confidence": 0.51043301820755
+            "confidence": 0.5964334607124329
         },
         "prediction": {
             "attack_id": [
-                "T1027",
+                "T1083",
                 "T1070",
-                "T1518",
-                "T1082",
-                "T1547"
+                "T1027",
+                "T1119",
+                "T1082"
             ],
             "confidence": [
-                0.007608449086546898,
-                0.006161576136946678,
-                0.00615241564810276,
-                0.005524506326764822,
-                0.005450275260955095
+                0.009041216224431992,
+                0.0060418229550123215,
+                0.005704961251467466,
+                0.005406409502029419,
+                0.005394508596509695
             ]
         }
     },
@@ -1000,22 +1420,22 @@
         "summary": "by turning on suspicious process blocking, Falcon ensures that Ryuk is killed in the very early stages of execution. CrowdStrike\u2019s machine learning algorithm provides additional coverage against this malware family, as illustrated below.",
         "detection": {
             "response": true,
-            "confidence": 0.6482033729553223
+            "confidence": 0.6294041872024536
         },
         "prediction": {
             "attack_id": [
-                "T1562",
-                "T1548",
+                "T1068",
                 "T1070",
-                "T1027",
-                "T1082"
+                "T1562",
+                "T1140",
+                "T1027"
             ],
             "confidence": [
-                0.006517187692224979,
-                0.006215917412191629,
-                0.005765423644334078,
-                0.005549535620957613,
-                0.005477463826537132
+                0.008490774780511856,
+                0.00640628207474947,
+                0.006150985136628151,
+                0.005732521414756775,
+                0.0053233434446156025
             ]
         }
     },
@@ -1025,22 +1445,22 @@
         "summary": "the following table contains the hashes of recently compiled Ryuk payloads. the table is based on a list of the most recent releases in the u.s.",
         "detection": {
             "response": true,
-            "confidence": 0.7761622667312622
+            "confidence": 0.6421203017234802
         },
         "prediction": {
             "attack_id": [
                 "T1027",
                 "T1083",
-                "T1059",
                 "T1574",
-                "T1140"
+                "T1059",
+                "T1070"
             ],
             "confidence": [
-                0.00938253290951252,
-                0.00697260582819581,
-                0.005371084902435541,
-                0.005357034038752317,
-                0.005333411507308483
+                0.007177366875112057,
+                0.007002720609307289,
+                0.005789618007838726,
+                0.00577287282794714,
+                0.005498070269823074
             ]
         }
     },
@@ -1050,22 +1470,22 @@
         "summary": "the following table contains hashes of Hermes executables that were previously analyzed. the table was compiled by hermes execs and was previously analysed by the u.s.",
         "detection": {
             "response": true,
-            "confidence": 0.7468624711036682
+            "confidence": 0.546360433101654
         },
         "prediction": {
             "attack_id": [
                 "T1027",
-                "T1083",
-                "T1518",
                 "T1140",
-                "T1059"
+                "T1070",
+                "T1055",
+                "T1083"
             ],
             "confidence": [
-                0.008802377618849277,
-                0.006714233662933111,
-                0.005740968976169825,
-                0.005365968681871891,
-                0.005330794490873814
+                0.008705195039510727,
+                0.0060642194002866745,
+                0.005626179743558168,
+                0.005550466477870941,
+                0.0054836999624967575
             ]
         }
     },
@@ -1075,22 +1495,22 @@
         "summary": "for more information on how to incorporate intelligence on dangerous threat actors into your security strategy, please visit the Falcon Intelligence product page. if you have any questions, you can contact us at cnn.com.",
         "detection": {
             "response": true,
-            "confidence": 0.6889829039573669
+            "confidence": 0.5855216979980469
         },
         "prediction": {
             "attack_id": [
                 "T1518",
                 "T1596",
-                "T1012",
-                "T1033",
+                "T1547",
+                "T1614",
                 "T1562"
             ],
             "confidence": [
-                0.013610615395009518,
-                0.005332790315151215,
-                0.0052413842640817165,
-                0.005229953210800886,
-                0.0052239131182432175
+                0.012700234539806843,
+                0.005717223044484854,
+                0.00523194158449769,
+                0.005229745991528034,
+                0.005228801164776087
             ]
         }
     },
@@ -1100,22 +1520,22 @@
         "summary": "Sign up now to receive the latest notifications and updates from CrowdStrike. if you have any questions, please contact us for more information.",
         "detection": {
             "response": true,
-            "confidence": 0.708820641040802
+            "confidence": 0.6407276391983032
         },
         "prediction": {
             "attack_id": [
-                "T1070",
+                "T1518",
                 "T1068",
-                "T1489",
-                "T1553",
-                "T1490"
+                "T1070",
+                "T1596",
+                "T1016"
             ],
             "confidence": [
-                0.007986627519130707,
-                0.006832432001829147,
-                0.005899959243834019,
-                0.005384690128266811,
-                0.005345955956727266
+                0.008397725410759449,
+                0.005723652895539999,
+                0.005714253056794405,
+                0.005694215651601553,
+                0.0056820642203092575
             ]
         }
     },
@@ -1135,7 +1555,7 @@
         "summary": "researchers found that threat group UNC1878 is responsible for one-fifth of Ryuk intrusions. \u201cHerein lies our monster,\u201d says mandiant\u2019s Aaron Stephens.",
         "detection": {
             "response": false,
-            "confidence": 0.44036611914634705
+            "confidence": 0.43417108058929443
         },
         "prediction": {}
     },
@@ -1145,22 +1565,22 @@
         "summary": "the coronavirus began its global spread. its silence hinted at its expiration or a rebrand in the form of the Conti ransomware.",
         "detection": {
             "response": true,
-            "confidence": 0.7075583934783936
+            "confidence": 0.6857572793960571
         },
         "prediction": {
             "attack_id": [
+                "T1070",
                 "T1496",
-                "T1534",
-                "T1542",
-                "T1489",
-                "T1204"
+                "T1027",
+                "T1486",
+                "T1489"
             ],
             "confidence": [
-                0.014116366393864155,
-                0.005223624873906374,
-                0.005219277925789356,
-                0.005218615289777517,
-                0.005218426696956158
+                0.008796114474534988,
+                0.007839124649763107,
+                0.0053231846541166306,
+                0.005279123783111572,
+                0.005278713069856167
             ]
         }
     },
@@ -1170,22 +1590,22 @@
         "summary": "the agencies warned the healthcare industry of a potential ransomware attack. CISA, FBI, and HHS have credible information of an increased and imminent cybercrime threat to U.S. hospitals and healthcare providers.",
         "detection": {
             "response": true,
-            "confidence": 0.5660656690597534
+            "confidence": 0.6102384328842163
         },
         "prediction": {
             "attack_id": [
-                "T1486",
-                "T1203",
-                "T1518",
+                "T1036",
                 "T1534",
+                "T1190",
+                "T1499",
                 "T1070"
             ],
             "confidence": [
-                0.007631402928382158,
-                0.006592330057173967,
-                0.006245948374271393,
-                0.005443165078759193,
-                0.005389491096138954
+                0.006625408306717873,
+                0.006224009674042463,
+                0.0062174005433917046,
+                0.005681128706783056,
+                0.005552529823035002
             ]
         }
     },
@@ -1195,22 +1615,22 @@
         "summary": "the expected onslaught of Ryuk ransomware could reach up to 400 hospitals, a cybersecurity expert tells cybersecurity journalist.",
         "detection": {
             "response": true,
-            "confidence": 0.5769309401512146
+            "confidence": 0.6538081169128418
         },
         "prediction": {
             "attack_id": [
-                "T1547",
                 "T1486",
-                "T1497",
                 "T1499",
-                "T1070"
+                "T1553",
+                "T1496",
+                "T1498"
             ],
             "confidence": [
-                0.006587082054466009,
-                0.0058807791210711,
-                0.005822489969432354,
-                0.0057781352661550045,
-                0.005699904169887304
+                0.007462324574589729,
+                0.006032218690961599,
+                0.005838329903781414,
+                0.005600099917501211,
+                0.0055191172286868095
             ]
         }
     },
@@ -1219,25 +1639,10 @@
         "source": "Ryuk wakes from hibernation; FBI, DHS warn of healthcare attacks _ Cybersecurity Dive.html",
         "summary": "\"Maybe Ryuk's time had come and gone,\" says Aaron Stephens, senior threat analyst on mandiant\u2019s FLARE Advanced Practices Team.",
         "detection": {
-            "response": true,
-            "confidence": 0.5065452456474304
+            "response": false,
+            "confidence": 0.4826916754245758
         },
-        "prediction": {
-            "attack_id": [
-                "T1059",
-                "T1587",
-                "T1543",
-                "T1083",
-                "T1548"
-            ],
-            "confidence": [
-                0.0069617885164916515,
-                0.006745881866663694,
-                0.0057130418717861176,
-                0.005705387331545353,
-                0.005436277948319912
-            ]
-        }
+        "prediction": {}
     },
     {
         "text": "Mandiant found that threat group UNC1878 is responsible for one-fifth of Ryuk intrusions. \u201cHerein lies our monster,\u201d said Stephens during the webcast. The cybersecurity firm released research on UNC1878\u2019s indicators Wednesday following news of attacks on hospitals.",
@@ -1245,22 +1650,22 @@
         "summary": "mandiant found that threat group UNC1878 is responsible for one-fifth of Ryuk intrusions. \"Herein lies our monster,\" said Stephens during the webcast.",
         "detection": {
             "response": true,
-            "confidence": 0.5726152062416077
+            "confidence": 0.5558681488037109
         },
         "prediction": {
             "attack_id": [
                 "T1059",
                 "T1203",
-                "T1082",
                 "T1110",
-                "T1566"
+                "T1018",
+                "T1082"
             ],
             "confidence": [
-                0.006536371540278196,
-                0.006487114354968071,
-                0.00614591222256422,
-                0.005996052175760269,
-                0.005677917040884495
+                0.007189802825450897,
+                0.005860057659447193,
+                0.005698303692042828,
+                0.005588314961642027,
+                0.005509404931217432
             ]
         }
     },
@@ -1270,22 +1675,22 @@
         "summary": "mandiant researchers coined a shorthand for uncategorized. they needed \"UNCs\" to help organize malicious activity.",
         "detection": {
             "response": true,
-            "confidence": 0.5468100309371948
+            "confidence": 0.6216320395469666
         },
         "prediction": {
             "attack_id": [
+                "T1137",
                 "T1068",
-                "T1587",
-                "T1078",
+                "T1036",
                 "T1547",
-                "T1203"
+                "T1216"
             ],
             "confidence": [
-                0.011398320086300373,
-                0.0056771570816636086,
-                0.005363938864320517,
-                0.005340630654245615,
-                0.005330501589924097
+                0.007016278803348541,
+                0.006808331701904535,
+                0.006490747909992933,
+                0.005392082035541534,
+                0.005366798024624586
             ]
         }
     },
@@ -1294,60 +1699,45 @@
         "source": "Ryuk wakes from hibernation; FBI, DHS warn of healthcare attacks _ Cybersecurity Dive.html",
         "summary": "UNCs serve as labels for which you can bucket indicators and techniques into. this labeled bucket would then act as technical anchor for what we are seeing is related activity.",
         "detection": {
-            "response": true,
-            "confidence": 0.5494872331619263
+            "response": false,
+            "confidence": 0.4933016300201416
         },
-        "prediction": {
-            "attack_id": [
-                "T1082",
-                "T1068",
-                "T1548",
-                "T1583",
-                "T1047"
-            ],
-            "confidence": [
-                0.010752364061772823,
-                0.0055417888797819614,
-                0.0053659286350011826,
-                0.005328903906047344,
-                0.00532539002597332
-            ]
-        }
+        "prediction": {}
     },
     {
         "text": "\u201cWe began to see Ryuk make its harrowing return. It wasn\u2019t dead. It was undead.\u201d",
         "source": "Ryuk wakes from hibernation; FBI, DHS warn of healthcare attacks _ Cybersecurity Dive.html",
         "summary": "\"we began to see Ryuk make its harrowing return. it wasn\u2019t dead. It was undead,\" he said.",
         "detection": {
-            "response": true,
-            "confidence": 0.5214954614639282
+            "response": false,
+            "confidence": 0.44890719652175903
         },
-        "prediction": {
-            "attack_id": [
-                "T1027",
-                "T1548",
-                "T1499",
-                "T1083",
-                "T1070"
-            ],
-            "confidence": [
-                0.012021275237202644,
-                0.005547245033085346,
-                0.005357922054827213,
-                0.005339248105883598,
-                0.005284136161208153
-            ]
-        }
+        "prediction": {}
     },
     {
         "text": "When enough UNCs are identified, researchers can cross section overlaps or see where UNCs graduate into different classifications, or threat groups. UNC1878 was created in January and within two months Mandiant picked up UNC1878\u2019s \u201cformative years,\u201d where it developed its strategies, said Ta. ",
         "source": "Ryuk wakes from hibernation; FBI, DHS warn of healthcare attacks _ Cybersecurity Dive.html",
         "summary": "researchers can cross section overlaps or see where UNCs graduate into different classifications. the organization was created in January and within two months it picked up its \"formative years\"",
         "detection": {
-            "response": false,
-            "confidence": 0.45132601261138916
+            "response": true,
+            "confidence": 0.5738660097122192
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1027",
+                "T1588",
+                "T1070",
+                "T1068",
+                "T1083"
+            ],
+            "confidence": [
+                0.0071938978508114815,
+                0.006281992886215448,
+                0.005478209815919399,
+                0.0054778107441961765,
+                0.005466117523610592
+            ]
+        }
     },
     {
         "text": "In September, \u201cwe began to see Ryuk make its harrowing return. It wasn\u2019t dead. It was undead,\u201d Stephens said. ",
@@ -1355,7 +1745,7 @@
         "summary": "in September, \"we began to see Ryuk make its harrowing return. it wasn\u2019t dead. It was undead,\" Stephens said.",
         "detection": {
             "response": false,
-            "confidence": 0.4578119218349457
+            "confidence": 0.4217945337295532
         },
         "prediction": {}
     },
@@ -1365,22 +1755,22 @@
         "summary": "the actors behind Ryuk are credited with collecting more than $61 million between February 2018 and October 2019, according to the FBI. retirement didn\u2019t seem likely to happen, but it\u2019s one of the most profitable strains.",
         "detection": {
             "response": true,
-            "confidence": 0.6289887428283691
+            "confidence": 0.636949896812439
         },
         "prediction": {
             "attack_id": [
                 "T1083",
                 "T1070",
                 "T1059",
-                "T1046",
-                "T1562"
+                "T1562",
+                "T1046"
             ],
             "confidence": [
-                0.007141651585698128,
-                0.006508469115942717,
-                0.006165686529129744,
-                0.005692510399967432,
-                0.005405616946518421
+                0.0075186737813055515,
+                0.006293811835348606,
+                0.00566187035292387,
+                0.00553149776533246,
+                0.005503730848431587
             ]
         }
     },
@@ -1390,22 +1780,22 @@
         "summary": "Ryuk-related incidents increased from 5,123 in Q3 2019. the company relied on more than 1 million global sensors to collect cyberattack data through September.",
         "detection": {
             "response": true,
-            "confidence": 0.5570707321166992
+            "confidence": 0.5833554863929749
         },
         "prediction": {
             "attack_id": [
                 "T1592",
                 "T1070",
-                "T1217",
                 "T1111",
-                "T1027"
+                "T1534",
+                "T1499"
             ],
             "confidence": [
-                0.00878430437296629,
-                0.006837521214038134,
-                0.005504488945007324,
-                0.005341024603694677,
-                0.005316636525094509
+                0.009139377623796463,
+                0.006266007665544748,
+                0.005573425441980362,
+                0.005436019040644169,
+                0.005378160160034895
             ]
         }
     },
@@ -1415,22 +1805,22 @@
         "summary": "Ryuk reportedly targeted Universal Health Services (UHS) and French IT services firm Sopra Steria. last week, steelcase disclosed a cyberattack on its IT systems in an SEC filing.",
         "detection": {
             "response": true,
-            "confidence": 0.5481641888618469
+            "confidence": 0.5141022801399231
         },
         "prediction": {
             "attack_id": [
-                "T1499",
                 "T1190",
-                "T1491",
-                "T1496",
-                "T1068"
+                "T1499",
+                "T1486",
+                "T1133",
+                "T1496"
             ],
             "confidence": [
-                0.008165874518454075,
-                0.006870281416922808,
-                0.005809273570775986,
-                0.005494445096701384,
-                0.005425861105322838
+                0.007897899486124516,
+                0.006534677930176258,
+                0.006409807596355677,
+                0.00537835480645299,
+                0.005353192333132029
             ]
         }
     },
@@ -1440,22 +1830,22 @@
         "summary": "\"the company does not currently expect this incident will have a material impact on its business operations or its financial results,\" Steelcase says.",
         "detection": {
             "response": true,
-            "confidence": 0.5835047960281372
+            "confidence": 0.6571539640426636
         },
         "prediction": {
             "attack_id": [
-                "T1027",
-                "T1518",
                 "T1078",
-                "T1562",
-                "T1068"
+                "T1111",
+                "T1548",
+                "T1564",
+                "T1136"
             ],
             "confidence": [
-                0.006773997563868761,
-                0.006373565178364515,
-                0.006332835648208857,
-                0.006055239122360945,
-                0.005508000031113625
+                0.008187221363186836,
+                0.007465856149792671,
+                0.005635812878608704,
+                0.005330834072083235,
+                0.0053192805498838425
             ]
         }
     },
@@ -1465,7 +1855,7 @@
         "summary": "UNC1878 traditionally relied on Trickbot, which provides initial access and visibility, and used Cobalt Strike with everyone of its intrusions.",
         "detection": {
             "response": false,
-            "confidence": 0.39867380261421204
+            "confidence": 0.4512803554534912
         },
         "prediction": {}
     },
@@ -1474,25 +1864,10 @@
         "source": "Ryuk wakes from hibernation; FBI, DHS warn of healthcare attacks _ Cybersecurity Dive.html",
         "summary": "\"with legitimate credentials UNC1878 extended their access by connecting to network shares and directly to systems over RDP and SSH,\" said Ta.",
         "detection": {
-            "response": true,
-            "confidence": 0.516843855381012
+            "response": false,
+            "confidence": 0.4473879635334015
         },
-        "prediction": {
-            "attack_id": [
-                "T1078",
-                "T1111",
-                "T1550",
-                "T1021",
-                "T1068"
-            ],
-            "confidence": [
-                0.010956984013319016,
-                0.005922374315559864,
-                0.005564301740378141,
-                0.0053486027754843235,
-                0.005283155012875795
-            ]
-        }
+        "prediction": {}
     },
     {
         "text": "This month, Microsoft was granted permission to disable Trickbot\u2019s critical infrastructure. A week into the disruption, Microsoft claimed to have eliminated \u201c94% of Trickbot\u2019s critical operational infrastructure including both the command-and-control servers in use at the time our action began and new infrastructure Trickbot has attempted to bring online.\u201d ",
@@ -1500,22 +1875,22 @@
         "summary": "a week into the disruption, Microsoft claimed to have eliminated \"94% of Trickbot's critical operational infrastructure including both the command-and-control servers in use at the time our action began.",
         "detection": {
             "response": true,
-            "confidence": 0.6173503398895264
+            "confidence": 0.6732943654060364
         },
         "prediction": {
             "attack_id": [
-                "T1548",
-                "T1070",
-                "T1204",
-                "T1137",
-                "T1562"
+                "T1027",
+                "T1203",
+                "T1546",
+                "T1055",
+                "T1547"
             ],
             "confidence": [
-                0.013355229049921036,
-                0.005353451706469059,
-                0.0052657057531178,
-                0.0052570742554962635,
-                0.005236811935901642
+                0.01335140410810709,
+                0.005379262380301952,
+                0.0053040930069983006,
+                0.00524111045524478,
+                0.005232674535363913
             ]
         }
     },
@@ -1525,22 +1900,22 @@
         "summary": "Microsoft acknowledged the maturity of Trickbot and impending threats. he said: \"this is challenging work, and there is not always a straight line to success\"",
         "detection": {
             "response": true,
-            "confidence": 0.6329651474952698
+            "confidence": 0.6169473528862
         },
         "prediction": {
             "attack_id": [
-                "T1027",
-                "T1548",
-                "T1059",
-                "T1518",
-                "T1068"
+                "T1203",
+                "T1140",
+                "T1587",
+                "T1068",
+                "T1027"
             ],
             "confidence": [
-                0.010585571639239788,
-                0.005802882369607687,
-                0.00547333899885416,
-                0.005443917121738195,
-                0.005336554255336523
+                0.011092695407569408,
+                0.0055818879045546055,
+                0.005549520719796419,
+                0.005432256031781435,
+                0.005293927155435085
             ]
         }
     },
@@ -1550,22 +1925,22 @@
         "summary": "subscribe to the Cybersecurity Dive free daily newsletter. keep up with the story. Subscribe to our free cybersecurity dive newsletter!",
         "detection": {
             "response": true,
-            "confidence": 0.7108951807022095
+            "confidence": 0.6409304738044739
         },
         "prediction": {
             "attack_id": [
-                "T1082",
+                "T1070",
                 "T1562",
-                "T1055",
-                "T1564",
-                "T1059"
+                "T1016",
+                "T1547",
+                "T1053"
             ],
             "confidence": [
-                0.006169795524328947,
-                0.006091691087931395,
-                0.005928260739892721,
-                0.005645629018545151,
-                0.005608211271464825
+                0.006552913226187229,
+                0.006162033881992102,
+                0.005858240183442831,
+                0.005732661113142967,
+                0.005619443953037262
             ]
         }
     },
@@ -1575,22 +1950,22 @@
         "summary": "Ryuk typically uses Emotet for a phishing or RDP attack, but sophos studied the attack. the next-generation attack tools showcased different tactic outside of Trickbot and trickbot.",
         "detection": {
             "response": true,
-            "confidence": 0.6103971004486084
+            "confidence": 0.6254505515098572
         },
         "prediction": {
             "attack_id": [
                 "T1189",
+                "T1505",
                 "T1566",
-                "T1598",
-                "T1587",
-                "T1585"
+                "T1204",
+                "T1598"
             ],
             "confidence": [
-                0.006658082827925682,
-                0.006655837409198284,
-                0.005922394804656506,
-                0.005553610622882843,
-                0.005510359536856413
+                0.00957393366843462,
+                0.00592455267906189,
+                0.0058839041739702225,
+                0.005422981455922127,
+                0.005365882068872452
             ]
         }
     },
@@ -1600,22 +1975,22 @@
         "summary": "if you look at Ryuk, they\u2019re using it as a malware cocktail, not just changing the ingredients, says Bill Conner, CEO of SonicWall.",
         "detection": {
             "response": true,
-            "confidence": 0.511951744556427
+            "confidence": 0.5847921967506409
         },
         "prediction": {
             "attack_id": [
-                "T1564",
+                "T1518",
                 "T1203",
+                "T1189",
                 "T1059",
-                "T1027",
-                "T1083"
+                "T1068"
             ],
             "confidence": [
-                0.007920542731881142,
-                0.00671070022508502,
-                0.005787026137113571,
-                0.005611059255897999,
-                0.0053839730098843575
+                0.006479126401245594,
+                0.006226734723895788,
+                0.006198558956384659,
+                0.0057732341811060905,
+                0.00563527038320899
             ]
         }
     },
@@ -1625,22 +2000,22 @@
         "summary": "the malicious document in the phishing email executed Buer Loader as a service downloader to get access to the malware.",
         "detection": {
             "response": true,
-            "confidence": 0.6671779155731201
+            "confidence": 0.7516224980354309
         },
         "prediction": {
             "attack_id": [
-                "T1534",
                 "T1204",
-                "T1486",
-                "T1068",
-                "T1091"
+                "T1566",
+                "T1105",
+                "T1547",
+                "T1203"
             ],
             "confidence": [
-                0.006318548694252968,
-                0.006255367770791054,
-                0.005945068784058094,
-                0.005782998166978359,
-                0.00558512145653367
+                0.009006203152239323,
+                0.006691318470984697,
+                0.005733267404139042,
+                0.0055616144090890884,
+                0.0053085885010659695
             ]
         }
     },
@@ -1650,22 +2025,22 @@
         "summary": "the September incident uncovered a quick infection-to-deployment time. each installment attempt failed, but Ryuk\u2019s operators persevered, \"including renewed phishing attempts to re-establisha foothold\"",
         "detection": {
             "response": true,
-            "confidence": 0.603461503982544
+            "confidence": 0.6100385189056396
         },
         "prediction": {
             "attack_id": [
-                "T1204",
+                "T1562",
+                "T1018",
                 "T1110",
-                "T1534",
-                "T1070",
-                "T1033"
+                "T1204",
+                "T1548"
             ],
             "confidence": [
-                0.010814625769853592,
-                0.006234843749552965,
-                0.005533426534384489,
-                0.005294423550367355,
-                0.005250489339232445
+                0.007055170368403196,
+                0.006327619776129723,
+                0.006199233699589968,
+                0.005638002883642912,
+                0.005508879665285349
             ]
         }
     },
@@ -1675,7 +2050,7 @@
         "summary": "operators behind Ryuk are \"really recreating these malware cocktails and bundles, if you will, to make them much more lethal,\" says Conner.",
         "detection": {
             "response": false,
-            "confidence": 0.43851742148399353
+            "confidence": 0.40767425298690796
         },
         "prediction": {}
     },
@@ -1685,7 +2060,7 @@
         "summary": "\"time to Ryuk,\" or intrusion to execution time, was on average about five days and 17 hours. it is demonstrably faster than other ransomware\u2019s \"dwell time\"",
         "detection": {
             "response": false,
-            "confidence": 0.47591379284858704
+            "confidence": 0.4062712788581848
         },
         "prediction": {}
     },
@@ -1695,22 +2070,22 @@
         "summary": "when UNC1878 is ready to deploy Ryuk, it will drop the zip file into the PerfLogs directory. they'll then unzip into a directory they create named \"share$\"",
         "detection": {
             "response": true,
-            "confidence": 0.5161740183830261
+            "confidence": 0.5539680123329163
         },
         "prediction": {
             "attack_id": [
-                "T1137",
-                "T1204",
-                "T1564",
+                "T1497",
                 "T1119",
-                "T1560"
+                "T1564",
+                "T1574",
+                "T1137"
             ],
             "confidence": [
-                0.006273922976106405,
-                0.006248160731047392,
-                0.006183318328112364,
-                0.006074937991797924,
-                0.005537660326808691
+                0.006909666117280722,
+                0.005917210131883621,
+                0.005884192418307066,
+                0.00573961203917861,
+                0.005581900477409363
             ]
         }
     },
@@ -1720,22 +2095,22 @@
         "summary": "at the beginning of the year, UNC1878 used Trickbot, Cobalt Strike and Ryuk. but his return doesn\u2019t necessarily mean he returned too.",
         "detection": {
             "response": true,
-            "confidence": 0.6034966111183167
+            "confidence": 0.6239351034164429
         },
         "prediction": {
             "attack_id": [
-                "T1598",
                 "T1027",
-                "T1055",
-                "T1486",
-                "T1070"
+                "T1497",
+                "T1598",
+                "T1059",
+                "T1055"
             ],
             "confidence": [
-                0.007259761914610863,
-                0.006849540863186121,
-                0.0056607527658343315,
-                0.005616463255137205,
-                0.0054888068698346615
+                0.009550593793392181,
+                0.005796707700937986,
+                0.0055206832475960255,
+                0.005515339784324169,
+                0.005447230767458677
             ]
         }
     },
@@ -1744,10 +2119,25 @@
         "source": "Ryuk wakes from hibernation; FBI, DHS warn of healthcare attacks _ Cybersecurity Dive.html",
         "summary": "Kegtap is among campaigns sent to targets with ever-changing \u201ddelivery tactics, techniques and procedures\u201d. campaigns have shifted from delivery via Sendgrid to having URLs host malware payload \u201cassociated with one or more of these legitimate services\u201d",
         "detection": {
-            "response": false,
-            "confidence": 0.4403340816497803
+            "response": true,
+            "confidence": 0.5316587090492249
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1204",
+                "T1584",
+                "T1102",
+                "T1566",
+                "T1568"
+            ],
+            "confidence": [
+                0.006912647746503353,
+                0.006802763324230909,
+                0.005881665740162134,
+                0.005773951765149832,
+                0.00549940625205636
+            ]
+        }
     },
     {
         "text": "Even the use of Cobalt Strike isn\u2019t the same as it once was, particularly seen in TLS certificates. ",
@@ -1755,22 +2145,22 @@
         "summary": "even the use of Cobalt Strike isn\u2019t the same as it once was. it is seen in TLS certificates.",
         "detection": {
             "response": true,
-            "confidence": 0.67699134349823
+            "confidence": 0.6433268785476685
         },
         "prediction": {
             "attack_id": [
-                "T1111",
                 "T1587",
-                "T1573",
-                "T1547",
-                "T1055"
+                "T1111",
+                "T1036",
+                "T1055",
+                "T1218"
             ],
             "confidence": [
-                0.007455023471266031,
-                0.006533489096909761,
-                0.005795568693429232,
-                0.005637903232127428,
-                0.005527724977582693
+                0.007046607322990894,
+                0.006573408376425505,
+                0.005690544378012419,
+                0.005631507374346256,
+                0.005605796817690134
             ]
         }
     },
@@ -1780,22 +2170,22 @@
         "summary": "mandiant noticed differentiation in certificates, nuances in domain patterns, and general overlaps in activity. researchers identified a newly-minted UNC2352 as the successor to unC1878.",
         "detection": {
             "response": true,
-            "confidence": 0.566194474697113
+            "confidence": 0.573399007320404
         },
         "prediction": {
             "attack_id": [
-                "T1110",
-                "T1027",
                 "T1070",
-                "T1203",
+                "T1505",
+                "T1027",
+                "T1068",
                 "T1587"
             ],
             "confidence": [
-                0.0069091226905584335,
-                0.0059694708324968815,
-                0.005765719339251518,
-                0.005753134377300739,
-                0.005653164349496365
+                0.007356071844696999,
+                0.005675298161804676,
+                0.005674116313457489,
+                0.005642519798129797,
+                0.005628866609185934
             ]
         }
     },
@@ -1805,22 +2195,22 @@
         "summary": "Trickbot's authors recently found a new variant that uses an updated version of the pwgrab module that lets it grab remote application credentials.",
         "detection": {
             "response": true,
-            "confidence": 0.6472455859184265
+            "confidence": 0.6590872406959534
         },
         "prediction": {
             "attack_id": [
                 "T1055",
-                "T1204",
-                "T1059",
-                "T1036",
-                "T1070"
+                "T1070",
+                "T1027",
+                "T1574",
+                "T1036"
             ],
             "confidence": [
-                0.006533463951200247,
-                0.005665920674800873,
-                0.005664616823196411,
-                0.0056620389223098755,
-                0.005625749472528696
+                0.007945967838168144,
+                0.006452396046370268,
+                0.005989479832351208,
+                0.005740752909332514,
+                0.005566095467656851
             ]
         }
     },
@@ -1830,7 +2220,7 @@
         "summary": "noel Anthony Llimos, Carl Maverick PascualFebruary 12, 2019Read time: 3 min 681 words.",
         "detection": {
             "response": false,
-            "confidence": 0.47647762298583984
+            "confidence": 0.41728267073631287
         },
         "prediction": {}
     },
@@ -1840,7 +2230,7 @@
         "summary": "in January 2019, we saw Trickbot (detected as TrojanSpy.Win32.TRICKBOT.AZ) with new capabilities added to its already extensive bag of tricks.",
         "detection": {
             "response": false,
-            "confidence": 0.3890768885612488
+            "confidence": 0.42308780550956726
         },
         "prediction": {}
     },
@@ -1850,22 +2240,22 @@
         "summary": "malware arrives via email disguised as tax incentive notification from major financial services company. email includes a macro enabled (XLSM) Microsoft Excel spreadsheet attachment (detected as Trojan.W97m.MERETAM.A) that purportedly contains the details of the incentive. however, as these attachments usually go, this macro will download and deploy Trickbot on the user\u2019s machine once activated.",
         "detection": {
             "response": true,
-            "confidence": 0.5955631136894226
+            "confidence": 0.5469328761100769
         },
         "prediction": {
             "attack_id": [
-                "T1204",
                 "T1566",
-                "T1113",
-                "T1534",
-                "T1189"
+                "T1059",
+                "T1204",
+                "T1036",
+                "T1203"
             ],
             "confidence": [
-                0.01270123291760683,
-                0.005819876678287983,
-                0.005223378073424101,
-                0.005223167594522238,
-                0.005222705192863941
+                0.013981004245579243,
+                0.005268416367471218,
+                0.005222042556852102,
+                0.005219068378210068,
+                0.005219050217419863
             ]
         }
     },
@@ -1875,22 +2265,22 @@
         "summary": "Trickbot variant is largely similar to the version we discovered in November. the 2019 version adds three new functions, one for the virtual network computing (VNC), PuTTY, and Remote Desktop Protocol (RDP).",
         "detection": {
             "response": true,
-            "confidence": 0.63140869140625
+            "confidence": 0.6441612839698792
         },
         "prediction": {
             "attack_id": [
                 "T1102",
-                "T1140",
-                "T1083",
-                "T1070",
-                "T1068"
+                "T1071",
+                "T1021",
+                "T1571",
+                "T1106"
             ],
             "confidence": [
-                0.006444796919822693,
-                0.006140708923339844,
-                0.0058603547513484955,
-                0.005839272867888212,
-                0.005758039187639952
+                0.006838272325694561,
+                0.0059592206962406635,
+                0.005926441866904497,
+                0.005681206937879324,
+                0.005576256196945906
             ]
         }
     },
@@ -1900,22 +2290,22 @@
         "summary": "comparison of pwgrab modules from November 2018 (top) and January 2019 (bottom). note the added functions in the code.",
         "detection": {
             "response": true,
-            "confidence": 0.6236859560012817
+            "confidence": 0.5927857756614685
         },
         "prediction": {
             "attack_id": [
+                "T1070",
+                "T1068",
                 "T1003",
-                "T1027",
-                "T1518",
-                "T1124",
-                "T1059"
+                "T1105",
+                "T1102"
             ],
             "confidence": [
-                0.00657048262655735,
-                0.006329001393169165,
-                0.005695481318980455,
-                0.005545936990529299,
-                0.005491340532898903
+                0.007266244385391474,
+                0.0057727801613509655,
+                0.0056659565307199955,
+                0.005640576593577862,
+                0.005575630348175764
             ]
         }
     },
@@ -1950,7 +2340,7 @@
         "summary": "XOR routine and SUB routine string encryption. xor routine (top) and string-crypting (bottom) respectively.",
         "detection": {
             "response": false,
-            "confidence": 0.4802592396736145
+            "confidence": 0.46287474036216736
         },
         "prediction": {}
     },
@@ -1985,22 +2375,22 @@
         "summary": "pwgrab module searches for files using the affix \u201c*.vnc.lnk\u201d located in the following directories.",
         "detection": {
             "response": true,
-            "confidence": 0.6637861728668213
+            "confidence": 0.633942723274231
         },
         "prediction": {
             "attack_id": [
-                "T1555",
-                "T1552",
+                "T1083",
+                "T1119",
                 "T1003",
-                "T1140",
-                "T1564"
+                "T1552",
+                "T1070"
             ],
             "confidence": [
-                0.010876284912228584,
-                0.006111022550612688,
-                0.005406592972576618,
-                0.005313334986567497,
-                0.005311985965818167
+                0.006281246431171894,
+                0.006025548093020916,
+                0.005954261869192123,
+                0.005808491259813309,
+                0.005711827892810106
             ]
         }
     },
@@ -2010,22 +2400,22 @@
         "summary": "the stolen information includes the target machine's hostname, port, and the proxy settings. the information was stolen by a stolen machine.",
         "detection": {
             "response": true,
-            "confidence": 0.7408426403999329
+            "confidence": 0.7225713729858398
         },
         "prediction": {
             "attack_id": [
-                "T1016",
                 "T1003",
                 "T1082",
                 "T1552",
+                "T1016",
                 "T1124"
             ],
             "confidence": [
-                0.009401950985193253,
-                0.006610210053622723,
-                0.005747564602643251,
-                0.005523110739886761,
-                0.005266513675451279
+                0.008618410676717758,
+                0.006723583675920963,
+                0.0062278569675982,
+                0.0054932525381445885,
+                0.0052621085196733475
             ]
         }
     },
@@ -2035,22 +2425,22 @@
         "summary": "pwgrab locates \".vnc.lnk\" files on the %USERPROFILE%Downloads directory.",
         "detection": {
             "response": true,
-            "confidence": 0.5182303786277771
+            "confidence": 0.5606390833854675
         },
         "prediction": {
             "attack_id": [
-                "T1113",
-                "T1518",
-                "T1036",
-                "T1027",
-                "T1546"
+                "T1083",
+                "T1552",
+                "T1074",
+                "T1012",
+                "T1005"
             ],
             "confidence": [
-                0.010657280683517456,
-                0.006265305448323488,
-                0.005398883949965239,
-                0.005281543359160423,
-                0.005280881188809872
+                0.007891167886555195,
+                0.007833068259060383,
+                0.0054208640940487385,
+                0.005375863518565893,
+                0.005348959472030401
             ]
         }
     },
@@ -2060,7 +2450,7 @@
         "summary": "the module will send the required data via POST. this file contains a list of command-and-control servers that will receive the exfiltrated data from the victim.",
         "detection": {
             "response": true,
-            "confidence": 0.6845474243164062
+            "confidence": 0.6842811107635498
         },
         "prediction": {
             "attack_id": [
@@ -2068,14 +2458,14 @@
                 "T1119",
                 "T1071",
                 "T1020",
-                "T1104"
+                "T1132"
             ],
             "confidence": [
-                0.009109961800277233,
-                0.006197838112711906,
-                0.0059573035687208176,
-                0.0054524862207472324,
-                0.005334004759788513
+                0.012088331393897533,
+                0.005652152467519045,
+                0.00543636130169034,
+                0.005271354224532843,
+                0.005256392061710358
             ]
         }
     },
@@ -2085,22 +2475,22 @@
         "summary": "to retrieve the PuTTY credentials, it queries the registry key SoftwareSimonTathamPutty to identify the saved connection settings. the module can retrieve information such as the Hostname and Username, and Private Key Files used for authentication.",
         "detection": {
             "response": true,
-            "confidence": 0.6510977149009705
+            "confidence": 0.6702707409858704
         },
         "prediction": {
             "attack_id": [
                 "T1082",
                 "T1012",
-                "T1552",
-                "T1564",
-                "T1070"
+                "T1555",
+                "T1573",
+                "T1552"
             ],
             "confidence": [
-                0.00945894606411457,
-                0.005841410253196955,
-                0.005596914794296026,
-                0.005554928444325924,
-                0.005473141558468342
+                0.007504882290959358,
+                0.0066711134277284145,
+                0.005945359356701374,
+                0.0058226860128343105,
+                0.005530401133000851
             ]
         }
     },
@@ -2109,10 +2499,25 @@
         "source": "Trickbot Adds Credential-Grabbing Capabilities.html",
         "summary": "figure 10. Registry traversal for Putty data exfiltration, code showing hostname, username and Private Key Files. the code is based on a code compiled by puttydataexfiltration.",
         "detection": {
-            "response": false,
-            "confidence": 0.4540446400642395
+            "response": true,
+            "confidence": 0.5583198070526123
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1003",
+                "T1027",
+                "T1552",
+                "T1112",
+                "T1055"
+            ],
+            "confidence": [
+                0.006375750992447138,
+                0.005758408457040787,
+                0.005681799259036779,
+                0.00565306143835187,
+                0.005647905170917511
+            ]
+        }
     },
     {
         "text": "Its third function related to RDP uses the CredEnumerateA API to identify and steal saved credentials. It then parses the string \u201ctarget=TERMSRV\u201d to identify the hostname, username, and password saved per RDP credential.",
@@ -2120,22 +2525,22 @@
         "summary": "the third function related to RDP uses the CredEnumerateA API. it then parses the string \u201ctarget=TERMSRV\u201d to identify the hostname, username, and password saved per credential.",
         "detection": {
             "response": true,
-            "confidence": 0.6544017195701599
+            "confidence": 0.6904860138893127
         },
         "prediction": {
             "attack_id": [
                 "T1003",
                 "T1021",
-                "T1110",
                 "T1018",
+                "T1033",
                 "T1059"
             ],
             "confidence": [
-                0.009529853239655495,
-                0.006412183865904808,
-                0.005701172631233931,
-                0.0053035179153084755,
-                0.005291433073580265
+                0.01365510281175375,
+                0.005288795102387667,
+                0.005252323113381863,
+                0.005236019846051931,
+                0.005232533439993858
             ]
         }
     },
@@ -2145,22 +2550,22 @@
         "summary": "this new variant is not groundbreaking in terms of what it can do, but proves that the groups or individuals behind Trickbot are not resting on their laurels and continuously improve it.",
         "detection": {
             "response": true,
-            "confidence": 0.575482964515686
+            "confidence": 0.5526912212371826
         },
         "prediction": {
             "attack_id": [
-                "T1548",
+                "T1083",
+                "T1574",
+                "T1070",
                 "T1027",
-                "T1587",
-                "T1055",
-                "T1203"
+                "T1110"
             ],
             "confidence": [
-                0.0068717217072844505,
-                0.006264904513955116,
-                0.0061713047325611115,
-                0.005603789817541838,
-                0.0055468338541686535
+                0.008996591903269291,
+                0.005805101711302996,
+                0.00576550979167223,
+                0.005608238745480776,
+                0.005310461390763521
             ]
         }
     },
@@ -2170,22 +2575,22 @@
         "summary": "users can nip attacks in the bud by following the best practices against spam. we recommend that users refrain from opening email attachments unless they are sure that it is from a legitimate source.",
         "detection": {
             "response": true,
-            "confidence": 0.5872014760971069
+            "confidence": 0.6689783930778503
         },
         "prediction": {
             "attack_id": [
-                "T1204",
-                "T1203",
                 "T1566",
-                "T1059",
-                "T1547"
+                "T1204",
+                "T1547",
+                "T1534",
+                "T1518"
             ],
             "confidence": [
-                0.014009757898747921,
-                0.005230963695794344,
-                0.005229897331446409,
-                0.005227299407124519,
-                0.005221792962402105
+                0.008359880186617374,
+                0.008153439499437809,
+                0.005337001755833626,
+                0.005301218014210463,
+                0.005275331903249025
             ]
         }
     },
@@ -2195,22 +2600,22 @@
         "summary": "the following Trend Micro solutions, powered by XGenTM security, protect systems from all types of threats, including malware such as Trickbot:",
         "detection": {
             "response": true,
-            "confidence": 0.5928682684898376
+            "confidence": 0.5969618558883667
         },
         "prediction": {
             "attack_id": [
                 "T1068",
                 "T1518",
-                "T1555",
                 "T1588",
-                "T1027"
+                "T1555",
+                "T1553"
             ],
             "confidence": [
-                0.011279640719294548,
-                0.005931181833148003,
-                0.005511339288204908,
-                0.005430043675005436,
-                0.00523311085999012
+                0.01090213656425476,
+                0.006467507220804691,
+                0.005340932868421078,
+                0.005308858584612608,
+                0.005233029834926128
             ]
         }
     },
@@ -2220,22 +2625,22 @@
         "summary": "cookies are used to collect information about how you interact with our website. we use this information in order to improve and customize your browsing experience and for analytics and metrics about our visitors both on this website and other media.",
         "detection": {
             "response": true,
-            "confidence": 0.5711966753005981
+            "confidence": 0.5003209114074707
         },
         "prediction": {
             "attack_id": [
                 "T1217",
-                "T1555",
-                "T1082",
-                "T1033",
-                "T1016"
+                "T1593",
+                "T1596",
+                "T1119",
+                "T1213"
             ],
             "confidence": [
-                0.008566384203732014,
-                0.006425537168979645,
-                0.00560858566313982,
-                0.005536174867302179,
-                0.005442288238555193
+                0.007291169837117195,
+                0.006506612990051508,
+                0.006311864126473665,
+                0.0055890460498631,
+                0.005451580043882132
             ]
         }
     },
@@ -2245,22 +2650,22 @@
         "summary": "technical novices, along with seasoned cybersecurity professionals, have witnessed over the past year a slew of ransomware events that have devastated enterprises around the world.",
         "detection": {
             "response": true,
-            "confidence": 0.5380980372428894
+            "confidence": 0.6364673972129822
         },
         "prediction": {
             "attack_id": [
-                "T1499",
-                "T1027",
-                "T1542",
-                "T1200",
-                "T1566"
+                "T1068",
+                "T1203",
+                "T1518",
+                "T1082",
+                "T1059"
             ],
             "confidence": [
-                0.007490950170904398,
-                0.006622533313930035,
-                0.005653683561831713,
-                0.005441117566078901,
-                0.005408548284322023
+                0.0066164275631308556,
+                0.006269187666475773,
+                0.00598658062517643,
+                0.005809304770082235,
+                0.005694467108696699
             ]
         }
     },
@@ -2295,22 +2700,22 @@
         "summary": "there is a lot the cybersecurity industry doesn\u2019t know: the volume of attacks, average cost of remediation and organizations who choose to stay silent once an attack has occurred.",
         "detection": {
             "response": true,
-            "confidence": 0.5424618124961853
+            "confidence": 0.6510381698608398
         },
         "prediction": {
             "attack_id": [
-                "T1499",
-                "T1518",
                 "T1083",
-                "T1070",
-                "T1037"
+                "T1082",
+                "T1203",
+                "T1204",
+                "T1548"
             ],
             "confidence": [
-                0.007264361251145601,
-                0.006542665418237448,
-                0.006047411356121302,
-                0.00543223787099123,
-                0.005398907698690891
+                0.012302887625992298,
+                0.0054540173150599,
+                0.005452020093798637,
+                0.005289352498948574,
+                0.005270920693874359
             ]
         }
     },
@@ -2319,10 +2724,25 @@
         "source": "Ransomware-as-a-service_ The pandemic within a pandemic _ Intel471.html",
         "summary": "the criminal groups behind ransomware are flourishing, creating new variants and offering access on underground markets to anyone that has access to corporate networks.",
         "detection": {
-            "response": false,
-            "confidence": 0.4208308756351471
+            "response": true,
+            "confidence": 0.6502844095230103
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1059",
+                "T1078",
+                "T1189",
+                "T1584",
+                "T1588"
+            ],
+            "confidence": [
+                0.006238974630832672,
+                0.006175967399030924,
+                0.006166123319417238,
+                0.0058405171148478985,
+                0.005631685256958008
+            ]
+        }
     },
     {
         "text": "The following is an examination of Ransomware-as-a-service (RaaS) crews that have grown over the past year. This is not meant to be a definitive measure of the ransomware scene, as what could be considered \u201cdamaging\u201d \u2014 payment amount, system downtime, communications with attackers \u2014 could vary by crew or incident. Additionally, there are known private gangs operating in tight, close-knit criminal circles using direct and private communication channels that we have little visibility into.",
@@ -2330,22 +2750,22 @@
         "summary": "this is not meant to be a definitive measure of the ransomware scene. there are known private gangs operating in tight, close-knit criminal circles using direct and private communication channels that we have little visibility into.",
         "detection": {
             "response": true,
-            "confidence": 0.516498327255249
+            "confidence": 0.6092811822891235
         },
         "prediction": {
             "attack_id": [
-                "T1499",
-                "T1496",
-                "T1082",
+                "T1083",
                 "T1027",
-                "T1083"
+                "T1082",
+                "T1499",
+                "T1090"
             ],
             "confidence": [
-                0.007923798635601997,
-                0.0063935453072190285,
-                0.005771820433437824,
-                0.005642990581691265,
-                0.005555286537855864
+                0.01230704877525568,
+                0.0055010318756103516,
+                0.0055006518959999084,
+                0.00526664312928915,
+                0.0052582076750695705
             ]
         }
     },
@@ -2355,22 +2775,22 @@
         "summary": "we are aiming to shine light on an area where relative darkness has led to a staggering amount of criminals running roughshod over enterprises, escaping with people\u2019s hard-earned money while facing very limited consequences.",
         "detection": {
             "response": true,
-            "confidence": 0.5909985303878784
+            "confidence": 0.6020562052726746
         },
         "prediction": {
             "attack_id": [
                 "T1499",
-                "T1083",
-                "T1568",
-                "T1046",
-                "T1534"
+                "T1534",
+                "T1204",
+                "T1027",
+                "T1018"
             ],
             "confidence": [
-                0.012685162015259266,
-                0.005417544860392809,
-                0.005347266793251038,
-                0.005293725058436394,
-                0.005281176418066025
+                0.008701796643435955,
+                0.007779931649565697,
+                0.0055452012456953526,
+                0.005297699011862278,
+                0.005244641099125147
             ]
         }
     },
@@ -2380,7 +2800,7 @@
         "summary": "we can verify that the following variants have been created and are being sold on a RaaS model. there is limited to no information on successful attacks, volume of attacks and cost of mitigation.",
         "detection": {
             "response": true,
-            "confidence": 0.6010525822639465
+            "confidence": 0.6057560443878174
         },
         "prediction": {
             "attack_id": [
@@ -2388,14 +2808,14 @@
                 "T1518",
                 "T1027",
                 "T1070",
-                "T1083"
+                "T1036"
             ],
             "confidence": [
-                0.008340483531355858,
-                0.006622096989303827,
-                0.006079584360122681,
-                0.0054268562234938145,
-                0.00539461150765419
+                0.008677680976688862,
+                0.0070153758861124516,
+                0.0057551199570298195,
+                0.0054049016907811165,
+                0.0053418478928506374
             ]
         }
     },
@@ -2405,22 +2825,22 @@
         "summary": "the following variants have been tied to a number of confirmed attacks. they have used blogs to \u201cname and shame\u201d victims who have refused to pay ransoms.",
         "detection": {
             "response": true,
-            "confidence": 0.6393870115280151
+            "confidence": 0.6514379382133484
         },
         "prediction": {
             "attack_id": [
-                "T1083",
                 "T1070",
+                "T1083",
+                "T1485",
                 "T1486",
-                "T1542",
-                "T1485"
+                "T1027"
             ],
             "confidence": [
-                0.009157462976872921,
-                0.006721843965351582,
-                0.005378320813179016,
-                0.005340067204087973,
-                0.0053051533177495
+                0.008216644637286663,
+                0.008162666112184525,
+                0.005346921272575855,
+                0.005321634002029896,
+                0.00531722279265523
             ]
         }
     },
@@ -2430,22 +2850,22 @@
         "summary": "all of these variants have used blogs to \u201cname and shame\u201d victims who have refused to pay ransoms. this figure may be low due to the lack of reporting surrounding enterprises payment to crews.",
         "detection": {
             "response": true,
-            "confidence": 0.5063998699188232
+            "confidence": 0.6119327545166016
         },
         "prediction": {
             "attack_id": [
-                "T1070",
-                "T1083",
-                "T1564",
                 "T1027",
-                "T1486"
+                "T1203",
+                "T1068",
+                "T1140",
+                "T1189"
             ],
             "confidence": [
-                0.007452523335814476,
-                0.007070581428706646,
-                0.005849193315953016,
-                0.0058164168149232864,
-                0.005536392331123352
+                0.006161855533719063,
+                0.006131693255156279,
+                0.005844831932336092,
+                0.005818478763103485,
+                0.005773432552814484
             ]
         }
     },
@@ -2455,22 +2875,22 @@
         "summary": "the BitPaymer aka FriedEx ransomware has been around since 2019. CrowdStrike has highlighted some similarities between those variants.",
         "detection": {
             "response": true,
-            "confidence": 0.5855907797813416
+            "confidence": 0.6679771542549133
         },
         "prediction": {
             "attack_id": [
                 "T1027",
-                "T1068",
-                "T1496",
                 "T1070",
-                "T1003"
+                "T1573",
+                "T1068",
+                "T1071"
             ],
             "confidence": [
-                0.007352843880653381,
-                0.005848542787134647,
-                0.00581679493188858,
-                0.005809012334793806,
-                0.005495732184499502
+                0.0115550821647048,
+                0.005726679228246212,
+                0.005429841578006744,
+                0.005306705832481384,
+                0.005297122988849878
             ]
         }
     },
@@ -2480,22 +2900,22 @@
         "summary": "the ransomware itself is usually deployed manually after a network is compromised and sensitive data is exfiltrated. the 'Dopple leaks' blog is used to publish information about compromised companies and their stolen data.",
         "detection": {
             "response": true,
-            "confidence": 0.6885579228401184
+            "confidence": 0.7104746699333191
         },
         "prediction": {
             "attack_id": [
-                "T1486",
-                "T1195",
+                "T1598",
+                "T1565",
                 "T1553",
-                "T1189",
-                "T1598"
+                "T1039",
+                "T1195"
             ],
             "confidence": [
-                0.006593069527298212,
-                0.005955906119197607,
-                0.005765251815319061,
-                0.005594078451395035,
-                0.005494032520800829
+                0.00611515948548913,
+                0.0059533435851335526,
+                0.005726644303649664,
+                0.005660708993673325,
+                0.00564975431188941
             ]
         }
     },
@@ -2505,22 +2925,22 @@
         "summary": "the crew is behind such notable attacks as those on pemex and an IT contractor that works with the u.s. federal government.",
         "detection": {
             "response": true,
-            "confidence": 0.6958814859390259
+            "confidence": 0.6794639229774475
         },
         "prediction": {
             "attack_id": [
-                "T1566",
-                "T1078",
                 "T1059",
-                "T1608",
-                "T1189"
+                "T1566",
+                "T1189",
+                "T1491",
+                "T1078"
             ],
             "confidence": [
-                0.006748276762664318,
-                0.006069553084671497,
-                0.005692221224308014,
-                0.005563514307141304,
-                0.0055556525476276875
+                0.006663583684712648,
+                0.0063651809468865395,
+                0.005899546202272177,
+                0.005665781442075968,
+                0.005469504743814468
             ]
         }
     },
@@ -2530,22 +2950,22 @@
         "summary": "the most known and discussed victim of DoppelPaymer ransomware is one against D\u00fcsseldorf University Clinic in September 2020. they sent a digital key to get the hospital up and running again when the perpetrators were made aware.",
         "detection": {
             "response": true,
-            "confidence": 0.5807607173919678
+            "confidence": 0.6274365186691284
         },
         "prediction": {
             "attack_id": [
                 "T1534",
                 "T1486",
-                "T1499",
                 "T1082",
-                "T1105"
+                "T1499",
+                "T1083"
             ],
             "confidence": [
-                0.012562627904117107,
-                0.0054534063674509525,
-                0.005329268053174019,
-                0.005283648613840342,
-                0.005266357213258743
+                0.012781498022377491,
+                0.005419211462140083,
+                0.005314188078045845,
+                0.005304709542542696,
+                0.0052587962709367275
             ]
         }
     },
@@ -2555,22 +2975,22 @@
         "summary": "DoppelPaymer has been used in over 125 ransomware incidents in 2020. the company has used doublepaymer for more than 20 years.",
         "detection": {
             "response": true,
-            "confidence": 0.5216222405433655
+            "confidence": 0.5756141543388367
         },
         "prediction": {
             "attack_id": [
                 "T1496",
-                "T1027",
-                "T1489",
-                "T1003",
-                "T1120"
+                "T1068",
+                "T1110",
+                "T1059",
+                "T1027"
             ],
             "confidence": [
-                0.012251446023583412,
-                0.005396248307079077,
-                0.005358058959245682,
-                0.0052822125144302845,
-                0.005280880723148584
+                0.01183293852955103,
+                0.005535906180739403,
+                0.005309937056154013,
+                0.0052850693464279175,
+                0.005277939140796661
             ]
         }
     },
@@ -2580,22 +3000,22 @@
         "summary": "the crew behind the Maze ransomware service announced it was shutting down its operations. there has been speculation that this group\u2019s affiliates will likely be funneled into the services behind Egregor.",
         "detection": {
             "response": true,
-            "confidence": 0.5493490695953369
+            "confidence": 0.697044849395752
         },
         "prediction": {
             "attack_id": [
-                "T1027",
-                "T1534",
+                "T1553",
                 "T1070",
-                "T1608",
-                "T1587"
+                "T1566",
+                "T1036",
+                "T1562"
             ],
             "confidence": [
-                0.006432109046727419,
-                0.006131788250058889,
-                0.006118390243500471,
-                0.005855979863554239,
-                0.0058342874981462955
+                0.00908785779029131,
+                0.006923440843820572,
+                0.005500780884176493,
+                0.005371243692934513,
+                0.005322644952684641
             ]
         }
     },
@@ -2605,22 +3025,22 @@
         "summary": "Intel 471 researchers found Egregor contained the same Base64 encoded data as Sekhmet where the last row contained additional parameters from a compromised system.",
         "detection": {
             "response": true,
-            "confidence": 0.5892953872680664
+            "confidence": 0.7112181186676025
         },
         "prediction": {
             "attack_id": [
                 "T1033",
-                "T1018",
-                "T1027",
-                "T1036",
-                "T1070"
+                "T1059",
+                "T1553",
+                "T1070",
+                "T1140"
             ],
             "confidence": [
-                0.007340891752392054,
-                0.0062467185780406,
-                0.006023083347827196,
-                0.005724461283534765,
-                0.005555805750191212
+                0.007428551092743874,
+                0.005787307862192392,
+                0.0057448213919997215,
+                0.005737961269915104,
+                0.005636878777295351
             ]
         }
     },
@@ -2629,20 +3049,50 @@
         "source": "Ransomware-as-a-service_ The pandemic within a pandemic _ Intel471.html",
         "summary": "Egregor was found in incidents at Crytek, Ubisoft and Barnes & Noble. he was a member of the u.s.",
         "detection": {
-            "response": false,
-            "confidence": 0.49381521344184875
+            "response": true,
+            "confidence": 0.5002747774124146
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1003",
+                "T1110",
+                "T1496",
+                "T1070",
+                "T1562"
+            ],
+            "confidence": [
+                0.007260659709572792,
+                0.005880025681108236,
+                0.005765023175626993,
+                0.005587663035839796,
+                0.0054777697660028934
+            ]
+        }
     },
     {
         "text": "Intel 471 found that Maze was used in over 250 ransomware incidents in 2020. Egregor was used in more than 200 incidents.",
         "source": "Ransomware-as-a-service_ The pandemic within a pandemic _ Intel471.html",
         "summary": "Intel 471 found that Maze was used in over 250 ransomware incidents in 2020. more than 200 incidents were reported in the u.s.",
         "detection": {
-            "response": false,
-            "confidence": 0.45312267541885376
+            "response": true,
+            "confidence": 0.5286753177642822
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1003",
+                "T1496",
+                "T1070",
+                "T1082",
+                "T1027"
+            ],
+            "confidence": [
+                0.006612071301788092,
+                0.006494088564068079,
+                0.0062530385330319405,
+                0.005584104917943478,
+                0.005523087456822395
+            ]
+        }
     },
     {
         "text": "First detected in September 2019, NetWalker is one of the more prolific affiliate services Intel 471 has tracked. The actors behind it have spent 2020 using phishing emails that leverage the impact and fear of the COVID-19 pandemic to lure victims into loading their malware onto systems. In May, the operators launched a Tor-based blog to release sensitive data stolen from victim organizations that refused to pay the requested ransom.",
@@ -2650,22 +3100,22 @@
         "summary": "the actors behind it have spent 2020 using phishing emails to lure victims into loading their malware onto systems. in may, the operators launched a Tor-based blog to release sensitive data stolen from victim organizations that refused to pay the requested ransom.",
         "detection": {
             "response": true,
-            "confidence": 0.5635362267494202
+            "confidence": 0.6794445514678955
         },
         "prediction": {
             "attack_id": [
-                "T1070",
-                "T1203",
-                "T1189",
-                "T1547",
-                "T1087"
+                "T1534",
+                "T1566",
+                "T1078",
+                "T1204",
+                "T1553"
             ],
             "confidence": [
-                0.006568972487002611,
-                0.005973720923066139,
-                0.005721888039261103,
-                0.005648845806717873,
-                0.0055603464134037495
+                0.012042509391903877,
+                0.0055137635208666325,
+                0.005340435076504946,
+                0.005330238491296768,
+                0.00530671002343297
             ]
         }
     },
@@ -2675,22 +3125,22 @@
         "summary": "the actors used a fileless infection technique and allegedly could bypass the user account control component of Windows 7 and newer operating systems. in 'individual mode, individual computers or the entire network could be held for ransom'",
         "detection": {
             "response": true,
-            "confidence": 0.6185546517372131
+            "confidence": 0.60051029920578
         },
         "prediction": {
             "attack_id": [
-                "T1542",
-                "T1486",
-                "T1080",
+                "T1078",
+                "T1210",
                 "T1068",
-                "T1547"
+                "T1083",
+                "T1528"
             ],
             "confidence": [
-                0.006208781618624926,
-                0.005720367189496756,
-                0.005495607387274504,
-                0.005484314635396004,
-                0.005468560382723808
+                0.008159290067851543,
+                0.005764074623584747,
+                0.00562388775870204,
+                0.005568600259721279,
+                0.005473575554788113
             ]
         }
     },
@@ -2700,22 +3150,22 @@
         "summary": "the most high-profile target hit by Netwalker is the Michigan State University, which refused to pay the ransom. netwalker's goal is to win a runsom in the run-up to the u.s.",
         "detection": {
             "response": true,
-            "confidence": 0.6835671067237854
+            "confidence": 0.5819693207740784
         },
         "prediction": {
             "attack_id": [
+                "T1057",
                 "T1102",
+                "T1082",
                 "T1070",
-                "T1553",
-                "T1587",
-                "T1082"
+                "T1553"
             ],
             "confidence": [
-                0.007115232292562723,
-                0.006829588674008846,
-                0.005551328882575035,
-                0.005493416916579008,
-                0.005472306627780199
+                0.006178892217576504,
+                0.00608746288344264,
+                0.006057467311620712,
+                0.005796108860522509,
+                0.005590042099356651
             ]
         }
     },
@@ -2725,22 +3175,22 @@
         "summary": "deployments of REvil first observed on April 17, 2019, where attackers leveraged a vulnerability in Oracle WebLogic servers tracked as CVE-2019-2725. two months later, advertisements started popping up on the XSS forum.",
         "detection": {
             "response": true,
-            "confidence": 0.5621995329856873
+            "confidence": 0.514881432056427
         },
         "prediction": {
             "attack_id": [
-                "T1203",
                 "T1068",
-                "T1499",
-                "T1189",
+                "T1203",
+                "T1059",
+                "T1588",
                 "T1070"
             ],
             "confidence": [
-                0.009833709336817265,
-                0.007493732031434774,
-                0.005248948000371456,
-                0.005236111581325531,
-                0.005232042632997036
+                0.013873683288693428,
+                0.005327978171408176,
+                0.005218887701630592,
+                0.005218041595071554,
+                0.00521790562197566
             ]
         }
     },
@@ -2750,7 +3200,7 @@
         "summary": "REvil has been one of the most active ransomware gangs in recent memory. he claims responsibility for such attacks as those on travelex, u.s.-based entertainment and media law firm Grubman Shire Meiselas & Sacks and 23 local governments in Texas.",
         "detection": {
             "response": false,
-            "confidence": 0.4505714476108551
+            "confidence": 0.46464434266090393
         },
         "prediction": {}
     },
@@ -2759,10 +3209,25 @@
         "source": "Ransomware-as-a-service_ The pandemic within a pandemic _ Intel471.html",
         "summary": "the representative said networks were compromised by exploiting outdated Citrix and Pulse Secure remote access software. the actors allegedly gained access to an entire network in \"about three minutes\"",
         "detection": {
-            "response": false,
-            "confidence": 0.452470064163208
+            "response": true,
+            "confidence": 0.6940265893936157
         },
-        "prediction": {}
+        "prediction": {
+            "attack_id": [
+                "T1190",
+                "T1133",
+                "T1078",
+                "T1018",
+                "T1111"
+            ],
+            "confidence": [
+                0.007356594316661358,
+                0.007303969468921423,
+                0.005657151807099581,
+                0.005629123188555241,
+                0.005376581102609634
+            ]
+        }
     },
     {
         "text": "While the group carries out attacks on its own, it has found the RaaS model brings back more money. Affiliates are responsible for gaining access to target networks, downloading valuable files and deploying the actual ransomware, while the REvil gang handles victim negotiations and blackmailing, ransom collection and distribution. This model has apparently led to skyrocketing profits: according to the REvil representative, one affiliate's earnings rose from about US$20,000 to US $30,000 per target with another RaaS offering to about US $7 million to $8 million per target in only six months after joining forces with REvil.",
@@ -2770,7 +3235,7 @@
         "summary": "affiliates are responsible for gaining access to target networks, downloading valuable files and deploying the actual ransomware. one affiliate's earnings rose from US$20,000 to US $30,000 per target with another offering to about US $7 million to $8 million in only six months after joining forces with REvil.",
         "detection": {
             "response": false,
-            "confidence": 0.4799182116985321
+            "confidence": 0.49982479214668274
         },
         "prediction": {}
     },
@@ -2780,22 +3245,22 @@
         "summary": "Intel 471 has linked REvil to 230 ransomware attacks in 2020. the attacks are linked to the u.s.",
         "detection": {
             "response": true,
-            "confidence": 0.5238990187644958
+            "confidence": 0.614727258682251
         },
         "prediction": {
             "attack_id": [
                 "T1496",
-                "T1068",
-                "T1190",
                 "T1566",
-                "T1003"
+                "T1587",
+                "T1553",
+                "T1588"
             ],
             "confidence": [
-                0.011979295872151852,
-                0.005333669949322939,
-                0.0053183045238256454,
-                0.005317519418895245,
-                0.005299949552863836
+                0.013297147117555141,
+                0.005284661427140236,
+                0.005281296093016863,
+                0.005272570997476578,
+                0.005237409844994545
             ]
         }
     },
@@ -2805,22 +3270,22 @@
         "summary": "the name \u201cRyuk\u201d could be categorized as synonymous with ransomware. the variant is one of the most popular, with a strong affiliate program and an extensive list of victims.",
         "detection": {
             "response": true,
-            "confidence": 0.6822755932807922
+            "confidence": 0.6827561855316162
         },
         "prediction": {
             "attack_id": [
+                "T1001",
                 "T1027",
                 "T1090",
-                "T1496",
-                "T1001",
-                "T1036"
+                "T1573",
+                "T1102"
             ],
             "confidence": [
-                0.007018856704235077,
-                0.005837953183799982,
-                0.0057499292306602,
-                0.005639085080474615,
-                0.005606450606137514
+                0.006729109212756157,
+                0.006249358877539635,
+                0.0056092869490385056,
+                0.005556709598749876,
+                0.005539421457797289
             ]
         }
     },
@@ -2830,22 +3295,22 @@
         "summary": "Ryuk is often delivered as the last action in the chain of infections brought on by dueling use of the Trickbot botnet and Emotet malwares.",
         "detection": {
             "response": true,
-            "confidence": 0.5995715260505676
+            "confidence": 0.6747953295707703
         },
         "prediction": {
             "attack_id": [
+                "T1036",
                 "T1027",
-                "T1070",
                 "T1189",
-                "T1542",
+                "T1574",
                 "T1055"
             ],
             "confidence": [
-                0.0064360578544437885,
-                0.006004917901009321,
-                0.005684133153408766,
-                0.005645780358463526,
-                0.005598446819931269
+                0.006194034591317177,
+                0.006153313908725977,
+                0.006054581608623266,
+                0.005780596286058426,
+                0.005627687554806471
             ]
         }
     },
@@ -2855,22 +3320,22 @@
         "summary": "affiliates follow a model in their attacks: Hiring actors to launch spam campaigns to deliver the actor's banking malware. as many of five actors deploy the ransomware and handle negotiations with victims.",
         "detection": {
             "response": true,
-            "confidence": 0.542043924331665
+            "confidence": 0.6350015997886658
         },
         "prediction": {
             "attack_id": [
                 "T1608",
                 "T1534",
                 "T1068",
-                "T1189",
-                "T1105"
+                "T1105",
+                "T1189"
             ],
             "confidence": [
-                0.008005380630493164,
-                0.006977815181016922,
-                0.0064394609071314335,
-                0.00531590823084116,
-                0.005283704958856106
+                0.00877591222524643,
+                0.006376382429152727,
+                0.006202946417033672,
+                0.005458284635096788,
+                0.005312871187925339
             ]
         }
     },
@@ -2880,22 +3345,22 @@
         "summary": "Ryuk has exploded over the past year, responsible for millions of ransomware incidents around the world. some security researchers estimate that it has been found in as much as one-third of attacks launched this year.",
         "detection": {
             "response": true,
-            "confidence": 0.6461381316184998
+            "confidence": 0.6363242268562317
         },
         "prediction": {
             "attack_id": [
                 "T1496",
                 "T1499",
                 "T1486",
-                "T1561",
-                "T1027"
+                "T1027",
+                "T1561"
             ],
             "confidence": [
-                0.00964866392314434,
-                0.0060620494186878204,
-                0.005893491208553314,
-                0.005379664245992899,
-                0.005358634516596794
+                0.010664870962500572,
+                0.005851277150213718,
+                0.005645371042191982,
+                0.00539389718323946,
+                0.005349243525415659
             ]
         }
     },
@@ -2905,22 +3370,22 @@
         "summary": "one of the biggest threats from Ryuk this year has been focused on the healthcare sector. the attack that drew the most headlines was the attacks on universal health services, a hospital system in the u.s.",
         "detection": {
             "response": true,
-            "confidence": 0.6832645535469055
+            "confidence": 0.6349721550941467
         },
         "prediction": {
             "attack_id": [
-                "T1203",
                 "T1499",
-                "T1068",
+                "T1203",
                 "T1082",
+                "T1068",
                 "T1110"
             ],
             "confidence": [
-                0.007510368246585131,
-                0.007406271528452635,
-                0.005903308745473623,
-                0.005424416158348322,
-                0.005405590403825045
+                0.008585543371737003,
+                0.006735498085618019,
+                0.005676853936165571,
+                0.0054973699152469635,
+                0.005420985631644726
             ]
         }
     },
@@ -2930,22 +3395,22 @@
         "summary": "the cybersecurity community recognizes the threat all of these groups present, but the criminals are only one part of the picture. in our next entry, Intel 471 will examine what a business goes through once it has to recover from the ransomware attack.",
         "detection": {
             "response": true,
-            "confidence": 0.7162279486656189
+            "confidence": 0.7031304240226746
         },
         "prediction": {
             "attack_id": [
+                "T1027",
+                "T1518",
                 "T1070",
                 "T1068",
-                "T1548",
-                "T1203",
-                "T1562"
+                "T1140"
             ],
             "confidence": [
-                0.008800617419183254,
-                0.00652794074267149,
-                0.005380336660891771,
-                0.0053768036887049675,
-                0.00535331666469574
+                0.010899859480559826,
+                0.005637906026095152,
+                0.0054610115475952625,
+                0.005393830128014088,
+                0.005326021928340197
             ]
         }
     },
@@ -2980,22 +3445,22 @@
         "summary": "Whether scaling your cybersecurity presence or starting to build your team, we help you fight cyber threats. if you have a cyber threat, contact us today.",
         "detection": {
             "response": true,
-            "confidence": 0.5098865628242493
+            "confidence": 0.5069097876548767
         },
         "prediction": {
             "attack_id": [
-                "T1518",
+                "T1547",
                 "T1587",
+                "T1518",
                 "T1564",
-                "T1562",
-                "T1543"
+                "T1082"
             ],
             "confidence": [
-                0.006626364309340715,
-                0.006462101824581623,
-                0.005764435511082411,
-                0.0056451293639838696,
-                0.00552252447232604
+                0.006255926098674536,
+                0.006093377247452736,
+                0.0059175919741392136,
+                0.005796490702778101,
+                0.005623050965368748
             ]
         }
     },
@@ -3005,22 +3470,22 @@
         "summary": "we use cookies to understand how visitors use our site and help us improve the user experience. by clicking \"Accept Cookies\", you agree to the usage of cookies on your device.",
         "detection": {
             "response": true,
-            "confidence": 0.6330879330635071
+            "confidence": 0.6761923432350159
         },
         "prediction": {
             "attack_id": [
-                "T1596",
                 "T1598",
+                "T1539",
+                "T1204",
                 "T1555",
-                "T1016",
-                "T1217"
+                "T1016"
             ],
             "confidence": [
-                0.006158579606562853,
-                0.006062163971364498,
-                0.005774442106485367,
-                0.005760805681347847,
-                0.005510637070983648
+                0.0060623036697506905,
+                0.0059820436872541904,
+                0.005712663754820824,
+                0.0055978731252253056,
+                0.005581369623541832
             ]
         }
     }

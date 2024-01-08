@@ -53,7 +53,7 @@ detector = classDetector.Detector()
 
 print("[CTI-Analyzer]\t, Detector's prediction")
 for entry in scraped:
-    entry['detection'] = detector.getPrediction2(entry["text"])
+    entry['detection'] = detector.getPrediction2(entry["summary"])
 
 aptdir = f"output/{apt}"
 
@@ -66,7 +66,7 @@ else:
 print("[CTI-Analyzer]\t, Classifier's prediction")
 for entry in scraped:
     if entry["detection"]["response"]== True:
-        entry["prediction"] = classifier.getKPrediction(entry["text"],k=5)
+        entry["prediction"] = classifier.getKPrediction(entry["summary"],k=5)
 
 with open(aptdir+f'/{apt}_summary.json', mode='w') as fp:
         json.dump(fp=fp, obj=scraped,indent=4, cls=CustomJSONizer)
