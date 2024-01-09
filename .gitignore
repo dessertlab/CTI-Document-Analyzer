@@ -163,7 +163,7 @@ models/data/dataset_mixed.csv
 *.h5
 *.pt
 
-
+others/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
