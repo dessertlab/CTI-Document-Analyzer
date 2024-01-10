@@ -10,7 +10,7 @@ class Detector:
 
 
     def __init__(self):
-       print("[Detector]: \t\t  Model initializzation]\t\t", 40*'-')                        #DEBUG
+       #print("[Detector]: \t\t  Model initializzation]\t\t", 40*'-')                        #DEBUG
 
        ac_path = os.path.abspath(os.path.dirname(__file__))
      
@@ -55,7 +55,7 @@ class Detector:
 
         treshold = 0.5
         inputs= self.tokenizer(text, padding='max_length', max_length = 512, truncation=True, return_tensors='tf')['input_ids']
-        prediction= self.model.predict(inputs)
+        prediction= self.model.predict(inputs,verbose=None)
         results= {
                 "response":  np.mean(prediction) >= treshold,
                 "confidence": np.mean(prediction)
