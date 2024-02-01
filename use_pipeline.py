@@ -1,9 +1,9 @@
 import argparse
 import os
 parser = argparse.ArgumentParser(
-                    prog='Use pipeline',
-                    description='This script given CTIs in input predict ATT&CK techniques associated with ML-Models',
-                    epilog='It could be used only for prediction')
+                    prog='CTI Document Analyzer',
+                    description='It retieves ATT&CK Techniques from the document given in input using multiple DL-Models',
+                    epilog='The input should be provided into a folder in .pdf or .html format')
 
 def valid_path(path):
     if os.path.exists(path):
@@ -11,11 +11,11 @@ def valid_path(path):
     else:
         raise argparse.ArgumentTypeError(f"The path \"{path}\" does not exist!")
 
-parser.add_argument('-path',required=True,type=valid_path,help="Path of CTI if used in scrape only mode/default mode, or path of CTI scraped if used in predict only mode")
+parser.add_argument('-path',required=True,type=valid_path,help="Path of CTRs (if used in scrape only mode/default mode), or path of CTI scraped (previous output provided from so mode) if used in predict only mode")
 group = parser.add_mutually_exclusive_group()
 
 group.add_argument('-so','--scrape-only', action='store_true', default=False, 
-                   help="uses the script only as a scraper and chunker for CTI which must be provided")
+                   help="uses the script only as a scraper and chunker for CTRs.")
 
 group.add_argument('-po','--predict-only', action='store_true', default=False,
                    help="uses the script only for prediction, the output of scrape only must be provided")
@@ -69,7 +69,8 @@ apt= os.path.split(args.path)[-1]
 # ██         ██    ██       ██   ██ ██    ██ ██      ██    ██ ██  ██  ██ ██      ██  ██ ██    ██        ██   ██ ██  ██ ██ ██   ██ ██         ██     ███    ██      ██   ██ 
 #  ██████    ██    ██       ██████   ██████   ██████  ██████  ██      ██ ███████ ██   ████    ██        ██   ██ ██   ████ ██   ██ ███████    ██    ███████ ███████ ██   ██ """)
 
-print(""".------------------------------------------------------------------------.
+print("""
+.------------------------------------------------------------------------.
 | ██████╗████████╗██╗                                                    |
 |██╔════╝╚══██╔══╝██║                                                    |
 |██║        ██║   ██║                                                    |
@@ -90,11 +91,15 @@ print(""".----------------------------------------------------------------------
 |██╔══██║██║╚██╗██║██╔══██║██║    ╚██╔╝   ███╔╝  ██╔══╝  ██╔══██╗        |
 |██║  ██║██║ ╚████║██║  ██║███████╗██║   ███████╗███████╗██║  ██║        |
 |╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝╚═╝   ╚══════╝╚══════╝╚═╝  ╚═╝        |
-'------------------------------------------------------------------------'""")
+'------------------------------------------------------------------------'
+      """)
 
 import time
 symbols = ['⣾', '⣷', '⣯', '⣟', '⡿', '⢿', '⣻', '⣽']
 i = 0
+
+# should be inserted a nofileexception
+
 
 if args.predict_only == False:
     if args.scraper=='semantic':
@@ -128,6 +133,7 @@ if args.predict_only == False:
         exit("Output saved in output/json")
 
 else:
+    #should be insert an exception for no formated files 
     with open(args.path) as fp:
         scraped = json.load(fp=fp)
     name, ext = os.path.splitext(apt)
