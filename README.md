@@ -70,17 +70,17 @@ The framework is organized in many folders:
 ├── data
       ├── caldera
       ├── resources
-      	├── apt29
-         ├── carbanak
-         ├── fin6
-         ├── fin7
-         ├── menuPass
-         ├── oilrig
-         ├── sandworm
-         └── wizardspider
+          ├── apt29
+          ├── carbanak
+          ├── fin6
+          ├── fin7
+          ├── menuPass
+          ├── oilrig
+          ├── sandworm
+          └── wizardspider
       ├── datasets
       	├── dataset_classifier.csv
-         └── dataset_detector.csv
+        └── dataset_detector.csv
       └── sorter
 ├── finetune
 ├── models
