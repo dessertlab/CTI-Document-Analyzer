@@ -62,3 +62,43 @@ options:
 The input should be provided into a folder in .pdf or .html format
 
 ```
+## Folder Organization
+
+The framework is organized in many folders:
+
+```
+├── data
+      ├── caldera
+      ├── resources
+      	├── apt29
+         ├── carbanak
+         ├── fin6
+         ├── fin7
+         ├── menuPass
+         ├── oilrig
+         ├── sandworm
+         └── wizardspider
+      ├── datasets
+      	├── dataset_classifier.csv
+         └── dataset_detector.csv
+      └── sorter
+├── finetune
+├── models
+├── output
+├── sorter
+├── utilities
+├── requirements.txt
+├── use_pipeline.py
+├── LICENSE
+└── README.md
+
+```
+
+- The `data/` folder contains many information    unnecessary for the framework execution
+  - In `data/resources/` are listed all the resources used in our analysis
+  - In `data/datasets/` are present the dataset in `.csv` format
+
+- The `finetune/` folder contains the script which could be used to recreate the models provided.
+- The `models/` folder contains the wrapping class of the used model. Those models (downloadable in [figshare](https://figshare.com/articles/software/Models_for_CTI-Document-Analyzer/25125320) **must** be provided in the `models/data/` folder 
+- The other folders are framework utilities.
+
