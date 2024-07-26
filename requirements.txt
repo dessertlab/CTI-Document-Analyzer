@@ -10,6 +10,6 @@ scikit_learn==1.1.1
 selenium==4.17.2
 spacy==3.6.1
 tensorflow==2.13.0
-torch==2.1.0
+torch==2.2.0
 transformers==4.33.2
 webdriver_manager==4.0.1
